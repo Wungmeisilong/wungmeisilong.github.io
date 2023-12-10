@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>硬件 on 王梅四郎maloudown</title>
+    <link>https://wungmeisilong.github.io/tags/%E7%A1%AC%E4%BB%B6/</link>
+    <description>Recent content in 硬件 on 王梅四郎maloudown</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 05 Dec 2023 00:04:15 +0800</lastBuildDate>
+    <atom:link href="https://wungmeisilong.github.io/tags/%E7%A1%AC%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>实验2 IO端口输出实验</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/cc2530_zigbee/experiment2/</link>
+      <pubDate>Tue, 05 Dec 2023 00:04:15 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/cc2530_zigbee/experiment2/</guid>
+      <description>实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一</description>
+    </item>
+  </channel>
+</rss>

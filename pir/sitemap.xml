@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://wungmeisilong.github.io/pir/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wungmeisilong.github.io/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wungmeisilong.github.io/" />
+    <xhtml:link rel="alternate" hreflang="pir" href="https://wungmeisilong.github.io/pir/" />
+  </url>
+  <url>
+    <loc>https://wungmeisilong.github.io/pir/categories/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wungmeisilong.github.io/categories/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wungmeisilong.github.io/categories/" />
+    <xhtml:link rel="alternate" hreflang="pir" href="https://wungmeisilong.github.io/pir/categories/" />
+  </url>
+  <url>
+    <loc>https://wungmeisilong.github.io/pir/tags/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wungmeisilong.github.io/tags/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wungmeisilong.github.io/tags/" />
+    <xhtml:link rel="alternate" hreflang="pir" href="https://wungmeisilong.github.io/pir/tags/" />
+  </url>
+</urlset>

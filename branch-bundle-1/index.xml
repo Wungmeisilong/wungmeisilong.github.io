@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>一、博客文章 on 王梅四郎maloudown</title>
+    <link>https://wungmeisilong.github.io/branch-bundle-1/</link>
+    <description>Recent content in 一、博客文章 on 王梅四郎maloudown</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 05 Dec 2023 00:04:15 +0800</lastBuildDate>
+    <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.计算机组成原理</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>2.AndroidStudio</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/androidstudio/</link>
+      <pubDate>Wed, 29 Nov 2023 16:54:44 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/androidstudio/</guid>
+      <description>2-1.Toolbar工具栏Toolbar是什么？ 简单理解就是页面的上的菜单栏，或者叫工具栏，在AndroidStudio的页面布局中使用Toolbar， menu文件的</description>
+    </item>
+    <item>
+      <title>3.STM32_RFID</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/stm32_rfid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/stm32_rfid/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>4.Esp8266_WiFi</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/esp8266_wifi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/esp8266_wifi/</guid>
+      <description>Lorem Ipsum. </description>
+    </item>
+    <item>
+      <title>5.CC2530_ZigBee</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/cc2530_zigbee/</link>
+      <pubDate>Tue, 05 Dec 2023 00:04:15 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/cc2530_zigbee/</guid>
+      <description>实验2 IO端口输出实验实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一</description>
+    </item>
+    <item>
+      <title>6.Arduino</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/arduino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/arduino/</guid>
+      <description>Lorem Ipsum. </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="2.AndroidStudio :: 王梅四郎maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="2.AndroidStudio :: 王梅四郎maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/androidstudio/">
+    <meta property="og:site_name" content="王梅四郎maloudown">
+    <title>2.AndroidStudio :: 王梅四郎maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/androidstudio/" rel="canonical" type="text/html" title="2.AndroidStudio :: 王梅四郎maloudown">
+    <link href="../../branch-bundle-1/androidstudio/index.xml" rel="alternate" type="application/rss+xml" title="2.AndroidStudio :: 王梅四郎maloudown">
+    <link href="../../images/favicon.png?1702226777" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../css/fontawesome-all.min.css?1702226777" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1702226777" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1702226777" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1702226777" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1702226777" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1702226777" rel="stylesheet">
+    <link href="../../css/fonts.css?1702226777" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1702226777" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1702226777" rel="stylesheet">
+    <link href="../../css/theme-zen-auto.css?1702226777" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/variant.css?1702226777" rel="stylesheet">
+    <link href="../../css/print.css?1702226777" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1702226777" rel="stylesheet">
+    <link href="../../css/ie.css?1702226777" rel="stylesheet">
+    <script src="../../js/url.js?1702226777"></script>
+    <script src="../../js/variant.js?1702226777"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../index.search.js";
+      var root_url="../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'zen-auto', 'zen-light', 'zen-dark', 'neon' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../branch-bundle-1/androidstudio/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../"><span itemprop="name">王梅四郎maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">2.AndroidStudio</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable chapter narrow" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="chapter">
+            <header class="headline">
+            </header>
+<div class="article-subheading">目录 20</div>
+<h1 id="2androidstudio">2.AndroidStudio</h1>
+
+
+<ul class="children children-li children-sort-">
+	
+<li><a href="../../branch-bundle-1/androidstudio/toolbar/">2-1.Toolbar工具栏</a><p>Toolbar是什么？ 简单理解就是页面的上的菜单栏，或者叫工具栏，在AndroidStudio的页面布局中使用Toolbar， menu文件的</p></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <section>
+            <h1 class="a11y-only">2.AndroidStudio 的子部分</h1>
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="2-1toolbar工具栏">2-1.Toolbar工具栏</h1>
+
+<h2 id="toolbar是什么">Toolbar是什么？</h2>
+<p>简单理解就是页面的上的菜单栏，或者叫工具栏，在<strong>AndroidStudio</strong>的页面布局中使用<strong>Toolbar</strong>，</p>
+<h2 id="menu文件的创建">menu文件的创建</h2>
+<p>在创建<strong>menu</strong>这个目录前，请看查看<strong>res/<strong>目录下是否包含该目录，如果没有则创建。
+接着在该目录下创建</strong>xml</strong>文件，此处文件名为<strong>content_menu</strong>。在该<strong>content_menu</strong>使用<code>&lt;item</code>,如下为部分代码：
+
+<div class="tab-panel" data-tab-group="fdf1865ad4b31377d3f2977e2bced7cc">
+  <div class="tab-nav">
+    <div class="tab-nav-title">.xml文件</div>
+    <button
+      data-tab-item="简码fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('fdf1865ad4b31377d3f2977e2bced7cc','简码fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 简码</span>
+    </button>
+    <button
+      data-tab-item="全码"
+      class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
+      onclick="switchTab('fdf1865ad4b31377d3f2977e2bced7cc','全码')"
+    >
+      <span class="tab-nav-text">全码</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="简码fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;item</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/content_menu_group_chat&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:title=</span><span style="color:#e6db74">&#34;发起群聊&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:orderInCategory=</span><span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">/&gt;</span></span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="全码"
+      class="tab-content tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;menu</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/content_menu_group_chat&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:title=</span><span style="color:#e6db74">&#34;发起群聊&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:orderInCategory=</span><span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/content_menu_add_friend&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:title=</span><span style="color:#e6db74">&#34;添加朋友&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:orderInCategory=</span><span style="color:#e6db74">&#34;2&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/content_menu_add_RichScan&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:title=</span><span style="color:#e6db74">&#34;扫一扫&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:orderInCategory=</span><span style="color:#e6db74">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/content_menu_add_QRcode&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:title=</span><span style="color:#e6db74">&#34;扫码&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:orderInCategory=</span><span style="color:#e6db74">&#34;4&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/menu&gt;</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+在代码中<strong>orderInCategory</strong>属性是用来控制该<strong>item</strong>权重的，权重越小等级越高，该标题就会靠前显示，
+
+<div class="box notices cstyle secondary">
+  <div class="box-label"><i class="fa-fw fas fa-eye"></i> 结果</div>
+  <div class="box-content">
+
+<p><a href="#R-image-02ce50dd6542c2d5a908b9917ad41cdd" class="lightbox-link"><img src="../../branch-bundle-1/androidstudio/toolbar/img1_item.jpg?classes=shadow,border&amp;height=250px&amp;width=15vw" alt="8899" class="figure-image        " style="height: 250px; width: 15vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-02ce50dd6542c2d5a908b9917ad41cdd"><img src="../../branch-bundle-1/androidstudio/toolbar/img1_item.jpg?classes=shadow,border&amp;height=250px&amp;width=15vw" alt="8899" class="lightbox-image        " loading="lazy"></a></p>
+</div>
+</div></p>
+<h2 id="创建布局页面">创建布局页面</h2>
+<p>详细代码如下：
+
+<div class="tab-panel" data-tab-group="d7efe57b2121a1beb0184b7b00068381">
+  <div class="tab-nav">
+    <div class="tab-nav-title">.xml文件</div>
+    <button
+      data-tab-item="简码fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('d7efe57b2121a1beb0184b7b00068381','简码fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 简码</span>
+    </button>
+    <button
+      data-tab-item="全码"
+      class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
+      onclick="switchTab('d7efe57b2121a1beb0184b7b00068381','全码')"
+    >
+      <span class="tab-nav-text">全码</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="简码fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;androidx.appcompat.widget.Toolbar</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/options_menu_toolbar&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;409dp&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:background=</span><span style="color:#e6db74">&#34;?attr/colorPrimary&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:minHeight=</span><span style="color:#e6db74">&#34;?attr/actionBarSize&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:theme=</span><span style="color:#e6db74">&#34;?attr/actionBarTheme&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color:#e6db74">&#34;parent&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color:#e6db74">&#34;parent&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color:#e6db74">&#34;parent&#34;</span> <span style="color:#f92672">/&gt;</span></span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="全码"
+      class="tab-content tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">xmlns:app=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">xmlns:tools=</span><span style="color:#e6db74">&#34;http://schemas.android.com/tools&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;match_parent&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;androidx.appcompat.widget.Toolbar</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/options_menu_toolbar&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;409dp&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:background=</span><span style="color:#e6db74">&#34;?attr/colorPrimary&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:minHeight=</span><span style="color:#e6db74">&#34;?attr/actionBarSize&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">android:theme=</span><span style="color:#e6db74">&#34;?attr/actionBarTheme&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color:#e6db74">&#34;parent&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color:#e6db74">&#34;parent&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color:#e6db74">&#34;parent&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div></p>
+<h2 id="activityjava1文件中">Activity.java<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>文件中</h2>
+<p>此处创建类的步骤，继承<code>AppCompatActivity</code>方法就不再赘述。</p>
+<ol>
+<li>在<code>onCreate</code>获取<strong>Toolbar</strong>的id，这个过程也叫实例化；</li>
+<li>接着使用方法<code>setSupportActionBar</code>;</li>
+<li>在onCreate外重写<code>onCreateOptionsMenu</code>和<code>onOptionsItemSelected</code>方法。</li>
+</ol>
+
+<div class="tab-panel" data-tab-group="b0d9775f0c987f4bde107331d366c5b1">
+  <div class="tab-nav">
+    <div class="tab-nav-title">.java文件</div>
+    <button
+      data-tab-item="oncreatefa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('b0d9775f0c987f4bde107331d366c5b1','oncreatefa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> onCreate</span>
+    </button>
+    <button
+      data-tab-item="oncreateoptionsmenufa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
+      onclick="switchTab('b0d9775f0c987f4bde107331d366c5b1','oncreateoptionsmenufa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> onCreateOptionsMenu</span>
+    </button>
+    <button
+      data-tab-item="onoptionsitemselectedfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
+      onclick="switchTab('b0d9775f0c987f4bde107331d366c5b1','onoptionsitemselectedfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> onOptionsItemSelected</span>
+    </button>
+    <button
+      data-tab-item="全码"
+      class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
+      onclick="switchTab('b0d9775f0c987f4bde107331d366c5b1','全码')"
+    >
+      <span class="tab-nav-text">全码</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="oncreatefa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@SuppressLint</span>(<span style="color:#e6db74">&#34;MissingInflatedId&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span>(<span style="color:#a6e22e">@Nullable</span> Bundle savedInstanceState) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreate</span>(savedInstanceState);
+</span></span><span style="display:flex;"><span>        setContentView(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">opetions_menu</span>);
+</span></span><span style="display:flex;"><span>        toolbar <span style="color:#f92672">=</span> findViewById(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">options_menu_toolbar</span>);
+</span></span><span style="display:flex;"><span>        setSupportActionBar(toolbar);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="oncreateoptionsmenufa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onCreateOptionsMenu</span>(Menu menu) {
+</span></span><span style="display:flex;"><span>        getMenuInflater().<span style="color:#a6e22e">inflate</span>(R.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">content_menu</span>,menu);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreateOptionsMenu</span>(menu);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="onoptionsitemselectedfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onOptionsItemSelected</span>(<span style="color:#a6e22e">@NonNull</span> MenuItem item) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//获取menu目录中content_menu.xml文件里item的id</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> item.<span style="color:#a6e22e">getItemId</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//判断id是否被点击，被点击就执行相应的动作，比如页面跳转</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(id <span style="color:#f92672">==</span> R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">content_menu_add_friend</span>){
+</span></span><span style="display:flex;"><span>            Intent intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent(OpetionsMenu.<span style="color:#a6e22e">this</span>,ListDialogActivity.<span style="color:#a6e22e">class</span>);
+</span></span><span style="display:flex;"><span>            startActivity(intent);
+</span></span><span style="display:flex;"><span>        }<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(id <span style="color:#f92672">==</span> R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">content_menu_group_chat</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>  <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onContextItemSelected</span>(item);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="全码"
+      class="tab-content tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.practiceapplication;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.annotation.SuppressLint;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.content.Intent;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.os.Bundle;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.Menu;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.MenuItem;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.annotation.NonNull;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.annotation.Nullable;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.appcompat.app.AppCompatActivity;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.appcompat.widget.Toolbar;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpetionsMenu</span> <span style="color:#66d9ef">extends</span> AppCompatActivity {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Toolbar toolbar;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@SuppressLint</span>(<span style="color:#e6db74">&#34;MissingInflatedId&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span>(<span style="color:#a6e22e">@Nullable</span> Bundle savedInstanceState) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreate</span>(savedInstanceState);
+</span></span><span style="display:flex;"><span>        setContentView(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">opetions_menu</span>);
+</span></span><span style="display:flex;"><span>        toolbar <span style="color:#f92672">=</span> findViewById(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">options_menu_toolbar</span>);
+</span></span><span style="display:flex;"><span>        setSupportActionBar(toolbar);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onCreateOptionsMenu</span>(Menu menu) {
+</span></span><span style="display:flex;"><span>        getMenuInflater().<span style="color:#a6e22e">inflate</span>(R.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">content_menu</span>,menu);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreateOptionsMenu</span>(menu);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onOptionsItemSelected</span>(<span style="color:#a6e22e">@NonNull</span> MenuItem item) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> item.<span style="color:#a6e22e">getItemId</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(id <span style="color:#f92672">==</span> R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">content_menu_add_friend</span>){
+</span></span><span style="display:flex;"><span>            Intent intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent(OpetionsMenu.<span style="color:#a6e22e">this</span>,ListDialogActivity.<span style="color:#a6e22e">class</span>);
+</span></span><span style="display:flex;"><span>            startActivity(intent);
+</span></span><span style="display:flex;"><span>        }<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(id <span style="color:#f92672">==</span> R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">content_menu_group_chat</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>  <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onContextItemSelected</span>(item);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<h2 id="最终结果">最终结果</h2>
+
+<div class="box notices cstyle secondary">
+  <div class="box-label"><i class="fa-fw fas fa-eye"></i> 结果</div>
+  <div class="box-content">
+
+<p><a href="#R-image-61dae4a4f8baf51e4e9e8d696f039c16" class="lightbox-link"><img src="../../branch-bundle-1/androidstudio/toolbar/abc.jpg?classes=shadow,border&amp;height=250px&amp;width=15vw" alt="8899" class="figure-image        " style="height: 250px; width: 15vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-61dae4a4f8baf51e4e9e8d696f039c16"><img src="../../branch-bundle-1/androidstudio/toolbar/abc.jpg?classes=shadow,border&amp;height=250px&amp;width=15vw" alt="8899" class="lightbox-image        " loading="lazy"></a></p>
+</div>
+</div>
+
+<div class="expand">
+    <input type="checkbox" id="R-expand-59d82503ed1e750d402110643e91e231" aria-controls="R-expandcontent-59d82503ed1e750d402110643e91e231" >
+    <label class="expand-label" for="R-expand-59d82503ed1e750d402110643e91e231" >
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        展开
+    </label>
+    <div id="R-expandcontent-59d82503ed1e750d402110643e91e231" class="expand-content">
+<p>
+详细知识等我更新……</div>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Activity.java这个文件的一般就是我们所说的主程序，类似与C语言中的包含main入口的文件。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/a1-%E5%AE%89%E5%8D%93app/">A1-安卓APP</a></li>
+    <li><a class="term-link" href="../../categories/y1-%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">Y1-用户界面设计</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard.min.js?1702226777" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1702226777" defer></script>
+    <script src="../../js/theme.js?1702226777" defer></script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="实验2 IO端口输出实验 :: 王梅四郎maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="实验2 IO端口输出实验 :: 王梅四郎maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/cc2530_zigbee/experiment2/">
+    <meta property="og:site_name" content="王梅四郎maloudown">
+    <title>实验2 IO端口输出实验 :: 王梅四郎maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/cc2530_zigbee/experiment2/" rel="canonical" type="text/html" title="实验2 IO端口输出实验 :: 王梅四郎maloudown">
+    <link href="../../../branch-bundle-1/cc2530_zigbee/experiment2/index.xml" rel="alternate" type="application/rss+xml" title="实验2 IO端口输出实验 :: 王梅四郎maloudown">
+    <link href="../../../images/favicon.png?1702226777" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1702226777" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1702226777" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1702226777" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1702226777" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1702226777" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1702226777" rel="stylesheet">
+    <link href="../../../css/fonts.css?1702226777" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1702226777" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1702226777" rel="stylesheet">
+    <link href="../../../css/theme-zen-auto.css?1702226777" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1702226777" rel="stylesheet">
+    <link href="../../../css/print.css?1702226777" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1702226777" rel="stylesheet">
+    <link href="../../../css/ie.css?1702226777" rel="stylesheet">
+    <script src="../../../js/url.js?1702226777"></script>
+    <script src="../../../js/variant.js?1702226777"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'zen-auto', 'zen-light', 'zen-dark', 'neon' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/cc2530_zigbee/experiment2/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">王梅四郎maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/cc2530_zigbee/"><span itemprop="name">5.CC2530_ZigBee</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">实验2 IO端口输出实验</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/%E7%A1%AC%E4%BB%B6/">硬件</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="实验2-io端口输出实验">实验2 IO端口输出实验</h1>
+
+<h3 id="实验2-io端口输出实验">实验2 IO端口输出实验</h3>
+<p><strong>1、实验要求：</strong>
+利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图：
+<a href="#R-image-9ddd91e0bc288e95800cb997ca15367b" class="lightbox-link"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" alt="八盏灯" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9ddd91e0bc288e95800cb997ca15367b"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" alt="八盏灯" class="lightbox-image        " loading="lazy"></a>
+在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用<strong>cc2530</strong>控制它。</p>
+<p><strong>2、LED灯驱动芯片</strong>
+由于CC2530 单片机端口驱动能力有限，所以我们可以用<strong>ULN2003</strong>芯片做驱动，但使用uln2003需要使用到八个端口，为了不浪费端口，我们可以使用<strong>74HC595</strong>，该芯片只需要用到三个端口就可以控制八盏灯的亮灭，下面提供两块芯片的原理图：
+<a href="#R-image-6bc66ece9d257cafbaf5500de2684048" class="lightbox-link"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" alt="原理图" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6bc66ece9d257cafbaf5500de2684048"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" alt="原理图" class="lightbox-image        " loading="lazy"></a>
+如果你想用<strong>ULN2003</strong>还请查看相关手册，此处对<strong>74HC595</strong>进行详细说明。
+74HC595 是 8 位输出锁存移位寄存器，数据输入由三个引脚组合控制，分别是数据输入引脚 SER、数据输入控制引脚 SRCK 和数据输出锁存引脚 RCK
+SER 引脚上的数据在 SRCK 引脚的上升沿信号保存到 QA 引脚，同时 QA 位上的数据移位到 QB位，QB 位的数据移位到 QC 位……，依次类推，所有数据向后串行移动一位，QH 位的数据被送到QH’位。所有位的数据在 RCK 引脚的上升沿信号被所存到输出端。
+<a href="#R-image-ef56f76ac6fdfcece4fbebbd7e838945" class="lightbox-link"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/74hc595.jpg" alt="74HC595" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef56f76ac6fdfcece4fbebbd7e838945"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/74hc595.jpg" alt="74HC595" class="lightbox-image        " loading="lazy"></a>
+一下是我的个人理解：
+这里我们用输入数据<strong>1001 0101</strong>，使第1、3、5、8盏灯亮（假设高电平有效）为例解释说明，首先，实际上数据输入74HC595是串行输入，所以可以数据输入时是在打开SER端口后，按照从高位到低位依次输入数据<strong>1001 0101</strong>，如上图的下面所示；接着打开SRCK，先把最高位1输入数据寄存器低位b0，接着输入次高位的0,通过0把1挤到b1，以此类推；接着再打开RCK显示灯的亮灭。</p>
+<p><strong>3、IO端口输出控制</strong>
+要使用CC2530的IO端口，我们需要对<strong>PxDIR</strong>、<strong>PxSEL</strong>、<strong>Px</strong>进行设置，PxDIR用来控制端口的输入输出模式，<strong>1</strong>表示<strong>输出模式</strong>，SEL为<strong>0</strong>时，表示<strong>通用IO端口</strong>，详细参照下表：
+<a href="#R-image-0839d6683104e422527d7903ee9d3407" class="lightbox-link"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/IO%E8%A1%A8.png" alt="IO" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0839d6683104e422527d7903ee9d3407"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/IO%E8%A1%A8.png" alt="IO" class="lightbox-image        " loading="lazy"></a>
+而这里的x可以取0、1、2，其实就是端口P0、P1、P2的意思,在端口下设8个端口0~7，例如P0_1,但是端口2只有0~4可用;</p>
+<p>下面是一个详细的例子：
+当I/OP1_0~P1_7 各I/O端口输出高低电平时，设置方法如表 1.2所示：
+<a href="#R-image-a883cc0d9be917456553f0598ed4f2dd" class="lightbox-link"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" alt="例子" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a883cc0d9be917456553f0598ed4f2dd"><img src="../../../branch-bundle-1/cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" alt="例子" class="lightbox-image        " loading="lazy"></a></p>
+<p>了解以上知识后我们就可以写工程代码了。</p>
+<p>
+<div class="tab-panel" data-tab-group="f98f9d569db4cdb8ab1fc80eadb1d1b5">
+  <div class="tab-nav">
+    <div class="tab-nav-title">.xml文件</div>
+    <button
+      data-tab-item="printfledhfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('f98f9d569db4cdb8ab1fc80eadb1d1b5','printfledhfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> PrintfLED.h</span>
+    </button>
+    <button
+      data-tab-item="delayehfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
+      onclick="switchTab('f98f9d569db4cdb8ab1fc80eadb1d1b5','delayehfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Delaye.h</span>
+    </button>
+    <button
+      data-tab-item="initialhfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
+      onclick="switchTab('f98f9d569db4cdb8ab1fc80eadb1d1b5','initialhfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Initial.h</span>
+    </button>
+    <button
+      data-tab-item="全码"
+      class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
+      onclick="switchTab('f98f9d569db4cdb8ab1fc80eadb1d1b5','全码')"
+    >
+      <span class="tab-nav-text">全码</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="printfledhfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">//led输出设置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;PrintfLED.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define SER  P1_0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define SRCK P1_2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define RCK P1_1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define LOW 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define HIGE 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printfLED</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> data,<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> byte){
+</span></span><span style="display:flex;"><span>        SRCK <span style="color:#f92672">=</span> LOW;
+</span></span><span style="display:flex;"><span>        RCK <span style="color:#f92672">=</span> LOW;
+</span></span><span style="display:flex;"><span>        P1 <span style="color:#f92672">=</span> byte;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//定义参考位
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> getbit <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x80</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> i;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>;i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">--</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(data <span style="color:#f92672">&amp;</span> getbit){
+</span></span><span style="display:flex;"><span>        SER<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>        SER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        SRCK <span style="color:#f92672">=</span> HIGE;
+</span></span><span style="display:flex;"><span>        getbit <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        SRCK <span style="color:#f92672">=</span>LOW;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        RCK <span style="color:#f92672">=</span> HIGE;  
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="delayehfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e"># include &#34;Delaye.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//延迟函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">delaye</span>()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> i,j,k;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">5</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(j<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;j<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">200</span>;j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span>(k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;k<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">255</span>;k<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>                    ;
+</span></span><span style="display:flex;"><span>        }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="initialhfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Initial.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//初始化函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">initial</span>(){
+</span></span><span style="display:flex;"><span>    P1SEL <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x00</span>;
+</span></span><span style="display:flex;"><span>    P1DIR <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xFF</span>;
+</span></span><span style="display:flex;"><span>    P1<span style="color:#f92672">=</span><span style="color:#ae81ff">0x00</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="全码"
+      class="tab-content tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;">
+      <div class="tab-content-text">
+
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;ioCC2530.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Initial.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Delaye.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;PrintfLED.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define Byte5 0x80
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> btn[<span style="color:#ae81ff">8</span>]<span style="color:#f92672">=</span>{<span style="color:#ae81ff">0x01</span>,<span style="color:#ae81ff">0x02</span>,<span style="color:#ae81ff">0x04</span>,<span style="color:#ae81ff">0x08</span>,<span style="color:#ae81ff">0x10</span>,<span style="color:#ae81ff">0x20</span>,<span style="color:#ae81ff">0x40</span>,<span style="color:#ae81ff">0x80</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> btn1[<span style="color:#ae81ff">8</span>]<span style="color:#f92672">=</span>{<span style="color:#ae81ff">0x01</span>,<span style="color:#ae81ff">0x03</span>,<span style="color:#ae81ff">0x07</span>,<span style="color:#ae81ff">0x0f</span>,<span style="color:#ae81ff">0x1f</span>,<span style="color:#ae81ff">0x3f</span>,<span style="color:#ae81ff">0x7f</span>,<span style="color:#ae81ff">0xff</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> btn2[<span style="color:#ae81ff">8</span>]<span style="color:#f92672">=</span>{<span style="color:#ae81ff">0x81</span>,<span style="color:#ae81ff">0xc3</span>,<span style="color:#ae81ff">0xe7</span>,<span style="color:#ae81ff">0xff</span>,<span style="color:#ae81ff">0xe7</span>,<span style="color:#ae81ff">0xc3</span>,<span style="color:#ae81ff">0x81</span>,<span style="color:#ae81ff">0x00</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">initial</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//1.发光二极管的循环点亮
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">8</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        { 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printfLED</span>(btn[i],Byte5);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delaye</span>();
+</span></span><span style="display:flex;"><span>        } 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printfLED</span>(<span style="color:#ae81ff">0x00</span>,Byte5);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">delayed</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//2.流水灯正向流动随后反向流动
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">8</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        { 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printfLED</span>(btn1[i],Byte5);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delaye</span>();
+</span></span><span style="display:flex;"><span>        } 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">8</span><span style="color:#f92672">&amp;</span> i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">--</span>){ 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printfLED</span>(btn1[i],Byte5);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delaye</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//3.流水灯两端逐步点亮，然后从中间向两边逐步熄灭  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">8</span>;i<span style="color:#f92672">++</span>){ 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printfLED</span>(btn2[i],Byte5);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delaye</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+在使用时请建好一个外设文件专门放Initial.c、Initial.c、Delaye.c，然后在这些问阿金中引用与他们名字一样的.h文件，当然.h文件你自己也要先写好。
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div></p>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/c1-cc2530/">C1-CC2530</a></li>
+    <li><a class="term-link" href="../../../categories/d1-%E7%82%B9%E7%81%AF%E5%AE%9E%E9%AA%8C/">D1-点灯实验</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1702226777" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1702226777" defer></script>
+    <script src="../../../js/theme.js?1702226777" defer></script>
+  </body>
+</html>

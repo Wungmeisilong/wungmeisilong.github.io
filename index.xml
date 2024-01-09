@@ -6,14 +6,14 @@
     <description>Recent content on 王梅四郎maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 11 Dec 2023 02:26:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2024 16:52:04 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一、博客文章</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/</link>
-      <pubDate>Mon, 11 Dec 2023 02:26:25 +0800</pubDate>
+      <pubDate>Tue, 09 Jan 2024 16:52:04 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/</guid>
-      <description>1.计算机组成原理 2.AndroidStudio 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 创建hugo静态网站的经历</description>
+      <description>1.计算机组成原理 2.AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制</description>
     </item>
     <item>
       <title>二、网站优化备忘录</title>
@@ -21,6 +21,13 @@
       <pubDate>Thu, 30 Nov 2023 01:35:45 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/about_create_web/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>三、小  说</title>
+      <link>https://wungmeisilong.github.io/textbook/</link>
+      <pubDate>Tue, 02 Jan 2024 00:25:42 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/textbook/</guid>
+      <description>君绘语第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。 记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋</description>
     </item>
   </channel>
 </rss>

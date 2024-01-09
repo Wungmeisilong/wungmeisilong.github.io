@@ -6,7 +6,7 @@
     <description>Recent content in 一、博客文章 on 王梅四郎maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 11 Dec 2023 02:26:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2024 16:52:04 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.计算机组成原理</title>
@@ -18,9 +18,10 @@
     <item>
       <title>2.AndroidStudio</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/androidstudio/</link>
-      <pubDate>Wed, 29 Nov 2023 16:54:44 +0800</pubDate>
+      <pubDate>Wed, 20 Dec 2023 17:59:23 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/androidstudio/</guid>
-      <description>2-1.Toolbar工具栏Toolbar是什么？ 简单理解就是页面的上的菜单栏，或者叫工具栏，在AndroidStudio的页面布局中使用Toolbar， menu文件的</description>
+      <description>AndroidStudio笔记第一章 配置开发环境： 1.安装JDK &amp;ldquo;安装连接&amp;rdquo; 2.安装AndroidStudio &amp;ldquo;安装连接&amp;rdquo;
+2-1.Toolbar工具栏Toolbar是什么？ 简单理解就是页面的上的菜单栏，或者叫工具栏，在AndroidStudio的页面布局中使用Toolbar， menu文件的</description>
     </item>
     <item>
       <title>3.STM32_RFID</title>
@@ -32,7 +33,7 @@
     <item>
       <title>4.Esp8266_WiFi</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/esp8266_wifi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jan 2024 16:52:04 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/esp8266_wifi/</guid>
       <description>Lorem Ipsum. </description>
     </item>
@@ -46,9 +47,23 @@
     <item>
       <title>6.Arduino</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/arduino/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jan 2024 16:52:04 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/arduino/</guid>
       <description>Lorem Ipsum. </description>
+    </item>
+    <item>
+      <title>7.物联网工程</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>51单片机</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+      <pubDate>Tue, 09 Jan 2024 15:04:24 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
+      <description>pretues&amp;#43;kiel5仿真软件配合使用时需要注意的地方不知道keil5从哪个版本开始就不支持了晶振的设置操作，我在网上搜也得到不</description>
     </item>
     <item>
       <title>创建hugo静态网站的经历</title>

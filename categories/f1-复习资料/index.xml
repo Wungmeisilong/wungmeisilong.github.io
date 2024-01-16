@@ -6,8 +6,22 @@
     <description>Recent content in F1-复习资料 on 王梅四郎maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 10 Jan 2024 10:45:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 18:36:31 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux期末复习</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Sun, 14 Jan 2024 18:36:31 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+      <description>认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般</description>
+    </item>
+    <item>
+      <title>AndroidStudio</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</link>
+      <pubDate>Thu, 11 Jan 2024 20:17:38 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</guid>
+      <description>AndroidStudio简介 1.配置Android开发环境： 安装JDK： （1）下载JDK （2）配置环境变量； 安装Android Studio</description>
+    </item>
     <item>
       <title>计算机组成原理-复习</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/</link>

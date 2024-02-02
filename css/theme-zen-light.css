@@ -56,6 +56,10 @@
     --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* text color of colored box content */
 
     --BOX-GREY-color: rgba( 210, 210, 210, 1 ); /* background color of grey boxes */
+
+  --CODE-theme: neon; /* name of the chroma stylesheet file */
+  --CODE-BLOCK-color: rgba( 226, 228, 229, 1 ); /* fallback color for code text */
+  --CODE-BLOCK-BG-color: rgba( 40, 42, 54, 1 ); /* fallback color for code background */
 }
 
 body a#R-logo,

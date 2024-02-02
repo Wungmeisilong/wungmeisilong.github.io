@@ -1,7 +1,7 @@
 var relearn_search_index = [
   {
     "breadcrumb": "王梅四郎maloudown",
-    "content": " 1.计算机组成原理 计算机组成原理-复习 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 操作系统 Linux期末复习 创建hugo静态网站的经历 常用的数学表达\n常用箭头\n",
+    "content": " 1.计算机组成原理 计算机组成原理-复习 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 操作系统 Linux期末复习 贺青工程 志愿活动软件设计与开发 验收问题 哲学 庄子之道 费尔巴哈提纲 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 常用的数学表达\n常用箭头\n",
     "description": "",
     "tags": null,
     "title": "一、博客文章",
@@ -17,7 +17,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "王梅四郎maloudown",
-    "content": " 君绘语第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。 记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋友以睡\n白唐战绛“时间的真的存在吗？” 我很意外王妈为什么会问我这样的问题，王妈小时候家境不好，没有机会上学，她对我说过，去学校上学的次数十个手指都数得过来。\n阿牛和阿花的爱情故事牛村与花村仅隔一片红树林，深秋里，满山的红叶铺天盖地，牛村的村尾是个好地方，常聚着城里来的人，就是离阿牛家远了些。 “嘿！ 阿牛。你要老婆不……\n时空国度-木尸王朝第一章 序 火车站往东沿着才华路步行十分钟便到衡岭财经学院，这条路王肖一年会走五六次——多的是回家或回校，他的理想大学是南国大学，虽与之擦肩而过\n",
+    "content": " 人物关系木尸王朝 1.文中的人类变成树木的原因是什么？ 与金钱绑定的一种木材，注定了她会给人类带来财富，当我可以使用金钱来奴役别人时，金钱不再是一般等价\n君绘语第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。 记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋友以睡\n白唐战绛“时间的真的存在吗？” 我很意外王妈为什么会问我这样的问题，王妈小时候家境不好，没有机会上学，她对我说过，去学校上学的次数十个手指都数得过来。\n阿牛和阿花的爱情故事牛村与花村仅隔一片红树林，深秋里，满山的红叶铺天盖地，牛村的村尾是个好地方，常聚着城里来的人，就是离阿牛家远了些。 “嘿！ 阿牛。你要老婆不……\n时空国度-木尸王朝第一章 序 火车站往东沿着才华路步行十分钟便到衡岭财经学院，这条路王肖一年会走五六次——多的是回家或回校，他的理想大学是南国大学，虽与之擦肩而过\n",
     "description": "",
     "tags": null,
     "title": "三、小  说",
@@ -25,7 +25,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章",
-    "content": "Lorem Ipsum.\n",
+    "content": " 计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表 比较内容 电子数字计算机 电子模拟计算机 数据表示方\n",
     "description": "",
     "tags": null,
     "title": "1.计算机组成原理",
@@ -57,7 +57,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章",
-    "content": "Lorem Ipsum. ",
+    "content": " 物联网通信技术-小知识通信串口 参照上一节课 物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网\n",
     "description": "",
     "tags": null,
     "title": "4.Esp8266_WiFi",
@@ -73,7 +73,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章",
-    "content": "Lorem Ipsum. ",
+    "content": " 物联网控制-小知识物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面\n",
     "description": "",
     "tags": null,
     "title": "6.Arduino",
@@ -104,31 +104,36 @@ var relearn_search_index = [
     "uri": "/branch-bundle-1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
   },
   {
-    "breadcrumb": "王梅四郎maloudown",
-    "content": "",
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章",
+    "content": " 志愿活动软件设计与开发设计一款可以参加志愿活动的小程序，其制作流程大致如下： 需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能\n验收问题页面美化验收 1.登录页面 2.首页—将志愿活动和活动时长数据放到轮播图下面 3.我的页面优化了吗？ 4.点击找回密码后，页面颜色不够美\n",
     "description": "",
     "tags": null,
-    "title": "Categories",
-    "uri": "/categories/"
+    "title": "贺青工程",
+    "uri": "/branch-bundle-1/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章",
+    "content": " 庄子之道今天通过王德峰老师的视频课来进一步的了解《庄子》的哲学之道，推荐看曹楚基注释的《庄子》。 行无为而知避害，避害就是避开人为，像自然灾害不在道家\n费尔巴哈提纲一 从前的一切唯物主义（包括费尔巴哈的唯物主义）的主要缺点是：对对象、现实、感性，只是从客体的或者直观的形式去理解，而不是把它们当作感性的人的\n在我个人看来中国的哲学重在修心，探讨入世出世，为人处世的哲学问题，而相比于西方的哲学，我觉得中国的哲学更贴近与生活，人的内心变化影响着人的生活，西方哲学注重探讨自然界的规律。所以我有时也很能理解为什么科技革命发生在西方，而不是我们中国，西方哲学下的社会似乎总能带来一些新东西，有时候会让你感觉到它带来了不属于这个世界的新事物，最典型的就是科技的发展带来的一些新事物。但这样的看法看待中国哲学和西方哲学还是太片面了，在哲学的大集合里，哲学主要还是为人服务的“ 工具 ”，哪个顺手我就用哪一个，哪个能帮我与事物更好的打交道，我就用哪个。\n学哲学是为了了解自己，看透世界，这就是当下我觉得学哲学的意义。\n学中国的哲学不是为了出家，不是为了攀登看破红尘的高山。如果你不是很富有，家境也不怎么样，我劝你打消这个念头，父母辛苦把你养大，你跑去山里去修道？国家现在还没有富起来，你不投身于社会为祖国做贡献，幻想着修自己心中所谓的道？你能安心吗？我想学完中国哲学的人不应该是有这样的想法，而是有与社会权力打交道的巧招妙招，有为家为国做贡献的决心，有好好活下去的勇气。\n",
+    "description": "",
+    "tags": null,
+    "title": "哲学",
+    "uri": "/branch-bundle-1/%E5%93%B2%E5%AD%A6/"
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e Categories",
     "content": "",
     "description": "",
     "tags": null,
-    "title": "类别 :: F1-复习资料",
-    "uri": "/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
+    "title": "类别 :: B1-备忘录",
+    "uri": "/categories/b1-%E5%A4%87%E5%BF%98%E5%BD%95/"
   },
   {
-    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 操作系统",
-    "content": "认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​ 命令 gzip [文件名]\rgunzip [解压文件名] 例子：\n[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# gzip hello.txt\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt.gz\r[root@localhost stdio]# gunzip hello.txt.gz [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# 如果不想删除源文件要怎么做呢？使用如下命令： ​ 命令 gzip -c [文件名] \u003e [压缩文件名.gz]\rzcat [解压文件名.gz] \u003e[压缩文件名.gz] 例子：\n[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# gzip -c hello.txt \u003ehello.txt.gz\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.gz\r[root@localhost stdio]# zcat hello.txt.gz \u003ehe.txt\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.gz he.txt\r[root@localhost stdio]# 在上面的命令中，zcat [解压文件名.gz] \u003e[压缩文件名.gz] 与 gunzip -c [解压文件名.gz] \u003e[压缩文件名.gz] 作用一样，另外，zcat [文件名]会将文件压缩信息输出在窗口上，即输出在 std。\nbzip2压缩文件和bunzip2压缩文件命令 一般压缩解压文件： ​ 命令 bzip2 [文件名]\rbunzip2 [解压文件名]\r//压缩解压后不会删除原文件\rbzip2 -k [文件名]\rbunzip2 -k [解压文件名] 例子：\n[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# bzip2 hello.txt [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt.bz2\r[root@localhost stdio]# bunzip2 hello.txt.bz2 [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# bzip2 -k hello.txt [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.bz2\r[root@localhost stdio]# rm hello.txt\rrm：是否删除普通文件 \"hello.txt\"？y\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt.bz2\r[root@localhost stdio]# bunzip2 -k hello.txt.bz2\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.bz2\r[root@localhost stdio]# tar归档文件命令 ​ 命令 在Linux系统中，tar 是一个非常重要的归档工具，用于将一组文件和目录打包到一个单一的.tar文件中。它创建的这种归档文件并不进行压缩，仅仅是将多个文件集合在一起，并保持原始文件的权限、所有权和其他元数据信息。\ntar -cvf [文件名]\rtar -xvf [解压文件名]然而，为了减少存储空间占用以及在网络上传输时加快速度，通常会结合使用 tar 和压缩工具（如gzip或bzip2）对归档文件进行压缩。这里 -z 或 -j 参数的作用就是启用压缩功能\ntar -czvf [文件名]\rtar -xzvf [解压文件名]\rtar -cjvf [文件名]\rtar -xjvf [解压文件名]如果要选择性的归档或压缩、解压某个文件或目录，那么需要加 w，如下：\ntar -cwzvf [文件名]\rtar -xwzvf [解压文件名]\rtar -cwjvf [文件名]\rtar -xwjvf [解压文件名] 在命令中;\nc（create）：表示创建新备份 z（gzip或gunzip）:表示使用gzip指令处理文件 v（verbose）：显示指令执行过程 f（file）:指定备份文件 w(interactive):对每一步都进行确认 j:表示使用bzip2、bunzip2指令进行压缩解压 如果加选项 -C （directory），则说明转到指定的目录，命令如下：\n[root@localhost ~]# tar -cjvf stdio.tar stdio/\rstdio/\rstdio/1.c\r[root@localhost ~]# tar -xjvf stdio.tar -C st/\rstdio/\rstdio/1.c\r[root@localhost ~]# cd st/\r[root@localhost st]# ls\rstdio\r[root@localhost st]# ls stdio/\r1.c\r[root@localhost st]# 用户与用户组管理 用户与组文件 用户文件-passwd 存放用户登录用户信息的文件位置：/etc/passwd 文件中域的的格式：\nusername:passwd:uid:gid:userinfo:home:shell:\n例子：\n[root@localhost st]# tail -1 /etc/passwd daliu:x:1008:1006::/home/daliu:/bin/bash\n/etc/passwdw 文件中域的含义\n域 含义 username 用户名 password 登录密码（一般显示的是密码转换后的乱码） uid 用户ID（0-99一般为系统保留） gid 用户组ID userinfo 用户信息 home 分配该用户的主目录（但位置是人为决定的，自己可以修改） shell 登录后启动的shell 一般root用户的UID为0，UID一般是唯一的为的是区分不同的用户，但UID为0的除外，UID为0则说明为超级用户；\n创建用户时，系统会分配一个主目录给用户一般在 home 目录下，例如用户user主目录为 /home/user。\n用户文件-shadow Linux系统中的/etc/shadow文件是存放用户密码信息的重要安全文件，也称为“影子口令文件”。它的主要作用是存储用户的加密密码以及与密码相关的属性，以增强系统的安全性。\n在早期的Unix/Linux系统中，密码是以明文或简单加密的形式存储在/etc/passwd文件中。为了提高系统的安全性，从1970年代末期开始引入了影子口令的概念，将密码字段从/etc/passwd移出，并存放在只有超级用户（root）可以读取的/etc/shadow文件中，而原来的 /etc/passwd 中的密码字段显示 x ,这就是上面的例子中显示x的原因。\n通过这种方式，即使攻击者获取了/etc/shadow文件，由于密码已经被高度加密，直接破解难度大大增加，从而有效提高了系统的密码安全级别。同时，通过对密码策略的设定，还可以实现对用户密码复杂度和有效期的管理。\n域 含义 username password min max warm inactive expire flag 下面就举个例子：\n[root@localhost st]# tail -1 /etc/passwd daliu:x:1008:1006::/home/daliu:/bin/bash\n[root@localhost st]# tail -1 /etc/shadow daliu:$6$f703Izgm$gIA74I6Vyqdjstz3BazhvEUVWfSyelNuv7UKTUtB3cScauSctebqrBIr/KShHnBcWWQideao3aucMrXsO.I6Z/:19694:0:99999:7:::\n用户组文件-group 用户组一方面是为了查找用户时更方便，比如查找user用户，你不需要去passwd文件一行一行的查找，你只需要去group文件找到对应的用户组即可。\n同样的，用户组也有类似passwd、shadow之和这样的文件，分别为group、gshadow.\n/etc/group 文件中域的含义如下：\n域 含义 group_name 组用户名 group_password 加密后的用户组口令 group_id 用户组ID group_members 以逗号隔开的用户清单 /etc/gshadow 文件中域的含义如下：\n域 含义 group_name 组用户名 group_password 加密后的用户组口令 group_members 以逗号隔开的用户清单 检验用户与用户组文件之间是否正确 检验 /etc/passwd 与 /etc/shadow 文件之间的正确性，使用命令 pwck,当发生错误，两个文件之间信息不对应时，系统会提示对相应项进行修改； 检验 /etc/group 与 /etc/gshadow 文件之间的正确性，使用命令 grpck,当发生错误，两个文件之间信息不对应时，系统会提示对相应项进行修改。 相关的命令操作 1.添加用户与用户组———— useradd \u0026 groupadd\n用法：\nuseradd [选项] 登录 useradd -D useradd -D [选项] 值得注意的是，对于选项的-d、-md，加了m表示在/home目录创建用户目录，如果不加，表示该目录已存在不需要再使用m,详细请结合下面的展开内容来开。 展开 选项：\r-b, --base-dir BASE_DIR\t新账户的主目录的基目录\r-c, --comment COMMENT 新账户的 GECOS 字段\r-d, --home-dir HOME_DIR 新账户的主目录\r-D, --defaults\t显示或更改默认的 useradd 配置\r-e, --expiredate EXPIRE_DATE 新账户的过期日期\r-f, --inactive INACTIVE 新账户的密码不活动期\r-g, --gid GROUP\t新账户主组的名称或 ID\r-G, --groups GROUPS\t新账户的附加组列表\r-h, --help 显示此帮助信息并推出\r-k, --skel SKEL_DIR\t使用此目录作为骨架目录\r-K, --key KEY=VALUE 不使用 /etc/login.defs 中的默认值\r-l, --no-log-init\t不要将此用户添加到最近登录和登录失败数据库\r-m, --create-home\t创建用户的主目录\r-M, --no-create-home\t不创建用户的主目录\r-N, --no-user-group\t不创建同名的组\r-o, --non-unique\t允许使用重复的 UID 创建用户\r-p, --password PASSWORD\t加密后的新账户密码\r-r, --system 创建一个系统账户\r-R, --root CHROOT_DIR chroot 到的目录\r-s, --shell SHELL\t新账户的登录 shell\r-u, --uid UID\t新账户的用户 ID\r-U, --user-group\t创建与用户同名的组\r-Z, --selinux-user SEUSER\t为 SELinux 用户映射使用指定 SEUSER\r用法： groupadd [选项] [组名] ，一般会用到的选项有\n-g: 用户设置组ID； -o: 与-g配合使用，设置不唯一的组ID; -n: 修改组的名字，如：gpasswd -n [新组名] [旧组名] 2.删除用户与用户组———— userdel \u0026 groupdel\nuserdel:一般用法就是在后面加要删除的用户，如果加选项-r则会删除主目录文件； groupdel：在后面加要删除的用户组 3.修改用户与用户组———— usermod 、passwd \u0026 gpasswd\nusermod： 一般就是对问文件中的域进行修改，会加加上选项-u、-g、-s等，最后还得指定用户，用法： usermod [选项] [用户名]。另外，-L（-U） 的作用是对用户的锁定（解锁）； passwd：一般就是用来修改用户的密码，在登录的是root用户情况下passwd是要指定修改密码的用户的，而如果登录的是用户本身，使用passwd时就不用指定在； gpasswd： 用法： gpasswd [选项] [组名] ，一般会用到的选项有 -a(添加组的用户)， -d(删除组里的用户)，gpasswd -d [用户名] [组名] -A(添加组的管理员). -g(修改组GID),例如：gpasswd -g [新ID] [组名] 对于usermod的进一步说明，除了上面提到的选项，还有如下选项：\n展开 选项：\r-c, --comment 注释 GECOS 字段的新值\r-d, --home HOME_DIR 用户的新主目录\r-e, --expiredate EXPIRE_DATE 设定帐户过期的日期为 EXPIRE_DATE\r-f, --inactive INACTIVE 过期 INACTIVE 天数后，设定密码为失效状态\r-g, --gid GROUP 强制使用 GROUP 为新主组\r-G, --groups GROUPS 新的附加组列表 GROUPS\r-a, --append GROUP 将用户追加至上边 -G 中提到的附加组中，\r并不从其它组中删除此用户\r-h, --help 显示此帮助信息并推出\r-l, --login LOGIN 新的登录名称\r-L, --lock 锁定用户帐号\r-m, --move-home 将家目录内容移至新位置 (仅于 -d 一起使用)\r-o, --non-unique 允许使用重复的(非唯一的) UID\r-p, --password PASSWORD 将加密过的密码 (PASSWORD) 设为新密码\r-R, --root CHROOT_DIR chroot 到的目录\r-s, --shell SHELL 该用户帐号的新登录 shell\r-u, --uid UID 用户帐号的新 UID\r-U, --unlock 解锁用户帐号\r-Z, --selinux-user SEUSER 用户账户的新 SELinux 用户映射 3.登录用户与用户组———— su newgrp\nroot用户与普通用户之间的切换使用su,如果要切换根目录则需要在su 后加-，即： su - [用户]。\n在Linux中，组的登录使用 newgrp ，即 newgrp [组名]。\n下面通过一个例子加以理解：\n添加一个用户名为15user，且该用户在用户组15group中，设置用户组和用户密码为123，创建一个用户15user2让该用户为用户组管理员,修改user的UID为2024，最后删除所用所建信息。\n展开 [root@localhost ~]# groupadd 15group\r[root@localhost ~]# useradd -g 15group 15user\r[root@localhost ~]# tail -1 /etc/passwd\r15user:x:1001:1007::/home/15user:/bin/bash\r[root@localhost ~]# tail -1 /etc/group\r15group:x:1007:\r[root@localhost ~]# gpasswd 15group\r正在修改 15group 组的密码\r新密码：\r请重新输入新密码：\r[root@localhost ~]# passwd 15user\r更改用户 15user 的密码 。\r新的 密码：\r无效的密码： 密码少于 8 个字符\r重新输入新的 密码：\rpasswd：所有的身份验证令牌已经成功更新。\r[root@localhost ~]# useradd 15user2\r[root@localhost ~]# gpasswd -A 15user2 15group\r[root@localhost ~]# tail -2 /etc/group\r15group:x:1007:\r15user2:x:1002:\r[root@localhost ~]# tail -2 /etc/gshadow\r15group:$6$d4pzl/CPrp$3NYvX8gzE3DBm35BLqAE8aGzfUhrUZTSMGQfeRve2iUhrH1tZGR8I8t91gWzFD2GWFEDaaocO7XO85RjKDY.q1:15user2:\r15user2:!::\r[root@localhost ~]# usermod -u 2024 15user\r[root@localhost ~]# tail -2 /etc/passwd\r15user:x:2024:1007::/home/15user:/bin/bash\r15user2:x:1002:1002::/home/15user2:/bin/bash\r[root@localhost ~]# userdel 15user\r[root@localhost ~]# groupdel 15group\r[root@localhost ~]# userdel 15user2 在上面的例子中，我们使用gpasswd -A来设置用户组管理员。\n文件目录和目录权限管理 文件访问权限与用户分类 文件的访问权限 读(r)：允许读文件的内容 写(w)：允许向文件中写入数据 执行(x)：允许将文件作为程序执行 目录的访问权限 读(r)：允许查看目录中有哪些文件和目录； 写(w)：允许该在目录下创建（或删除）文件、目录，修改文件名字或者目录名字 执行(x)：允许访问目录(用 cd 命令进入该目录，并查看目录中可读文件的内容) 用户分类 文件所有者（owner）：建立文件、目录的用户。 同组用户(group)：属于同一组群的用户对属于该组群的文件有相同的访问权限。 其他用户(other)：除了文件所有者、同组用户的其他用户。 我们先用ls -l 查看文件的权限信息：\n在上面的开头有三段他们分别表示为文件所有者、同组用户、其他用户：\n其中的d表示目录。\n权限修改 访问权限的表示 （1）字母表示法（如：rwxr-xr-x） （2）数字表示法 （如：755） 使用数字进行文件权限的划分，其中r=4、w=2、x=1、-=0，这样rwx这组权限就是4+2+1=7，r-x这组权限就是5。\n修改权限的命令：chmod 命令格式1： chmod $n{_1}n{_2}n{_3}$ \u003c文件|目录\u003e 功能：为指定文件或目录修改给定的数值访问权限。 选项： $n{_1}n{_2}n{_3}$三位数字表示的文件访问权限。 命令格式2： chmod [用户标识] [设定方法] [权限字符] \u003c文件名或目录名〉 功能：修改文件或目录的访问权限。 选项： （1）用户标识：所有者（u）、同组（g）、其他人（o）、所有的人员（a） （2）设定方法：+ 增加权限、- 删除权限、= 分配权限，同时删除旧的权限 （3）权限字符：r（读）、w（写）、x（执行）、u（和所有者的权限相同）、g（和所同组用户的权限相同）、o（和其他用户的权限相同） 修改文件所有者的命令：chown 格式：chown [-R] \u003c用户[：组]\u003e \u003c文件或目录\u003e 功能：更改属主和组。 选项： -R：对目录及其子目录进行递归设置。 例如：chown sjh：sjh result.txt\n修改文件所属组群的命令：chgrp 格式：chgrp group file\n其中group：组名或组代号\n功能： 改变文件或目录组群\n例如：chgrp user result.txt\n关于chown与chgrp的命令的例子：\n展开 [root@localhost ~]# chown user2:user2 /tmp/test/user1_2.txt\r[root@localhost ~]# ls -l /tmp/test/\r总用量 0\r-rw-rw-r--. 1 user2 user2 0 1月 15 19:40 user1_2.txt\r[root@localhost ~]# chgrp root /tmp/test/user1_2.txt\r[root@localhost ~]# ls -l /tmp/test/\r总用量 0\r-rw-rw-r--. 1 user2 root 0 1月 15 19:40 user1_2.txt\r[root@localhost ~]# 修改默认权限的命令：umask 格式：umask [mask]\n功能：设置文件或目录的默认权限\n注意：系统默认屏蔽的权限为022（umask的默认值为0022），因此新 创建的目录权限就为777-022=755，用字符表示就是rwxr-xr-x，新创 建的普通文件权限为666-022=644，即rw–r–r–。\n文件隐藏属性 1）查看文件隐藏属性：lsattr\n2）修改文件隐藏属性：chattr\nchattr [+-=] [ ai] 文件或目录名称\na: 当设置a之后，这个文件将只能增加数据，而不能删除也不能修改数据， 必须要为root才能设置这个属性。 i：不能删除，不能修改，不能改名。必须要为root才能设置这个属性。 文件特殊权限 文件特殊权限有以下三种：\n1）SUID：Set UID（只对二进制程序有效，对shell script无效）\n例如：ll /usr/bin/passwd\n注意：当用户执行passwd命令的时候，需要修改/etc/shadow文件，而该文件普通用户并没有任何权限。\n2）SGID：Set GID\n例如：ll /usr/bin/locate 注意：当用户执行locate命令的时候，需要读取/var/lib/mlocate/mlocate.db文件。\n3）SBIT：Sticky Bit （只对目录有效）\n设置方法：\nchmod -o+t [指定目录名]\r或者\rchmod 1777 [指定目录名]对一个目录进行如上设置以后，假设有用户A和B，用户A在该目录下创建的文件只有他自己的root用户可以删，像B这样的其他用户删不了。\n特殊文件说明文章链接\n软件包管理 接下里介绍两个软件安装的工具，分别是RPM：Red Hat Package Manager（Red Hat软件包管，以及YUM:Yellow dog Dpdater,Modified.\nRPM工具不需要网络，需要提前准备好安装包，但是他也有缺点安装的时候如果缺少依赖包你还需要再安装依赖包；\n而YUM工具需要再有网的状态下才可以下载，它免去了依赖包提醒，自动将依赖包下载好，较为方便，我跟推荐使用YUM。\nRPM工具的使用 1．安装软件包（install）\nrpm -ivh rpm软件包全名：\ni：安装一个新的软件包 v：显示详细信息 h：显示安装进度条理工具 2．查询已安装的软件包（query）\nrpm –qa //查询出本机所有已经安装的软件\rrpm –q httpd //查询httpd软件包是否已经安装\rrpm -q【i l c d R】 vsftpd\rrpm -qf /etc/inittab\r查询未安装的软件包：\rrpm -qp 【i l c d R】 gconf-editor-2.28.0-3.el6.i686.rpm3．升级与更新（upgrade/freshen）\nrpm -Uvh 软件包名称\r//原来没有安装过的，直接安装；如果已安装过，则更新至新版\rrpm -Fvh 软件包名称\r//原来没有安装过的，不安装；如果已安装过，则更新至新版4．卸载RPM包（erase）\nrpm -e vsftpd\r注意：卸载时只需要给出软件包名称vsftpd，而不需要给出软件包的全部名称信息vsftpd-2.2.2-6.el6.i686.rpm。YUM工具的使用 yum在线升级机制：\n安装软件 yum install gcc 删除软件 yum remove gcc 查询软件 yum search gcc 软件包管理：\n举例一：搜寻与磁盘阵列(raid)相关的软件有哪些？ [root@www ~]# yum search raid 举例二：找出mdadm这个软件的功能为何？ [root@www ~]# yum info mdadm 举例三：列出yum 服务器上面提供的所有软件名称。 [root@www ~]# yum list 举例四：列出目前服务器上可供本机进行升级的软件有哪些？ [root@www ~]# yum list updates 举例五：列出提供passwd这个文件的软件有哪些？ [root@www ~]# yum provides passwd yum的软件组功能：\n查询软件组：yum grouplist（查阅目前容器与本机上面的可用与安装过 的软件群组有哪些？） yum groupinfo Eclipse（查询Eclipse软件组的相关信息）\n安装软件组： yum groupinstall Eclipse 删除软件组： yum groupremove Eclipse 硬盘分区及格式化 硬盘分区介绍 硬盘的分区分为主磁盘分区和扩展磁盘分区。 一个硬盘最多可以划分为 4 个主磁盘分区，这时不能再创建扩展分区。 一个硬盘中最多只能创建 1个扩展分区 ，扩展分区不能直接使用，必须在扩展分区中再划分出逻辑分区才可以使用。 逻辑分区是从5开始的，每多1个分区，数字加1就可以。 硬盘标识 （1）IDE硬盘：hd[a-d]*\nhd表示硬盘类型为IDE，中括号中的字母为a、b、c、d中的一个，a是基本盘，b是从盘，是辅助主盘，d是辅助从盘，*指分区，即主分区和扩展分区。\n例如：hda1代表第一块IDE硬盘上的第一个分区。hdb5代表第二块IDE硬盘的第一个逻辑分区。\n（2）SCSI/SATA硬盘：sd[a-p]*\nsd表示SCSI/SATA硬盘。SCSI/SATA的引导盘使用设备文件/dev/sda1、/dev/sda2、/dev/sda3、/dev/sda4作为主分区或者扩展分区，而以/dev/sda5，/dev/sda6等作为逻辑分区。\n创建硬盘分区 先使用ls -l /dev |grep ‘sd’查看文件里是否有可用的磁盘，如果没有需要创建一个磁盘，创建步骤：\n1．通过虚拟机设置增加一块SCSI硬盘，大小为5G，重启系统。 展开 按照下图点击下一步\n根据实际情况输入所需硬盘大小，这里输入5GB\n然后点击完成\n最后在命令窗口输入reboot重启。\n2．将该硬盘分为2个主分区（每个主分区的大小为1G），1个扩展分区（大小为3G），将第2个主分区制作成swap分区。\n命令： 展开 //先用命令查看sd,sd表示SCSI/SATA硬盘， ls /dev/sd |grep sd //硬盘分区 fdisk /dev/sdb //使用m查看帮助命令，n为新建命令，d为删除命令，w为写入命令，每次配完都要写入才有效。 n p //这是新建主分区的意思 //接着指定分区起始位置，一般我们默认，所以回车就可以 //然后就是指定分区的大小，这里我设置1G、 +1G //可以用p命令查看设置的情况 P //按照上面的流程进行其他的设置，一下给出步骤命令 n p +1G n e +3G 3．将扩展分区划出2个逻辑分区（大小分别为1G、2G）。\n命令： 展开 //到这步后我们可以给扩展分区分配逻辑分区，分配时逻辑分区用l命令。 n l +1G n l +2G 查看磁盘情况与磁盘格式化 （1）查看系统中的新硬盘：ls /dev/sd* （2）查看分区：fdisk –l /dev/sda （3）创建主分区：fdisk /dev/sdc （4）创建扩展分区：输入n,再输入e （5）创建逻辑分区: 输入n,再输入l （6）修改分区类型 （7）格式化分区： mkfs –t ext4 /dev/sdc1 还可以写成**mkfs.ext4 /dev/sdc1** 格式化交换分区略有不同，使用命令 mkswap ,例如： mkswap dev/sdb2 （8）磁盘检查命令：fsck –t ext4 /dev/sdc1 badblocks /dev/sdb5 上面的-t意思是参数TYPE的意思，后面接ext4()、vfat(FAT32)、ntfs()等，\n挂载文件系统：mount 1、 挂载硬盘分区： 步骤1：mkdir /usr/music 步骤2：mount /dev/sdc5 /usr/music 2、 挂载光驱： 步骤1：mkdir /mnt/cdrom 步骤2：mount /dev/cdrom /mnt/cdrom 3、 挂载U盘： 步骤1：mkdir /mnt/usb 步骤2：mount /dev/sdd1 /mnt/usb 4、 挂载Windows下的C盘 （FAT32格式）： 步骤1：mkdir /mnt/dosc 步骤2：mount -t vfat /dev/sda1 /mnt/dos 注意： C盘必须已经被格式化为FAT32格式。\n显示系统内所有已经挂载的文件系统 mount 不带任何参数执行mount命令，则会显示当前系统中已经挂载的所有的文件系统列表。\n卸载设备：umount 格式： umount \u003c设备名或挂载点\u003e\n说明：卸载指定的设备，既可以使用设备名也可以使用挂载点。\n举例： # umount /dev/cdrom\n自动挂载文件系统：/etc/fstab 每条记录由6个字段组成。\n1.设备名称 2.设备挂载点 3.文件系统类型 4.挂载选项 5.是否备份 6.自检顺序\n如果想要系统自动挂载/dev/sdc5分区，可在/etc/fstab文件添加下面这行：\n/dev/sdc5 /usr/music ext4 defaults 0 0\n注意:由于fstab文件非常重要，如果这个文件有错误，就可能会造成系统不能正常启动。因此向fstab文件中添加数据时应非常小心。修改完该文件后务必使用mount -a命令测试有没有错误。\n磁盘配额 以sdb1为例\n第一步：先配置sdb磁盘，然后挂载sdb1磁盘 第二步：使用quotaon /sdb1/生成aquota.group和aquota.user文件 第三步：对用户或用户组进行磁盘限制,例如：edquota -u user1，然后会进入一个文件，文件里的0表示禁用，在里面可以设置创建文件个数或文件大小的软限制、硬限制； 第四步：我们登录user1，在/sdb/目录下创建文件，使用 db if=/dev/zero of=/sdb1/test/ bs=1k count=10这条命令进行测试，这是一个写文件大小的命令，这样可以快速测试文件大小的软限制和硬限制； 第五步：子里面建文件，检验创建文件个数的软限制和硬限制； 第六步: 可以使用repquota -u查看目录的情况； 第七步：关闭磁盘匹配额，quotatoff /sdb1/\nLinux编程 附件 ",
+    "breadcrumb": "王梅四郎maloudown",
+    "content": "",
     "description": "",
-    "tags": [
-      "硬件",
-      "软件"
-    ],
-    "title": "Linux期末复习",
-    "uri": "/branch-bundle-1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"
+    "tags": null,
+    "title": "Categories",
+    "uri": "/categories/"
   },
   {
     "breadcrumb": "王梅四郎maloudown",
@@ -143,16 +148,162 @@ var relearn_search_index = [
     "content": "",
     "description": "",
     "tags": null,
-    "title": "标签 :: 软件",
-    "uri": "/tags/%E8%BD%AF%E4%BB%B6/"
+    "title": "标签 :: 前端",
+    "uri": "/tags/%E5%89%8D%E7%AB%AF/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章",
+    "content": "拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。\n所需设备 一台旧电脑，一台目前在使用的电脑。\n在旧电脑上安装natapp程序 在百度上搜索NATAPP，或点击这个链接:NATAPP,\n进入网站后先简单注册一下用户,顺便实名认证一下，因为买隧道会提示需要实名，接着点击首页下载自己的电脑系统对应版本，我的是Windows（下面的测试也是基于Windows）\n下载好后解压文件，得到如下图程序：\n在解压文件下新建一个文件： config.ini,做好这一步后我们去购买免费的隧道，如下图：\n点击网站的文档，然后点击教程/文档里的 使用本地配置文件config.ini 文章，\n然后复制里面的配置信息：\n#将本文件放置于natapp同级目录 程序将读取 [default] 段 #在命令行参数模式如 natapp -authtoken=xxx 等相同参数将会覆盖掉此配置 #命令行参数 -config= 可以指定任意config.ini文件 [default] authtoken= #对应一条隧道的authtoken clienttoken= #对应客户端的clienttoken,将会忽略authtoken,若无请留空, log=none #log 日志文件,可指定本地文件, none=不做记录,stdout=直接屏幕输出 ,默认为none loglevel=ERROR #日志等级 DEBUG, INFO, WARNING, ERROR 默认为 DEBUG http_proxy= #代理设置 如 http://10.123.10.10:3128 非代理上网用户请务必留空在字段authtoken后面值在我的隧道配置里可以找到，如下：\n复制下图authtoken的值填到config.ini文件里\n我这边演示的效果如下：\n完成上面的操作后，我们运行NATAPP程序，结果如下：\n你会得到一个随机的网址，这个网址指向你的本地端口，当你有网站挂载到本地端口时，你就可以通过网址访问到你的本地端口网址，内网外网都可以，但是这个网址每一次运行都会不一样，这点需要注意，然后就是端口的设置，看下图：\n我这里写的的端口是1313，如果你网站运行后不在1313，例如你运行网站后，本地的网站启动端口是8080.那你就把这个地方的1313改为8080就可以了。\n下面我们举个例子看看，假设我现在我需要外网的网友访问我挂在在自己电脑本地的网站，那们在做好上面的操作后我先去启动自己的网站，这里使用hugo的网站模版，用code程序打开网站模版，然后调出终端，在终端输入命令 hugo server ,表示启动网站，如下图：\n然后去复制刚才运行NATAPP程序后的网站，在浏览器中打开，我们先试一下局域网能不能访问，结果如下：\n将网站发给自己的朋友，测试外网是否可以访问，\n结果是外网可以正常可以访问。\n那么到这里你的电脑其实就充当了一台服务器，将网站放到了你电脑上，只要你的电脑保持开机状态那么别人就可以一直访问你的网站，或许NATAPP网站还有别的有趣功能，所以你不妨去摸索摸索，所不定可以找到多次启动NATAPP指向你本地的网址不变，你也就不用每次启动后都要发新的网址给对方了。\n那么其实到这里就差不多了，但是我们还需要用一台电脑控制另一台电脑，简而言之就是电脑的远程登录，其实电脑远程登录有许多的方法，这里我需要借助一个来实现内网穿透，其实上面的旧电脑变服务器也是使用了内网穿透， 附件 ",
+    "description": "",
+    "tags": [
+      "前端",
+      "网络",
+      "网站"
+    ],
+    "title": "如何用旧电脑搭建自己的服务器？",
+    "uri": "/branch-bundle-1/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"
   },
   {
     "breadcrumb": "",
-    "content": " 搜索 欢迎来到我的个人博客网站……\n",
+    "content": " Search Search 欢迎来到我的个人博客网站……\n",
     "description": "",
     "tags": null,
     "title": "王梅四郎maloudown",
     "uri": "/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 网络",
+    "uri": "/tags/%E7%BD%91%E7%BB%9C/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 网站",
+    "uri": "/tags/%E7%BD%91%E7%AB%99/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: Z1-哲学",
+    "uri": "/categories/z1-%E5%93%B2%E5%AD%A6/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 哲学",
+    "uri": "/tags/%E5%93%B2%E5%AD%A6/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 哲学",
+    "content": "今天通过王德峰老师的视频课来进一步的了解《庄子》的哲学之道，推荐看曹楚基注释的《庄子》。\n行无为而知避害，避害就是避开人为，像自然灾害不在道家讨论的范围内。避害的方法有两个:\n一是天下的人为的事情辨认出来。 二是自己不参与任何人为的事情。不参与是一种人生态度。 一、如何辨别人为？\n二、如何不参与人为之？\n庄子行于山中，见大木枝叶盛茂。伐木者止其旁而不取也。问其故，曰:“无所可用。”庄子曰:“此木以不材得终其天年。”夫子出于山。舍于故人之家。故人喜命竖子杀雁而烹之。竖子请曰:“其一能鸣，其一不能鸣，请奚杀?”主人曰:“杀不能鸣者。”明日弟子问于庄子曰:“昨日山中之木以不材得终其天年，今主人之雁以不材死，先生将何处?”庄子笑曰:“周将处夫材与不材之间。材与不材之间，似之而非也，故未免乎累。若夫乘道德1而浮游2则不然3。 ——《庄子山木篇》\n全身避害，终究避不了害，怎么办呢？\n列子有言：生非贵之所能存，生非爱之所能厚。\n老子的给出的方法：贵以身为天下，若可寄天下;爱以身为天下，若可托天下4。\n下面是原文： 宠辱若惊，贵大患若身。 何谓宠辱若惊?宠为下，得之若惊，失之若惊，是谓宠辱若惊。何谓贵大患若身?吾所以有大患者，为吾有身，及吾无身，吾有何患?故贵以身为天下，若可寄天下;爱以身为天下，若可托天下。 ——《道德经》第十三章\n接下来讨论逍遥游与齐物论。前一篇将境界，后一篇讲道理，前一篇讲要达到哪一种境界，后一篇是如何讲达到这种境界。\n《逍遥游》原文 北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也；怒而飞，其翼若垂天之云。是鸟也，海运则将徙于南冥。南冥者，天池也。《齐谐》者，志怪者也。《谐》之言曰：“鹏之徙于南冥也，水击三千里，抟扶摇而上者九万里，去以六月息者也。”野马也，尘埃也，生物之以息相吹也。天之苍苍，其正色邪？其远而无所至极邪？其视下也，亦若是则已矣。且夫水之积也不厚，则其负大舟也无力。覆杯水于坳堂之上，则芥为之舟；置杯焉则胶，水浅而舟大也。风之积也不厚，则其负大翼也无力。故九万里，则风斯在下矣，而后乃今培风；背负青天，而莫之夭阏者，而后乃今将图南。蜩与学鸠笑之曰：“我决起而飞，抢榆枋而止，时则不至，而控于地而已矣，奚以之九万里而南为？”适莽苍者，三餐而反，腹犹果然；适百里者，宿舂粮；适千里者，三月聚粮。之二虫又何知！小知不及大知，小年不及大年。奚以知其然也？朝菌不知晦朔，蟪蛄不知春秋，此小年也。楚之南有冥灵者，以五百岁为春，五百岁为秋；上古有大椿者，以八千岁为春，八千岁为秋。此大年也。而彭祖乃今以久特闻，众人匹之，不亦悲乎？\n汤之问棘也是已：“穷发之北，有冥海者，天池也。有鱼焉，其广数千里，未有知其修者，其名为鲲。有鸟焉，其名为鹏，背若泰山，翼若垂天之云；抟扶摇羊角而上者九万里，绝云气，负青天，然后图南，且适南冥也。斥鷃笑之曰：‘彼且奚适也？我腾跃而上，不过数仞而下，翱翔蓬蒿之间，此亦飞之至也。而彼且奚适也？’”此小大之辩也。\n故夫知效一官、行比一乡、德合一君、而征一国者，其自视也，亦若此矣。而宋荣子犹然笑之。且举世誉之而不加劝，举世非之而不加沮，定乎内外之分，辩乎荣辱之境，斯已矣。彼其于世，未数数然也。虽然，犹有未树也。夫列子御风而行，泠然善也，旬有五日而后反。彼于致福者，未数数然也。此虽免乎行，犹有所待者也。若夫乘天地之正，而御六气之辩，以游无穷者，彼且恶乎待哉？故曰：至人无己，神人无功，圣人无名。\n尧让天下于许由，曰：“日月出矣，而爝火不息；其于光也，不亦难乎？时雨降矣，而犹浸灌；其于泽也，不亦劳乎？夫子立而天下治，而我犹尸之；吾自视缺然，请致天下。”许由曰：“子治天下，天下既已治也；而我犹代子，吾将为名乎？名者，实之宾也；吾将为宾乎？鹪鹩巢于深林，不过一枝；偃鼠饮河，不过满腹。归休乎君，予无所用天下为！庖人虽不治庖，尸祝不越樽俎而代之矣！”\n肩吾问于连叔曰：“吾闻言于接舆，大而无当，往而不反。吾惊怖其言。犹河汉而无极也；大有径庭，不近人情焉。”连叔曰：“其言谓何哉？”曰：“藐姑射之山，有神人居焉。肌肤若冰雪，淖约若处子，不食五谷，吸风饮露，乘云气，御飞龙，而游乎四海之外；其神凝，使物不疵疠而年谷熟。吾以是狂而不信也。”连叔曰：“然。瞽者无以与乎文章之观，聋者无以与乎钟鼓之声。岂唯形骸有聋盲哉？夫知亦有之！是其言也犹时女也。之人也，之德也，将旁礴万物以为一，世蕲乎乱，孰弊弊焉以天下为事！之人也，物莫之伤：大浸稽天而不溺，大旱金石流，土山焦而不热。是其尘垢秕糠将犹陶铸尧舜者也，孰肯以物为事？”宋人资章甫而适诸越，越人断发文身，无所用之。尧治天下之民，平海内之政，往见四子藐姑射之山，汾水之阳，窅然丧其天下焉。\n惠子谓庄子曰：“魏王贻我大瓠之种，我树之成，而实五石。以盛水浆，其坚不能自举也。剖之以为瓢，则瓠落无所容。非不呺然大也，吾为其无用而掊之。”庄子曰：“夫子固拙于用大矣。宋人有善为不龟手之药者，世世以洴澼絖为事。客闻之，请买其方百金。聚族而谋曰：‘我世世为洴澼絖，不过数金，今一朝而鬻技百金，请与之。’客得之，以说吴王。越有难，吴王使之将，冬，与越人水战，大败越人。裂地而封之。能不龟手一也，或以封，或不免于洴澼絖，则所用之异也。今子有五石之瓠，何不虑以为大樽，而浮于江湖，而忧其瓠落无所容？则夫子犹有蓬之心也夫！”\n惠子谓庄子曰：“吾有大树，人谓之樗。其大本拥肿而不中绳墨，其小枝卷曲而不中规矩，立之涂，匠者不顾。今子之言大而无用，众所同去也。”庄子曰：“子独不见狸狌乎？卑身而伏，以候敖者；东西跳梁，不辟高下；中于机辟，死于罔罟。今夫斄牛，其大若垂天之云。此能为大矣，而不能执鼠。今子有大树，患其无用，何不树之于无何有之乡，广莫之野，彷徨乎无为其侧，逍遥乎寝卧其下。不夭斤斧，物无害者，无所可用，安所困苦哉！”\n轻物重生————老子:反者道之动，以不变应万变————庄子:齐生死一物我\n附件 道德：事物的德性。 ↩︎\n浮游：即物物而不物于物。意思是说，做一件事情，不被这件事情所支配。 ↩︎\n若夫乘道德而浮游则不然。按照事物的德性去做该做的事情，但又不被事物所支配。 ↩︎\n看重自己的身体把它等同于看重天下，于是就可以把身体寄托于天下（这里这么说的原因是如果你爱惜自己的身体向把一艘船藏到山沟里一样，不让人发现，但第二天还是被人偷走了一样，如果你把船藏于天下，那么不管怎么样船都不会被偷走。）。爱惜自己身体等同于爱惜天下，于是可以把它寄托于天下。 ↩︎\n",
+    "description": "",
+    "tags": "哲学",
+    "title": "庄子之道",
+    "uri": "/branch-bundle-1/%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 哲学",
+    "content": "一\n从前的一切唯物主义（包括费尔巴哈的唯物主义）的主要缺点是：对对象、现实、感性，只是从客体的或者直观的形式去理解，而不是把它们当作感性的人的活动，当作实践去理解，不是从主体方面去理解。因此，和唯物主义相反，能动的方面却被唯心主义抽象地发展了，当然，唯心主义是不知道现实的、感性的活动本身的。费尔巴哈想要研究跟思想客体确实不同的感性客体：但是他没有把人的活动本身理解为对象性的［gegenständliche］活动。因此，他在《基督教的本质》中仅仅把理论的活动看作是真正人的活动，而对于实践则只是从它的卑污的犹太人的表现形式去理解和确定。因此，他不了解“革命的”、“实践批判的”活动的意义。\n二\n人的思维是否具有客观的［gegenständliche］真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。关于思维——离开实践的思维——的现实性或非现实性的争论，是一个纯粹经院哲学的问题。\n三\n关于环境和教育起改变作用的唯物主义学说忘记了：环境是由人来改变的，而教育者本人一定是受教育的。因此，这种学说一定把社会分成两部分，其中一部分凌驾于社会之上。\n环境的改变和人的活动或自我改变的一致，只能被看作是并合理地理解为革命的实践。\n四\n费尔巴哈是从宗教上的自我异化，从世界被二重化为宗教世界和世俗世界这一事实出发的。他做的工作是把宗教世界归结于它的世俗基础。但是，世俗基础使自己从自身中分离出去，并在云霄中固定为一个独立王国，这只能用这个世俗基础的自我分裂和自我矛盾来说明。因此，对于这个世俗基础本身应当在自身中、从它的矛盾中去理解，并在实践中使之革命化。因此，例如，自从发现神圣家族的秘密在于世俗家庭之后，世俗家庭本身就应当在理论上和实践中被消灭。\n五\n费尔巴哈不满意抽象的思维而喜欢直观；但是他把感性不是看作实践的、人的感性的活动。\n六\n费尔巴哈把宗教的本质归结于人的本质。但是，人的本质不是单个人所固有的抽象物，在其现实性上，它是一切社会关系的总和。\n费尔巴哈没有对这种现实的本质进行批判，因此他不得不：\n（１）撇开历史的进程，把宗教感情固定为独立的东西，并假定有一种抽象的——孤立的——人的个体。\n（２）因此，本质只能被理解为“类”，理解为一种内在的、无声的、把许多个人自然地联系起来的普遍性。\n七\n因此，费尔巴哈没有看到，“宗教感情”本身是社会的产物，而他所分析的抽象的个人，是属于一定的社会形式的。\n第八条\n全部社会生活在本质上是实践的。凡是把理论引向神秘主义的神秘东西，都能在人的实践中以及对这个实践的理解中得到合理的解决。\n九\n直观的唯物主义，即不是把感性理解为实践活动的唯物主义至多也只能达到对单个人和市民社会的直观。\n十\n旧唯物主义的立脚点是市民社会，新唯物主义的立脚点则是人类社会或社会的人类。\n十一\n哲学家们只是用不同的方式解释世界，问题在于改变世界\n附件 ",
+    "description": "",
+    "tags": "哲学",
+    "title": "费尔巴哈提纲",
+    "uri": "/branch-bundle-1/%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: X1-小说",
+    "uri": "/categories/x1-%E5%B0%8F%E8%AF%B4/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 爱情",
+    "uri": "/tags/%E7%88%B1%E6%83%85/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 三、小 说",
+    "content": "木尸王朝 1.文中的人类变成树木的原因是什么？\n与金钱绑定的一种木材，注定了她会给人类带来财富，当我可以使用金钱来奴役别人时，金钱不再是一般等价物，而是一种凌驾于身上奴役人的力量。牧盛发现死去的实体与活着的尸体在被桃花源的涌泉浸泡后会变成一颗又一颗树苗，而且树苗长大后会在树底下凝结出一种叫血玉的物体，而这种血玉就是制造那个时代货币的原材料。\n2.文中牧盛为什么要将人变成血木？\n为了获得更多的权利，为了改变那个时代。\n3.文中所处的时代是以哪一个朝代为历史背景的？\n秦朝末年\n4.文中人们的经济基础怎么样？\n农耕女纸，自给自足；\n5.穷极祖为什么人为桃花源能给别人快乐\n人们不再需要货币进行物质交换。\n6.这个故事的结局是什么？\n牧盛被处死，主人公逃离了桃花源。\n时间 事件 备注 丁亥年（项元帝3年） 年19岁的林太极（穷极祖）寻得桃花林 项元帝5年 牧盛来到了桃花林并发现了木尸的源头。\n同年为继承家业牧府明争暗斗，一场浩劫即将来临。 项元帝7年 牧府被抄家，牧盛躲过一劫来到了与桃花源接壤的月牙沟，为了推翻项王朝开始收兵买马。 项元帝10年 牧盛开始暗地修筑宫殿，在月牙沟建立起自己的政权，战争一触即发 项元帝13年 牧盛大败项王朝于朔阳，同年项元帝驾崩，项郢即位，然而实际掌权的却是牧盛将领魏相王。\n同年12月，王肖穿越来到了乌鸡山，加入了准备发动起义的郭康阵营。 项灵帝1年（庚子年） 郭康起义军与牧盛君发生冲突，王肖巧妙化解，\n同年6月王肖离开起义军，在途中与登须被捕发配到月牙沟充当劳工，\n同年7月中旬在月牙沟遇到了同样被抓的覃武，第二天，掌管劳工的司空英举行了一年一度的桃林总管竞选，在登须的帮助下，王肖成功杀入阵营，夺得总管职位； 项灵帝1年（庚子年） （本来七月就出发的因为穷极祖有客，牧盛便将行程往后了一个月）八月中旬，王肖大伤初愈不久，前往桃花源的行程便开始了，在前往的途中，有许多人想着逃走，但都被抓了回来，而且被处死了。\n九月初，王肖等人抵达了桃花林受到了当地的欢迎，来前司空英曾说，送人到就可以返回不必停留，不想在这遇到了牧盛的女儿寜儿（牧寜），发生了一些事，于是耽搁了几日，在这几天王肖渐渐发现了木尸的来历。 时间 事件 备注 乌鸡山神庙 --- title: 故事顺序 --- graph LR; A[ ] --\u003e|Link text| B(Round edge) B --\u003e C{\u003cstrong\u003eDecision\u003c/strong\u003e} C --\u003e|One| D[Result one] C --\u003e|Two| E[Result two] mindmap root((niha)) ni nikldl dsask daj dfv fas sds ",
+    "description": "",
+    "tags": [
+      "校园",
+      "爱情"
+    ],
+    "title": "人物关系",
+    "uri": "/textbook/%E4%BA%BA%E7%89%A9%E5%85%B3%E7%B3%BB/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 校园",
+    "uri": "/tags/%E6%A0%A1%E5%9B%AD/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: X1-项目",
+    "uri": "/categories/x1-%E9%A1%B9%E7%9B%AE/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 软件",
+    "uri": "/tags/%E8%BD%AF%E4%BB%B6/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 贺青工程",
+    "content": "设计一款可以参加志愿活动的小程序，其制作流程大致如下：\n需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能需求。\n志愿者：\n注册/登录：志愿者可以通过手机号、邮箱或第三方账号进行注册和登录。 个人中心：查看并编辑个人信息，包括姓名、联系方式、服务时长、参与过的活动记录等。 活动浏览：查看活动列表，搜索感兴趣的服务项目，支持按地区、时间、类型筛选。 活动报名：选择感兴趣的志愿活动进行报名，填写相关报名表单，并能收到报名成功或失败的反馈信息。 签到打卡：参加活动时通过GPS定位、二维码扫描等方式进行签到和签退，记录服务时长。 互动交流：可在活动详情页留言评论，与其他志愿者交流心得，也可以对已完成的活动进行评价。 积分系统：根据参与活动的情况获取积分，可用于兑换礼品或其他激励。 活动组织者：\n活动发布：创建新的志愿活动，填写活动名称、地点、时间、内容描述、所需志愿者数量、技能要求等详细信息。 活动管理：查看已发布的活动状态，审核志愿者报名申请，确认志愿者名单，发送通知消息给志愿者。 数据统计：查看各项活动的报名人数、实际参与人数、总服务时长等统计数据。 评价反馈：查阅志愿者对活动的评价和建议，以便改进后续活动组织。 资源管理：上传活动相关的文档、图片等资源，管理活动物料。 管理员：\n用户管理：审核志愿者注册信息，处理用户投诉与咨询，维护用户账户安全。 权限管理：分配不同的角色权限，如设置哪些用户可以发布活动、审核报名等。 活动审批：对于某些大型或重要的活动，可能需要经过管理员审核后才能正式发布上线。 系统配置：设置全局参数，如积分规则、活动类别等基础数据的增删改查。 数据分析：获取平台整体运营数据，分析用户行为、活跃度以及志愿服务的整体状况，为决策提供依据。 功能列表梳理 活动浏览、报名参与、签到打卡、服务时长记录、通知公告、评价反馈、积分兑换等功能模块。 数据结构设计：定义数据库表结构，包括但不限于用户信息、活动信息、报名记录等。 原型设计与UI/UX设计 创建低保真或高保真原型，展示小程序的主要界面布局及交互流程。 设计符合用户体验的UI界面，确保简洁易用且美观大方。 技术选型与开发环境搭建 根据团队技术栈选择合适的开发平台，如微信小程序、支付宝小程序、百度小程序等。 搭建开发环境，安装所需的IDE工具（如微信开发者工具）及相关依赖库。 后端服务器开发 设计并实现后端API接口，处理用户的注册登录、活动发布与管理、报名审核等操作。 开发数据库系统，用于存储用户信息、活动数据等内容。 前端小程序开发 根据原型图编写前端页面代码，使用各小程序平台提供的组件和API进行功能开发。 实现用户认证、活动详情展示、报名表单提交、状态更新等功能。 测试与优化 单元测试：对各个功能模块进行独立测试，确保逻辑正确无误。 集成测试：模拟真实场景，测试整个应用的完整流程是否顺畅。 性能测试：检查在大量并发请求下系统的响应速度和稳定性。 用户体验测试：邀请部分目标用户试用，并根据反馈进行迭代优化。 上线部署与版本管理 将完成开发和测试的小程序上传至对应平台进行审核发布。 制定版本更新策略，持续收集用户反馈，定期更新优化软件。 后期维护与运营 定期检查系统性能，及时修复已知问题和潜在隐患。 对接新的需求，不断丰富和完善产品功能。 进行数据分析，了解用户行为，以数据驱动产品迭代优化。 自我异化的解释\n类力量：\n肉体存在于感性存在 随地大小便是前者，上公厕表示后者\n资本主义的三大作用 推动世界史的形成， 为人类的全面发展准备物质资料\n人是人感性活动的产物，人类与自然界打交道 人的类存在基础是感性存在 感性的存在就是把自然的东西变成人的东西，就是变成社会的存在，就像美，美的感觉的\n人不仅是感性的对象，还是感性的活动的产物 附件 ",
+    "description": "",
+    "tags": "软件",
+    "title": "志愿活动软件设计与开发",
+    "uri": "/branch-bundle-1/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 贺青工程",
+    "content": "页面美化验收 1.登录页面 2.首页—将志愿活动和活动时长数据放到轮播图下面 3.我的页面优化了吗？ 4.点击找回密码后，页面颜色不够美观，该页面应符合小程序主色调 5.首页—-为你推荐的志愿活动适当放大活动名称字体，调整活动名称下面的显示信息，请适当调整字体大小、行距、间距。 6.贺院学子一直在行动调整这个模块数字、志愿活动、志愿者等字段的字体大小，现在看起来感觉数字和文字很随意，请适当调整。 7.让“无权限”字段直接显示在页面上，字体背景设置为透明，而不是像现在这样看起来像一个按键。 8.我的组织页面中，显示的组织之间间距太近，请适当调整。 小程序功能验收 1.不同的登录方式有问题吗？ 2.签到开始时间为活动开始前半小时，（现在是没到签到时间不可以签到，精确度很高） 3.活动结束后不能进行签退，但是活动发起者可以对其进行补签，补签时长可以自定，自定义时长不能超过该志愿者从开始签到至活动结束的时长。 4.服务时长为签到签退时间差吗？ 5.签到签退需要在活动地点三公里以内才能进行。 6.活动发起者发布活动后或得四位数数字密码，该密码在志愿者点击签到或签退时弹出小弹窗，输入密码后实现签到签退。 7.当成员加入活动时，活动发起者能够一键通过成员的审核 8.发现页面上方，将日期和距离归纳在一个板块“排序” 9.当我登录后点击返回，返回到的页面是上一次的登录页面，需要一步一步返回，请设置为登陆成功后直接跳转到我的页面。 10. 11. 附件 ",
+    "description": "",
+    "tags": "软件",
+    "title": "验收问题",
+    "uri": "/branch-bundle-1/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: F1-复习资料",
+    "uri": "/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
+  },
+  {
+    "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 操作系统",
+    "content": "认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​ 命令 gzip [文件名]\rgunzip [解压文件名] 例子：\n[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# gzip hello.txt\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt.gz\r[root@localhost stdio]# gunzip hello.txt.gz [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# 如果不想删除源文件要怎么做呢？使用如下命令： ​ 命令 gzip -c [文件名] \u003e [压缩文件名.gz]\rzcat [解压文件名.gz] \u003e[压缩文件名.gz] 例子：\n[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# gzip -c hello.txt \u003ehello.txt.gz\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.gz\r[root@localhost stdio]# zcat hello.txt.gz \u003ehe.txt\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.gz he.txt\r[root@localhost stdio]# 在上面的命令中，zcat [解压文件名.gz] \u003e[压缩文件名.gz] 与 gunzip -c [解压文件名.gz] \u003e[压缩文件名.gz] 作用一样，另外，zcat [文件名]会将文件压缩信息输出在窗口上，即输出在 std。\nbzip2压缩文件和bunzip2压缩文件命令 一般压缩解压文件： ​ 命令 bzip2 [文件名]\rbunzip2 [解压文件名]\r//压缩解压后不会删除原文件\rbzip2 -k [文件名]\rbunzip2 -k [解压文件名] 例子：\n[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# bzip2 hello.txt [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt.bz2\r[root@localhost stdio]# bunzip2 hello.txt.bz2 [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt\r[root@localhost stdio]# bzip2 -k hello.txt [root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.bz2\r[root@localhost stdio]# rm hello.txt\rrm：是否删除普通文件 \"hello.txt\"？y\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt.bz2\r[root@localhost stdio]# bunzip2 -k hello.txt.bz2\r[root@localhost stdio]# ls\r1.c 2.c 3.c hello.txt hello.txt.bz2\r[root@localhost stdio]# tar归档文件命令 ​ 命令 在Linux系统中，tar 是一个非常重要的归档工具，用于将一组文件和目录打包到一个单一的.tar文件中。它创建的这种归档文件并不进行压缩，仅仅是将多个文件集合在一起，并保持原始文件的权限、所有权和其他元数据信息。\ntar -cvf [文件名]\rtar -xvf [解压文件名]然而，为了减少存储空间占用以及在网络上传输时加快速度，通常会结合使用 tar 和压缩工具（如gzip或bzip2）对归档文件进行压缩。这里 -z 或 -j 参数的作用就是启用压缩功能\ntar -czvf [文件名]\rtar -xzvf [解压文件名]\rtar -cjvf [文件名]\rtar -xjvf [解压文件名]如果要选择性的归档或压缩、解压某个文件或目录，那么需要加 w，如下：\ntar -cwzvf [文件名]\rtar -xwzvf [解压文件名]\rtar -cwjvf [文件名]\rtar -xwjvf [解压文件名] 在命令中;\nc（create）：表示创建新备份 z（gzip或gunzip）:表示使用gzip指令处理文件 v（verbose）：显示指令执行过程 f（file）:指定备份文件 w(interactive):对每一步都进行确认 j:表示使用bzip2、bunzip2指令进行压缩解压 如果加选项 -C （directory），则说明转到指定的目录，命令如下：\n[root@localhost ~]# tar -cjvf stdio.tar stdio/\rstdio/\rstdio/1.c\r[root@localhost ~]# tar -xjvf stdio.tar -C st/\rstdio/\rstdio/1.c\r[root@localhost ~]# cd st/\r[root@localhost st]# ls\rstdio\r[root@localhost st]# ls stdio/\r1.c\r[root@localhost st]# 用户与用户组管理 用户与组文件 用户文件-passwd 存放用户登录用户信息的文件位置：/etc/passwd 文件中域的的格式：\nusername:passwd:uid:gid:userinfo:home:shell:\n例子：\n[root@localhost st]# tail -1 /etc/passwd daliu:x:1008:1006::/home/daliu:/bin/bash\n/etc/passwdw 文件中域的含义\n域 含义 username 用户名 password 登录密码（一般显示的是密码转换后的乱码） uid 用户ID（0-99一般为系统保留） gid 用户组ID userinfo 用户信息 home 分配该用户的主目录（但位置是人为决定的，自己可以修改） shell 登录后启动的shell 一般root用户的UID为0，UID一般是唯一的为的是区分不同的用户，但UID为0的除外，UID为0则说明为超级用户；\n创建用户时，系统会分配一个主目录给用户一般在 home 目录下，例如用户user主目录为 /home/user。\n用户文件-shadow Linux系统中的/etc/shadow文件是存放用户密码信息的重要安全文件，也称为“影子口令文件”。它的主要作用是存储用户的加密密码以及与密码相关的属性，以增强系统的安全性。\n在早期的Unix/Linux系统中，密码是以明文或简单加密的形式存储在/etc/passwd文件中。为了提高系统的安全性，从1970年代末期开始引入了影子口令的概念，将密码字段从/etc/passwd移出，并存放在只有超级用户（root）可以读取的/etc/shadow文件中，而原来的 /etc/passwd 中的密码字段显示 x ,这就是上面的例子中显示x的原因。\n通过这种方式，即使攻击者获取了/etc/shadow文件，由于密码已经被高度加密，直接破解难度大大增加，从而有效提高了系统的密码安全级别。同时，通过对密码策略的设定，还可以实现对用户密码复杂度和有效期的管理。\n域 含义 username password min max warm inactive expire flag 下面就举个例子：\n[root@localhost st]# tail -1 /etc/passwd daliu:x:1008:1006::/home/daliu:/bin/bash\n[root@localhost st]# tail -1 /etc/shadow daliu:$6$f703Izgm$gIA74I6Vyqdjstz3BazhvEUVWfSyelNuv7UKTUtB3cScauSctebqrBIr/KShHnBcWWQideao3aucMrXsO.I6Z/:19694:0:99999:7:::\n用户组文件-group 用户组一方面是为了查找用户时更方便，比如查找user用户，你不需要去passwd文件一行一行的查找，你只需要去group文件找到对应的用户组即可。\n同样的，用户组也有类似passwd、shadow之和这样的文件，分别为group、gshadow.\n/etc/group 文件中域的含义如下：\n域 含义 group_name 组用户名 group_password 加密后的用户组口令 group_id 用户组ID group_members 以逗号隔开的用户清单 /etc/gshadow 文件中域的含义如下：\n域 含义 group_name 组用户名 group_password 加密后的用户组口令 group_members 以逗号隔开的用户清单 检验用户与用户组文件之间是否正确 检验 /etc/passwd 与 /etc/shadow 文件之间的正确性，使用命令 pwck,当发生错误，两个文件之间信息不对应时，系统会提示对相应项进行修改； 检验 /etc/group 与 /etc/gshadow 文件之间的正确性，使用命令 grpck,当发生错误，两个文件之间信息不对应时，系统会提示对相应项进行修改。 相关的命令操作 1.添加用户与用户组———— useradd \u0026 groupadd\n用法：\nuseradd [选项] 登录 useradd -D useradd -D [选项] 值得注意的是，对于选项的-d、-md，加了m表示在/home目录创建用户目录，如果不加，表示该目录已存在不需要再使用m,详细请结合下面的展开内容来开。 展开 选项：\r-b, --base-dir BASE_DIR\t新账户的主目录的基目录\r-c, --comment COMMENT 新账户的 GECOS 字段\r-d, --home-dir HOME_DIR 新账户的主目录\r-D, --defaults\t显示或更改默认的 useradd 配置\r-e, --expiredate EXPIRE_DATE 新账户的过期日期\r-f, --inactive INACTIVE 新账户的密码不活动期\r-g, --gid GROUP\t新账户主组的名称或 ID\r-G, --groups GROUPS\t新账户的附加组列表\r-h, --help 显示此帮助信息并推出\r-k, --skel SKEL_DIR\t使用此目录作为骨架目录\r-K, --key KEY=VALUE 不使用 /etc/login.defs 中的默认值\r-l, --no-log-init\t不要将此用户添加到最近登录和登录失败数据库\r-m, --create-home\t创建用户的主目录\r-M, --no-create-home\t不创建用户的主目录\r-N, --no-user-group\t不创建同名的组\r-o, --non-unique\t允许使用重复的 UID 创建用户\r-p, --password PASSWORD\t加密后的新账户密码\r-r, --system 创建一个系统账户\r-R, --root CHROOT_DIR chroot 到的目录\r-s, --shell SHELL\t新账户的登录 shell\r-u, --uid UID\t新账户的用户 ID\r-U, --user-group\t创建与用户同名的组\r-Z, --selinux-user SEUSER\t为 SELinux 用户映射使用指定 SEUSER\r用法： groupadd [选项] [组名] ，一般会用到的选项有\n-g: 用户设置组ID； -o: 与-g配合使用，设置不唯一的组ID; -n: 修改组的名字，如：gpasswd -n [新组名] [旧组名] 2.删除用户与用户组———— userdel \u0026 groupdel\nuserdel:一般用法就是在后面加要删除的用户，如果加选项-r则会删除主目录文件； groupdel：在后面加要删除的用户组 3.修改用户与用户组———— usermod 、passwd \u0026 gpasswd\nusermod： 一般就是对问文件中的域进行修改，会加加上选项-u、-g、-s等，最后还得指定用户，用法： usermod [选项] [用户名]。另外，-L（-U） 的作用是对用户的锁定（解锁）； passwd：一般就是用来修改用户的密码，在登录的是root用户情况下passwd是要指定修改密码的用户的，而如果登录的是用户本身，使用passwd时就不用指定在； gpasswd： 用法： gpasswd [选项] [组名] ，一般会用到的选项有 -a(添加组的用户)， -d(删除组里的用户)，gpasswd -d [用户名] [组名] -A(添加组的管理员). -g(修改组GID),例如：gpasswd -g [新ID] [组名] 对于usermod的进一步说明，除了上面提到的选项，还有如下选项：\n展开 选项：\r-c, --comment 注释 GECOS 字段的新值\r-d, --home HOME_DIR 用户的新主目录\r-e, --expiredate EXPIRE_DATE 设定帐户过期的日期为 EXPIRE_DATE\r-f, --inactive INACTIVE 过期 INACTIVE 天数后，设定密码为失效状态\r-g, --gid GROUP 强制使用 GROUP 为新主组\r-G, --groups GROUPS 新的附加组列表 GROUPS\r-a, --append GROUP 将用户追加至上边 -G 中提到的附加组中，\r并不从其它组中删除此用户\r-h, --help 显示此帮助信息并推出\r-l, --login LOGIN 新的登录名称\r-L, --lock 锁定用户帐号\r-m, --move-home 将家目录内容移至新位置 (仅于 -d 一起使用)\r-o, --non-unique 允许使用重复的(非唯一的) UID\r-p, --password PASSWORD 将加密过的密码 (PASSWORD) 设为新密码\r-R, --root CHROOT_DIR chroot 到的目录\r-s, --shell SHELL 该用户帐号的新登录 shell\r-u, --uid UID 用户帐号的新 UID\r-U, --unlock 解锁用户帐号\r-Z, --selinux-user SEUSER 用户账户的新 SELinux 用户映射 3.登录用户与用户组———— su newgrp\nroot用户与普通用户之间的切换使用su,如果要切换根目录则需要在su 后加-，即： su - [用户]。\n在Linux中，组的登录使用 newgrp ，即 newgrp [组名]。\n下面通过一个例子加以理解：\n添加一个用户名为15user，且该用户在用户组15group中，设置用户组和用户密码为123，创建一个用户15user2让该用户为用户组管理员,修改user的UID为2024，最后删除所用所建信息。\n展开 [root@localhost ~]# groupadd 15group\r[root@localhost ~]# useradd -g 15group 15user\r[root@localhost ~]# tail -1 /etc/passwd\r15user:x:1001:1007::/home/15user:/bin/bash\r[root@localhost ~]# tail -1 /etc/group\r15group:x:1007:\r[root@localhost ~]# gpasswd 15group\r正在修改 15group 组的密码\r新密码：\r请重新输入新密码：\r[root@localhost ~]# passwd 15user\r更改用户 15user 的密码 。\r新的 密码：\r无效的密码： 密码少于 8 个字符\r重新输入新的 密码：\rpasswd：所有的身份验证令牌已经成功更新。\r[root@localhost ~]# useradd 15user2\r[root@localhost ~]# gpasswd -A 15user2 15group\r[root@localhost ~]# tail -2 /etc/group\r15group:x:1007:\r15user2:x:1002:\r[root@localhost ~]# tail -2 /etc/gshadow\r15group:$6$d4pzl/CPrp$3NYvX8gzE3DBm35BLqAE8aGzfUhrUZTSMGQfeRve2iUhrH1tZGR8I8t91gWzFD2GWFEDaaocO7XO85RjKDY.q1:15user2:\r15user2:!::\r[root@localhost ~]# usermod -u 2024 15user\r[root@localhost ~]# tail -2 /etc/passwd\r15user:x:2024:1007::/home/15user:/bin/bash\r15user2:x:1002:1002::/home/15user2:/bin/bash\r[root@localhost ~]# userdel 15user\r[root@localhost ~]# groupdel 15group\r[root@localhost ~]# userdel 15user2 在上面的例子中，我们使用gpasswd -A来设置用户组管理员。\n文件目录和目录权限管理 文件访问权限与用户分类 文件的访问权限 读(r)：允许读文件的内容 写(w)：允许向文件中写入数据 执行(x)：允许将文件作为程序执行 目录的访问权限 读(r)：允许查看目录中有哪些文件和目录； 写(w)：允许该在目录下创建（或删除）文件、目录，修改文件名字或者目录名字 执行(x)：允许访问目录(用 cd 命令进入该目录，并查看目录中可读文件的内容) 用户分类 文件所有者（owner）：建立文件、目录的用户。 同组用户(group)：属于同一组群的用户对属于该组群的文件有相同的访问权限。 其他用户(other)：除了文件所有者、同组用户的其他用户。 我们先用ls -l 查看文件的权限信息：\n在上面的开头有三段他们分别表示为文件所有者、同组用户、其他用户：\n其中的d表示目录。\n权限修改 访问权限的表示 （1）字母表示法（如：rwxr-xr-x） （2）数字表示法 （如：755） 使用数字进行文件权限的划分，其中r=4、w=2、x=1、-=0，这样rwx这组权限就是4+2+1=7，r-x这组权限就是5。\n修改权限的命令：chmod 命令格式1： chmod $n{_1}n{_2}n{_3}$ \u003c文件|目录\u003e 功能：为指定文件或目录修改给定的数值访问权限。 选项： $n{_1}n{_2}n{_3}$三位数字表示的文件访问权限。 命令格式2： chmod [用户标识] [设定方法] [权限字符] \u003c文件名或目录名〉 功能：修改文件或目录的访问权限。 选项： （1）用户标识：所有者（u）、同组（g）、其他人（o）、所有的人员（a） （2）设定方法：+ 增加权限、- 删除权限、= 分配权限，同时删除旧的权限 （3）权限字符：r（读）、w（写）、x（执行）、u（和所有者的权限相同）、g（和所同组用户的权限相同）、o（和其他用户的权限相同） 修改文件所有者的命令：chown 格式：chown [-R] \u003c用户[：组]\u003e \u003c文件或目录\u003e 功能：更改属主和组。 选项： -R：对目录及其子目录进行递归设置。 例如：chown sjh：sjh result.txt\n修改文件所属组群的命令：chgrp 格式：chgrp group file\n其中group：组名或组代号\n功能： 改变文件或目录组群\n例如：chgrp user result.txt\n关于chown与chgrp的命令的例子：\n展开 [root@localhost ~]# chown user2:user2 /tmp/test/user1_2.txt\r[root@localhost ~]# ls -l /tmp/test/\r总用量 0\r-rw-rw-r--. 1 user2 user2 0 1月 15 19:40 user1_2.txt\r[root@localhost ~]# chgrp root /tmp/test/user1_2.txt\r[root@localhost ~]# ls -l /tmp/test/\r总用量 0\r-rw-rw-r--. 1 user2 root 0 1月 15 19:40 user1_2.txt\r[root@localhost ~]# 修改默认权限的命令：umask 格式：umask [mask]\n功能：设置文件或目录的默认权限\n注意：系统默认屏蔽的权限为022（umask的默认值为0022），因此新 创建的目录权限就为777-022=755，用字符表示就是rwxr-xr-x，新创 建的普通文件权限为666-022=644，即rw–r–r–。\n文件隐藏属性 1）查看文件隐藏属性：lsattr\n2）修改文件隐藏属性：chattr\nchattr [+-=] [ ai] 文件或目录名称\na: 当设置a之后，这个文件将只能增加数据，而不能删除也不能修改数据， 必须要为root才能设置这个属性。 i：不能删除，不能修改，不能改名。必须要为root才能设置这个属性。 文件特殊权限 文件特殊权限有以下三种：\n1）SUID：Set UID（只对二进制程序有效，对shell script无效）\n例如：ll /usr/bin/passwd\n注意：当用户执行passwd命令的时候，需要修改/etc/shadow文件，而该文件普通用户并没有任何权限。\n2）SGID：Set GID\n例如：ll /usr/bin/locate 注意：当用户执行locate命令的时候，需要读取/var/lib/mlocate/mlocate.db文件。\n3）SBIT：Sticky Bit （只对目录有效）\n设置方法：\nchmod -o+t [指定目录名]\r或者\rchmod 1777 [指定目录名]对一个目录进行如上设置以后，假设有用户A和B，用户A在该目录下创建的文件只有他自己的root用户可以删，像B这样的其他用户删不了。\n特殊文件说明文章链接\n软件包管理 接下里介绍两个软件安装的工具，分别是RPM：Red Hat Package Manager（Red Hat软件包管，以及YUM:Yellow dog Dpdater,Modified.\nRPM工具不需要网络，需要提前准备好安装包，但是他也有缺点安装的时候如果缺少依赖包你还需要再安装依赖包；\n而YUM工具需要再有网的状态下才可以下载，它免去了依赖包提醒，自动将依赖包下载好，较为方便，我跟推荐使用YUM。\nRPM工具的使用 1．安装软件包（install）\nrpm -ivh rpm软件包全名：\ni：安装一个新的软件包 v：显示详细信息 h：显示安装进度条理工具 2．查询已安装的软件包（query）\nrpm –qa //查询出本机所有已经安装的软件\rrpm –q httpd //查询httpd软件包是否已经安装\rrpm -q【i l c d R】 vsftpd\rrpm -qf /etc/inittab\r查询未安装的软件包：\rrpm -qp 【i l c d R】 gconf-editor-2.28.0-3.el6.i686.rpm3．升级与更新（upgrade/freshen）\nrpm -Uvh 软件包名称\r//原来没有安装过的，直接安装；如果已安装过，则更新至新版\rrpm -Fvh 软件包名称\r//原来没有安装过的，不安装；如果已安装过，则更新至新版4．卸载RPM包（erase）\nrpm -e vsftpd\r注意：卸载时只需要给出软件包名称vsftpd，而不需要给出软件包的全部名称信息vsftpd-2.2.2-6.el6.i686.rpm。YUM工具的使用 yum在线升级机制：\n安装软件 yum install gcc 删除软件 yum remove gcc 查询软件 yum search gcc 软件包管理：\n举例一：搜寻与磁盘阵列(raid)相关的软件有哪些？ [root@www ~]# yum search raid 举例二：找出mdadm这个软件的功能为何？ [root@www ~]# yum info mdadm 举例三：列出yum 服务器上面提供的所有软件名称。 [root@www ~]# yum list 举例四：列出目前服务器上可供本机进行升级的软件有哪些？ [root@www ~]# yum list updates 举例五：列出提供passwd这个文件的软件有哪些？ [root@www ~]# yum provides passwd yum的软件组功能：\n查询软件组：yum grouplist（查阅目前容器与本机上面的可用与安装过 的软件群组有哪些？） yum groupinfo Eclipse（查询Eclipse软件组的相关信息）\n安装软件组： yum groupinstall Eclipse 删除软件组： yum groupremove Eclipse 硬盘分区及格式化 硬盘分区介绍 硬盘的分区分为主磁盘分区和扩展磁盘分区。 一个硬盘最多可以划分为 4 个主磁盘分区，这时不能再创建扩展分区。 一个硬盘中最多只能创建 1个扩展分区 ，扩展分区不能直接使用，必须在扩展分区中再划分出逻辑分区才可以使用。 逻辑分区是从5开始的，每多1个分区，数字加1就可以。 硬盘标识 （1）IDE硬盘：hd[a-d]*\nhd表示硬盘类型为IDE，中括号中的字母为a、b、c、d中的一个，a是基本盘，b是从盘，是辅助主盘，d是辅助从盘，*指分区，即主分区和扩展分区。\n例如：hda1代表第一块IDE硬盘上的第一个分区。hdb5代表第二块IDE硬盘的第一个逻辑分区。\n（2）SCSI/SATA硬盘：sd[a-p]*\nsd表示SCSI/SATA硬盘。SCSI/SATA的引导盘使用设备文件/dev/sda1、/dev/sda2、/dev/sda3、/dev/sda4作为主分区或者扩展分区，而以/dev/sda5，/dev/sda6等作为逻辑分区。\n创建硬盘分区 先使用ls -l /dev |grep ‘sd’查看文件里是否有可用的磁盘，如果没有需要创建一个磁盘，创建步骤：\n1．通过虚拟机设置增加一块SCSI硬盘，大小为5G，重启系统。 展开 按照下图点击下一步\n根据实际情况输入所需硬盘大小，这里输入5GB\n然后点击完成\n最后在命令窗口输入reboot重启。\n2．将该硬盘分为2个主分区（每个主分区的大小为1G），1个扩展分区（大小为3G），将第2个主分区制作成swap分区。\n命令： 展开 //先用命令查看sd,sd表示SCSI/SATA硬盘， ls /dev/sd |grep sd //硬盘分区 fdisk /dev/sdb //使用m查看帮助命令，n为新建命令，d为删除命令，w为写入命令，每次配完都要写入才有效。 n p //这是新建主分区的意思 //接着指定分区起始位置，一般我们默认，所以回车就可以 //然后就是指定分区的大小，这里我设置1G、 +1G //可以用p命令查看设置的情况 P //按照上面的流程进行其他的设置，一下给出步骤命令 n p +1G n e +3G 3．将扩展分区划出2个逻辑分区（大小分别为1G、2G）。\n命令： 展开 //到这步后我们可以给扩展分区分配逻辑分区，分配时逻辑分区用l命令。 n l +1G n l +2G 查看磁盘情况与磁盘格式化 （1）查看系统中的新硬盘：ls /dev/sd* （2）查看分区：fdisk –l /dev/sda （3）创建主分区：fdisk /dev/sdc （4）创建扩展分区：输入n,再输入e （5）创建逻辑分区: 输入n,再输入l （6）修改分区类型 （7）格式化分区： mkfs –t ext4 /dev/sdc1 还可以写成**mkfs.ext4 /dev/sdc1** 格式化交换分区略有不同，使用命令 mkswap ,例如： mkswap dev/sdb2 （8）磁盘检查命令：fsck –t ext4 /dev/sdc1 badblocks /dev/sdb5 （9）查看磁盘使用情况 df,或使用df -h输出更易于查看。 上面的-t意思是参数TYPE的意思，后面接ext4()、vfat(FAT32)、ntfs()等，\n挂载文件系统：mount 1、 挂载硬盘分区： 步骤1：mkdir /usr/music 步骤2：mount /dev/sdc5 /usr/music 2、 挂载光驱： 步骤1：mkdir /mnt/cdrom 步骤2：mount /dev/cdrom /mnt/cdrom 3、 挂载U盘： 步骤1：mkdir /mnt/usb 步骤2：mount /dev/sdd1 /mnt/usb 4、 挂载Windows下的C盘 （FAT32格式）： 步骤1：mkdir /mnt/dosc 步骤2：mount -t vfat /dev/sda1 /mnt/dos 注意： C盘必须已经被格式化为FAT32格式。\n显示系统内所有已经挂载的文件系统 mount 不带任何参数执行mount命令，则会显示当前系统中已经挂载的所有的文件系统列表。\n卸载设备：umount 格式： umount \u003c设备名或挂载点\u003e\n说明：卸载指定的设备，既可以使用设备名也可以使用挂载点。\n举例： # umount /dev/cdrom\n自动挂载文件系统：/etc/fstab 每条记录由6个字段组成。\n1.设备名称 2.设备挂载点 3.文件系统类型 4.挂载选项 5.是否备份 6.自检顺序\n如果想要系统自动挂载/dev/sdc5分区，可在/etc/fstab文件添加下面这行：\n/dev/sdc5 /usr/music ext4 defaults 0 0\n注意:由于fstab文件非常重要，如果这个文件有错误，就可能会造成系统不能正常启动。因此向fstab文件中添加数据时应非常小心。修改完该文件后务必使用mount -a命令测试有没有错误。\n磁盘配额 以sdb1为例\n第一步：先配置sdb磁盘，然后挂载sdb1磁盘\n第二步：使用quotaon /sdb1/生成aquota.group和aquota.user文件\n第三步：对用户或用户组进行磁盘限制,例如：edquota -u user1，然后会进入一个文件，文件里的0表示禁用，在里面可以设置创建文件个数或文件大小的软限制、硬限制；\n第四步：我们登录user1，在/sdb/目录下创建文件，使用 db if=/dev/zero of=/sdb1/test/ bs=1k count=10这条命令进行测试，这是一个写文件大小的命令，这样可以快速测试文件大小的软限制和硬限制；\n第五步：子里面建文件，检验创建文件个数的软限制和硬限制；\n第六步: 可以使用repquota -u查看目录的情况；\n第七步：关闭磁盘匹配额，quotatoff /sdb1/\nLinux编程 附件 ",
+    "description": "",
+    "tags": [
+      "硬件",
+      "软件"
+    ],
+    "title": "Linux期末复习",
+    "uri": "/branch-bundle-1/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e Tags",
@@ -180,14 +331,6 @@ var relearn_search_index = [
     "tags": null,
     "title": "标签 :: 安卓",
     "uri": "/tags/%E5%AE%89%E5%8D%93/"
-  },
-  {
-    "breadcrumb": "王梅四郎maloudown \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "标签 :: 前端",
-    "uri": "/tags/%E5%89%8D%E7%AB%AF/"
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e 一、博客文章 \u003e 1.计算机组成原理",
@@ -249,22 +392,6 @@ var relearn_search_index = [
     "uri": "/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/"
   },
   {
-    "breadcrumb": "王梅四郎maloudown \u003e Categories",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "类别 :: X1-小说",
-    "uri": "/categories/x1-%E5%B0%8F%E8%AF%B4/"
-  },
-  {
-    "breadcrumb": "王梅四郎maloudown \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "标签 :: 爱情",
-    "uri": "/tags/%E7%88%B1%E6%83%85/"
-  },
-  {
     "breadcrumb": "王梅四郎maloudown \u003e 三、小 说",
     "content": "第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。\n记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋友以睡觉为己任的人。我不信，哪有这种人？\n几天后张君竟把他介绍给了我，我们仨还一起去吃了饭，顺便逛了街，特别是喝奶茶的时候，张君故意给我和他有二人空间，整得像相亲似的，而后只是聊了些生活学习上的问题……在买花的时候我叫住他：“那个？”\n没想到他没听见，“听说你以‘睡觉’为己任，”我提了声音又叫了一遍，搞得自己有些尴尬：“是真的？”\n他一脸疑惑，又露出让人想笑的表情，道：“what?”\n气氛顿时尴尬，我有些不好意思，手挡了挡额头，说了句，没什么。回头继续吃着烧烤便不再问什么，寻思着张君的话自己也信？\n傍晚有些冷，校门就是我们的最后一站，老天在天角涂了层口红，不知道什么色号的，仔细看还挺美的。突然，岭正叫住了我，道：“都是为了我的下一代!”\n我一时间没反应过来，以为他在与别人对话，不想他似有深情地看着我，补充道：“所以，你要好好睡觉才行！”\n而后迷人之笑，怎么说呢？看着像在演戏一样，感觉这种桥段只有小说电视里才有，让我又懵又有些难为情，一时想不到什么好的词，只好顶着职业假笑示意“好的”。 “绘妹妹，”回寝室路上张君调侃道：“你要好好睡觉哦。”而后一阵哈哈大笑，我急忙想制止她，可越要这么做她就越要说，越说越开心。\n回宿舍后我细品了岭正的话，总感觉有什么意思在里头，但时间久了便不再放在心上。\n……\n后来张君不怎么提他，我倒是期待着张君说点关于他的什么，至于为什么这么想，我不敢究其原因，也不想问张君 ，只想着张君能和我说说，明明是些琐碎的事罢了，再次回忆，便不由自主地想起那些人，那些事。\n三个月后的一天，张君突然问我，还记得不得上次给你介绍的帅哥。我说，帅哥不记得了，只记得有个人说什么好好睡觉。随后聊的具体内容记不太清，依稀记得张君说，他转到了我们学校，而且在我们隔壁班。这算个惊喜吗……在我的生活里没那么多惊喜，也许眼睛会和惊喜反应，“生成”眼睛和平平无奇。\n分班后的一天，我去找张君，问她在哪个班。张君告诉我，他们班在一楼，离食堂最近。她还说，一般来说，学校的食堂都挺干净的，外面的不怎么卫生，可绘啊！我还是喜欢吃外面的，特别是小帅哥带来的。\n我说：“又是用美色挣来的吧！”\n张君听到后哈哈笑了，笑声爽朗，我也跟着笑了起来，和她总能这么开心，但是，笑过之后我却突然感觉心情有些沉重。因为在上个学期期末考试结束后，我看到她和另外一个男同学坐在靠窗的位置上，他们俩个正在讨论着什么。他们的讨论是那样的热烈和激情，这是我从未见到过的。这一刻，我不知为何渴望着融入他们。\n第二章 仲夏夜之星 张君看着楼道下，一个小巧的女孩正一步一步走来，她知道是谁，长舒了一口气，转身对着小峰说道，小峰，我好像有点喜欢上你了。小峰一时还转不过来，刚刚还在讨论高考的试题，现在怎么……小峰没说什么，故意移开视线看着试题，张君，又继续道：\n“可以牵牵我的手吗？一会儿，就一会儿。”张君抿了抿小嘴，“不说话就是默许。”张君不再犹豫，牵起了小峰的手。小峰面颊泛红，激动又开心，温暖的小手，好像柔软的云朵，微风拂过两腮，不经意让小峰忆起往事。他想：现在怎么也不想松开这个女孩的手了，因为这一天小峰已经等了很久很久了。\n四年前的一个夜晚，我打球准备回宿舍，在收拾时，看到张君一个人独自坐在长椅上，篮球场两排明亮的灯光照在她的身上，泛着光，影子投影到地面综错散乱，被拉成常常的弧线，我走了过去，夜晚的榕树下凉得让人想就地睡觉，有些疲惫的我边走边拉伸着身体。\n“唉，在这干嘛呢？”\n“哟，打球呐。”张君寻着熟悉声音，看向小峰，确认是他后，说道：“出来乘凉。”\n“切，女生宿舍不有风扇吗？”\n“你以为想吹就吹啊！那也是要看舍友滴……女生的世界，你个男生不懂。”\n小峰擦了擦头，看着地面道：\n“谁tm大晚上跑出来乘凉啊？现在又不是夏季。”\n“小峰，如果有个男生喜欢你……”张君长叹，又咽了咽口水，慵懒的说：“你们……”\n“什么？男的！那不搞基吗？”\n“呀，什么搞基啊，认真听我说嘛！”她继续道：“她还是你同学，你怎么办？”\n“拒绝啊……为什么？当然是因为我喜欢女孩子啦，而且我接受不了……如果吗？哪有什么如果，你这是假设，这样的场景和画面我敢都不敢想像，怎么你搞……” 张君插话道：“什么什么呀！好好说话好不好。”\n那天我想着要再次向张君表白，当时气氛尤为适宜，夜晚的操场很快人离影散，满天的星空捧着圆月，远远的传来葡萄架下的蟋蟀的奏鸣曲，好像拉小提琴一样，悠长而又慢慢地穿到我和张君这，操场的灯光还明着，铺洒一地，犹如海浪扑来，直冲张君的脚下，瞬间在身上如水浸透白纸般，我坐在长椅较暗的地方，一身好像穿着高雅的西服，一切都让我内心波涛汹涌。\n我们似乎同时说出了对方的名字，我有些不好意思，他亦如此，我便让他先说。\n“我被个女孩喜欢上了，她是我要好的朋友，看着小颗小颗的，纤弱又可爱，让我……不由自主产生保护她的心理，可是我不想因为这件事破坏我们的友谊……”\n聊了会，交谈中张君告诉了我那人的名字，知道后也有些震撼，也许那时候不知道什么是喜欢，什么是爱，所以我不能理解她们的关系和情愫。正说着，我们看到校警摸着电筒，四处照射，似个夜间丛林里的猎人，我们也结束了相关的话题。\n那后我渐渐的对她们之间的关系有些不自在起来，虽然如此，但我对张君的心却一直不变，对她仍存一丝丝希望，期待着有一天她回头，可以见到我还在原地等她归来，我无法忘记我与她们一同“出境”的尴尬处境，特别是虚假地做她男友，在喜欢她的人面前，把恋人的关系发挥到极致的事，我讨厌又害怕，犹如一场美梦，醒来却是肮脏的现实，噩梦般的现实。\n记得有一次我还因此谎称生病，停了一周的课，可我忘不掉张君，我依旧喜欢她，我想和她来一次真正的恋爱，不一定热烈浪漫，但一定真实难以忘怀。在高中时我就知道她其实不喜欢我，可我还是默默等待着，在漆黑的夜晚做个可怜的人。\n等我明白渐渐理解，和解这些事时，那已是许多年后的事了，张君也早已远嫁他乡，他乡的那颗星也一直在我可以看到的地方闪闪发光。\n第三章 剪不断，理还乱 苏绘走上楼梯，走廊传来张君的声音，他们讨论着今年高考各科试卷。\n我纳闷一个文科生，一个理科生的，有什么好讨论的？我知道此刻我是羡慕的，想想自己摸底考自己就是一个失败者，失败者，失败者……\n我苦涩地一笑，恰巧张君见状问道：“绘，怎么了？”\n我回过神，道：“没什么。”\n等我微微抬头——张君和小峰的手十指相扣，看着好像他们的手被牢牢焊死，原来刚刚的男孩是小峰，为什么，为什么，那背影，那声音完全是另外的人。对我是那样的尊敬，玩笑都开不起，而对张君却畅言所欲，小峰， 小峰……我的内心一声又一声，就像远山传来的回音。\n张君闻言大笑：“哈哈哈……你这个形象真好笑，对了告诉你哦，我和小峰确立关系了哦，今晚要不要庆祝一下下。”\n张君说的小峰，是我认识的人，那会还初中，我一直觉得小峰比较内向，又有点高冷，可现在看来它和张君的性格都比较随意，所以关系也建立得很快，现在都是情侣了。我和张君是从小认识的，可以说我们是死党，我总喜欢调戏她和她的堂弟云，和他们关系特别好，我觉得我是他们最好的朋友，所以总是会开开些无伤大雅的玩笑。\n“干嘛呢？开玩笑的，我和小峰没交往，”和小峰分开后，张君说了实话，可我当时并不相信，即使她说，有个人喜欢他，小峰为了避开她，他们就演演喽。\n“我说嘛！君姐怎么会那么快换男朋友嘛！”\n“啊？”张君看着我，愣了会儿，说道：“那不是。”随后我们鹅鹅地笑出声。\n后面我和张君又聊了几句，然后就各回了各自己的寝室，我推开寝室进去，一片死寂充斥着寝室，我坐在床边，呆呆地看着天花板，突然觉得心里一阵空落落，仿佛心底里丢失了一个什么东西，很难受很难受。\n张君，小峰和岭正分到了一个班，他们三个在班级里很低调，也不敢在学校里表露出他们三个的关系，毕竟那个班有些特殊，或许是不想引起别人的注意吧。不知道从什么时候开始自己躲在暗角默默地暗恋着岭正，对岭正的记忆自从分开后慢慢从脑海中消失，突然我想起，张君说的，我以后可能会是他的妻子，虽然我知道这是个假的概率，毕竟我和他还没到那一步，但心底里却不免升腾起一丝妄想，这些妄想也随着时间一天一天蒸发殆尽，为了不让这样的念头消失，我试着与他见面。我知道我配不上他，但是心底深处，却有些隐隐约约的期盼，期盼着有一天，我们能够在校园偶遇，在校园内，能够成为朋友，这样，我就能够时时刻刻，见证我和他在张君心目中的地位了。\n一晃一年的时间，转瞬即逝。\n我和张君、小峰、岭正他们的联系少之又少，除了偶尔见面聊聊，别的联系少之又少。\n我们似乎都各奔东西了。\n第四章 再忆江南曲 大一的一天晚上，我一个人躺在床上，想着和张君的点滴往事，我想起了我们初入江南高中时那个阳光开朗的张君，想起了那个总是喜欢逗我，却从来没有欺负我的云，想起了初中我第一次在学校的篮球场和小峰见面的那个早晨。\n初中篮球场。\n那一天天气格外炎热，有些受不了的直接不来，有些则虚弱地装一下，老师自然是信的，这样的天气搞不好真的会中暑呢。小峰注意班上的班花很久了，从军训那天开始，他就一直关注着她，报体育委员也是因为有她的名字，只可惜她没选上。这天，女子篮球组在练习，\n“唉！她身边老跟一个家伙”\n“什么家伙，人家有名字，叫苏绘。”\n“耶，你们认识？”小峰的同学手靠在他肩上，说道：“什么时候的事。”\n“唉，小学那会儿了，不过她是隔壁班的，她应该不记得我。”\n小峰看要到他们组训练了，顾不了那么多了，直接上前与班花搭话。\n我们第一次见面。小峰说：“如果你愿意当我的女朋友，我可以考虑带你进军篮球队。”当时张君愣了好一会，我也一样，这句话他是对张君说的，想想当时他是体育委员，我只不过是个连投球都不会，还硬要参加女子篮球队的家伙，自己真的傻得可怜。\n张君看了看绘，对她说，绘可以帮我去拿一下纸巾吗，在那边的树底下，谢谢。\n看着绘远去，张君提高了些声音，说道，你有那本事，我就答应。\n小峰一脸春风拂面，说道：“你说的，别反悔。”\n想到这我觉得那件事张君是刻意这么做的。\n第五章 终章 那时的我还是一个不谙世事的毛丫头，看着张君与小峰在一起，自己竟眼红了起来，那段时间一切的事情都只想着怎么和岭正在一起，我每天都在幻想着和他有朝一日可以成为男女朋友的画面，但是，一切的梦境都只是梦境而已，在现实里，我和他永远也不会在一起。想到那天鼓气勇气与岭正告白，却被拒绝的画面……眼泪不知怎的流出眼眶，打湿脸颊，黑夜抚摸着我，似乎在特意安慰，可我内心久久无法平静，久久无法入睡。\n翻来覆去怎么也是那美好而又难过的岁月。\n那天，我去学校图书馆借书，张君的书包落在图书馆里。张君让我在图书馆外面等一下，张君走了很久，我在图书馆外面站了好久好久，突然有人拍了我肩膀一下，我吓了一跳，猛地回头，见是云，我松了口气，拍了拍胸脯，责怪他道：“怎么走路一点声音都没有，吓死我了。”\n云微笑着，道：“我看你站在外面想事情想得很投入，所以就狠下心打扰你。”\n我问：“你怎么在这里？”\n云说：“我和朋友谈了点事儿，他们让我在这里等。”\n云的那些朋友都是高年级的学生，有男有女，看起来都不怎么好惹的样子，不用说也知道，云在这里肯定是认识不少人的，我心中不禁有些担忧，担心云在这里受到别人欺负。 我问：“你朋友都是些什么人啊？”\n云道：“是我以前的同学，现在都在这个学校里上学，我在这里认识不少人，以后有事儿，找我，我罩着你！”\n我道：“好啊，那我有事儿了再找你吧！”\n云说：“行！”\n云和我说的话很简单，但是，我知道他一定是一个善良的人。\n在外面久久不见张君出来，我的内心莫名有些难受，等待也许就是这样……\n想到这我才知道，那时的自己对张君是怎么样的感情，我就是只愿做信鸽脚下的信筒，即使有天会被丢弃，只要有一刻还在与她在一起，我所忍受的都是值得的，可我一直在她的庇护下，一步一步走向自己的未来，这种种美好而痛苦的记忆我永生难忘，这一生也不会再有。\n写于2021年6月\n",
     "description": "",
@@ -274,14 +401,6 @@ var relearn_search_index = [
     ],
     "title": "君绘语",
     "uri": "/textbook/%E5%90%9B%E7%BB%98%E8%AF%AD/"
-  },
-  {
-    "breadcrumb": "王梅四郎maloudown \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "标签 :: 校园",
-    "uri": "/tags/%E6%A0%A1%E5%9B%AD/"
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e 三、小 说",
@@ -405,14 +524,6 @@ var relearn_search_index = [
     "tags": "模版",
     "title": "2.常用模版",
     "uri": "/about_create_web/%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/"
-  },
-  {
-    "breadcrumb": "王梅四郎maloudown \u003e Categories",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "类别 :: B1-备忘录",
-    "uri": "/categories/b1-%E5%A4%87%E5%BF%98%E5%BD%95/"
   },
   {
     "breadcrumb": "王梅四郎maloudown \u003e Tags",

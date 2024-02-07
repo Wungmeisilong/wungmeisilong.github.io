@@ -6,35 +6,28 @@
     <description>Recent content on 王梅四郎maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Feb 2024 09:57:05 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Feb 2024 16:24:40 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一、博客文章</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/</link>
-      <pubDate>Wed, 07 Feb 2024 09:57:05 +0800</pubDate>
+      <pubDate>Wed, 07 Feb 2024 15:10:51 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/</guid>
-      <description>1.计算机组成原理 计算机组成原理-复习 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端</description>
+      <description>1.文章 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidSt</description>
     </item>
     <item>
-      <title>二、网站优化备忘录</title>
-      <link>https://wungmeisilong.github.io/about_create_web/</link>
-      <pubDate>Thu, 30 Nov 2023 01:35:45 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/about_create_web/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>三、小  说</title>
+      <title>二、小  说</title>
       <link>https://wungmeisilong.github.io/textbook/</link>
       <pubDate>Thu, 18 Jan 2024 10:37:47 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/textbook/</guid>
       <description>人物关系木尸王朝 1.文中的人类变成树木的原因是什么？ 与金钱绑定的一种木材，注定了她会给人类带来财富，当我可以使用金钱来奴役别人时，金钱不再是</description>
     </item>
     <item>
-      <title>公告</title>
-      <link>https://wungmeisilong.github.io/%E7%89%88%E6%9C%AC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wungmeisilong.github.io/%E7%89%88%E6%9C%AC/</guid>
-      <description>Search V1.0 我将修改了图标以后的网站作为自己的版本v1.0。 展开 第一个版本其实没有多少东西是自己的，从大的地方说许多都还是基于原来的网址做的，最大的</description>
+      <title>三、关于</title>
+      <link>https://wungmeisilong.github.io/about_create_web/</link>
+      <pubDate>Wed, 07 Feb 2024 16:24:40 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/about_create_web/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

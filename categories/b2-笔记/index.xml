@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B2-笔记 on 王梅四郎maloudown</title>
+    <link>https://wungmeisilong.github.io/categories/b2-%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in B2-笔记 on 王梅四郎maloudown</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 20 Dec 2023 17:59:23 +0800</lastBuildDate>
+    <atom:link href="https://wungmeisilong.github.io/categories/b2-%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AndroidStudio笔记</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/2.androidstudio/%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 20 Dec 2023 17:59:23 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/2.androidstudio/%E7%AC%94%E8%AE%B0/</guid>
+      <description>第一章 配置开发环境： 1.安装JDK &amp;ldquo;安装连接&amp;rdquo; 2.安装AndroidStudio &amp;ldquo;安装连接&amp;rdquo;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B3-课堂笔记 on 王梅四郎maloudown</title>
+    <link>https://wungmeisilong.github.io/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in B3-课堂笔记 on 王梅四郎maloudown</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 29 Nov 2023 16:54:44 +0800</lastBuildDate>
+    <atom:link href="https://wungmeisilong.github.io/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2-1.Toolbar工具栏</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/2.androidstudio/toolbar/</link>
+      <pubDate>Wed, 29 Nov 2023 16:54:44 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/2.androidstudio/toolbar/</guid>
+      <description>Toolbar是什么？ 简单理解就是页面的上的菜单栏，或者叫工具栏，在AndroidStudio的页面布局中使用Toolbar， menu文件的</description>
+    </item>
+  </channel>
+</rss>

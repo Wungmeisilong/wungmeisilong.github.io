@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>一、博客文章 on 王梅四郎maloudown</title>
+    <title>一、博客文章 on Maloudown</title>
     <link>https://wungmeisilong.github.io/branch-bundle-1/</link>
-    <description>Recent content in 一、博客文章 on 王梅四郎maloudown</description>
+    <description>Recent content in 一、博客文章 on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Feb 2024 15:10:51 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Feb 2024 17:08:49 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.文章</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Wed, 07 Feb 2024 09:57:05 +0800</pubDate>
+      <pubDate>Fri, 16 Feb 2024 17:08:49 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</guid>
-      <description>Git常遇问题1、使用git commi -m &amp;ldquo;……&amp;ldquo;时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了</description>
+      <description>文章标题的多样设计在标题前面显示图标： +++ menuPre = &amp;#34;&amp;lt;i class=&amp;#39;fab fa-github&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; &amp;#34; +++添加这个后的效果如下： 附件 Git常遇问题1、使用git commi -m &amp;ldquo;……&amp;ld</description>
     </item>
     <item>
       <title>2.AndroidStudio</title>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>三、关于 on 王梅四郎maloudown</title>
+    <title>三、关于 on Maloudown</title>
     <link>https://wungmeisilong.github.io/about_create_web/</link>
-    <description>Recent content in 三、关于 on 王梅四郎maloudown</description>
+    <description>Recent content in 三、关于 on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 07 Feb 2024 16:24:40 +0800</lastBuildDate>
@@ -14,13 +14,6 @@
       <pubDate>Wed, 07 Feb 2024 16:24:40 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/about_create_web/%E7%89%88%E6%9C%AC/</guid>
       <description>附件</description>
-    </item>
-    <item>
-      <title>推送网站步骤</title>
-      <link>https://wungmeisilong.github.io/about_create_web/%E6%8E%A8%E9%80%81%E7%BD%91%E7%AB%99%E6%AD%A5%E9%AA%A4/</link>
-      <pubDate>Wed, 07 Feb 2024 12:25:54 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/about_create_web/%E6%8E%A8%E9%80%81%E7%BD%91%E7%AB%99%E6%AD%A5%E9%AA%A4/</guid>
-      <description>推送网站步骤 #在项目更目录下运行下面这句命令 hugo --theme=hugo-theme-relearn-main --baseURL=&amp;#34;https://wungmeisilong.github.io/&amp;#34; --buildDrafts #进入public文件夹 cd public/ #初始化文件夹，这个命令不一定要需要， #有时候不初始化也可以</description>
     </item>
   </channel>
 </rss>

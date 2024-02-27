@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.文章 on Maloudown</title>
+    <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</link>
+    <description>Recent content in 1.文章 on Maloudown</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 27 Feb 2024 19:19:05 +0800</lastBuildDate>
+    <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5.自定义页面以康奈尔笔记格式输出</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/5.%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%88%9B%E5%BB%BA/</link>
+      <pubDate>Tue, 27 Feb 2024 19:19:05 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/5.%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%88%9B%E5%BB%BA/</guid>
+      <description>Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。 Notes 创建</description>
+    </item>
+    <item>
+      <title>4.如何在github上使用高级搜索搜出自己想要的项目？</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Fri, 23 Feb 2024 00:49:51 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/</guid>
+      <description>原文章链接 附件</description>
+    </item>
+    <item>
+      <title>文章标题的多样设计</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/3.%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 16 Feb 2024 17:08:49 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/3.%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E8%AE%BE%E8%AE%A1/</guid>
+      <description>在标题前面显示图标： +++ menuPre = &amp;#34;&amp;lt;i class=&amp;#39;fab fa-github&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; &amp;#34; +++添加这个后的效果如下： 附件</description>
+    </item>
+    <item>
+      <title>Git常遇问题</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 07 Feb 2024 09:57:05 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/</guid>
+      <description>1、使用git commi -m &amp;ldquo;……&amp;ldquo;时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网</description>
+    </item>
+    <item>
+      <title>如何用旧电脑搭建自己的服务器？</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Wed, 31 Jan 2024 03:13:33 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可</description>
+    </item>
+    <item>
+      <title>创建hugo静态网站的经历</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/experimence/</link>
+      <pubDate>Mon, 11 Dec 2023 02:26:25 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/experimence/</guid>
+      <description>附件 一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重</description>
+    </item>
+    <item>
+      <title>网站内常用到的模版</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/</link>
+      <pubDate>Thu, 30 Nov 2023 01:35:45 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/</guid>
+      <description>代码分制表 以&amp;lt; tabs title=&amp;quot;file name&amp;quot; &amp;gt;，&amp;lt; /tabs &amp;gt;结尾； 然后里面写以% tab title=&amp;quot;code name&amp;quot; style=&amp;quot;info&amp;quot; color=&amp;quot;blue &amp;quot; %，% /tab %结尾 他们都需要用{{}}括起来 &amp;#8203; 代码 {{&amp;lt; tabs title=&amp;#34;hello.&amp;#34; &amp;gt;}}</description>
+    </item>
+    <item>
+      <title>网站的目录与子目录创建</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/</link>
+      <pubDate>Sat, 25 Nov 2023 18:33:04 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/</guid>
+      <description>不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说</description>
+    </item>
+  </channel>
+</rss>

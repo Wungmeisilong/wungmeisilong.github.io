@@ -1,15 +1,15 @@
 var relearn_search_index = [
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章",
-    "content": " 文章标题的多样设计在标题前面显示图标： +++ menuPre = \"\u003ci class='fab fa-github'\u003e\u003c/i\u003e \" +++添加这个后的效果如下： 附件\nGit常遇问题1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网\n如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可\n创建hugo静态网站的经历附件 一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重\n网站内常用到的模版代码分制表 以\u003c tabs title=\"file name\" \u003e，\u003c /tabs \u003e结尾； 然后里面写以% tab title=\"code name\" style=\"info\" color=\"blue \" %，% /tab %结尾 他们都需要用{{}}括起来 ​ 代码 {{\u003c tabs title=\"hello.\" \u003e}}\n网站的目录与子目录创建不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说\n",
+    "content": " 5.自定义页面以康奈尔笔记格式输出Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。 Notes 创建\n4.如何在github上使用高级搜索搜出自己想要的项目？原文章链接 附件\n文章标题的多样设计在标题前面显示图标： +++ menuPre = \"\u003ci class='fab fa-github'\u003e\u003c/i\u003e \" +++添加这个后的效果如下： 附件\nGit常遇问题1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网\n如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可\n创建hugo静态网站的经历附件 一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重\n网站内常用到的模版代码分制表 以\u003c tabs title=\"file name\" \u003e，\u003c /tabs \u003e结尾； 然后里面写以% tab title=\"code name\" style=\"info\" color=\"blue \" %，% /tab %结尾 他们都需要用{{}}括起来 ​ 代码 {{\u003c tabs title=\"hello.\" \u003e}}\n网站的目录与子目录创建不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说\n",
     "description": "",
     "tags": null,
     "title": "1.文章",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"
   },
   {
     "breadcrumb": "Maloudown",
-    "content": " 1.文章 文章标题的多样设计 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 庄子之道 费尔巴哈提纲 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 常用的数学表达\n常用箭头\n",
+    "content": " 1.文章 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 庄子之道 费尔巴哈提纲 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 电子电路 模拟电子技术基础笔记 常用的数学表达\n常用箭头\n常用函数图像公式\n",
     "description": "",
     "tags": null,
     "title": "一、博客文章",
@@ -29,7 +29,7 @@ var relearn_search_index = [
     "description": "",
     "tags": null,
     "title": "过年",
-    "uri": "/branch-bundle-1/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%87%E5%B9%B4/"
+    "uri": "/branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%87%E5%B9%B4/"
   },
   {
     "breadcrumb": "Maloudown",
@@ -141,15 +141,25 @@ var relearn_search_index = [
     "description": "",
     "tags": null,
     "title": "13.计算机组成原理",
-    "uri": "/branch-bundle-1/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"
+    "uri": "/branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"
   },
   {
-    "breadcrumb": "Maloudown \u003e Categories",
-    "content": "",
+    "breadcrumb": "Maloudown \u003e 一、博客文章",
+    "content": "模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的 本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4\n",
     "description": "",
     "tags": null,
-    "title": "类别 :: B1-拓展笔记",
-    "uri": "/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/"
+    "title": "电子电路",
+    "uri": "/branch-bundle-1/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": " Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。\nNotes 创建css文件 康奈尔笔记的布局，其中左侧是 “Cues”，右侧是 “Notes”，底部是 “Summary”，您可以使用 Flexbox 的 row 和 column 布局来实现。这里是一个 CSS 示例，它将创建一个两列的布局，左侧为 “Cues”，右侧为 “Notes”，然后在这两列下方是 “Summary”。\n首先，创建一个名为 cornell-notes.css 的 CSS 文件，并添加以下样式代码：\n.cornell-notes { border: 1px solid #ccc; padding: 20px; margin: 20px; display: flex; flex-wrap: wrap; } .cues { background-image: url('icon2.svg'); border-right: 1px solid #080808; flex: 1; padding-right: 20px; } .notes { background-image: url('icon1.svg'); border-left: 1px solid #080808; flex: 2; padding-left: 20px; } .summary { width: 100%; clear: both; /* 清除浮动，确保摘要部分在下方 */ padding-top: 20px; background-image:url('wwwatercolor.jpg'); margin-top: 20px; }在这个样式中，.cornell-notes 是整个康奈尔笔记的容器，我们使用 display: flex; 和 flex-wrap: wrap; 来创建一个 Flex 容器，允许子元素根据需要换行。.cues 和 .notes 分别设置为容器的子项，并通过 flex 属性来分配空间。.summary 部分使用 width: 100%; 来确保它在 .cues 和 .notes 下方显示，并使用 clear: both; 来清除之前的浮动。\n此处分享一个免费的svg网站，bbburst： 在这个网站或许你可以找到适合你的背景图，用以装饰自己的康奈尔容器，此处的svg是放在css文件夹下的，所以是直接引用，如果你放在别的的放那么还请使用正确的的路径。\n在hugo配置中设置 接下来，确保将 cornell-notes.css 文件放置在 Hugo 站点的 static/css 目录下。然后，在 Hugo 的配置文件 config.toml 中添加对 CSS 文件的引用：\n# config.toml [Params] # 其他参数... [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # 允许在 Markdown 中使用 HTML 和 CSS如果使用的是code打开的项目，那么可以先在code内搜索上面的配置是否已添加，因为部分hugo主题原来就添加了这一配置。\n在markdown文档中引用 在 Markdown 文件中，你可以这样使用这些类：\n--- title: \"康奈尔笔记示例\" --- \u003clink rel=\"stylesheet\" href=\"/css/cornell-notes.css\"\u003e \u003cdiv class=\"cornell-notes\"\u003e \u003cdiv class=\"cues\"\u003e ## Cues - 这里是关键词和提示。 \u003c/div\u003e \u003cdiv class=\"notes\"\u003e ## Notes - 这里是详细的笔记内容。 \u003c/div\u003e \u003cdiv class=\"summary\"\u003e ## Summary - 这里是笔记的摘要。 \u003c/div\u003e \u003c/div\u003e确保在 Markdown 文件中添加 标签来引入 CSS 文件，并为每个部分使用相应的类。这样，当你构建并查看 Hugo 站点时，康奈尔笔记将以正确的样式显示，其中 “Cues” 在左侧，“Notes” 在右侧，“Summary” 在底部。\nSummary 在上面我们学习了如何自定义hugo中页面的输出格式，在引用hugo主题情况下，自定义自己的页面输出格式只需要三点，即创建css文件，在config配置文件中配置相关信息，在markdown中引用。其实我们可以拓展，如果你想创建属于自己的笔记你可以参照上面的方法自制简单的笔记，希望本期内容对你有所帮助。\n",
+    "description": "",
+    "tags": [
+      "文章"
+    ],
+    "title": "5.自定义页面以康奈尔笔记格式输出",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/5.%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%88%9B%E5%BB%BA/"
   },
   {
     "breadcrumb": "Maloudown",
@@ -176,6 +186,73 @@ var relearn_search_index = [
     "uri": "/tags/"
   },
   {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: W1-博客文章",
+    "uri": "/categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 文章",
+    "uri": "/tags/%E6%96%87%E7%AB%A0/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": "原文章链接\n附件 ",
+    "description": "",
+    "tags": [
+      "github",
+      "高级搜索"
+    ],
+    "title": "4.如何在github上使用高级搜索搜出自己想要的项目？",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: github",
+    "uri": "/tags/github/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 高级搜索",
+    "uri": "/tags/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: B1-拓展笔记",
+    "uri": "/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 模电",
+    "uri": "/tags/%E6%A8%A1%E7%94%B5/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 电子电路",
+    "content": "常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的\n本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程\n本征半导体的导电能力与载流子的浓度有关：此时处于动态平衡，本证激发与复合的速度一样。\n从工程的角度看，只加热温度让导电能力增加不实际，还好它具有掺杂别的东西让导电能力增加。\n杂质半导体 概念 掺杂少量 的杂志元素。\nN型半导体 掺杂P元素（5价元素），本征半导体的导电能力增加，自由电子是多子，空穴是少子；\n温度对多子影响小，因为多子本身就多，但对少子浓度的影响大，因为少子的量少；\nP型半导体 掺杂硼元素（3价元素），本征半导体的导电能力增加，自由电子是少子，空穴是多子；\nPN结半导体 1.扩散运动：在浓度梯度的作用下，浓度高的地方向浓度低的地方扩散；\n2.空间电荷区（耗尽层、PN结），这里举个例子，就右边空间电荷区的正电荷而言，从电场线出发，两边平衡我们可以理为正电荷发出的电场阻止了左边的空穴移动，而对于负电荷他也有这样的特性，所以两边达到平衡的状态。\n虽然中间有空间电荷区形成势垒（由电压形成）组织了两遍的多子运动，但是这样的势垒能百分之百阻止多子向两边运动吗？\n答案是不完全，还是有一小部分的多子冲破避雷向两边运动。下面是一张简单的图。\n3.漂移运动：两边少子的运动称之为漂移运动\n4.对称结与不对称结：由上面的图可以看出两边宽度一样，原因是掺杂的浓度一样，如果不一样？那么两边就不对称了，这时候称之为不对称结。\n加外电压的PN结半导体 加正电压（P流向N，空间电荷区被削弱） 加反向电压（，空间电荷区增加） 这个时候的漂移运动是增加的，但漂移运动是由少子形成的所以他的影响是很小的，值得注意的是漂移运动对 温度 是很敏感的。\nPN结的电流方程 $i=I_s(e^{U/U{_T}}-1),其中V_T=26V$\n锗：0.2-0.3V 硅：0.6-0.7V\n特性 正向特性 反向特性 2.1雪崩击穿（掺杂浓度低，温度越高，击穿电压越高，因为粒子需要加速） 2.2齐纳击穿（掺杂浓度高，温度越高，击穿电压越低，因为） PN结的电容效应 当正负极两边的电压变化时，中间的电量发生改变；\n1.势垒电容 2.扩散电容：非平衡少子形成 电压增高为2线，浓度增高，电压减小为3，浓度降低；\n半导体二极管 常见结构 伏安特性 体电阻的存在，电流的PN结小； 反向电流大一些； 温度的影响 正向电流：温度升高，本证激发，粒子热运动增加，所以电压固定的时候，温度高的电流可定大，所以曲线往上走；\n反向电流：温度升高，对少子影响大，饱和电流增加，所以曲线往下走；\n二极管作用 单向导电性，规定电流流向，做整流器件；也可以稳压，但一般用反向的稳压 反向的饱和电流，简单的温度传感器； 反向截止电流，稳压二极管； 问：为什么稳压电路不用正向的电压稳压？\n二极管的主要参数 IF：工作的时候电流的最大流过电流， UR：最高反向电压， IR：反向电流（未击穿时）， FM：最高频率（选高频电路的时候需要参考）， 二极管的等效电路 1.上图a为理想的等效电路\n2.b图为常用的等效模型\n上面三张图的 中间没有一杠，这是与普通二极管的区别。\n下面我们看二级管的几个应用：\n整流电路 在上面的这个电路中我们假设交流电10mV，要想在 $u_R$中测量出变化的电流那么需要加一个直流电压，将交流电抬高，曲线图如下：\n上图B点的电压10mV升到A点，它们的关系是： $U_A=U_B+V$,那么此时就可以测量出 $u_R$两端的变化的电流了。具体电路图如下：\n最后得到的波形图是去掉Y轴的负半轴的正弦三角函数图像，也就是整流电路。\n限幅电路 在分析这个电路时，要先判断正向导通和反向截止。\n当 $U_S-U_1\u003c=Uon$的时候截止 当 $U_S-U_1\u003e=Uon$的时候导通 这时候的三角函数上半边会被割掉如下图：\n附件 ",
+    "description": "",
+    "tags": "模电",
+    "title": "模拟电子技术基础笔记",
+    "uri": "/branch-bundle-1/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"
+  },
+  {
     "breadcrumb": "Maloudown \u003e Tags",
     "content": "",
     "description": "",
@@ -189,7 +266,7 @@ var relearn_search_index = [
     "description": "",
     "tags": "网站",
     "title": "文章标题的多样设计",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/3.%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E8%AE%BE%E8%AE%A1/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/3.%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "Maloudown \u003e Categories",
@@ -283,14 +360,6 @@ var relearn_search_index = [
     "uri": "/tags/git/"
   },
   {
-    "breadcrumb": "Maloudown \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "标签 :: github",
-    "uri": "/tags/github/"
-  },
-  {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
     "content": "1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网上查了解决办法，有的说创建新的分支可以解决，但我的不行。\n最后我的解决办法是先退出git base here，再重新进入，下面是具体步骤：\n先使用git add .； 接着使用git status -s查看我更改的文件，也是我要推送的文件，如果前面的有M和??，那么久重新更新文件，然后重复上面的步骤； 发现前面的M是绿色的后就可以使用git commit -m \"文件备注\"； 然后推送就可以了git push origin main。 这里的关键命令是git status -s，我现在搞不懂这个错误产生的原因…… 附件 ",
     "description": "",
@@ -300,15 +369,7 @@ var relearn_search_index = [
       "git"
     ],
     "title": "Git常遇问题",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/"
-  },
-  {
-    "breadcrumb": "Maloudown \u003e Categories",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "类别 :: W1-博客文章",
-    "uri": "/categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",
@@ -371,7 +432,7 @@ var relearn_search_index = [
       "网站"
     ],
     "title": "如何用旧电脑搭建自己的服务器？",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",
@@ -465,7 +526,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 12.实战项目 \u003e 贺青工程",
-    "content": "页面美化验收 1.登录页面 2.首页—将志愿活动和活动时长数据放到轮播图下面 3.我的页面优化了吗？ 4.点击找回密码后，页面颜色不够美观，该页面应符合小程序主色调 5.首页—-为你推荐的志愿活动适当放大活动名称字体，调整活动名称下面的显示信息，请适当调整字体大小、行距、间距。 6.贺院学子一直在行动调整这个模块数字、志愿活动、志愿者等字段的字体大小，现在看起来感觉数字和文字很随意，请适当调整。 7.让“无权限”字段直接显示在页面上，字体背景设置为透明，而不是像现在这样看起来像一个按键。 8.我的组织页面中，显示的组织之间间距太近，请适当调整。 小程序功能验收 1.不同的登录方式有问题吗？ 2.签到开始时间为活动开始前半小时，（现在是没到签到时间不可以签到，精确度很高） 3.活动结束后不能进行签退，但是活动发起者可以对其进行补签，补签时长可以自定，自定义时长不能超过该志愿者从开始签到至活动结束的时长。 4.服务时长为签到签退时间差吗？ 5.签到签退需要在活动地点三公里以内才能进行。 6.活动发起者发布活动后或得四位数数字密码，该密码在志愿者点击签到或签退时弹出小弹窗，输入密码后实现签到签退。 7.当成员加入活动时，活动发起者能够一键通过成员的审核 8.发现页面上方，将日期和距离归纳在一个板块“排序” 9.当我登录后点击返回，返回到的页面是上一次的登录页面，需要一步一步返回，请设置为登陆成功后直接跳转到我的页面。 10. 11. 附件 ",
+    "content": "页面美化验收 1.登录页面 2.首页—将志愿活动和活动时长数据放到轮播图下面 3.我的页面优化了吗？ 4.点击找回密码后，页面颜色不够美观，该页面应符合小程序主色调 5.首页—-为你推荐的志愿活动适当放大活动名称字体，调整活动名称下面的显示信息，请适当调整字体大小、行距、间距。 6.贺院学子一直在行动调整这个模块数字、志愿活动、志愿者等字段的字体大小，现在看起来感觉数字和文字很随意，请适当调整。 7.让“无权限”字段直接显示在页面上，字体背景设置为透明，而不是像现在这样看起来像一个按键。 8.我的组织页面中，显示的组织之间间距太近，请适当调整。 小程序功能验收 1.不同的登录方式有问题吗？ 2.签到开始时间为活动开始前半小时，（现在是没到签到时间不可以签到，精确度很高） 3.活动结束后不能进行签退，但是活动发起者可以对其进行补签，补签时长可以自定，自定义时长不能超过该志愿者从开始签到至活动结束的时长。 4.服务时长为签到签退时间差吗？ 5.签到签退需要在活动地点三公里以内才能进行。 6.活动发起者发布活动后或得四位数数字密码，该密码在志愿者点击签到或签退时弹出小弹窗，输入密码后实现签到签退。 7.当成员加入活动时，活动发起者能够一键通过成员的审核 8.发现页面上方，将日期和距离归纳在一个板块“排序” 9.当我登录后点击返回，返回到的页面是上一次的登录页面，需要一步一步返回，请设置为登陆成功后直接跳转到我的页面。 10. 11. 今晚检查有三，目前都没问题，如下：\n签到签退， 上传、查看、删除pdf和图片， 部分页面正常显示， 一些小问题 ：\n后台修改开始时间和截止时间后，虽然能正常显示，但修改后不起效果，假设报名时间为12：00，过了12点整后修改为13：00，那么活动还是无法参与。\n组织详情页不显示所写简介 参与人次之前说是等于组织活动参与人数之和，但是我这边看了好像与组织成员相等，并不是活动人数之和，而是总的组织成员人数，你们那边也看看吧。\n附件 ",
     "description": "",
     "tags": [
       "软件",
@@ -542,7 +603,7 @@ var relearn_search_index = [
       "R-软硬件"
     ],
     "title": "计算机组成原理-复习",
-    "uri": "/branch-bundle-1/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/"
+    "uri": "/branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",
@@ -698,7 +759,7 @@ var relearn_search_index = [
       "前端"
     ],
     "title": "创建hugo静态网站的经历",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/experimence/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/experimence/"
   },
   {
     "breadcrumb": "Maloudown \u003e Categories",
@@ -742,7 +803,7 @@ var relearn_search_index = [
       "前端"
     ],
     "title": "网站内常用到的模版",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 2.AndroidStudio",
@@ -781,6 +842,6 @@ var relearn_search_index = [
       "前端"
     ],
     "title": "网站的目录与子目录创建",
-    "uri": "/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/"
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/"
   }
 ]

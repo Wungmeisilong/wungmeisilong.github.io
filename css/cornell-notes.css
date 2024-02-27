@@ -1,0 +1,32 @@
+/* cornell-notes.css */
+
+.cornell-notes {
+  
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cues {
+  background-image: url('icon2.svg');
+  border-right: 1px solid #080808;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.notes {
+  background-image: url('icon1.svg');
+  border-left: 1px solid #080808;
+  flex: 2;
+  padding-left: 20px;
+}
+
+.summary {
+  width: 100%;
+  clear: both; /* 清除浮动，确保摘要部分在下方 */
+  padding-top: 20px;
+  background-image:url('wwwatercolor.jpg');
+  margin-top: 20px;
+}

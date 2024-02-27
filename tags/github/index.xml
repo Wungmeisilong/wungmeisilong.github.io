@@ -6,13 +6,20 @@
     <description>Recent content in github on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Feb 2024 09:57:05 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Feb 2024 00:49:51 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>4.如何在github上使用高级搜索搜出自己想要的项目？</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Fri, 23 Feb 2024 00:49:51 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/</guid>
+      <description>原文章链接 附件</description>
+    </item>
+    <item>
       <title>Git常遇问题</title>
-      <link>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/</link>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 07 Feb 2024 09:57:05 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/</guid>
       <description>1、使用git commi -m &amp;ldquo;……&amp;ldquo;时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网</description>
     </item>
   </channel>

@@ -6,14 +6,14 @@
     <description>Recent content in 一、博客文章 on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 16 Feb 2024 17:08:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Feb 2024 19:19:05 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.文章</title>
-      <link>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Fri, 16 Feb 2024 17:08:49 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</guid>
-      <description>文章标题的多样设计在标题前面显示图标： +++ menuPre = &amp;#34;&amp;lt;i class=&amp;#39;fab fa-github&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; &amp;#34; +++添加这个后的效果如下： 附件 Git常遇问题1、使用git commi -m &amp;ldquo;……&amp;ld</description>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Tue, 27 Feb 2024 19:19:05 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/</guid>
+      <description>5.自定义页面以康奈尔笔记格式输出Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔</description>
     </item>
     <item>
       <title>2.AndroidStudio</title>
@@ -96,10 +96,17 @@ AndroidStudio笔记第一章 配置开发环境： 1.安装JDK &amp;ldquo;安装
     </item>
     <item>
       <title>13.计算机组成原理</title>
-      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
       <pubDate>Wed, 10 Jan 2024 10:45:58 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
       <description>过年 计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表 比较内容 电子数字计算机</description>
+    </item>
+    <item>
+      <title>电子电路</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
+      <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
+      <description>模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的 本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3</description>
     </item>
   </channel>
 </rss>

@@ -17,16 +17,16 @@
     </item>
     <item>
       <title>网站内常用到的模版</title>
-      <link>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/</link>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/</link>
       <pubDate>Thu, 30 Nov 2023 01:35:45 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/</guid>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/</guid>
       <description>代码分制表 以&amp;lt; tabs title=&amp;quot;file name&amp;quot; &amp;gt;，&amp;lt; /tabs &amp;gt;结尾； 然后里面写以% tab title=&amp;quot;code name&amp;quot; style=&amp;quot;info&amp;quot; color=&amp;quot;blue &amp;quot; %，% /tab %结尾 他们都需要用{{}}括起来 &amp;#8203; 代码 {{&amp;lt; tabs title=&amp;#34;hello.&amp;#34; &amp;gt;}}</description>
     </item>
     <item>
       <title>网站的目录与子目录创建</title>
-      <link>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/</link>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/</link>
       <pubDate>Sat, 25 Nov 2023 18:33:04 +0800</pubDate>
-      <guid>https://wungmeisilong.github.io/branch-bundle-1/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/</guid>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/</guid>
       <description>不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说</description>
     </item>
   </channel>

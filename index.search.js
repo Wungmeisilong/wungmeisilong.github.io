@@ -1,19 +1,19 @@
 var relearn_search_index = [
   {
+    "breadcrumb": "Maloudown",
+    "content": " 1.文章 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 庄子之道 费尔巴哈提纲 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 14.电子电路 模拟电子技术基础笔记 15.外语类 英语 常用的数学表达\n常用箭头\n常用函数图像公式\n",
+    "description": "",
+    "tags": null,
+    "title": "一、博客文章",
+    "uri": "/branch-bundle-1/"
+  },
+  {
     "breadcrumb": "Maloudown \u003e 一、博客文章",
     "content": " 5.自定义页面以康奈尔笔记格式输出Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。 Notes 创建\n4.如何在github上使用高级搜索搜出自己想要的项目？原文章链接 附件\n文章标题的多样设计在标题前面显示图标： +++ menuPre = \"\u003ci class='fab fa-github'\u003e\u003c/i\u003e \" +++添加这个后的效果如下： 附件\nGit常遇问题1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网\n如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可\n创建hugo静态网站的经历附件 一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重\n网站内常用到的模版代码分制表 以\u003c tabs title=\"file name\" \u003e，\u003c /tabs \u003e结尾； 然后里面写以% tab title=\"code name\" style=\"info\" color=\"blue \" %，% /tab %结尾 他们都需要用{{}}括起来 ​ 代码 {{\u003c tabs title=\"hello.\" \u003e}}\n网站的目录与子目录创建不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说\n",
     "description": "",
     "tags": null,
     "title": "1.文章",
     "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"
-  },
-  {
-    "breadcrumb": "Maloudown",
-    "content": " 1.文章 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 庄子之道 费尔巴哈提纲 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 电子电路 模拟电子技术基础笔记 常用的数学表达\n常用箭头\n常用函数图像公式\n",
-    "description": "",
-    "tags": null,
-    "title": "一、博客文章",
-    "uri": "/branch-bundle-1/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 12.实战项目",
@@ -148,18 +148,16 @@ var relearn_search_index = [
     "content": "模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的 本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4\n",
     "description": "",
     "tags": null,
-    "title": "电子电路",
+    "title": "14.电子电路",
     "uri": "/branch-bundle-1/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/"
   },
   {
-    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
-    "content": " Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。\nNotes 创建css文件 康奈尔笔记的布局，其中左侧是 “Cues”，右侧是 “Notes”，底部是 “Summary”，您可以使用 Flexbox 的 row 和 column 布局来实现。这里是一个 CSS 示例，它将创建一个两列的布局，左侧为 “Cues”，右侧为 “Notes”，然后在这两列下方是 “Summary”。\n首先，创建一个名为 cornell-notes.css 的 CSS 文件，并添加以下样式代码：\n.cornell-notes { border: 1px solid #ccc; padding: 20px; margin: 20px; display: flex; flex-wrap: wrap; } .cues { background-image: url('icon2.svg'); border-right: 1px solid #080808; flex: 1; padding-right: 20px; } .notes { background-image: url('icon1.svg'); border-left: 1px solid #080808; flex: 2; padding-left: 20px; } .summary { width: 100%; clear: both; /* 清除浮动，确保摘要部分在下方 */ padding-top: 20px; background-image:url('wwwatercolor.jpg'); margin-top: 20px; }在这个样式中，.cornell-notes 是整个康奈尔笔记的容器，我们使用 display: flex; 和 flex-wrap: wrap; 来创建一个 Flex 容器，允许子元素根据需要换行。.cues 和 .notes 分别设置为容器的子项，并通过 flex 属性来分配空间。.summary 部分使用 width: 100%; 来确保它在 .cues 和 .notes 下方显示，并使用 clear: both; 来清除之前的浮动。\n此处分享一个免费的svg网站，bbburst： 在这个网站或许你可以找到适合你的背景图，用以装饰自己的康奈尔容器，此处的svg是放在css文件夹下的，所以是直接引用，如果你放在别的的放那么还请使用正确的的路径。\n在hugo配置中设置 接下来，确保将 cornell-notes.css 文件放置在 Hugo 站点的 static/css 目录下。然后，在 Hugo 的配置文件 config.toml 中添加对 CSS 文件的引用：\n# config.toml [Params] # 其他参数... [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # 允许在 Markdown 中使用 HTML 和 CSS如果使用的是code打开的项目，那么可以先在code内搜索上面的配置是否已添加，因为部分hugo主题原来就添加了这一配置。\n在markdown文档中引用 在 Markdown 文件中，你可以这样使用这些类：\n--- title: \"康奈尔笔记示例\" --- \u003clink rel=\"stylesheet\" href=\"/css/cornell-notes.css\"\u003e \u003cdiv class=\"cornell-notes\"\u003e \u003cdiv class=\"cues\"\u003e ## Cues - 这里是关键词和提示。 \u003c/div\u003e \u003cdiv class=\"notes\"\u003e ## Notes - 这里是详细的笔记内容。 \u003c/div\u003e \u003cdiv class=\"summary\"\u003e ## Summary - 这里是笔记的摘要。 \u003c/div\u003e \u003c/div\u003e确保在 Markdown 文件中添加 标签来引入 CSS 文件，并为每个部分使用相应的类。这样，当你构建并查看 Hugo 站点时，康奈尔笔记将以正确的样式显示，其中 “Cues” 在左侧，“Notes” 在右侧，“Summary” 在底部。\nSummary 在上面我们学习了如何自定义hugo中页面的输出格式，在引用hugo主题情况下，自定义自己的页面输出格式只需要三点，即创建css文件，在config配置文件中配置相关信息，在markdown中引用。其实我们可以拓展，如果你想创建属于自己的笔记你可以参照上面的方法自制简单的笔记，希望本期内容对你有所帮助。\n",
+    "breadcrumb": "Maloudown \u003e 一、博客文章",
+    "content": " 英语听力相关 ： Cues 这里是关键词和提示。 Notes 有声书。 视频学习： ted， comedy，stand up. 1.看原文； 2.看中英； 3.看原文； 4.记笔记； 5.关\n",
     "description": "",
-    "tags": [
-      "文章"
-    ],
-    "title": "5.自定义页面以康奈尔笔记格式输出",
-    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/5.%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%88%9B%E5%BB%BA/"
+    "tags": null,
+    "title": "15.外语类",
+    "uri": "/branch-bundle-1/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/"
   },
   {
     "breadcrumb": "Maloudown",
@@ -184,6 +182,51 @@ var relearn_search_index = [
     "tags": null,
     "title": "Tags",
     "uri": "/tags/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: Y1-外语",
+    "uri": "/categories/y1-%E5%A4%96%E8%AF%AD/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 英语",
+    "uri": "/tags/%E8%8B%B1%E8%AF%AD/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 15.外语类",
+    "content": "听力相关 ：\nCues 这里是关键词和提示。 Notes 有声书。\n视频学习： ted， comedy，stand up. 1.看原文； 2.看中英； 3.看原文； 4.记笔记； 5.关闭字母。\npodcast：\n音频链接\n音频链接2\nSummary 这里是笔记的摘要。 阅读相关 ：\nCues1 单词、词汇。 英语阅读 阅读方法 Notes1 make time for reading.坚持每天都花一点时间阅读10分钟也可以； 使用浏览器搜索自己感兴趣的话题，推bing.com国际版; ask questions as you read.试着带着问题去阅读； read it again. read a variety of texts.阅读丰富的文章。 Don’t worry about looking words up as you’re reading. 在查词的过程中把陌生词添加到自己的单词本中； 上面是一些阅读方法，下面介绍如何找到自己的水平，找到适合自己水平的题材。\n如何阅读，如果自己的四六级英语水平是三百多及一下，推荐这个网站\nThe news ：breaking news english Articles :Lingua and the British Stories :English for Students 如果还是看不懂上面的文章推荐去这个网站：English for Kids。\n四级过了但六级没过推荐下面的网站:\nbritish council magazine and Smithsonian Twen Tribune,the Mental Floss\nLeonardo English Blog\nReading:\nManyBooks\nLibrivox\nAuthorama\nProject Gutenberg\nInternatonal Children’s Digital Library\nRead Print\nArchive.org\nSummary1 renre:题材，体裁。 linguists:语言学家 名词解释 ：\nCues3 名词解释 英文术语 Notes3 College VS. university.\nSummary3 这里是笔记的摘要。 附件 ",
+    "description": "",
+    "tags": [
+      "英语词汇",
+      "英语"
+    ],
+    "title": "英语",
+    "uri": "/branch-bundle-1/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/%E8%8B%B1%E8%AF%AD/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 英语词汇",
+    "uri": "/tags/%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": " Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。\nNotes 创建css文件 康奈尔笔记的布局，其中左侧是 “Cues”，右侧是 “Notes”，底部是 “Summary”，您可以使用 Flexbox 的 row 和 column 布局来实现。这里是一个 CSS 示例，它将创建一个两列的布局，左侧为 “Cues”，右侧为 “Notes”，然后在这两列下方是 “Summary”。\n首先，创建一个名为 cornell-notes.css 的 CSS 文件，并添加以下样式代码：\n.cornell-notes { border: 1px solid #ccc; padding: 20px; margin: 20px; display: flex; flex-wrap: wrap; } .cues { background-image: url('icon2.svg'); border-right: 1px solid #080808; flex: 1; padding-right: 20px; } .notes { background-image: url('icon1.svg'); border-left: 1px solid #080808; flex: 2; padding-left: 20px; } .summary { width: 100%; clear: both; /* 清除浮动，确保摘要部分在下方 */ padding-top: 20px; background-image:url('wwwatercolor.jpg'); margin-top: 20px; }在这个样式中，.cornell-notes 是整个康奈尔笔记的容器，我们使用 display: flex; 和 flex-wrap: wrap; 来创建一个 Flex 容器，允许子元素根据需要换行。.cues 和 .notes 分别设置为容器的子项，并通过 flex 属性来分配空间。.summary 部分使用 width: 100%; 来确保它在 .cues 和 .notes 下方显示，并使用 clear: both; 来清除之前的浮动。\n此处分享一个免费的svg网站，bbburst： 在这个网站或许你可以找到适合你的背景图，用以装饰自己的康奈尔容器，此处的svg是放在css文件夹下的，所以是直接引用，如果你放在别的的放那么还请使用正确的的路径。\n在hugo配置中设置 接下来，确保将 cornell-notes.css 文件放置在 Hugo 站点的 static/css 目录下。然后，在 Hugo 的配置文件 config.toml 中添加对 CSS 文件的引用：\n# config.toml [Params] # 其他参数... [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # 允许在 Markdown 中使用 HTML 和 CSS如果使用的是code打开的项目，那么可以先在code内搜索上面的配置是否已添加，因为部分hugo主题原来就添加了这一配置。\n在markdown文档中引用 在 Markdown 文件中，你可以这样使用这些类：\n--- title: \"康奈尔笔记示例\" --- \u003clink rel=\"stylesheet\" href=\"/css/cornell-notes.css\"\u003e \u003cdiv class=\"cornell-notes\"\u003e \u003cdiv class=\"cues\"\u003e ## Cues - 这里是关键词和提示。 \u003c/div\u003e \u003cdiv class=\"notes\"\u003e ## Notes - 这里是详细的笔记内容。 \u003c/div\u003e \u003cdiv class=\"summary\"\u003e ## Summary - 这里是笔记的摘要。 \u003c/div\u003e \u003c/div\u003e确保在 Markdown 文件中添加 标签来引入 CSS 文件，并为每个部分使用相应的类。这样，当你构建并查看 Hugo 站点时，康奈尔笔记将以正确的样式显示，其中 “Cues” 在左侧，“Notes” 在右侧，“Summary” 在底部。\nSummary 在上面我们学习了如何自定义hugo中页面的输出格式，在引用hugo主题情况下，自定义自己的页面输出格式只需要三点，即创建css文件，在config配置文件中配置相关信息，在markdown中引用。其实我们可以拓展，如果你想创建属于自己的笔记你可以参照上面的方法自制简单的笔记，希望本期内容对你有所帮助。\n",
+    "description": "",
+    "tags": [
+      "文章"
+    ],
+    "title": "5.自定义页面以康奈尔笔记格式输出",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/5.%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%88%9B%E5%BB%BA/"
   },
   {
     "breadcrumb": "Maloudown \u003e Categories",
@@ -245,7 +288,7 @@ var relearn_search_index = [
     "uri": "/tags/%E6%A8%A1%E7%94%B5/"
   },
   {
-    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 电子电路",
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 14.电子电路",
     "content": "常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的\n本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程\n本征半导体的导电能力与载流子的浓度有关：此时处于动态平衡，本证激发与复合的速度一样。\n从工程的角度看，只加热温度让导电能力增加不实际，还好它具有掺杂别的东西让导电能力增加。\n杂质半导体 概念 掺杂少量 的杂志元素。\nN型半导体 掺杂P元素（5价元素），本征半导体的导电能力增加，自由电子是多子，空穴是少子；\n温度对多子影响小，因为多子本身就多，但对少子浓度的影响大，因为少子的量少；\nP型半导体 掺杂硼元素（3价元素），本征半导体的导电能力增加，自由电子是少子，空穴是多子；\nPN结半导体 1.扩散运动：在浓度梯度的作用下，浓度高的地方向浓度低的地方扩散；\n2.空间电荷区（耗尽层、PN结），这里举个例子，就右边空间电荷区的正电荷而言，从电场线出发，两边平衡我们可以理为正电荷发出的电场阻止了左边的空穴移动，而对于负电荷他也有这样的特性，所以两边达到平衡的状态。\n虽然中间有空间电荷区形成势垒（由电压形成）组织了两遍的多子运动，但是这样的势垒能百分之百阻止多子向两边运动吗？\n答案是不完全，还是有一小部分的多子冲破避雷向两边运动。下面是一张简单的图。\n3.漂移运动：两边少子的运动称之为漂移运动\n4.对称结与不对称结：由上面的图可以看出两边宽度一样，原因是掺杂的浓度一样，如果不一样？那么两边就不对称了，这时候称之为不对称结。\n加外电压的PN结半导体 加正电压（P流向N，空间电荷区被削弱） 加反向电压（，空间电荷区增加） 这个时候的漂移运动是增加的，但漂移运动是由少子形成的所以他的影响是很小的，值得注意的是漂移运动对 温度 是很敏感的。\nPN结的电流方程 $i=I_s(e^{U/U{_T}}-1),其中V_T=26V$\n锗：0.2-0.3V 硅：0.6-0.7V\n特性 正向特性 反向特性 2.1雪崩击穿（掺杂浓度低，温度越高，击穿电压越高，因为粒子需要加速） 2.2齐纳击穿（掺杂浓度高，温度越高，击穿电压越低，因为） PN结的电容效应 当正负极两边的电压变化时，中间的电量发生改变；\n1.势垒电容 2.扩散电容：非平衡少子形成 电压增高为2线，浓度增高，电压减小为3，浓度降低；\n半导体二极管 常见结构 伏安特性 体电阻的存在，电流的PN结小； 反向电流大一些； 温度的影响 正向电流：温度升高，本证激发，粒子热运动增加，所以电压固定的时候，温度高的电流可定大，所以曲线往上走；\n反向电流：温度升高，对少子影响大，饱和电流增加，所以曲线往下走；\n二极管作用 单向导电性，规定电流流向，做整流器件；也可以稳压，但一般用反向的稳压 反向的饱和电流，简单的温度传感器； 反向截止电流，稳压二极管； 问：为什么稳压电路不用正向的电压稳压？\n二极管的主要参数 IF：工作的时候电流的最大流过电流， UR：最高反向电压， IR：反向电流（未击穿时）， FM：最高频率（选高频电路的时候需要参考）， 二极管的等效电路 1.上图a为理想的等效电路\n2.b图为常用的等效模型\n上面三张图的 中间没有一杠，这是与普通二极管的区别。\n下面我们看二级管的几个应用：\n整流电路 在上面的这个电路中我们假设交流电10mV，要想在 $u_R$中测量出变化的电流那么需要加一个直流电压，将交流电抬高，曲线图如下：\n上图B点的电压10mV升到A点，它们的关系是： $U_A=U_B+V$,那么此时就可以测量出 $u_R$两端的变化的电流了。具体电路图如下：\n最后得到的波形图是去掉Y轴的负半轴的正弦三角函数图像，也就是整流电路。\n限幅电路 在分析这个电路时，要先判断正向导通和反向截止。\n当 $U_S-U_1\u003c=Uon$的时候截止 当 $U_S-U_1\u003e=Uon$的时候导通 这时候的三角函数上半边会被割掉如下图：\n附件 ",
     "description": "",
     "tags": "模电",

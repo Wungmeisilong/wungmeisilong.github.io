@@ -18,20 +18,20 @@
     <title>计算机组成原理-复习 :: Maloudown</title>
     <link href="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="alternate" type="application/rss+xml" title="计算机组成原理-复习 :: Maloudown">
     <link href="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/index.print.html" rel="alternate" type="text/html" title="计算机组成原理-复习 :: Maloudown">
-    <link href="../../../images/favicon.png?1709726004" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1709734135" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1709726004" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1709726004" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1709726004" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1709726004" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1709726004" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1709726004" rel="stylesheet">
-    <link href="../../../css/fonts.css?1709726004" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1709726004" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1709726004" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1709726004" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1709726004" rel="stylesheet">
-    <link href="../../../css/print.css?1709726004" rel="stylesheet" media="print">
-    <link href="../../../css/ie.css?1709726004" rel="stylesheet">
-    <script src="../../../js/url.js?1709726004"></script>
-    <script src="../../../js/variant.js?1709726004"></script>
+    <link href="../../../css/fontawesome-all.min.css?1709734135" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1709734135" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1709734135" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1709734135" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1709734135" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1709734135" rel="stylesheet">
+    <link href="../../../css/fonts.css?1709734135" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1709734135" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1709734135" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1709734135" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1709734135" rel="stylesheet">
+    <link href="../../../css/print.css?1709734135" rel="stylesheet" media="print">
+    <link href="../../../css/ie.css?1709734135" rel="stylesheet">
+    <script src="../../../js/url.js?1709734135"></script>
+    <script src="../../../js/variant.js?1709734135"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -604,8 +604,8 @@
 <p>乘法运算拆分来看主要有算术运算加法，逻辑运算异或，还有移位操作。</p>
 <p>四位二进制数x,y，两数进行乘法运算，符号位不参与数值位分开运算，一开始y的最低位与x的每一位进行异或并输出结果，下一次y的次高位与x的每一位进行异或运算，结果输出并左移次高位的位数，假设次高位是2，那么左移两位输出结果。</p>
 <p>举个例子，如下：</p>
-<p><a href="#R-image-b1d5d7c8429649921e529098088b920c" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE1.png" alt="图1.png" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1d5d7c8429649921e529098088b920c"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE1.png" alt="图1.png" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-a4ef35ee09a055f699874ccc8339c819" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE1.png" alt="图1.png" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4ef35ee09a055f699874ccc8339c819"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE1.png" alt="图1.png" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="定点数除法运算">定点数除法运算</h3>
 <p>定点数除法运算这里提供两种方法：</p>
 <ol>
@@ -613,12 +613,12 @@
 </ol>
 <p>这种方法是手工计算，而非机器计算，如下图：
 定点原码一位除法实现方案（手工）０．１００１０／０．１０１１
-<a href="#R-image-e0b40e724a734fce859eff6b2e6f31a9" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE2.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0b40e724a734fce859eff6b2e6f31a9"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE2.png" alt="tu" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-c24c7a59e70d9b477ceefb8d71ab30ad" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE2.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c24c7a59e70d9b477ceefb8d71ab30ad"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE2.png" alt="tu" class="lightbox-image        " loading="lazy"></a>
 2. 加减交替法（不恢复余数法）</p>
 <p>在这之前我们先简单了解并行除法器，如下图：</p>
-<p><a href="#R-image-0d1721cc25bdf3af6b7ee912e74d3eba" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE3.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0d1721cc25bdf3af6b7ee912e74d3eba"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE3.png" alt="tu" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-d0a04bc566ef18f859b20bedfc520fa6" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE3.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0a04bc566ef18f859b20bedfc520fa6"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE3.png" alt="tu" class="lightbox-image        " loading="lazy"></a></p>
 <p>被除数 
 <span class="math align-center">$0.x{_6}x{_5}x{_4}x{_3}x{_2}x{_1}$</span></p>
 <p>(双倍长)</p>
@@ -631,8 +631,8 @@
 <p>除数右移</p>
 <p>例题：ｘ＝0.101001, ｙ＝0.111, 求
 <span class="math align-center">${x}\div{y}$</span></p>
-<p><a href="#R-image-29cee808d51f30b1da0c249c5c54ce6a" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE4.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-29cee808d51f30b1da0c249c5c54ce6a"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE4.png" alt="tu" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-4db9b763e3efad851eee8c4592968b3d" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE4.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4db9b763e3efad851eee8c4592968b3d"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE4.png" alt="tu" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="浮点运算方法浮点运算器">浮点运算方法，浮点运算器</h3>
 <p>再次我们在此复习浮点数的表示方法</p>
 
@@ -667,8 +667,8 @@
 <li>结果规格化，把运算结果写成1.M的格式</li>
 <li>检查上溢出或下溢出（-127&lt;=x&lt;=127,x在这个范围就表示没有溢出,如果溢出需要通过 <strong>变形补码</strong> 来判断是正溢出（01），还是负溢出（10））</li>
 <li>舍入处理。写出要求需要的有效位，并用十进制检验是否正确
-<a href="#R-image-643caffbffb8aba17ad8646bdeb3e2b2" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE5.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-643caffbffb8aba17ad8646bdeb3e2b2"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE5.png" alt="tu" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-b35cd7551c14d7da658c57f809dd965a" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE5.png" alt="tu" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b35cd7551c14d7da658c57f809dd965a"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE5.png" alt="tu" class="lightbox-image        " loading="lazy"></a></li>
 </ul>
 <p>例题：设
 <span class="math align-center">$x=0.5{_10},y=0.4375{_10}$</span>,假设尾数有效位为4位，用二进制求
@@ -728,8 +728,8 @@
 <li>高速缓冲存储器简称<strong>cache</strong>，它是计算机系统中的一个高速小容量半导体存储器。</li>
 <li>主存储器简称 <strong>主存</strong>，是计算机系统的主要存储器，用来存放计算机运行期间的 <strong>大量程序</strong> 和 <strong>数据</strong> 。</li>
 <li>外存储器简称 <strong>外存</strong>，它是大容量辅助存储器。
-<a href="#R-image-768e9850c2381c4fb952d32bbf14311a" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu6.png" alt=" tu6" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-768e9850c2381c4fb952d32bbf14311a"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu6.png" alt=" tu6" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-c6b830bf8b34c869ac26d5edd5212333" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu6.png" alt=" tu6" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6b830bf8b34c869ac26d5edd5212333"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu6.png" alt=" tu6" class="lightbox-image        " loading="lazy"></a></li>
 </ul>
 <h3 id="存储系统分类">存储系统分类</h3>
 <ul>
@@ -780,8 +780,8 @@
  列线
  控制线：控制读/写，读写不会同时进行
 例如一台计算机数据线有4条，那么它就是4位的计算机。
-<a href="#R-image-8c3c04addfaff311322466387079bfa5" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu7.png" alt="tu7" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8c3c04addfaff311322466387079bfa5"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu7.png" alt="tu7" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-3b5e8efb4a68f4d94c516f71d8c4a0e0" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu7.png" alt="tu7" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3b5e8efb4a68f4d94c516f71d8c4a0e0"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu7.png" alt="tu7" class="lightbox-image        " loading="lazy"></a></p>
 <h4 id="存储容量的扩充">存储容量的扩充</h4>
 <p>1、字长位数扩展
 字节不变，即给的地址线不变，改变数据线让芯片容量符合设计要求。</p>
@@ -799,8 +799,8 @@
 <p>先进行位扩展（数据线bite），字节扩展（字节扩展Byte）</p>
 <h3 id="动态随机存取存储器">动态随机存取存储器</h3>
 <h4 id="工作原理图">工作原理图</h4>
-<p><a href="#R-image-c48790441f86c5ee0865490b94639b6f" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu8.png" alt="tu8" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c48790441f86c5ee0865490b94639b6f"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu8.png" alt="tu8" class="lightbox-image        " loading="lazy"></a>
+<p><a href="#R-image-8a0789b2b73c36648060ab62cd55e0fd" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu8.png" alt="tu8" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8a0789b2b73c36648060ab62cd55e0fd"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu8.png" alt="tu8" class="lightbox-image        " loading="lazy"></a>
 原理图上的刷新本质上是给mos管充电。</p>
 <h4 id="动态随机存取存储器的刷新操作">动态随机存取存储器的刷新操作</h4>
 <p>刷新的目的是为了保存存储器的存储信息。
@@ -827,15 +827,15 @@
 </ul>
 <h4 id="掩模rom">掩模ROM</h4>
 <p>1、掩模ROM的阵列结构和存储元
-<a href="#R-image-326df435ff6bc378b38aea897cd9d5f6" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu9.png" alt="tu9" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-326df435ff6bc378b38aea897cd9d5f6"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu9.png" alt="tu9" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-9de0ef211fe82a373dc3f407d38c5ddf" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu9.png" alt="tu9" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9de0ef211fe82a373dc3f407d38c5ddf"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu9.png" alt="tu9" class="lightbox-image        " loading="lazy"></a></p>
 <p>2、可编程ROM</p>
 <p> EPROM叫做 <em><strong>光擦除可编程可读存储器</strong></em>。它的存储内容可以根据需要写入，当需要更新时将原存储内容抹去，再写入新的内容。
  现以浮栅雪崩注入型MOS管为存储元的EPROM为例进行说明，结构如下图所示。</p>
 <p>E2PROM存储元</p>
 <p>EEPROM，叫做电擦除可编程只读存储器。其存储元是一个具有两个栅极的NMOS管，如图(a)和(b)所示，G1是控制栅，它是一个浮栅，无引出线；G2是抹去栅，它有引出线。在G1栅和漏极D之间有一小面积的氧化层，其厚度极薄，可产生隧道效应。如图(c)所示，当G2栅加20V正脉冲P1时，通过隧道效应，电子由衬底注入到G1浮栅，相当于存储了1”。利用此方法可将存储器抹成全“1”状态。
-<a href="#R-image-3ce744c93a9e56b5ace5715132ca7616" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu10.png" alt=" tu10" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ce744c93a9e56b5ace5715132ca7616"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu10.png" alt=" tu10" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-31313544c7d67773c298dc32d659f24b" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu10.png" alt=" tu10" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-31313544c7d67773c298dc32d659f24b"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu10.png" alt=" tu10" class="lightbox-image        " loading="lazy"></a></p>
 <h4 id="flash">FLASH</h4>
 <p>FLASH存储器也翻译成闪速存储器，它是高密度非失易失性的读/写存储器。高密度意味着它具有巨大比特数目的存储容量。非易失性意味着存放的数据在没有电源的情况下可以长期保存。总之，它既有RAM的优点，又有ROM的优点，称得上是存储技术划时代的进展。</p>
 <p><strong>FLASH存储器的基本操作</strong> 编程操作、读取操作、擦除操作。</p>
@@ -844,8 +844,8 @@
 <h4 id="双端口与存储器">双端口与存储器</h4>
 <p>1、双端口存储器的逻辑结构</p>
 <p>双端口存储器由同一个存储器具有两组 <strong>相互独立的读写控制电路</strong> 而得名。由于进行并行的独立操作，因而是一种高速工作的存储器，在科研和工程中非常有用。 举例说明，双端口存储器IDT7133的逻辑框图 。如下图：
-<a href="#R-image-aff227630d53941f9e46615b52961580" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu11.png" alt="tu11" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aff227630d53941f9e46615b52961580"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu11.png" alt="tu11" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-383b37fbafc6f2578662e90abcd02b29" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu11.png" alt="tu11" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-383b37fbafc6f2578662e90abcd02b29"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu11.png" alt="tu11" class="lightbox-image        " loading="lazy"></a></p>
 <p>2、无冲突读写控制</p>
 <p>当两个端口的地址不相同时，在两个端口上进行读写操作，一定不会发生冲突。当任一端口被选中驱动时，就可对整个存储器进行存取，每一个端口都有自己的片选控制(CE)和输出驱动控制(OE)。读操作时，端口的OE(低电平有效)打开输出驱动器，由存储矩阵读出的数据就出现在I/O线上。</p>
 <p>3、有冲突读写控制</p>
@@ -856,8 +856,8 @@
 <ul>
 <li>一种是 <strong>顺序方式</strong> ，</li>
 <li>一种是 <strong>交叉方式</strong> 。
-<a href="#R-image-fd2fe5201d28307a6a3e7ddecae9894b" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu12.png" alt="tu12" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd2fe5201d28307a6a3e7ddecae9894b"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu12.png" alt="tu12" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-ff07bcd389b4d3bf147c4d77dc28e56e" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu12.png" alt="tu12" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ff07bcd389b4d3bf147c4d77dc28e56e"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu12.png" alt="tu12" class="lightbox-image        " loading="lazy"></a></li>
 </ul>
 <h5 id="顺序方式">顺序方式</h5>
 <p>[例]M0－M3共四个模块，则每个模块8个字</p>
@@ -914,8 +914,8 @@ M3：24－31</p>
 <li>早期的一级Cache在CPU内，二级在主板上</li>
 <li>现在的CPU内带L1 Cache和L2 Cache</li>
 <li>全由硬件调度，对用户透明
-<a href="#R-image-92d71c27742c050a1d57545103db8d71" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu14.png" alt="tu14" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-92d71c27742c050a1d57545103db8d71"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu14.png" alt="tu14" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-200769e5f939de02ac035fed778713fc" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu14.png" alt="tu14" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-200769e5f939de02ac035fed778713fc"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu14.png" alt="tu14" class="lightbox-image        " loading="lazy"></a>
 cpu与缓存之间数据交换是以字节为单位，而缓存与主存之间的数据交换以块为单位，一个块有若干组成，是定长的。</li>
 </ul>
 <p>从CPU来看，增加一个cache的目的，就是在性能上使主存的平均读出时间尽可能接近cache的读出时间。为了达到这个目的，在所有的存储器访问中由cache满足CPU需要的部分应占很高的比例，即cache的命中率应接近于1。由于程序访问的局部性，实现这个目标是可能的。</p>
@@ -931,8 +931,8 @@ cpu与缓存之间数据交换是以字节为单位，而缓存与主存之间�
 <p>1、全相联的映射方式（一对多，一是指缓存，多是指主存里的数据块）</p>
 <p>（1）将地址分为两部分（块号和字），在内存块写入Cache时，同时写入块号标记；
 （2）CPU给出访问地址后，也将地址分为两部分（块号和字），比较电路块号与Cache 表中的标记进行比较，相同表示命中，访问相应单元；如果没有命中访问内存，CPU 直接访问内存，并将被访问内存的相对应块写入Cache。
-<a href="#R-image-61ee5da1917c01a57dc1d265cf725d8b" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu16.png" alt=" tu15" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-61ee5da1917c01a57dc1d265cf725d8b"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu16.png" alt=" tu15" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-c740a93d6297e7a3cd81d7a9486c52ff" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu16.png" alt=" tu15" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c740a93d6297e7a3cd81d7a9486c52ff"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu16.png" alt=" tu15" class="lightbox-image        " loading="lazy"></a></p>
 <p>1、全相联映射方式</p>
 <p>特点：</p>
 <ul>
@@ -946,8 +946,8 @@ cpu与缓存之间数据交换是以字节为单位，而缓存与主存之间�
 <li>m为cache中的总行数</li>
 <li>主存第j块内容拷贝到Cache的i行</li>
 <li>一般I和m都是2^N级
-<a href="#R-image-46bc523c8a7aa88a7b2001818ebb1585" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu15.png" alt="tu15" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-46bc523c8a7aa88a7b2001818ebb1585"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu15.png" alt="tu15" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-b0837f0aa6d89e6122f42c54a31cf85c" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu15.png" alt="tu15" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b0837f0aa6d89e6122f42c54a31cf85c"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu15.png" alt="tu15" class="lightbox-image        " loading="lazy"></a></li>
 </ul>
 <p>[例]cache容量16字，主存容量256字，则地址2，18，34…..242等都存放在cache的地址2内，如果第一次2在cache中，下次访问34内容，则不管cache其他位置的内容访问情况，都会引起2块内容的替换。</p>
 <p>特点</p>
@@ -978,8 +978,8 @@ cpu与缓存之间数据交换是以字节为单位，而缓存与主存之间�
 <li>v=1，则为直接相联映射方式</li>
 <li>u=1，则为全相联映射方式</li>
 <li>v的取值一般比较小， 一般是2的幂，称之为v路组相联cache。
-<a href="#R-image-99672e0dae5cdf2e2a524ba31eb9720f" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu17.png" alt="tu17" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-99672e0dae5cdf2e2a524ba31eb9720f"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu17.png" alt="tu17" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-276bf084f415ad1faeb6e8bdd4e1766f" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu17.png" alt="tu17" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-276bf084f415ad1faeb6e8bdd4e1766f"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu17.png" alt="tu17" class="lightbox-image        " loading="lazy"></a></li>
 </ul>
 <h3 id="cache替换策略">cache替换策略</h3>
 <ul>
@@ -1017,8 +1017,8 @@ cpu与缓存之间数据交换是以字节为单位，而缓存与主存之间�
 <li>兼容性</li>
 </ul>
 <p>低级语言与高级语言的关系
-<a href="#R-image-dde53fcb11b70455728c072ecedbe8a9" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu18.png" alt="tu18" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dde53fcb11b70455728c072ecedbe8a9"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu18.png" alt="tu18" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-a873aafdf92d1a7cb0a915b0f805a4e6" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu18.png" alt="tu18" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a873aafdf92d1a7cb0a915b0f805a4e6"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu18.png" alt="tu18" class="lightbox-image        " loading="lazy"></a></p>
 <p>机器程序员看到的计算机属性就是指令系统体系结构，简称 <strong>ISA</strong>。</p>
 <h3 id="指令格式">指令格式</h3>
 <table>
@@ -1286,60 +1286,60 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
 此处的跳跃寻址包含了选择和循环。</p>
 <h3 id="操作数基本寻址方式">操作数基本寻址方式</h3>
 <p>1、隐含寻址</p>
-<p><a href="#R-image-6143f136bca8812b60fc7330bf42b55c" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu20.png" alt="tu20" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6143f136bca8812b60fc7330bf42b55c"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu20.png" alt="tu20" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-7af200039f07da4600d3af095a07efa2" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu20.png" alt="tu20" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7af200039f07da4600d3af095a07efa2"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu20.png" alt="tu20" class="lightbox-image        " loading="lazy"></a></p>
 <ul>
 <li>指令中隐含着操作数的地址，比如隐藏累加器的地址，当该指令被执行时会执行累加器，但累加器的地址是没有表现在该指令上的。</li>
 <li>如某些运算，隐含了累加器AC作为源和目的寄存器</li>
 <li>如8086汇编中的STC指令，设置标志寄存器的C为1</li>
 </ul>
 <p>2、立即寻址</p>
-<p><a href="#R-image-7472cd7da5e3949a9238f5b691840cf6" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu21.png" alt="tu21" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7472cd7da5e3949a9238f5b691840cf6"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu21.png" alt="tu21" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-6e051bce75b3df43c2f41640555b47cf" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu21.png" alt="tu21" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6e051bce75b3df43c2f41640555b47cf"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu21.png" alt="tu21" class="lightbox-image        " loading="lazy"></a></p>
 <p>指令的地址指出的不是操作数地址，而是操作数本身。比如</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,y<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> z<span style="color:#f92672">=</span>x<span style="color:#f92672">+</span>y;</span></span></code></pre></div><p>在上面这个例子中，执行加法的时候x,y不是6和7的地址，而是6和7本身；</p>
 <p>3、直接寻址</p>
-<p><a href="#R-image-74cebf88c04cf9b4efe73fc4bfb47284" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu22.png" alt="tu22" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-74cebf88c04cf9b4efe73fc4bfb47284"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu22.png" alt="tu22" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-928c640f82e10533bc212c322890d76d" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu22.png" alt="tu22" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-928c640f82e10533bc212c322890d76d"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu22.png" alt="tu22" class="lightbox-image        " loading="lazy"></a></p>
 <p>在指令格式中的地址上指出操作数在内存中的地址。其实这很像数组，例如</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>;<span style="color:#75715e">//地址为5673
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> cha[]<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;x&#39;</span>};<span style="color:#75715e">//地址为2341
 </span></span></span></code></pre></div><p>我们在使用cha[0]的时候,地址2341指向的就是1的地址5673，一个地址指向另一个地址。</p>
 <p>4、间接寻址</p>
-<p><a href="#R-image-6024f76c9ff2475a41eed96ba0a5be7c" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu23.png" alt="tu23" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6024f76c9ff2475a41eed96ba0a5be7c"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu23.png" alt="tu23" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-454fc13c49cddec13b67314814d79c1d" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu23.png" alt="tu23" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-454fc13c49cddec13b67314814d79c1d"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu23.png" alt="tu23" class="lightbox-image        " loading="lazy"></a></p>
 <p>类似二维数组</p>
 <p>5、寄存器寻址</p>
-<p><a href="#R-image-8afedbcceb4f5697a0ba9a7b7080d564" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu24.png" alt="tu24" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8afedbcceb4f5697a0ba9a7b7080d564"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu24.png" alt="tu24" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-20cc4183207547708310c9a121e34ec1" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu24.png" alt="tu24" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-20cc4183207547708310c9a121e34ec1"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu24.png" alt="tu24" class="lightbox-image        " loading="lazy"></a></p>
 <p>当操作数不在内存而是在CPU的寄存器中时使用这个寻址方式</p>
 <p>6、寄存器简介寻址</p>
-<p><a href="#R-image-cce81e669e0b10e977a7c1926c6bb0de" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu25.png" alt="tu25" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cce81e669e0b10e977a7c1926c6bb0de"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu25.png" alt="tu25" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-da49ef5745835c312e84eee18c09cb39" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu25.png" alt="tu25" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da49ef5745835c312e84eee18c09cb39"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu25.png" alt="tu25" class="lightbox-image        " loading="lazy"></a></p>
 <p>操作数不在寄存器中，而是在寄存器地址所知的位置，比如内存（类似二维数组）</p>
 <p>7、偏移寻址</p>
-<p><a href="#R-image-dd196d4224b756bbdf8744db82479704" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu26.png" alt="tu26" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd196d4224b756bbdf8744db82479704"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu26.png" alt="tu26" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-d5112f635321ea550f7d1051f4f07699" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu26.png" alt="tu26" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d5112f635321ea550f7d1051f4f07699"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu26.png" alt="tu26" class="lightbox-image        " loading="lazy"></a></p>
 <p>类似于数组中，数组下标的变化会对应不同的地址上的值，下标的变化可以理解为加了某一个偏移量而产生改变。</p>
 <p>下面介绍三种不同的偏移寻址，他们的不同我觉得就是使用的寄存器不一样，本质上都是地址加了偏移量后找到第二个地址，再通过第二个地址上的值进行操作。</p>
 <p>7.1 相对寻址</p>
 <p>使用的是程序计数器（CP），CP作为原始地址，EA=A+（CP）</p>
 <p>7.2 基址寻址</p>
-<p><a href="#R-image-0143eaf993a30d048d155bb07412fdfb" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu28.png" alt="tu27" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0143eaf993a30d048d155bb07412fdfb"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu28.png" alt="tu27" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-0e6468ef3f326dce43110fc76b5aa539" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu28.png" alt="tu27" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0e6468ef3f326dce43110fc76b5aa539"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu28.png" alt="tu27" class="lightbox-image        " loading="lazy"></a></p>
 <p>使用存储器地址，作为原始地址，</p>
 <p>7.3 变址寻址</p>
-<p><a href="#R-image-b520cc061badc1e52ad2b6d56bf31f77" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu29.png" alt="tu28" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b520cc061badc1e52ad2b6d56bf31f77"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu29.png" alt="tu28" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-c0af5e067c5bfea5810f05c9449b8704" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu29.png" alt="tu28" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c0af5e067c5bfea5810f05c9449b8704"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu29.png" alt="tu28" class="lightbox-image        " loading="lazy"></a></p>
 <p>就是将指令的地址码部分给出的基准地址A与CPU内某特定的变址寄存器Rx中的内容相加，以形成操作数的有效地址。</p>
 <p>8、分寄存器堆栈、存储器堆栈以先进后出原理存储数据
-<a href="#R-image-63bf427400e4d1aa43b6b31ed79695b7" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu27.png" alt="tu27" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-63bf427400e4d1aa43b6b31ed79695b7"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu27.png" alt="tu27" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-ecc1638f80bc39baf6ebe07712bb4e2b" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu27.png" alt="tu27" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecc1638f80bc39baf6ebe07712bb4e2b"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu27.png" alt="tu27" class="lightbox-image        " loading="lazy"></a></p>
 <p>9、段寻址方式</p>
 <p>存储空间划分为多段
-<a href="#R-image-763bf05c7d0402bd6f017da69e9dc8f8" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu30.png" alt="tu30" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-763bf05c7d0402bd6f017da69e9dc8f8"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu30.png" alt="tu30" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-5aa60e50f1bf284dd555c9bdb5979a9c" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu30.png" alt="tu30" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5aa60e50f1bf284dd555c9bdb5979a9c"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu30.png" alt="tu30" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="典型的指令">典型的指令</h3>
 <ul>
 <li>数据处理</li>
@@ -1368,8 +1368,8 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
 <li>数据加工。例如算数运算和逻辑运算</li>
 </ul>
 <h4 id="cpu的组成">CPU的组成</h4>
-<p><a href="#R-image-b4bc08ce0cd89e136b5edde7cf351da4" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu31.png" alt="tu31" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4bc08ce0cd89e136b5edde7cf351da4"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu31.png" alt="tu31" class="lightbox-image        " loading="lazy"></a>
+<p><a href="#R-image-671106f065144fffd9b59f11e7ede62e" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu31.png" alt="tu31" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-671106f065144fffd9b59f11e7ede62e"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu31.png" alt="tu31" class="lightbox-image        " loading="lazy"></a>
 中央处理器CPU = 运算器 + cache + 控制器</p>
 <h5 id="运算器">运算器</h5>
 <ul>
@@ -1398,8 +1398,8 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
 <h3 id="重要的寄存器">重要的寄存器</h3>
 <ul>
 <li>数据缓冲寄存器（DP）：暂时存放ALU（算术逻辑运算单元）运算结果，或或有数据寄存器读出的数据字，或外部接口的数据字。
-<a href="#R-image-b9128155addcb4b466c93551ecc1a704" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu32.png" alt="tu32" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9128155addcb4b466c93551ecc1a704"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu32.png" alt="tu32" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-1d27856cc58d4909312c8ac9756c00b5" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu32.png" alt="tu32" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d27856cc58d4909312c8ac9756c00b5"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu32.png" alt="tu32" class="lightbox-image        " loading="lazy"></a></li>
 <li>指令寄存器(IR)：用来保存当前正在执行的第一条指令</li>
 <li>程序计数器(PC)：总是保持将要执行的下一条指令，绝大多数是顺序程序，所以修改过程中通常是简单的PC加1.</li>
 <li>数据地址寄存器(AR)用来保存当前CPU所访问的数据存储单元的地址。</li>
@@ -1407,8 +1407,8 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
 <li>状态字寄存器(PSW)：保存有算术运算或逻辑运算或测试结果产生的更重条件代码，简而言之就是存储一些运算的结果，比如进位、溢出、零标志、负标志等</li>
 </ul>
 <h3 id="指令周期">指令周期</h3>
-<p><a href="#R-image-0016818b949ad6dcfe0de97678462581" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu33.png" alt="tu23" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0016818b949ad6dcfe0de97678462581"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu33.png" alt="tu23" class="lightbox-image        " loading="lazy"></a>
+<p><a href="#R-image-f5528bd1e1294a8028af6ca740024844" class="lightbox-link"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu33.png" alt="tu23" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f5528bd1e1294a8028af6ca740024844"><img src="../../../branch-bundle-1/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu33.png" alt="tu23" class="lightbox-image        " loading="lazy"></a>
 指令周期由若干个CPU周期数表示，CPU周期又称为机器周期，在一些系统中称机器周期为时钟周期。</p>
 <p>指令周期又分为取指令周期与执行指令周期</p>
 
@@ -6111,12 +6111,12 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
         <script>
           var contentLangs=['zh'];
         </script>
-        <script src="../../../js/auto-complete.js?1709726004" defer></script>
-        <script src="../../../js/lunr/lunr.min.js?1709726004" defer></script>
-        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1709726004" defer></script>
-        <script src="../../../js/lunr/lunr.multi.min.js?1709726004" defer></script>
-        <script src="../../../js/lunr/lunr.zh.min.js?1709726004" defer></script>
-        <script src="../../../js/search.js?1709726004" defer></script>
+        <script src="../../../js/auto-complete.js?1709734135" defer></script>
+        <script src="../../../js/lunr/lunr.min.js?1709734135" defer></script>
+        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1709734135" defer></script>
+        <script src="../../../js/lunr/lunr.multi.min.js?1709734135" defer></script>
+        <script src="../../../js/lunr/lunr.zh.min.js?1709734135" defer></script>
+        <script src="../../../js/search.js?1709734135" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -6254,8 +6254,8 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
         </div>
       </div>
     </aside>
-    <script src="../../../js/clipboard.min.js?1709726004" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1709726004" defer></script>
+    <script src="../../../js/clipboard.min.js?1709734136" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1709734136" defer></script>
     <script>
       function useMathJax( config ){
         if( !Object.assign ){
@@ -6284,7 +6284,7 @@ RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内�
       }
       useMathJax( JSON.parse("{}") );
     </script>
-    <script id="MathJax-script" async src="../../../js/mathjax/tex-mml-chtml.js?1709726004"></script>
-    <script src="../../../js/theme.js?1709726004" defer></script>
+    <script id="MathJax-script" async src="../../../js/mathjax/tex-mml-chtml.js?1709734136"></script>
+    <script src="../../../js/theme.js?1709734136" defer></script>
   </body>
 </html>

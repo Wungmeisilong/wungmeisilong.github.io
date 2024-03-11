@@ -18,20 +18,20 @@
     <title>实验2 IO端口输出实验 :: Maloudown</title>
     <link href="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/index.xml" rel="alternate" type="application/rss+xml" title="实验2 IO端口输出实验 :: Maloudown">
     <link href="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/index.print.html" rel="alternate" type="text/html" title="实验2 IO端口输出实验 :: Maloudown">
-    <link href="../../../images/favicon.png?1710162162" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1710164088" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1710162162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1710162162" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1710162162" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1710162162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1710162162" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1710162162" rel="stylesheet">
-    <link href="../../../css/fonts.css?1710162162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1710162162" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1710162162" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1710162162" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1710162162" rel="stylesheet">
-    <link href="../../../css/print.css?1710162162" rel="stylesheet" media="print">
-    <link href="../../../css/ie.css?1710162162" rel="stylesheet">
-    <script src="../../../js/url.js?1710162162"></script>
-    <script src="../../../js/variant.js?1710162162"></script>
+    <link href="../../../css/fontawesome-all.min.css?1710164088" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1710164088" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1710164088" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1710164088" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1710164088" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1710164088" rel="stylesheet">
+    <link href="../../../css/fonts.css?1710164088" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1710164088" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1710164088" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1710164088" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1710164088" rel="stylesheet">
+    <link href="../../../css/print.css?1710164088" rel="stylesheet" media="print">
+    <link href="../../../css/ie.css?1710164088" rel="stylesheet">
+    <script src="../../../js/url.js?1710164088"></script>
+    <script src="../../../js/variant.js?1710164088"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -135,59 +135,59 @@
 <h3 id="实验2-io端口输出实验">实验2 IO端口输出实验</h3>
 <p><strong>1、实验要求：</strong>
 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图：
-<a href="#R-image-18e7245e817cb4a993f92db8cd715e42" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" alt="八盏灯" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-18e7245e817cb4a993f92db8cd715e42"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" alt="八盏灯" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-9fd1fbf57c17c828162945df7e44c2a3" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" alt="八盏灯" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9fd1fbf57c17c828162945df7e44c2a3"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" alt="八盏灯" class="lightbox-image        " loading="lazy"></a>
 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用<strong>cc2530</strong>控制它。</p>
 <p><strong>2、LED灯驱动芯片</strong>
 由于CC2530 单片机端口驱动能力有限，所以我们可以用<strong>ULN2003</strong>芯片做驱动，但使用uln2003需要使用到八个端口，为了不浪费端口，我们可以使用<strong>74HC595</strong>，该芯片只需要用到三个端口就可以控制八盏灯的亮灭，下面提供两块芯片的原理图：
-<a href="#R-image-ae24e552655cb45fa2e632411d6871b0" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" alt="原理图" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ae24e552655cb45fa2e632411d6871b0"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" alt="原理图" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-ef77df5a03e2605ae9b0c57044b01c7c" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" alt="原理图" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef77df5a03e2605ae9b0c57044b01c7c"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" alt="原理图" class="lightbox-image        " loading="lazy"></a>
 如果你想用<strong>ULN2003</strong>还请查看相关手册，此处对<strong>74HC595</strong>进行详细说明。
 74HC595 是 8 位输出锁存移位寄存器，数据输入由三个引脚组合控制，分别是数据输入引脚 SER、数据输入控制引脚 SRCK 和数据输出锁存引脚 RCK
 SER 引脚上的数据在 SRCK 引脚的上升沿信号保存到 QA 引脚，同时 QA 位上的数据移位到 QB位，QB 位的数据移位到 QC 位……，依次类推，所有数据向后串行移动一位，QH 位的数据被送到QH’位。所有位的数据在 RCK 引脚的上升沿信号被所存到输出端。
-<a href="#R-image-e7b6d51df5eb4c4f122e8bc134a0ca4d" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/74hc595.jpg" alt="74HC595" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e7b6d51df5eb4c4f122e8bc134a0ca4d"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/74hc595.jpg" alt="74HC595" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-ebfecb8c10a146fe6232e3ee11ed2710" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/74hc595.jpg" alt="74HC595" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ebfecb8c10a146fe6232e3ee11ed2710"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/74hc595.jpg" alt="74HC595" class="lightbox-image        " loading="lazy"></a>
 一下是我的个人理解：
 这里我们用输入数据<strong>1001 0101</strong>，使第1、3、5、8盏灯亮（假设高电平有效）为例解释说明，首先，实际上数据输入74HC595是串行输入，所以可以数据输入时是在打开SER端口后，按照从高位到低位依次输入数据<strong>1001 0101</strong>，如上图的下面所示；接着打开SRCK，先把最高位1输入数据寄存器低位b0，接着输入次高位的0,通过0把1挤到b1，以此类推；接着再打开RCK显示灯的亮灭。</p>
 <p><strong>3、IO端口输出控制</strong>
 要使用CC2530的IO端口，我们需要对<strong>PxDIR</strong>、<strong>PxSEL</strong>、<strong>Px</strong>进行设置，PxDIR用来控制端口的输入输出模式，<strong>1</strong>表示<strong>输出模式</strong>，SEL为<strong>0</strong>时，表示<strong>通用IO端口</strong>，详细参照下表：
-<a href="#R-image-c3e5e7ae67971ff7ce21abc3ecd55517" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png" alt="IO" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c3e5e7ae67971ff7ce21abc3ecd55517"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png" alt="IO" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-388a3f667cb3dbdcedd0c3914f29fc25" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png" alt="IO" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-388a3f667cb3dbdcedd0c3914f29fc25"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png" alt="IO" class="lightbox-image        " loading="lazy"></a>
 而这里的x可以取0、1、2，其实就是端口P0、P1、P2的意思,在端口下设8个端口0~7，例如P0_1,但是端口2只有0~4可用;</p>
 <p>下面是一个详细的例子：
 当I/OP1_0~P1_7 各I/O端口输出高低电平时，设置方法如表 1.2所示：
-<a href="#R-image-3b54496d0989df860ce073ff809c2c26" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" alt="例子" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3b54496d0989df860ce073ff809c2c26"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" alt="例子" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-361f4360360b4bd589715dcfbc12f7bb" class="lightbox-link"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" alt="例子" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-361f4360360b4bd589715dcfbc12f7bb"><img src="../../../branch-bundle-1/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" alt="例子" class="lightbox-image        " loading="lazy"></a></p>
 <p>了解以上知识后我们就可以写工程代码了。</p>
 <p>
-<div class="tab-panel" data-tab-group="6e1d0dd8befae468d910693846450d85">
+<div class="tab-panel" data-tab-group="f8b64241f67839bf4bdc390d43d82513">
   <div class="tab-nav">
     <div class="tab-nav-title">.xml文件</div>
     <button
       data-tab-item="printfledhfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('6e1d0dd8befae468d910693846450d85','printfledhfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f8b64241f67839bf4bdc390d43d82513','printfledhfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> PrintfLED.h</span>
     </button>
     <button
       data-tab-item="delayehfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
-      onclick="switchTab('6e1d0dd8befae468d910693846450d85','delayehfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f8b64241f67839bf4bdc390d43d82513','delayehfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Delaye.h</span>
     </button>
     <button
       data-tab-item="initialhfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
-      onclick="switchTab('6e1d0dd8befae468d910693846450d85','initialhfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f8b64241f67839bf4bdc390d43d82513','initialhfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Initial.h</span>
     </button>
     <button
       data-tab-item="全码"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
-      onclick="switchTab('6e1d0dd8befae468d910693846450d85','全码')"
+      onclick="switchTab('f8b64241f67839bf4bdc390d43d82513','全码')"
     >
       <span class="tab-nav-text">全码</span>
     </button>
@@ -4995,12 +4995,12 @@ SER 引脚上的数据在 SRCK 引脚的上升沿信号保存到 QA 引脚，同
         <script>
           var contentLangs=['zh'];
         </script>
-        <script src="../../../js/auto-complete.js?1710162162" defer></script>
-        <script src="../../../js/lunr/lunr.min.js?1710162162" defer></script>
-        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1710162162" defer></script>
-        <script src="../../../js/lunr/lunr.multi.min.js?1710162162" defer></script>
-        <script src="../../../js/lunr/lunr.zh.min.js?1710162162" defer></script>
-        <script src="../../../js/search.js?1710162162" defer></script>
+        <script src="../../../js/auto-complete.js?1710164088" defer></script>
+        <script src="../../../js/lunr/lunr.min.js?1710164088" defer></script>
+        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1710164088" defer></script>
+        <script src="../../../js/lunr/lunr.multi.min.js?1710164088" defer></script>
+        <script src="../../../js/lunr/lunr.zh.min.js?1710164088" defer></script>
+        <script src="../../../js/search.js?1710164088" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -5138,8 +5138,8 @@ SER 引脚上的数据在 SRCK 引脚的上升沿信号保存到 QA 引脚，同
         </div>
       </div>
     </aside>
-    <script src="../../../js/clipboard.min.js?1710162162" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1710162162" defer></script>
-    <script src="../../../js/theme.js?1710162162" defer></script>
+    <script src="../../../js/clipboard.min.js?1710164088" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1710164088" defer></script>
+    <script src="../../../js/theme.js?1710164088" defer></script>
   </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="10.云端一体化的环境变量问题 :: Maloudown">
+    <meta name="twitter:description" content="参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env 先部署云函数到远端，然后在去远端">
+    <meta property="og:title" content="10.云端一体化的环境变量问题 :: Maloudown">
+    <meta property="og:description" content="参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env 先部署云函数到远端，然后在去远端">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/">
+    <meta property="article:section" content="1.文章 :: Maloudown">
+    <meta property="article:published_time" content="2024-03-23T15:46:15+08:00">
+    <meta property="article:modified_time" content="2024-03-23T15:46:15+08:00">
+    <meta property="og:site_name" content="Maloudown">
+    <title>10.云端一体化的环境变量问题 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" rel="canonical" type="text/html" title="10.云端一体化的环境变量问题 :: Maloudown">
+    <link href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/index.xml" rel="alternate" type="application/rss+xml" title="10.云端一体化的环境变量问题 :: Maloudown">
+    <link href="../../../images/favicon.png?1716793162" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1716793162" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1716793162" rel="stylesheet">
+    <link href="../../../css/fonts.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1716793162" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1716793162" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1716793162" rel="stylesheet">
+    <link href="../../../css/print.css?1716793162" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1716793162" rel="stylesheet">
+    <link href="../../../css/ie.css?1716793162" rel="stylesheet">
+    <script src="../../../js/url.js?1716793162"></script>
+    <script src="../../../js/variant.js?1716793162"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"><span itemprop="name">1.文章</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">10.云端一体化的环境变量问题</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/arkts/">ArkTS</a></li>
+    <li><a class="term-link" href="../../../tags/harmonyos/">HarmonyOS</a></li>
+    <li><a class="term-link" href="../../../tags/openharmony/">OpenHarmony</a></li>
+    <li><a class="term-link" href="../../../tags/%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96/">云端一体化</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="10云端一体化的环境变量问题">10.云端一体化的环境变量问题</h1>
+
+<p>参数<strong>context</strong> 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env</p>
+<ul>
+<li>先部署云函数到远端，然后在去远端添加环境变量，然后在本地运行虚拟机查看。</li>
+</ul>
+<p>负载均衡的四种方式</p>
+<ul>
+<li>随机</li>
+<li>轮询</li>
+<li>最少连接数</li>
+<li>最短响应时间</li>
+</ul>
+<p>延迟时长的重试策略</p>
+<ul>
+<li>zero:一旦云函数调用失败，则调用，中间不等待</li>
+<li>constant：调用失败等一段时间</li>
+<li>jittered:调用失败等一段时间，再次调用，如果失败等待时间以指数增长</li>
+</ul>
+<p>熔断</p>
+<p>设置一定的条件，满足条件后会执行熔断。熔断后云函数不在提供服务。</p>
+<p><a href="#R-image-b06190e01cf332bf61576e35dc4ba049" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/./log.JPG" alt="e" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b06190e01cf332bf61576e35dc4ba049"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/./log.JPG" alt="e" class="lightbox-image        " loading="lazy"></a></p>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">应用开发</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1716793162" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1716793162" defer></script>
+    <script src="../../../js/theme.js?1716793162" defer></script>
+  </body>
+</html>

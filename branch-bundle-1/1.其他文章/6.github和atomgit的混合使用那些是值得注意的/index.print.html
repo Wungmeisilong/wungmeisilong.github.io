@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="6.github和atomgit的混合使用，哪些是值得注意的？ :: Maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="6.github和atomgit的混合使用，哪些是值得注意的？ :: Maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/">
+    <meta property="og:site_name" content="Maloudown">
+    <title>6.github和atomgit的混合使用，哪些是值得注意的？ :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/" rel="canonical" type="text/html" title="6.github和atomgit的混合使用，哪些是值得注意的？ :: Maloudown">
+    <link href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/index.xml" rel="alternate" type="application/rss+xml" title="6.github和atomgit的混合使用，哪些是值得注意的？ :: Maloudown">
+    <link href="../../../images/favicon.png?1716793162" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1716793162" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1716793162" rel="stylesheet">
+    <link href="../../../css/fonts.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1716793162" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1716793162" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1716793162" rel="stylesheet">
+    <link href="../../../css/print.css?1716793162" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1716793162" rel="stylesheet">
+    <link href="../../../css/ie.css?1716793162" rel="stylesheet">
+    <script src="../../../js/url.js?1716793162"></script>
+    <script src="../../../js/variant.js?1716793162"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"><span itemprop="name">1.文章</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">6.github和atomgit的混合使用，哪些是值得注意的？</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/atomgit/">atomgit</a></li>
+    <li><a class="term-link" href="../../../tags/gihub/">gihub</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="6github和atomgit的混合使用哪些是值得注意的">6.github和atomgit的混合使用，哪些是值得注意的？</h1>
+
+<h2 id="一台电脑如何使用多个远程仓库">一台电脑如何使用多个远程仓库？</h2>
+<ul>
+<li>下载好git，并做好相关的配置</li>
+<li>关联github仓库
+<ul>
+<li>创建github仓库</li>
+<li>克隆仓库到本地</li>
+</ul>
+</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0"><code class="language-git" data-lang="git">  git clone &lt;你的远程仓库URL&gt;</code></pre></div><p>创建多个 SSH 密钥对涉及到在本地生成多个公钥和私钥文件，并将公钥添加到你想要访问的远程服务器上。以下是详细步骤：</p>
+<p>打开终端：
+打开你的终端（在 macOS 或 Linux 上）或 Git Bash（在 Windows 上）。</p>
+<p>导航到 SSH 目录：
+使用 cd 命令切换到你的 SSH 目录，通常是 ~/.ssh。</p>
+<p><code>cd ~/.ssh</code>
+生成新的 SSH 密钥对：
+使用 ssh-keygen 命令生成新的密钥对。每次运行此命令时，你都可以指定不同的文件名，以便区分不同的密钥对。例如，为 GitHub 生成的密钥对可能命名为 id_rsa_github，为 GitLab 生成的密钥对可能命名为 id_rsa_gitlab。</p>
+<p><code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot; -f id_rsa_github</code>
+重复上述步骤，为其他服务生成密钥对，只需更改文件名即可。例如：</p>
+<p><code>ssh-keygen -t rsa -b 4096 -C &quot;another_email@example.com&quot; -f id_rsa_gitlab</code></p>
+<p>-b是指密码的长度是4096，与加密有关，-f表示要创建的ssh有关文件名</p>
+<p>在生成密钥时，系统会提示你输入一个文件名来保存新的密钥对。如果你直接按回车键，它将使用默认的文件名（如 id_rsa）。如果你想要为每个服务使用不同的文件名，确保在命令中指定 -f 选项后跟你想要的文件名。</p>
+<p>将公钥添加到远程服务器：
+生成密钥对后，你需要将公钥（文件名后缀为 .pub）添加到远程服务器的 SSH 密钥管理界面。例如，在 GitHub 上，你可以在 Settings &gt; SSH and GPG keys 部分添加新的公钥。</p>
+<p>配置 SSH 配置文件：
+为了确保 SSH 使用正确的密钥对连接到正确的服务器，你可以在 .ssh 目录下创建一个名为 config 的文件（如果该文件不存在的话），并为每个服务配置不同的设置。</p>
+<p><code>touch ~/.ssh/config</code></p>
+<p>然后编辑这个文件，添加以下内容：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Host github.com
+</span></span><span style="display:flex;"><span>  User git
+</span></span><span style="display:flex;"><span>  IdentityFile <span style="color:#f92672">~/</span>.ssh<span style="color:#f92672">/</span>id_rsa_github
+</span></span><span style="display:flex;"><span>  IdentitiesOnly yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Host gitlab.com
+</span></span><span style="display:flex;"><span>  User git
+</span></span><span style="display:flex;"><span>  IdentityFile <span style="color:#f92672">~/</span>.ssh<span style="color:#f92672">/</span>id_rsa_gitlab
+</span></span><span style="display:flex;"><span>  IdentitiesOnly yes</span></span></code></pre></div><p>这里的 Host 是你为每个服务设置的别名，User 是 Git 服务的默认用户名（通常是 git），IdentityFile 是你的私钥文件的路径。</p>
+<p>测试 SSH 连接：
+使用 ssh -T 命令测试与远程服务器的连接。例如：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>ssh <span style="color:#f92672">-</span>T git<span style="color:#960050;background-color:#1e0010">@</span>github.com
+</span></span><span style="display:flex;"><span>ssh <span style="color:#f92672">-</span>T git<span style="color:#960050;background-color:#1e0010">@</span>gitlab.com</span></span></code></pre></div><p>如果一切设置正确，你应该会看到一条欢迎消息，表明你已经成功通过 SSH 密钥验证。</p>
+<h2 id="当我有连个github账户时当我用同一台电脑推送的时候如何区分是那个推送的">当我有连个github账户时，当我用同一台电脑推送的时候如何区分是那个推送的</h2>
+<p><a href="https://blog.csdn.net/Kingson_Wu/article/details/38960559" target="_blank">推荐文章</a></p>
+<p>答案：</p>
+<p>首先是克隆下来两个项目一个为test_A,一个为test_B，假设有一个账户是A，另一个是B，而且A账户的邮箱是设置为全局的，即用了这条命令：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>git config <span style="color:#f92672">--</span>global user.name <span style="color:#e6db74">&#34;A&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git config <span style="color:#f92672">--</span>global user.email A<span style="color:#960050;background-color:#1e0010">@</span>qq.com
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#假设这里的邮箱是QQ</span></span></span></code></pre></div><p>那么在在text_A中不作任何修改，在text_B中添加如下命令即可：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>git config  user.name <span style="color:#e6db74">&#34;B&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git config user.email B<span style="color:#960050;background-color:#1e0010">@</span>qq.com
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#假设这里的邮箱是QQ</span></span></span></code></pre></div><h2 id="遇到的一些问题">遇到的一些问题</h2>
+<p>问题一</p>
+<hr>
+<p>解决Git上传代码error: failed to push some refs to ‘xxx‘hint:(e.g., ‘git pull &hellip;‘) before pushing again错误</p>
+<hr>
+<p><a href="https://blog.csdn.net/qq_43265673/article/details/107392047" target="_blank">推荐文章</a></p>
+<p>问题二</p>
+<hr>
+<p>【Git】错误：权限被拒绝（公钥）(Permission denied (publickey).)</p>
+<hr>
+<p><a href="https://blog.csdn.net/weixin_42282187/article/details/124820546?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%25!E%28MISSING%29default%25!E%28MISSING%29CTRLIST%25!E%28MISSING%29Rate-2-124820546-blog-100894172.235%25!E%28MISSING%29v43%25!E%28MISSING%29pc_blog_bottom_relevance_base8&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%25!E%28MISSING%29default%25!E%28MISSING%29CTRLIST%25!E%28MISSING%29Rate-2-124820546-blog-100894172.235%25!E%28MISSING%29v43%25!E%28MISSING%29pc_blog_bottom_relevance_base8&amp;utm_relevant_index=5" target="_blank">推荐文章</a>2)</p>
+<p>问题三</p>
+<hr>
+<p>解决Git上传代码error: failed to push some refs to ‘xxx‘hint:(e.g., ‘git pull &hellip;‘) before pushing again错误</p>
+<hr>
+<p><a href="https://blog.csdn.net/qq_43265673/article/details/107392047" target="_blank">推荐文章</a>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div></p>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/b1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">B1-博客文章</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1716793162" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1716793162" defer></script>
+    <script src="../../../js/theme.js?1716793162" defer></script>
+  </body>
+</html>

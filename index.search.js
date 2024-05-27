@@ -1,19 +1,19 @@
 var relearn_search_index = [
   {
-    "breadcrumb": "Maloudown",
-    "content": " 1.文章 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 思想的边界 庄子之道 费尔巴哈提纲 如何理解费尔巴哈提纲的主要含义？ 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 14.电子电路 模拟电子技术基础笔记 15.外语类 英语 16.考试类 教资 小学 常用的数学表达\n常用箭头\n常用函数图像公式\n",
-    "description": "",
-    "tags": null,
-    "title": "一、博客文章",
-    "uri": "/branch-bundle-1/"
-  },
-  {
     "breadcrumb": "Maloudown \u003e 一、博客文章",
-    "content": " 5.自定义页面以康奈尔笔记格式输出Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。 Notes 创建\n4.如何在github上使用高级搜索搜出自己想要的项目？原文章链接 附件\n文章标题的多样设计在标题前面显示图标： +++ menuPre = \"\u003ci class='fab fa-github'\u003e\u003c/i\u003e \" +++添加这个后的效果如下： 附件\nGit常遇问题1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网\n如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可\n创建hugo静态网站的经历附件 一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重\n网站内常用到的模版代码分制表 以\u003c tabs title=\"file name\" \u003e，\u003c /tabs \u003e结尾； 然后里面写以% tab title=\"code name\" style=\"info\" color=\"blue \" %，% /tab %结尾 他们都需要用{{}}括起来 ​ 代码 {{\u003c tabs title=\"hello.\" \u003e}}\n网站的目录与子目录创建不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说\n",
+    "content": " 物联网应用系统设计物联网结构系统与传统网路系统的区别 前者由三个部分构成 信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测质量保证、项目管理 需求：功\n10.云端一体化的环境变量问题参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env 先部署云函数到远端，然后在去远端\n9.云端一体化如何查看云函数日志？调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问\n8.速通ArkTS语言数据类型 练习网址： 条件语句 拓展：for in与for of的使用 for in ：遍历得到数组的角标， for of ：直接得到元素。 函数 使用function关键字声明\n6.github和atomgit的混合使用，哪些是值得注意的？一台电脑如何使用多个远程仓库？ 下载好git，并做好相关的配置 关联github仓库 创建github仓库 克隆仓库到本地 git clone \u003c你的远程仓库U\n5.自定义页面以康奈尔笔记格式输出Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。 Notes 创建\n4.如何在github上使用高级搜索搜出自己想要的项目？原文章链接 附件\n文章标题的多样设计在标题前面显示图标： +++ menuPre = \"\u003ci class='fab fa-github'\u003e\u003c/i\u003e \" +++添加这个后的效果如下： 附件\nGit常遇问题1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网\n如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可\n创建hugo静态网站的经历附件 一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重\n网站内常用到的模版代码分制表 以\u003c tabs title=\"file name\" \u003e，\u003c /tabs \u003e结尾； 然后里面写以% tab title=\"code name\" style=\"info\" color=\"blue \" %，% /tab %结尾 他们都需要用{{}}括起来 ​ 代码 {{\u003c tabs title=\"hello.\" \u003e}}\n网站的目录与子目录创建不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说\n",
     "description": "",
     "tags": null,
     "title": "1.文章",
     "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"
+  },
+  {
+    "breadcrumb": "Maloudown",
+    "content": " 1.文章 物联网应用系统设计 10.云端一体化的环境变量问题 9.云端一体化如何查看云函数日志？ 8.速通ArkTS语言 6.github和atomgit的混合使用，哪些是值得注意的？ 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 Git常遇问题 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 思想的边界 庄子之道 费尔巴哈提纲 如何理解费尔巴哈提纲的主要含义？ 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 电赛 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 14.电子电路 模拟电子技术基础笔记 15.外语类 英语 16.考试类 教资 小学 常用的数学表达\n常用箭头\n常用函数图像公式\n",
+    "description": "",
+    "tags": null,
+    "title": "一、博客文章",
+    "uri": "/branch-bundle-1/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 12.实战项目",
@@ -129,7 +129,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章",
-    "content": " 贺青工程志愿活动软件设计与开发设计一款可以参加志愿活动的小程序，其制作流程大致如下： 需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和\n唛盟杯比赛详记比赛说明 自己有幸参加这次唛盟杯的比赛，这次比赛流程如下： 一、报名时2024年1月1到31日本来是12月份但延期了。 二、培训时间，现在还不确定\n",
+    "content": " 贺青工程志愿活动软件设计与开发设计一款可以参加志愿活动的小程序，其制作流程大致如下： 需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和\n电赛以下笔记皆基于HAL库。 新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。 外\n唛盟杯比赛详记比赛说明 自己有幸参加这次唛盟杯的比赛，这次比赛流程如下： 一、报名时2024年1月1到31日本来是12月份但延期了。 二、培训时间，现在还不确定\n",
     "description": "",
     "tags": null,
     "title": "12.实战项目",
@@ -176,12 +176,20 @@ var relearn_search_index = [
     "uri": "/categories/"
   },
   {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: ESP8266",
+    "uri": "/tags/esp8266/"
+  },
+  {
     "breadcrumb": "Maloudown \u003e Categories",
     "content": "",
     "description": "",
     "tags": null,
-    "title": "类别 :: J1-教师资格考试",
-    "uri": "/categories/j1-%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%80%83%E8%AF%95/"
+    "title": "类别 :: F1-复习",
+    "uri": "/categories/f1-%E5%A4%8D%E4%B9%A0/"
   },
   {
     "breadcrumb": "",
@@ -192,12 +200,220 @@ var relearn_search_index = [
     "uri": "/"
   },
   {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: STM32",
+    "uri": "/tags/stm32/"
+  },
+  {
     "breadcrumb": "Maloudown",
     "content": "",
     "description": "",
     "tags": null,
     "title": "Tags",
     "uri": "/tags/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 物联网",
+    "uri": "/tags/%E7%89%A9%E8%81%94%E7%BD%91/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 物联网应用系统设计",
+    "uri": "/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": "物联网结构系统与传统网路系统的区别\n前者由三个部分构成\n信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测质量保证、项目管理\n需求：功能、性能 、行为、设计约束等方面的期望\n需求分析：对要解决的问题的详细分析说明，弄清问题的需求\n需求分析过程 获取用户需求——分析用户需求——编写需求文档——评审需求分析\n需求管理 一、需求管理开发与需求管理的界限\n需求开发的中编写的需求文档数据来自于市场、用户、管理，以基准需求说明为界限，需求管理从这个文档中获取开发信息，通过市场等变动修改这个文档。\n二、需求分析任务\n1。确定系统运行环境\n硬件环境的要求：外存种类、数据的输入方式、数据通信接口；\n软件环境的需求：哪一种操作系统、数据库系统；\n2。系统性能需求\n数据输入系统后系统多久可以可以做出反应；\n3。系统功能\n确定目标系统的所有功能\n设计概要 任务 根据需求文档确定系统的整体结构，设计其中硬件结构、软件结构和数据结构\n硬件结构：确定系统功能对应的硬件环境，以及硬件之间的关系； 软件结构：将一个复杂系统按照功能进行模块划分，建立模块的层次结构以及调用关系，确定模块之间的接口以及人机界面 数据结构：数据特征、数据结构特点、数据库设计 概要设计原则 抽象： 抽象就是抽出事物的本质特征，而暂时不考虑细节。它允许我们定义一个操作的步骤，而不需要立即知道这些步骤是如何执行的。\n抽样方法：\n（1）过程抽象 过程抽象关注的是操作的序列，而不是具体实现的细节。它允许我们定义一个操作的步骤，而不需要立即知道这些步骤是如何执行的。\n举例： 假设我们要设计一个软件来管理图书馆的借书和还书过程。过程抽象可能包括以下步骤：\n用户登录 查询书籍 借书 还书 用户登出 在这个抽象级别，我们不需要知道用户如何登录（比如是通过用户名和密码，还是通过社交媒体账号），也不需要知道查询书籍的具体算法。我们只是定义了需要执行的操作序列。\n（2）数据抽象 数据抽象关注的是数据的结构和行为，而不是数据的具体表示。它允许我们定义数据类型和操作，而隐藏了数据的内部细节。\n举例： 考虑一个银行账户系统。数据抽象可能包括以下定义：\n账户类型（如储蓄账户、支票账户） 账户操作（如存款、取款、转账） 账户属性（如账户号码、账户余额、账户持有人） 在这个抽象级别，我们定义了账户是什么以及可以对账户执行哪些操作，但我们不需要知道账户数据是如何存储的（比如是在数据库中，还是在内存中）。\n（3）控制抽象 控制抽象关注的是程序的控制流，而不是具体的控制机制。它允许我们定义程序的执行路径，而不需要立即知道控制流的具体实现。\n举例： 假设我们正在设计一个交通信号灯控制系统。控制抽象可能包括以下逻辑：\n红灯亮起 等待一定时间 黄灯闪烁 绿灯亮起 等待一定时间后返回到红灯 在这个抽象级别，我们定义了信号灯变化的顺序，但我们不需要知道具体的计时机制或者信号灯是如何被激活的。控制抽象允许我们专注于信号灯变化的逻辑，而不是实现细节。\n网络结构的基本拓扑结构 拓扑结构的类型和使用选择 按照组网方式和组网形态：\n集中式 分布式 混合式 网状式 按照节点和结构层次\n平面网络结构 分级网络结构 混合网络结构 Mesh网络结构 表示工具 流程图 基本成分 处理； 判断条件； 控制流。\n基本的控制结构 顺序型； 选择型； 先判断（While）型循环； 后判断（Until）型循环； 多情况（Case）选择型。\n优点 对控制流程的描绘直观、清晰，易于学习掌握。\n缺点 诱使程序员过早地考虑程序的控制流程，而不去考虑程序的全局结构； 用箭头代表控制流，可以完全不顾结构程序设计的思想，随意转移控制； 不易表示数据结构； 修改麻烦。\n问题分析图 合图 优点 功能明确，可以一眼看出来； 没有箭头，无法随意转移控制； 很容易确定局部和全局的作用域； 很容易表示嵌套关系，也可以表示模块的参差结构 强制让设计人员按照结程序设计描述方案； 图形直观。容易理解设计意图 缺点 当分支嵌套较多时较麻烦，有时候在一页纸上很难画下来； 画图麻烦修改麻烦 层次图 概要设计与详细设计的区别 概要设计通常得到软件结构图 详细设计常用的描述方式（常用的图）：流程图、N-S图、PAD图、过程设计语言（PLD），又称伪代码。 注：伪代码——伪代码是一种非正式的、类似编程语言的描述方式，它用于描述算法的逻辑流程而不涉及具体的编程语言细节。伪代码使得设计者可以在不编写实际代码的情况下表达算法和程序结构。\n接口设计 外部接口：外部用户、软/硬环境与软件系统的接口； 内部系统：已划分出的模块间接口。\n工厂方法模式 为创建对象提供过度接口，一遍将创还能对象的具体过程屏蔽隔离起来，达到提高灵活性的目的\n工厂模式在《java与模式》中分为：\n简单工厂模式 工厂方法模式 抽象工厂模式 拓扑控制中考虑的设计目标和相关概念-覆盖 覆盖可以理解为对传感器网络质量的度量 覆盖可以分为：\n区域覆盖：研究对目标区域的覆盖（监测）问题； 点覆盖：研究离散的目标覆盖问题； 栅栏覆盖：研究运动川渝网络部署区域被发现的概率问题。 MANET路由协议——按需路由协议（也是一种算法） TORA协议是临时按需路由协议，是一种有向环基础上提出的基于路由反转的自适应分布式路由算法。\n作为一个有源端发起的按需路由，他开已找到从源头到目的节点的多条路由，当网络拓扑发生改变时，控制消息在改变的拓扑结构范围内传播，节点只需要维护相邻节点的路由信息；\n协议由路由建立、路由维护、路由拆除三部分组成。\n无线传感网络选择 选择有线还是无线 选择专利还是标准化无线方案 无线标准 GPRS Wi-Fi 蓝牙 ZigBee 无线网络拓扑结构 无线体域网 WBAN由三部分组成：\n植入或佩戴于人体的网络神经， 作为通信枢纽的汇聚节点， 负责信息处理和控制整个网络的上位机监控系统。 WBAN采集人体生理信息的过程 某一种生理信号传感器和无线收发装置能够构成一个网络节点，各个节点分布式的分布在人体上，构成局域网。 网络节点在上位机电脑和汇聚节点的指令下收集人体生理信息，将收集到的信息通过汇聚节点传输到上位机电脑。 系统集成 系统集成式指综合分布先系统和计算机网络技术，蒋各个分离的设备、功能和信息等集成到相互关联、统一和协调的系统之中，以达到资源充分共享，实现集中、高效、便利的管理。\n系统集成采用功能集成、网络集成、软件界面集成等多种集成技术；\n系统集成的关键在于解决系统之间互联和互操作性的问题，它是一个对厂商、多协议和面向各种应用的结构系统\n简而言之，就是把分散的东西集成到一起，使得它们之间可以相互通信共享数据的一种技术。\n静态测试 不执行代码。主要对编程格式、结构等方面进行评估并发现存在的错误。\n优点：\n不必动态地运行代码，不必设计测试用例，不用判断测试结果； 可以由人工进行，充分发挥人的逻辑思维优势，检查出错误的水平很高； 不需要特别条件，容易开展。 具体步骤（查看PPT）\n动态测试 通过运行软件来检查软件的动态行为和运行结果是否正确的方法。\n特点：\n运行被测程序，取得程序运行的真实情况和动态情况，在进行打分； 必须生成测试数据来运行程序，测试质量依赖于测试数据； 生成测试数据、分析测试结果的工作量大，展开测试费时、费力； 动态测试中涉及多方面的工作，人员多、设备多、数据多、要求有较好的管理和工程规划； （1） 功能确认与接口测试 （2） 覆盖率分析 （3） 性能分析 （4） 内存分析\n集成测试 集成测试也称为组装测试或综合测试，在单元测试的基础上，将模块按照设计要求组装成子系统或系统，进行集成测试。\n制定集成测试计划——设计集成测试——实施集成测试——评估集成模块\n集成测试完成标准：\n成功执行了测试计划中规定的所有集成测试； 修整了发现的错误； 测试结果通过了专门小组的评审。 MQTT和HTTP的底层都是TCP/IP，也就是物联网装置可以沿用既有的网路架构和设备，只是在网路上流通的「讯息格式」以及应用程式的处理机制不同.\nMQTT协议概述 MQTT不同于HTTP标头采用文字描述，而是采用数字编码，整个长度只占2位元祖，等同两个字元，后面跟着讯息的主题（topic）和内容（payload），格式如下：\n讯息类型 DUP(是否为副本) QoP(传输品质) R(是否保留)\r0 0 1 1\r0 0 0 0\r剩余资料长度 传输品质QoS 传输品质QoS表示发布者与代理人（订阅者）之间数据传输的品质。\n传输品质 QoS 说明 阿里云IOT QoS=0 最多传输一次，可能收不到 支持 QoS=1 最少传输一次可能会重传 支持 QoS=2 有且仅有一次传输 不支持 注：MosQuito全都支持\nMQTTLens订阅以及发布消息 订阅者可以透过下列三个叙述订阅多个主题： 结合上面这张图来理解\n1.假设订阅者要订阅温度，温度可以来自主题A（yard），主题B(soil)，主题C（Tool）。\n订阅某个属性的信息\nhome/+/DHT11 +号内容可以是yard，soil可以写为 home/yard/DHT11 home/soil/DHT11 但不可以写为： home/yard/pond/DHT11 home/soil/DHT11/Temp订阅三个主题\nhome/+/+ 包含三个主题，具体如下 home/yard/DHT11 home/soil/DHT11 home/Tool/RID订阅某个主题的所有属性\nhome/yard/# 包含三个主题，具体如下 home/yard/DHT11 home/yard/pond/DHT11 home/yard/DHT11/temp home/yard/DHT11/humi在上面的代码中所写的#号表示订阅所有的主题，在使用时注意下面的写法是无效的：\nhome/#/DHT11 //无效 home/yard# //无效 综合实验——局域网内手机通信 创建AP接入点、TCP服务器，通过手机连接ESP8266模块控制STM32开发板上的LED和蜂鸣器；\n实现的功能 (1)STM32控制ESP8266模块创建AP接入点。 (2)STM32控制ESP8266创建TCP服务器。 (3)通过手机的软件连接ESP8266模块的TCP服务器。 (4)手机上可以通过WIFI模块控制STM32开发板的LED1、LED2、LED3和蜂鸣器。 (5)手机上可以看到STM32上传的温度和湿度。\n//ESP8266初始化 //Esp8266Mode:WIFI模块的工作模式，STA和AP //ssid:要生成或者接入的SSID名字，如果已经一键配网，要写NULL //password:对应SSID的密码，如果已经一键配网，要写NULL //ip:如果要设置静态IP，要写对应的IP，否则写NULL。 u8 ESP8266_init(u8 Esp8266Mode, char *ssid,char *password, char *ip) { u8 i=0; memset(esp8266.sta_ip,0,20); memset(esp8266.ap_ip,0,20); if(Esp8266Mode==ESP8266_MODE_STA) { esp8266.mode=ESP8266_MODE_STA; //STA模式有可能通过了一键配网模式得到了SSID和PSW if(ssid!=NULL) sprintf(esp8266.sta_ssid, \"%s\", ssid); if(password!=NULL) sprintf(esp8266.sta_password, \"%s\", password); if(ip!=NULL) sprintf(esp8266.sta_ip, \"%s\", ip);//设置STA模式静态IP ESP8266_Printf(\"\\r\\nSTA ssid:%s, psw:%s\\r\\n\", esp8266.sta_ssid, esp8266.sta_password); } else { esp8266.ap_chl=5;//通道号 esp8266.ap_ecn=ESP8266_ECN_WPA_PSK;//加密方式 esp8266.mode=ESP8266_MODE_AP; sprintf(esp8266.ap_ssid, \"%s\", ssid); sprintf(esp8266.ap_password, \"%s\", password); if(ip!=NULL) sprintf(esp8266.ap_ip, \"%s\", ip);//设置AP模式静态IP ESP8266_Printf(\"\\r\\nAP ssid:%s, psw:%s\\r\\n\", esp8266.ap_ssid, esp8266.ap_password); } esp8266.smartconfig=0; ESP8266_reset(); ESP8266_SendAT(\"ATE0\\r\\n\",1);//关回显 //AP模式 if(esp8266.mode==ESP8266_MODE_AP||esp8266.mode==ESP8266_MODE_AP_STA) { ESP8266_SetWiFiWorkMode(esp8266.mode); ESP8266_SoftAp(esp8266.ap_ssid, esp8266.ap_password, esp8266.ap_chl, esp8266.ap_ecn); ESP8266_SoftAp_staticIp(esp8266.ap_ip); } //STA模式 if(esp8266.mode==ESP8266_MODE_STA||esp8266.mode==ESP8266_MODE_AP_STA) { ESP8266_SetWiFiWorkMode(esp8266.mode); ESP8266_ConnectAp(esp8266.sta_ssid, esp8266.sta_password, NULL); ESP8266_Station_staticIp(esp8266.sta_ip); } //启动DHCP ESP8266_SetDhcp(esp8266.mode, 1); ESP8266_SendAT(\"AT+CWLAPOPT=1,2047\\r\\n\",1); return 0; } //设置WIFI工作的传输模式 //transportProtocol：UDP，TCPservice,tcp_client //localPort:本地端口号 //remoteIp：远端的IP，如果是TCPservice模式，请写NULL或者\"\" //remotePort：远端端口号的PORT u8 ESP8266_SetWorkMode(u8 transportProtocol, u16 localPort, char *remoteIp, u16 remotePort) { u8 i=0; esp8266.localPort=localPort; esp8266.isConnect=0;//连接是否创建　1：已经创建 //ID为无效的ID esp8266.clientId[0]=-1; esp8266.clientId[1]=-1; esp8266.clientId[2]=-1; esp8266.clientId[3]=-1; memset(esp8266.sta_mac,0,30); esp8266.curLen=0; esp8266.data_len=0;// memset(esp8266.remoteIp,0,20); if(ESP8266_TCP_SERVICE==transportProtocol) { esp8266.connectMode=1;//1：TCP service 2:TCP client 3:UDP if(remoteIp!=NULL) sprintf(esp8266.remoteIp, \"%s\", remoteIp); esp8266.remotePort=remotePort; } else if(ESP8266_TCP_CLIENT==transportProtocol) { esp8266.connectMode=2;//1：TCP service 2:TCP client 3:UDP if(remoteIp!=NULL) sprintf(esp8266.remoteIp, \"%s\", remoteIp); esp8266.remotePort=remotePort; } else if(ESP8266_UDP==transportProtocol) { esp8266.connectMode=3;//1：TCP service 2:TCP client 3:UDP if(remoteIp!=NULL) sprintf(esp8266.remoteIp, \"%s\", remoteIp); esp8266.remotePort=remotePort; } ESP8266_Printf(\"\\r\\nconnectMode:%d, ip:%s, port:%d\\r\\n\", esp8266.connectMode, esp8266.remoteIp,esp8266.remotePort); return 0; } //收到数据 ptr = (char*)strstr((const char*)cmd,(const char*)\"+IPD,\"); //接收到+IPD开头，说明接收到数据 if(ptr!=NULL) { int i=0; u8 id=0; //+IPD, ptr+=5; if(ptr==NULL) return 0; //如果是TCP服务器 //格式会多一个id if(esp8266.connectMode==1)//如果是TCP服务器，找出\u003clink ID \u003e { //TCP服务的处理 id=atoi(ptr); while(ptr!=NULL \u0026\u0026 *ptr!=',') ptr++; ptr++; } esp8266.data_len=atoi(ptr);//读出接收到的数据长度 while(ptr!=NULL \u0026\u0026 *ptr!=':') ptr++; ptr++; memset(esp8266.data, 0, MAX_WIFI_RX_LEN); esp8266.curLen=0; //读出收到的数据 while(esp8266.curLen\u003cMAX_WIFI_RX_LEN \u0026\u0026 esp8266.curLen\u003cesp8266.data_len \u0026\u0026 ptr!=NULL \u0026\u0026 ((ptr-cmd)\u003c=len)) { esp8266.data[esp8266.curLen]=*ptr;//数据存储 ptr++; esp8266.curLen++; } //一次性把数据接收全 if(esp8266.curLen\u003e=esp8266.data_len) { //对接收到的数据进行处理 ESP8266_RxData(esp8266.data, esp8266.curLen); esp8266.curLen=0; esp8266.data_len=0; } re=1; }实验三 //以下是启动AP模式 ESP8266_init(ESP8266_MODE_AP, WIFI_SSID, WIFI_PASSWORD, WIFI_IP); //配置协议模式：TCP服务器、TCP客户端或者UDP //配置要连接的IP和端口号 //注意！！注意！！注意！！以下二个配置参数只能打开其中一个。 //配置TCP服务器参数 //ESP8266_SetWorkMode(ESP8266_TCP_SERVICE, WIFI_PORT, NULL, 10000); //ESP8266_SetWorkMode(ESP8266_TCP_CLIENT, WIFI_PORT, ROMOTE_IP, ROMOTE_PORT); //配置UDP的参数 //这里的IP\"192.168.1.90\"为UDP服务器所在的电脑IP，根据实际情况修改 ESP8266_SetWorkMode(ESP8266_UDP, WIFI_PORT, \"192.168.1.2\", 10000); while(1) { if((count%20)==0) { ESP8266_run(); } //3秒采集温湿度一次 if((count%300)==0)//300次累加 { DHT11(\u0026t, \u0026h);//采集温湿度 sprintf(buff, \"温度:%02d,湿度:%02d.\\r\\n\", t,h); Gui_DrawFont_GBK16_line(HAL_LCD_LINE_8,RED,WHITE,buff);//发送温度值 ESP8266_SendData(buff, strlen(buff)); } delay_ms(10); //闪灯表示程序活着 if((count%20)==0) LED1=!LED1; count++; }实验十 关于STM32工程代码的几点说明 Define 是C语言中的宏定义，可以提高代码的可读性为编程提供方便。\nSTM32开发板的下载方式是串口；\n函数定义的静态变量可以不赋初值，因为程序会分配存储空间；\n温度读取流程 判断传感器相应是否正确； 安慰读取数值； 判断检验和是否正确； 提取温度值 在智慧大棚中采集温度值或者是光照值应该 在STM32开发板上搭建TCP服务器； 在不同区域放置若干WiFi模块，采集DHT11温湿度传感器； WiFi模块和STM32模块连到同一个无线路由 WIFI模块通过TCP协议将传感器温湿度值传到服务器 传感器将接收到的数据存储在数据库中。 根据土壤情况进行自动灌溉 在STM32板子上搭建TCP服务器； 在大棚的不同区域放置若干WIFI模块，采集土壤湿度信息； WiFi模块和STM32板子连接到同一个路由器； WiFi模块通过TCP通信协议将土壤湿度信息传到服务器； 服务器更具当前的温湿度信息和阈值，启动和停止水泵。 附件 ",
+    "description": "",
+    "tags": [
+      "物联网应用系统设计",
+      "物联网",
+      "STM32",
+      "ESP8266"
+    ],
+    "title": "物联网应用系统设计",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: B5-比赛",
+    "uri": "/categories/b5-%E6%AF%94%E8%B5%9B/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: STM32学习",
+    "uri": "/tags/stm32%E5%AD%A6%E4%B9%A0/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: X1-项目",
+    "uri": "/categories/x1-%E9%A1%B9%E7%9B%AE/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 12.实战项目",
+    "content": " 以下笔记皆基于HAL库。\n新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。 外部时钟设置 工程设置 如果Application Structure设置为Basic，那么会把下面的两个文件分开放 否则项目会把两个文件放在一个文件夹里，如Core\n最后还需要设置Code Generator，如下： 时钟 1.初识时钟周期\n2.时钟树 3.时钟配置步骤 4.外设时钟使能和失能\n5.sys_stm32_cloc_init()函数\nHAL_RCC_OscConfig()\nHSE高速外设振荡器 LSE RC振荡器，随着电压的变化而变化，所以需要一个检验值 PLL锁相环 HAL_RCC_ClockConfig() 第一个参数 结构体中的第一个参数里的HCLK是指AHB总线、PCLK1是指APB1总线、PCLK2是指APB2总线，这个配置表示要配那条总线的时钟。 第二个形参 F1系统时钟72MHz,如果使用72MHz访问闪存（Flash）那么是需要等待的，因为闪存的允许最大时钟频率是42MHz,所以需要等待，等待多少个周期需要下图 6.SYSTEN文件夹\nsys文件夹 NVIC介绍 中断基本概念 中断向量表 文件里的中断在哪里呢？ 在文件startup_stm32f10x_hd.s中这里列出内部中断，外部中断就在内部中断之下，这里不再列出。\n__Vectors DCD __initial_sp ; Top of Stack DCD Reset_Handler ; Reset Handler DCD NMI_Handler ; NMI Handler DCD HardFault_Handler ; Hard Fault Handler DCD MemManage_Handler ; MPU Fault Handler DCD BusFault_Handler ; Bus Fault Handler DCD UsageFault_Handler ; Usage Fault Handler DCD 0 ; Reserved DCD 0 ; Reserved DCD 0 ; Reserved DCD 0 ; Reserved DCD SVC_Handler ; SVCall Handler DCD DebugMon_Handler ; Debug Monitor Handler DCD 0 ; Reserved DCD PendSV_Handler ; PendSV Handler DCD SysTick_Handler ; SysTick Handler中断寄存器 中断原理 中断优先级 响应优先级又叫子优先级\n中断的抢占优先级由AICR寄存器的后三位控制，而响应优先级由IPRx寄存器的后四位控制，最终分配结果参考下面的表格 中断一般只设置一次，设置多次可能会导致中断紊乱，一般以最后一次的中断设置为准，详细说明参考手册4.4.5\n中断执行的顺序：抢占优先级（先执行数值小的）————响应优先级（先执行数值小的）————自然优先级（先执行数值大的）\nNVIC 的使用 以下笔记皆基于标准库。\n标准库中额中断 EXTI（Extern Interrupt）外部中断 EXTI可以监测指定GPIO口的电平信号，当其指定的GPIO口产生电平变化时，EXTI将立即向NVIC发出中断申请，经过NVIC裁决后即可中断CPU主程序，使CPU执行EXTI对应的中断程序\n简而言之，gpio电平发生变化时，申请外部中断。\n支持的触发方式：上升沿/下降沿/双边沿/软件触发（引脚没有发生变化，执行一段代码就申请中断） 支持的GPIO口：所有GPIO口，但相同的Pin不能同时触发中断（如PA1，PB1，PC1不能同时触发中断） 通道数：16个GPIO_Pin，外加PVD输出、RTC闹钟、USB唤醒、以太网唤醒 触发响应方式：中断响应/事件响应（事件响应不会触发中断。而是触发别的外设操作。属于外设之间的联合工作） AFIO复用IO口 主要用于引脚复用功能的选择和重定义\n在STM32中，AFIO主要完成两个任务：\n复用功能引脚重映射 中断引脚选择 EXTI实现代码 这段代码的中断端口是GPIOB_Pin14，所以需要将相关的传感器接到PB14这个端口\nvoid CountSensor_Init(){ //配置RCC RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE); //AFIO、 RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE); //EXTI、一直打开着不用配置打开时钟 //NVIC 一直打开着不用配置打开时钟 GPIO_InitTypeDef GPIO_InitStructure; GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU; GPIO_InitStructure.GPIO_Pin=GPIO_Pin_14; GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz; GPIO_Init(GPIOB,\u0026GPIO_InitStructure); GPIO_EXTILineConfig(GPIO_PortSourceGPIOB,GPIO_PinSource14); //EXTI EXTI_InitTypeDef EXTI_InitStructure; EXTI_InitStructure.EXTI_Line=EXTI_Line14; EXTI_InitStructure.EXTI_LineCmd=ENABLE; EXTI_InitStructure.EXTI_Mode=EXTI_Mode_Interrupt; EXTI_InitStructure.EXTI_Trigger=EXTI_Trigger_Falling; EXTI_Init(\u0026EXTI_InitStructure); //NVIC NVIC_InitTypeDef NVIC_InitStructure; NVIC_InitStructure.NVIC_IRQChannel=EXTI15_10_IRQn; NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE; NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=2; NVIC_InitStructure.NVIC_IRQChannelSubPriority=0; NVIC_Init(\u0026NVIC_InitStructure); } void EXTI15_10_IRQHandler(void){//中断函数 if(EXTI_GetITStatus(EXTI_Line14)== SET){ EXTI_ClearITPendingBit(EXTI_Line14); } }定时器 TIM（Timer）定时器 定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发中断\n16位计数器、预分频器、自动重装寄存器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时 不仅具备基本的定时中断功能，而且还包含内外时钟源选择、输入捕获、输出比较、编码器接口、主从触发模式等多种功能 根据复杂度和应用场景分为了高级定时器、通用定时器、基本定时器三种类型\n使用内部时钟源实现中断（标准库中） 在编写代码前先看看定时器的实现原理图\n基本定时器 通用定时器 高级定时器（红色框出来的部分是高级定时器独有的） 此处主要参考通用计时器的结构图，下面是基于内部时钟RCC的定时器。\n在 stm32f103xxx_rcc.c 文件对 RCC_APB1PeriphClockCmd 这样的介绍：\n/** * @brief Enables or disables the High Speed APB (APB2) peripheral clock. * @param RCC_APB2Periph: specifies the APB2 peripheral to gates its clock. * This parameter can be any combination of the following values: * @arg RCC_APB2Periph_AFIO, RCC_APB2Periph_GPIOA, …… …… ……+ */specifies the APB2 peripheral to gates its clock.即：指定APB 2外围设备到其时钟门。而这里的时钟门代码里选择了TIM2。\nvoid Timer_Init(void){ //1.RCC RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE); //2.选择时基单元时钟源， TIM_InternalClockConfig(TIM2); //3.时基单元 TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure; TIM_TimeBaseInitStructure.TIM_ClockDivision=TIM_CKD_DIV1;\t//时钟分频，这里是1分频 TIM_TimeBaseInitStructure.TIM_CounterMode=TIM_CounterMode_Up;\t//计数方式 TIM_TimeBaseInitStructure.TIM_Period=10000-1;\t//自动重装值，计数达到这个值后触发中断，然后重新开始计数 TIM_TimeBaseInitStructure.TIM_Prescaler=7200 -1;\t//预分频，计数频率， //假设计数为1s则自动重装值可设置为10000，预分频可设置为7200，公式为秒数=27MHz/PSC/ARR TIM_TimeBaseInitStructure.TIM_RepetitionCounter=0;\t//重复计数数器高级定时器才有，这里设置为0 TIM_TimeBaseInit(TIM2,\u0026TIM_TimeBaseInitStructure);\t//时基单元设置 TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE); //4.中断输出控制 NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);\t//抢占优先级,0-3， 响应优先级0-3，一个工程只设置一次 //5.NVIC NVIC_InitTypeDef NVIC_InitStructure; NVIC_InitStructure.NVIC_IRQChannel=TIM2_IRQn; NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE; NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1; NVIC_InitStructure.NVIC_IRQChannelSubPriority=1; NVIC_Init(\u0026NVIC_InitStructure); TIM_Cmd(TIM2,ENABLE); } void TIM2_IRQHandler(void){ if(TIM_GetITStatus(TIM2,TIM_IT_Update) == SET){ Num++; TIM_ClearITPendingBit(TIM2,TIM_IT_Update); } }实现输出比较 OC（Output Compare）输出比较 输出比较可以通过比较CNT与CCR寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形\n每个高级定时器和通用定时器都拥有4个输出比较通道\n高级定时器的前3个通道额外拥有死区生成和互补输出的功能\nOC：输出比较\nIC：输入比较\nCC：输入/输出比较\nPWM波形 PWM（Pulse Width Modulation）脉冲宽度调制，广泛应用于各种电子和电气系统中，用于控制功率转换、电机速度、信号传输等 在具有^1中，可以通过对一系列脉冲的宽度进行调制，来等效地获得所需要的模拟参量，常应用于电机控速等领域 ^1 PWM参数： 频率 = 1 / TS 占空比 = TON / TS 分辨率 = 占空比变化步距 一些电平变化图可以等效为图中的虚线。 上图框出来的部分具体如下图： 在信号通过比较后输出到CC1P，然后再输出到输出使用电路，输出使用电路的OC1可以查看引脚定义表\n在上图中需要注意的一些引文缩写：\nREF 是reference的缩写。意思是 参考信号 输出比较的设置 设置的函数为\nPWM基本结构 配置PWM的时候可以参考下面的图， 图中的参考坐标系图红色线表示CCR的值，蓝色线表示CNT的值，黄色线表示自动重装载值即ARR。 了解了这点后我们再看看PWM的是如何计算的，如下公式\nPWM频率： [ \\text{Freq} = \\frac{CKPSC}{(PSC + 1) \\times (ARR + 1)} ] 可以看出PWM的频率等于CNT的更新频率\nPWM占空比： [ \\text{Duty} = \\frac{CCR}{(ARR + 1)} ]\nPWM分辨率： [ \\text{Reso} = \\frac{1}{(ARR + 1)} ]\n代码编写 附件 ",
+    "description": "",
+    "tags": [
+      "STM32学习"
+    ],
+    "title": "电赛",
+    "uri": "/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E7%94%B5%E8%B5%9B/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": "参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env\n先部署云函数到远端，然后在去远端添加环境变量，然后在本地运行虚拟机查看。 负载均衡的四种方式\n随机 轮询 最少连接数 最短响应时间 延迟时长的重试策略\nzero:一旦云函数调用失败，则调用，中间不等待 constant：调用失败等一段时间 jittered:调用失败等一段时间，再次调用，如果失败等待时间以指数增长 熔断\n设置一定的条件，满足条件后会执行熔断。熔断后云函数不在提供服务。\n附件 ",
+    "description": "",
+    "tags": [
+      "ArkTS",
+      "OpenHarmony",
+      "HarmonyOS",
+      "云端一体化"
+    ],
+    "title": "10.云端一体化的环境变量问题",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: ArkTS",
+    "uri": "/tags/arkts/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: HarmonyOS",
+    "uri": "/tags/harmonyos/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: OpenHarmony",
+    "uri": "/tags/openharmony/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: 应用开发",
+    "uri": "/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 云端一体化",
+    "uri": "/tags/%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": "调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问题：\n首先参数event的输出以JSON格式输出，这样方便阅读，下面有一段代码，\n云函数代码如下：\nimport { stringify } from \"querystring\"; let myHandler = async function (event, context, callback, logger) { logger.info(JSON.stringify(event)); const name = event.body.name callback({ code: 200, message: `Hello ${name}.` }); }; export { myHandler };获取信息的ets文件如下：\nimport cloud from '@hw-agconnect/cloud'; @Entry @Component struct MyIndex { @State message: string = '' @State name:string = '' build() { Row() { Column() { TextInput({placeholder:'请输入姓名'}) .onChange(value =\u003e { this.name = value }) Button('使用云端一体化') .fontSize(20) .onClick(async ()=\u003e{ const result = await cloud.callFunction({ name:'login',//云函数的名字 version:'$latest', params:{name:this.name} }) this.message=result.getValue().message }) Text(this.message) .fontSize(50) .fontWeight(FontWeight.Bold) } .width('100%') } .height('100%') } }function函数的说明：\n触发条件： HTTP请求， 云数据库插入， 云存储 参数含义： 输入信息（）， 执行时上下文信息（环境变量）， 输出（返回结果给调用者）， 记录日志（） 此处做了这样的处理使得日志输出以JSON格式输出：\nlogger.info(JSON.stringify(event))\r当遇到问题时，去官方的开发论坛搜索相关内容， 此处我想实现输入一个名字，然后让云端函数以不同的方式输出，比如：\n你好，张三\n你好，李四\n但是现在输出的是：你好，%\u0026*%%\n解决办法：\n查看event参数说明\n再去CAG官网选择云监控—\u003e日志服务\n然后复制右边的内容,放到一个json文件夹，用编译器（比如VScode）打开，并调整格式(如果用的是VScode，请使用shift+alt+F调整json格式)如下：\n{\r\"path\": \"login-$latest\",\r\"httpMethod\": \"POST\",\r\"headers\": {\r\"user-agent\": \"libcurl-agent/1.0\",\r\"x-forwarded-for\": \"115.46.239.151, 10.135.135.154, 10.134.64.11\",\r\"x-forwarded-port\": \"443\",\r\"accept\": \"*/*\",\r\"accept-encoding\": \"gzip\",\r\"agcgw-trigger-authtype\": \"apigw-client\",\r\"host\": \"10.14.4.31\",\r\"content-type\": \"application/json;charset=UTF-8\",\r\"packagename\": \"com.itwcx.test\",\r\"appid\": \"5765880207853994135\",\r\"authorization\": \"SDK-HMAC-SHA256 containPath=false,containBody=false,containQuery=false,accessId=m7rTGQ2uNvyq1AGfJFLo,timestamp=1711175951586,signedHeaders=appid;productid,signature=44fe3b4da7d80ec9dfee07ca3747c448e94254b5454fef87f468150089f38623\",\r\"x-forwarded-host\": \"10.14.4.31\",\r\"appversion\": \"1.0.0\",\r\"sdkplatformversion\": \"3.2.0.0\",\r\"sdktype\": \"TS\",\r\"content-length\": \"19\",\r\"x-real-ip\": \"10.134.64.11\",\r\"sdkversion\": \"1.0.0\",\r\"x-forwarded-proto\": \"https\",\r\"sdkservicename\": \"agconnect-cloud\",\r\"x-trace-id\": \"f09f1070-6d7b-46a9-875d-bfb2bc4bfdb9\",\r\"productid\": \"388421841222044287\",\r\"sdkplatform\": \"OpenHarmony\"\r},\r\"queryStringParameters\": \"\",\r\"queryParameters\": null,\r\"body\": \"{\\\"name\\\":\\\"zhangsan\\\"}\",\r\"isBase64Encoded\": false,\r\"pathVariable\": null\r}此处我们只查看参数event的HTTP请求的相关说明：\n比较官网的event参数格式与自己日志打印的格式，看看有什么不同\n观察可知问题出在body这个参数，参数是json格式，而日志打印的是字符格式，我们需要把字符格式转换成json格式，做如下操作：\nimport { stringify } from \"querystring\"; let myHandler = async function (event, context, callback, logger) { logger.info(JSON.stringify(event)); const obj = JSON.parse(event.body) const name = obj.name callback({ code: 200, message: `Hello ${name}.` }); }; export { myHandler };上面的代码中\nconst obj = JSON.parse(event.body)\rconst name = obj.name\r就是转换操作。\n认证服务 登录页面的实现 登录验证代码：\nimport { AuthMode,Login } from '@hw-agconnect/auth-component' import { AuthUser } from '@hw-agconnect/cloud' import router from '@ohos.router' @Entry @Component struct MyLogin { @State message: string = 'Hello World' build() { Row() { Column() { Login({ modes:[AuthMode.PHONE_VERIFY_CODE], onSuccess:(usr:AuthUser) =\u003e{ router.pushUrl({url:'page/MyWelcome'}) } }){ Button('登录') } } .width('100%') } .height('100%') } } 页面登录获取验证码 import { Auth, VerifyCodeAction } from '@hw-agconnect/cloud'; import cloud from '@hw-agconnect/cloud' import hilog from '@ohos.hilog' import router from '@ohos.router'; @Entry @Component struct MyLogin { @State countDown: number = 10 //用一个变量来获取setinterval的ID intervalId:number = 0 //因为这个变量与页面显示无关所以不用@State注释 @State verifyCodeButtonEnable:boolean = false @State verifyCodeButtonText:string ='获取验证码' @State phoneNumber: string = '' @State verifyCode:string = '输入验证码' //定时器代码 waiting(){ this.verifyCodeButtonEnable = false this.verifyCodeButtonText = `${this.countDown}s`//在一点击时，就显示10S this.intervalId = setInterval(() =\u003e { //要知道定时器结束没有需要知道它的返回结果，这个结果可以通过setinterval的ID获取。 this.verifyCodeButtonText = `${this.countDown}s`//将倒计时显示出来 if(this.countDown \u003c 0){ //如果减到0，清楚定时器 clearInterval(this.intervalId)//得到返回结果后清楚定时器 this.countDown = 10 this.intervalId = 0 this.verifyCodeButtonText = '获取验证码'//倒计时结束时回复 this.verifyCodeButtonEnable = true //当点击时按键不可用 return //不需要再往下继续执行了，所以return } this.countDown-- },1000)//每隔1秒减一次 } judgement(){ if(this.phoneNumber.length === 11){ this.verifyCodeButtonEnable=true }else { this.verifyCodeButtonEnable=false } } async sending_verifyCode(){ try { //调用方式异步调用 await cloud.auth().requestVerifyCode({ verifyCodeType: { kind: 'phone', phoneNumber: this.phoneNumber, countryCode: '86' }, action: VerifyCodeAction.REGISTER_LOGIN, //验证的方式 lang: 'zh_CN', sendInterval: 10 }) hilog.info(0,'VerifCode','Success') } catch (e) { AlertDialog.show({ title: '错误', message: '验证码失败' })//弹窗内容 hilog.info(0,'VerifCode',JSON.stringify(e)) } } async login_verify(){ try { const result = await cloud.auth().signIn({ //定义一个变量来接收它的返回结果,返回的是result，在通过result.gitUsr获取用户信息 credentialInfo: { kind: 'phone', countryCode: '86', phoneNumber: this.phoneNumber, verifyCode: this.verifyCode } }) const user = result.getUser() AppStorage.SetOrCreate('user',user)//存储用户到 AppStorage hilog.info(0,'Login','Success') router.replaceUrl({ url: 'pages/MyLoginLignOut' }) } catch (e) { AlertDialog.show({title:'错误',message:'登陆失败'}) hilog.info(0,'Login',JSON.stringify(e)) } } build() { Row() { Column() { TextInput({placeholder:'请输入手机号'}) .type(InputType.Number) .onChange(values =\u003e{ this.phoneNumber = values this.judgement()//点击获取验证码时，判断按键是否可用 }) Row(){ TextInput({placeholder:'验证码'}) .width('70%') .onChange(value =\u003e{ this.verifyCode=value }) Button(this.verifyCodeButtonText) .width('30%') .enabled(this.verifyCodeButtonEnable)//该属性是控制按键是否可用 .onClick(async () =\u003e{ //所在方法加async this.waiting() this.sending_verifyCode() }) } .width('100%') Button('登录') .enabled(this.phoneNumber.length === 11 \u0026\u0026 this.verifyCode.length === 6)//手机号11位，且验证码六位时点击登录才有效 .onClick(async ()=\u003e{ this.login_verify() }) } .width('100%') } .height('100%') } }登录后跳转到的页面：\nimport cloud ,{AuthUser}from \"@hw-agconnect/cloud\" import hilog from '@ohos.hilog' import router from '@ohos.router' @Entry @Component struct MyLoginLignOut { @State photoUrl:string = '' //存储头像路径 @State displayName:string = '' //存储用户昵称 @StorageLink('user') user:AuthUser = null //定义一个AuthUser的类型来获取用户存的值，('user')叫存储对象名，是在另一个页面定义的名字 aboutToAppear(){//build渲染前就运行 //1.cloud.auth().getCurrentUser() //2.appStorage this.displayName = this.user.getDisplayName()//获取用户，间接通过用户拿到用户头像等数据。 this.photoUrl = this.user.getPhotoUrl() } build() { Row() { Column() { Row(){ Image(this.photoUrl?this.photoUrl:$r('app.media.app_icon')) .width(80) .height(80) .onClick(()=\u003e{ this.photoUrl= 'https://img.btstu.cn/api/images/5a2a5d5560223.jpg' }) }.width('100%') .justifyContent(FlexAlign.Center) .padding({bottom:70}) TextInput({placeholder:'设置昵称',text:this.displayName}) .fontSize(25) .fontWeight(FontWeight.Bold) .onChange(value =\u003e{ this.displayName = value }) Button('保存') .margin({top:10,bottom:10}) .width(90) .onClick(async ()=\u003e{//保存图片与用户名 try { await this.user.updateProfile({//保存头像、用户名 displayName: this.displayName, photoUrl: this.photoUrl }) hilog.info(0,'updateProfile','Success') } catch (e) { hilog.info(0,'updateProfile',JSON.stringify(e)) } }) Button('登出') .margin({top:10,bottom:10}) .width(90) .onClick(async ()=\u003e{ try { await cloud.auth().signOut() hilog.info(0,'SignOut','Success') router.replaceUrl({url:'pages/MyLogin'}) } catch (e) { hilog.info(0,'SignOut',JSON.stringify(e)) } }) } .width('100%') } .height('100%') } }个人设置中心 import cloud, { AuthUser } from '@hw-agconnect/cloud' import router from '@ohos.router' import hilog from '@ohos.hilog' import picker from '@ohos.file.picker' @Entry @Component struct MyIndex { @State photoUrl: string = '' //存储头像路径 @State displayName: string = '' //存储用户昵称 @StorageLink('user') user: AuthUser = null //定义一个AuthUser的类型来获取用户存的值，('user')叫存储对象名，是在另一个页面定义的名字 @State uploading: boolean = false//用户控制图片是否可以点击，上传时不可以点击 @State uploadingText: string = '0%'//上传进度 aboutToAppear() { //build渲染前就运行 // 1. cloud.auth().getCurrentUser() // 2. AppStorage this.displayName = this.user?.getDisplayName()//获取用户，间接通过用户拿到用户头像等数据。加问号是因为在aboutToAppear运行时是无法获取用户名或图片等信息的 this.photoUrl = this.user?.getPhotoUrl() } build() { Row() { Column({ space: 10 }) { Stack() {//Stack该属性让它所包含的组件重叠 Image(this.photoUrl ? this.photoUrl : $r('app.media.user_dark')) .width(70) .height(70) .borderRadius(70) .enabled(!this.uploading) .onComplete(()=\u003e{ this.uploading = false }) .onClick(async () =\u003e { // this.photoUrl = '网络图片的地址' try { // 1. 从相簿中选照片 const options = new picker.PhotoSelectOptions() options.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE//媒体类型：视频还是图片 options.maxSelectNumber = 1//最大选择个数 const result = await new picker.PhotoViewPicker().select(options)//把参数传给下面的方法，把结果传给result hilog.info(0, 'Upload', `Picker Success ${result.photoUris[0]}`) this.uploading = true // 2. 调云存储 api 上传照片 await cloud.storage().upload({ localPath: result.photoUris[0],//本地图片路径 cloudPath: `test/${this.user.getUid()}.jpg`,//云存储那边存储的路径 onUploadProgress: event =\u003e { const percent = Math.floor(100 * event.loaded / event.total)//获取上传的百分比，event.loaded：已上传的自己数，event.total：总的自己数，Math.floor：舍弃小数点 this.uploadingText = `${percent}%` //数值更新到uploadingText } }) hilog.info(0, 'Upload', 'Upload Success') // 3. 获取上传照片的网络地址 const url = await cloud.storage().getDownloadURL(`test/${this.user.getUid()}.jpg`)//获取公网地址，拿到图片在网络上的地址 this.photoUrl = `${url}\u0026ts=${new Date().getTime()}`//这个里做这个处理是因为，图片被缓存起来了，上传的时候如果只是给云存储的地址，那么在传第二张图片到云存储后，photoUrl再获取时，因为图片地址不变照片也不会改变，它会缓存起来，而在图片后面加上一个时间图片就不在被缓存。 // this.uploading = false hilog.info(0, 'Upload', `url: ${url}`) } catch (e) { hilog.error(0, 'Upload', JSON.stringify(e)) } }) if (this.uploading) { // 显示上传进度 Text(this.uploadingText) .width(70) .height(70) .borderRadius(70) .fontColor('white') .backgroundColor('black') .opacity(0.6) .fontSize(24) .fontWeight(FontWeight.Bolder) .textAlign(TextAlign.Center)//文字对齐方式 } } TextInput({ placeholder: '请设置昵称', text: this.displayName }) .width('50%') .onChange(value =\u003e { this.displayName = value }) Button(`保存`) .onClick(async () =\u003e { try { await this.user.updateProfile({ displayName: this.displayName, photoUrl: this.photoUrl }) hilog.info(0, 'updateProfile', 'Success') } catch (e) { hilog.error(0, 'updateProfile', JSON.stringify(e)) } }) Button(`登出`) .onClick(async () =\u003e { try { await cloud.auth().signOut() hilog.info(0, 'SignOut', 'Success') router.replaceUrl({ url: 'pages/MyLoginCustom' }) } catch (e) { hilog.error(0, 'SignOut', JSON.stringify(e)) } }) } .width('100%') } .height('100%') } }登录页面 import { Auth, VerifyCodeAction } from '@hw-agconnect/cloud'; import cloud from '@hw-agconnect/cloud' import hilog from '@ohos.hilog' import router from '@ohos.router'; @Entry @Component struct MyLogin { @State countDown: number = 10 //用一个变量来获取setinterval的ID intervalId:number = 0 //因为这个变量与页面显示无关所以不用@State注释 @State verifyCodeButtonEnable:boolean = false @State verifyCodeButtonText:string ='获取验证码' @State phoneNumber: string = '' @State verifyCode:string = '输入验证码' private mainPage = `pages/StudentPage` async aboutToAppear() { try { const user = await cloud.auth().getCurrentUser()//获取当前认证用户 if (user != null) {//获取用户是否为空，如果用户已经断开会话，则下一次进入时间走时登录流程 AppStorage.SetOrCreate('user', user) // 如果会话未断开，不走登录流程，而是吧用户数据存到AppStorage router.replaceUrl({ url: this.mainPage }) } } catch (e) { hilog.error(0, 'Login', JSON.stringify(e)) } } //定时器代码 waiting(){ this.verifyCodeButtonEnable = false this.verifyCodeButtonText = `${this.countDown}s`//在一点击时，就显示10S this.intervalId = setInterval(() =\u003e { //要知道定时器结束没有需要知道它的返回结果，这个结果可以通过setinterval的ID获取。 this.verifyCodeButtonText = `${this.countDown}s`//将倒计时显示出来 if(this.countDown \u003c 0){ //如果减到0，清楚定时器 clearInterval(this.intervalId)//得到返回结果后清楚定时器 this.countDown = 10 this.intervalId = 0 this.verifyCodeButtonText = '获取验证码'//倒计时结束时回复 this.verifyCodeButtonEnable = true //当点击时按键不可用 return //不需要再往下继续执行了，所以return } this.countDown-- },1000)//每隔1秒减一次 } judgement(){ if(this.phoneNumber.length === 11){ this.verifyCodeButtonEnable=true }else { this.verifyCodeButtonEnable=false } } async sending_verifyCode(){ try { //调用方式异步调用 await cloud.auth().requestVerifyCode({ verifyCodeType: { kind: 'phone', phoneNumber: this.phoneNumber, countryCode: '86' }, action: VerifyCodeAction.REGISTER_LOGIN, //验证的方式 lang: 'zh_CN', sendInterval: 10 }) hilog.info(0,'VerifCode','Success') } catch (e) { AlertDialog.show({ title: '错误', message: '验证码失败' })//弹窗内容 hilog.info(0,'VerifCode',JSON.stringify(e)) } } async login_verify(){ try { const result = await cloud.auth().signIn({ //定义一个变量来接收它的返回结果,返回的是result，在通过result.gitUsr获取用户信息 credentialInfo: { kind: 'phone', countryCode: '86', phoneNumber: this.phoneNumber, verifyCode: this.verifyCode } }) const user = result.getUser() AppStorage.SetOrCreate('user',user)//存储用户到 AppStorage hilog.info(0,'Login','Success') router.replaceUrl({ url: 'pages/MyLoginLignOut' }) } catch (e) { AlertDialog.show({title:'错误',message:'登陆失败'}) hilog.info(0,'Login',JSON.stringify(e)) } } build() { Row() { Column() { TextInput({placeholder:'请输入手机号'}) .type(InputType.Number) .onChange(values =\u003e{ this.phoneNumber = values this.judgement()//点击获取验证码时，判断按键是否可用 }) Row(){ TextInput({placeholder:'验证码'}) .width('70%') .onChange(value =\u003e{ this.verifyCode=value }) Button(this.verifyCodeButtonText) .width('30%') .enabled(this.verifyCodeButtonEnable)//该属性是控制按键是否可用 .onClick(async () =\u003e{ //所在方法加async this.waiting() this.sending_verifyCode() }) } .width('100%') Button('登录') .enabled(this.phoneNumber.length === 11 \u0026\u0026 this.verifyCode.length === 6)//手机号11位，且验证码六位时点击登录才有效 .onClick(async ()=\u003e{ this.login_verify() }) } .width('100%') } .height('100%') } }希望文档对你有所帮助。\n附件 ",
+    "description": "",
+    "tags": [
+      "ArkTS",
+      "OpenHarmony",
+      "HarmonyOS",
+      "云端一体化"
+    ],
+    "title": "9.云端一体化如何查看云函数日志？",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": "数据类型 练习网址：\n条件语句 拓展：for in与for of的使用\nfor in ：遍历得到数组的角标， for of ：直接得到元素。 函数 使用function关键字声明函数，\nfunction outname(name:string):void{ console.log('你好'+name+\"!\") } //第二种写法： let outname = (name:string)=\u003e{ console.log('你好'+name+\"!\") } outname('lucy')ts还提供了一种可传参数和不传参数也执行的函数的操作，写法如下：\nlet outname = (name:string='张三')=\u003e{ console.log('你好'+name+\"!\") } outname()面向对象 模块的导入导出 提高代码的重复使用 组件的使用 image组件 textinput组件 TextInput({text:this.imagewidth.toFixed(0)}) .width(150) .backgroundColor('#36D00A') .type(InputType.Number) .onChange( values =\u003e{ this.imagewidth = parseInt(values) }) TextInput({placeholder:'nihao'}) .width(150) .backgroundColor('#4399')效果如下图： 文本框内输入的值是什么类型的数据呢？\n从上面的代码可知是字符型的，此处我们用parseInt将一个变量转换成number类型，又用方法.toFixed()将一个number类型的变量转换成字符串型。\n按键组件 滑动条组件（slider） 页面布局 线性布局 Row布局与Column布局类似，只是主轴方向不同 循环控制ForEach 使用router进行页面跳转时用replaceUrl与pushUrl的区别 后者会保留前一页信息，就是跳转后会返回上一页面，而后面的不会跳回上一页\n11–t\nf–!=11,运行时 附件 ",
+    "description": "",
+    "tags": [
+      "ArkTS语言",
+      "OpenHarmony",
+      "HarmonyOS"
+    ],
+    "title": "8.速通ArkTS语言",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/8.%E9%80%9F%E9%80%9Aarkts%E8%AF%AD%E8%A8%80/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: ArkTS语言",
+    "uri": "/tags/arkts%E8%AF%AD%E8%A8%80/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: B5-编程",
+    "uri": "/categories/b5-%E7%BC%96%E7%A8%8B/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 1.文章",
+    "content": "一台电脑如何使用多个远程仓库？ 下载好git，并做好相关的配置 关联github仓库 创建github仓库 克隆仓库到本地 git clone \u003c你的远程仓库URL\u003e创建多个 SSH 密钥对涉及到在本地生成多个公钥和私钥文件，并将公钥添加到你想要访问的远程服务器上。以下是详细步骤：\n打开终端： 打开你的终端（在 macOS 或 Linux 上）或 Git Bash（在 Windows 上）。\n导航到 SSH 目录： 使用 cd 命令切换到你的 SSH 目录，通常是 ~/.ssh。\ncd ~/.ssh 生成新的 SSH 密钥对： 使用 ssh-keygen 命令生成新的密钥对。每次运行此命令时，你都可以指定不同的文件名，以便区分不同的密钥对。例如，为 GitHub 生成的密钥对可能命名为 id_rsa_github，为 GitLab 生成的密钥对可能命名为 id_rsa_gitlab。\nssh-keygen -t rsa -b 4096 -C \"your_email@example.com\" -f id_rsa_github 重复上述步骤，为其他服务生成密钥对，只需更改文件名即可。例如：\nssh-keygen -t rsa -b 4096 -C \"another_email@example.com\" -f id_rsa_gitlab\n-b是指密码的长度是4096，与加密有关，-f表示要创建的ssh有关文件名\n在生成密钥时，系统会提示你输入一个文件名来保存新的密钥对。如果你直接按回车键，它将使用默认的文件名（如 id_rsa）。如果你想要为每个服务使用不同的文件名，确保在命令中指定 -f 选项后跟你想要的文件名。\n将公钥添加到远程服务器： 生成密钥对后，你需要将公钥（文件名后缀为 .pub）添加到远程服务器的 SSH 密钥管理界面。例如，在 GitHub 上，你可以在 Settings \u003e SSH and GPG keys 部分添加新的公钥。\n配置 SSH 配置文件： 为了确保 SSH 使用正确的密钥对连接到正确的服务器，你可以在 .ssh 目录下创建一个名为 config 的文件（如果该文件不存在的话），并为每个服务配置不同的设置。\ntouch ~/.ssh/config\n然后编辑这个文件，添加以下内容：\nHost github.com User git IdentityFile ~/.ssh/id_rsa_github IdentitiesOnly yes Host gitlab.com User git IdentityFile ~/.ssh/id_rsa_gitlab IdentitiesOnly yes这里的 Host 是你为每个服务设置的别名，User 是 Git 服务的默认用户名（通常是 git），IdentityFile 是你的私钥文件的路径。\n测试 SSH 连接： 使用 ssh -T 命令测试与远程服务器的连接。例如：\nssh -T git@github.com ssh -T git@gitlab.com如果一切设置正确，你应该会看到一条欢迎消息，表明你已经成功通过 SSH 密钥验证。\n当我有连个github账户时，当我用同一台电脑推送的时候如何区分是那个推送的 推荐文章\n答案：\n首先是克隆下来两个项目一个为test_A,一个为test_B，假设有一个账户是A，另一个是B，而且A账户的邮箱是设置为全局的，即用了这条命令：\ngit config --global user.name \"A\" git config --global user.email A@qq.com #假设这里的邮箱是QQ那么在在text_A中不作任何修改，在text_B中添加如下命令即可：\ngit config user.name \"B\" git config user.email B@qq.com #假设这里的邮箱是QQ遇到的一些问题 问题一\n解决Git上传代码error: failed to push some refs to ‘xxx‘hint:(e.g., ‘git pull …‘) before pushing again错误\n推荐文章\n问题二\n【Git】错误：权限被拒绝（公钥）(Permission denied (publickey).)\n推荐文章2)\n问题三\n解决Git上传代码error: failed to push some refs to ‘xxx‘hint:(e.g., ‘git pull …‘) before pushing again错误\n推荐文章 附件 ",
+    "description": "",
+    "tags": [
+      "gihub",
+      "atomgit"
+    ],
+    "title": "6.github和atomgit的混合使用，哪些是值得注意的？",
+    "uri": "/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: atomgit",
+    "uri": "/tags/atomgit/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: B1-博客文章",
+    "uri": "/categories/b1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: gihub",
+    "uri": "/tags/gihub/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: J1-教师资格考试",
+    "uri": "/categories/j1-%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%80%83%E8%AF%95/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",
@@ -493,22 +709,6 @@ var relearn_search_index = [
     "tags": null,
     "title": "标签 :: 报错与解决",
     "uri": "/tags/%E6%8A%A5%E9%94%99%E4%B8%8E%E8%A7%A3%E5%86%B3/"
-  },
-  {
-    "breadcrumb": "Maloudown \u003e Categories",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "类别 :: B5-比赛",
-    "uri": "/categories/b5-%E6%AF%94%E8%B5%9B/"
-  },
-  {
-    "breadcrumb": "Maloudown \u003e Categories",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "类别 :: X1-项目",
-    "uri": "/categories/x1-%E9%A1%B9%E7%9B%AE/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",

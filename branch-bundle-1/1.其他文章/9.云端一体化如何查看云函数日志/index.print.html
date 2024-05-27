@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="9.云端一体化如何查看云函数日志？ :: Maloudown">
+    <meta name="twitter:description" content="调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问">
+    <meta property="og:title" content="9.云端一体化如何查看云函数日志？ :: Maloudown">
+    <meta property="og:description" content="调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/">
+    <meta property="article:section" content="1.文章 :: Maloudown">
+    <meta property="article:published_time" content="2024-03-23T14:53:36+08:00">
+    <meta property="article:modified_time" content="2024-03-23T14:53:36+08:00">
+    <meta property="og:site_name" content="Maloudown">
+    <title>9.云端一体化如何查看云函数日志？ :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/" rel="canonical" type="text/html" title="9.云端一体化如何查看云函数日志？ :: Maloudown">
+    <link href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/index.xml" rel="alternate" type="application/rss+xml" title="9.云端一体化如何查看云函数日志？ :: Maloudown">
+    <link href="../../../images/favicon.png?1716793162" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1716793162" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1716793162" rel="stylesheet">
+    <link href="../../../css/fonts.css?1716793162" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1716793162" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1716793162" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1716793162" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1716793162" rel="stylesheet">
+    <link href="../../../css/print.css?1716793162" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1716793162" rel="stylesheet">
+    <link href="../../../css/ie.css?1716793162" rel="stylesheet">
+    <script src="../../../js/url.js?1716793162"></script>
+    <script src="../../../js/variant.js?1716793162"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/"><span itemprop="name">1.文章</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">9.云端一体化如何查看云函数日志？</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/arkts/">ArkTS</a></li>
+    <li><a class="term-link" href="../../../tags/harmonyos/">HarmonyOS</a></li>
+    <li><a class="term-link" href="../../../tags/openharmony/">OpenHarmony</a></li>
+    <li><a class="term-link" href="../../../tags/%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96/">云端一体化</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="9云端一体化如何查看云函数日志">9.云端一体化如何查看云函数日志？</h1>
+
+<p>调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问题：</p>
+<p>首先参数event的输出以JSON格式输出，这样方便阅读，下面有一段代码，</p>
+<p>云函数代码如下：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">stringify</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;querystring&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myHandler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">context</span>, <span style="color:#a6e22e">callback</span>, <span style="color:#a6e22e">logger</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">event</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">name</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">callback</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">code</span>: <span style="color:#66d9ef">200</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">myHandler</span> };</span></span></code></pre></div><p>获取信息的ets文件如下：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">cloud</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Entry</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">struct</span> <span style="color:#a6e22e">MyIndex</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">message</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">name</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">build() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Row() {</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Column() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">TextInput</span>({<span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;请输入姓名&#39;</span>})
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">value</span> <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;使用云端一体化&#39;</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">fontSize</span>(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> ()<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">callFunction</span>({
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;login&#39;</span>,<span style="color:#75715e">//云函数的名字
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>              <span style="color:#a6e22e">version</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;$latest&#39;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">params</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">name</span>:<span style="color:#66d9ef">this.name</span>}
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">message</span><span style="color:#f92672">=</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">getValue</span>().<span style="color:#a6e22e">message</span>
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Text</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">message</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">fontSize</span>(<span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">fontWeight</span>(<span style="color:#a6e22e">FontWeight</span>.<span style="color:#a6e22e">Bold</span>)
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">height</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p><strong>function函数的说明：</strong></p>
+<ul>
+<li>触发条件：
+<ul>
+<li>HTTP请求，</li>
+<li>云数据库插入，</li>
+<li>云存储</li>
+</ul>
+</li>
+<li>参数含义：
+<ul>
+<li>输入信息（），</li>
+<li>执行时上下文信息（环境变量），</li>
+<li>输出（返回结果给调用者），</li>
+<li>记录日志（）</li>
+</ul>
+</li>
+</ul>
+<p>此处做了这样的处理使得日志输出以JSON格式输出：</p>
+<hr>
+<pre><code>logger.info(JSON.stringify(event))
+</code></pre>
+<hr>
+<p>当遇到问题时，去官方的开发论坛搜索相关内容，
+此处我想实现输入一个名字，然后让云端函数以不同的方式输出，比如：</p>
+<hr>
+<p>你好，张三</p>
+<p>你好，李四</p>
+<hr>
+<p>但是现在输出的是：<strong>你好，%&amp;*%%</strong></p>
+<p>解决办法：</p>
+<p><a href="https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/agc-cloudfunction-appx-event-0000001620581529" target="_blank">查看event参数说明</a></p>
+<p><a href="#R-image-41c322ca06902596aaec3e42b0fc0bd8" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image.png" alt="jietu1" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-41c322ca06902596aaec3e42b0fc0bd8"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image.png" alt="jietu1" class="lightbox-image        " loading="lazy"></a></p>
+<p>再去CAG官网选择云监控&mdash;&gt;日志服务</p>
+<p><a href="#R-image-239526fefe1e2696afe4388d8f9af2c7" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-1.png" alt="截图2" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-239526fefe1e2696afe4388d8f9af2c7"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-1.png" alt="截图2" class="lightbox-image        " loading="lazy"></a></p>
+<p>然后复制右边的内容,放到一个json文件夹，用编译器（比如VScode）打开，并调整格式(如果用的是VScode，请使用<strong>shift+alt+F</strong>调整json格式)如下：</p>
+<div class="wrap-code highlight"><pre tabindex="0"><code class="language-jsonyouweishengke" data-lang="jsonyouweishengke">{
+    &#34;path&#34;: &#34;login-$latest&#34;,
+    &#34;httpMethod&#34;: &#34;POST&#34;,
+
+    &#34;headers&#34;: 
+    {
+        &#34;user-agent&#34;: &#34;libcurl-agent/1.0&#34;,
+        &#34;x-forwarded-for&#34;: &#34;115.46.239.151, 10.135.135.154, 10.134.64.11&#34;,
+        &#34;x-forwarded-port&#34;: &#34;443&#34;,
+        &#34;accept&#34;: &#34;*/*&#34;,
+        &#34;accept-encoding&#34;: &#34;gzip&#34;,
+        &#34;agcgw-trigger-authtype&#34;: &#34;apigw-client&#34;,
+        &#34;host&#34;: &#34;10.14.4.31&#34;,
+        &#34;content-type&#34;: &#34;application/json;charset=UTF-8&#34;,
+        &#34;packagename&#34;: &#34;com.itwcx.test&#34;,
+        &#34;appid&#34;: &#34;5765880207853994135&#34;,
+        &#34;authorization&#34;: &#34;SDK-HMAC-SHA256 containPath=false,containBody=false,containQuery=false,accessId=m7rTGQ2uNvyq1AGfJFLo,timestamp=1711175951586,signedHeaders=appid;productid,signature=44fe3b4da7d80ec9dfee07ca3747c448e94254b5454fef87f468150089f38623&#34;,
+        &#34;x-forwarded-host&#34;: &#34;10.14.4.31&#34;,
+        &#34;appversion&#34;: &#34;1.0.0&#34;,
+        &#34;sdkplatformversion&#34;: &#34;3.2.0.0&#34;,
+        &#34;sdktype&#34;: &#34;TS&#34;,
+        &#34;content-length&#34;: &#34;19&#34;,
+        &#34;x-real-ip&#34;: &#34;10.134.64.11&#34;,
+        &#34;sdkversion&#34;: &#34;1.0.0&#34;,
+        &#34;x-forwarded-proto&#34;: &#34;https&#34;,
+        &#34;sdkservicename&#34;: &#34;agconnect-cloud&#34;,
+        &#34;x-trace-id&#34;: &#34;f09f1070-6d7b-46a9-875d-bfb2bc4bfdb9&#34;,
+        &#34;productid&#34;: &#34;388421841222044287&#34;,
+        &#34;sdkplatform&#34;: &#34;OpenHarmony&#34;
+    },
+
+    &#34;queryStringParameters&#34;: &#34;&#34;,
+    &#34;queryParameters&#34;: null,
+    &#34;body&#34;: &#34;{\&#34;name\&#34;:\&#34;zhangsan\&#34;}&#34;,
+    &#34;isBase64Encoded&#34;: false,
+    &#34;pathVariable&#34;: null
+}</code></pre></div><p>此处我们只查看参数event的HTTP请求的相关说明：</p>
+<p>比较官网的event参数格式与自己日志打印的格式，看看有什么不同</p>
+<p><a href="#R-image-0df039c79991dec0673eee6a67de1793" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-2.png" alt="截图3" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0df039c79991dec0673eee6a67de1793"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-2.png" alt="截图3" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-1c6eb9090dc3e79307ea311e9f60d0e1" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-3.png" alt="截图4" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1c6eb9090dc3e79307ea311e9f60d0e1"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-3.png" alt="截图4" class="lightbox-image        " loading="lazy"></a></p>
+<p>观察可知问题出在body这个参数，参数是json格式，而日志打印的是字符格式，我们需要把字符格式转换成json格式，做如下操作：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-TS" data-lang="TS"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">stringify</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;querystring&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myHandler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">context</span>, <span style="color:#a6e22e">callback</span>, <span style="color:#a6e22e">logger</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">event</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">body</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">name</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">callback</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">code</span>: <span style="color:#66d9ef">200</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">myHandler</span> };</span></span></code></pre></div><p>上面的代码中</p>
+<hr>
+<pre><code>const obj = JSON.parse(event.body)
+const name = obj.name
+</code></pre>
+<hr>
+<p>就是转换操作。</p>
+<h2 id="认证服务">认证服务</h2>
+<h3 id="登录页面的实现">登录页面的实现</h3>
+<p><a href="#R-image-24b7b29af724cbd0f4e99b51632667cd" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-4.png" alt="截图7" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-24b7b29af724cbd0f4e99b51632667cd"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-4.png" alt="截图7" class="lightbox-image        " loading="lazy"></a></p>
+<p>登录验证代码：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AuthMode</span>,<span style="color:#a6e22e">Login</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/auth-component&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AuthUser</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">router</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.router&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Entry</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">struct</span> <span style="color:#a6e22e">MyLogin</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">message</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello World&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">build() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Row() {</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Column() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Login</span>({
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">modes</span><span style="color:#f92672">:</span>[<span style="color:#a6e22e">AuthMode</span>.<span style="color:#a6e22e">PHONE_VERIFY_CODE</span>],
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">onSuccess</span><span style="color:#f92672">:</span>(<span style="color:#a6e22e">usr</span>:<span style="color:#66d9ef">AuthUser</span>) <span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">pushUrl</span>({<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;page/MyWelcome&#39;</span>})
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }){
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;登录&#39;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">height</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p><a href="#R-image-90b3dfccb6807628b7161b13c0990ddc" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-5.png" alt="12" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-90b3dfccb6807628b7161b13c0990ddc"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/image-5.png" alt="12" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="页面登录获取验证码">页面登录获取验证码</h2>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Auth</span>, <span style="color:#a6e22e">VerifyCodeAction</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">cloud</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">hilog</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.hilog&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">router</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.router&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Entry</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Component</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">struct</span> <span style="color:#a6e22e">MyLogin</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">countDown</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//用一个变量来获取setinterval的ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">intervalId</span>:<span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">//因为这个变量与页面显示无关所以不用@State注释
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">verifyCodeButtonEnable</span>:<span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">verifyCodeButtonText</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;获取验证码&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">phoneNumber</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">verifyCode</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;输入验证码&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//定时器代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">waiting</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s`</span><span style="color:#75715e">//在一点击时，就显示10S
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">intervalId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(() <span style="color:#f92672">=&gt;</span> { <span style="color:#75715e">//要知道定时器结束没有需要知道它的返回结果，这个结果可以通过setinterval的ID获取。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s`</span><span style="color:#75715e">//将倒计时显示出来
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//如果减到0，清楚定时器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">clearInterval</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">intervalId</span>)<span style="color:#75715e">//得到返回结果后清楚定时器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">intervalId</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;获取验证码&#39;</span><span style="color:#75715e">//倒计时结束时回复
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span> <span style="color:#75715e">//当点击时按键不可用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#75715e">//不需要再往下继续执行了，所以return
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span><span style="color:#f92672">--</span>
+</span></span><span style="display:flex;"><span>    },<span style="color:#ae81ff">1000</span>)<span style="color:#75715e">//每隔1秒减一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">judgement</span>(){
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">phoneNumber</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span>){
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span><span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>     }<span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">sending_verifyCode</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> { <span style="color:#75715e">//调用方式异步调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">requestVerifyCode</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">verifyCodeType</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;phone&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">phoneNumber</span>: <span style="color:#66d9ef">this.phoneNumber</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">countryCode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;86&#39;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">action</span>: <span style="color:#66d9ef">VerifyCodeAction.REGISTER_LOGIN</span>, <span style="color:#75715e">//验证的方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">lang</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;zh_CN&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sendInterval</span>: <span style="color:#66d9ef">10</span>
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;VerifCode&#39;</span>,<span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AlertDialog</span>.<span style="color:#a6e22e">show</span>({ <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;错误&#39;</span>, <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;验证码失败&#39;</span> })<span style="color:#75715e">//弹窗内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;VerifCode&#39;</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">login_verify</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">signIn</span>({ <span style="color:#75715e">//定义一个变量来接收它的返回结果,返回的是result，在通过result.gitUsr获取用户信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">credentialInfo</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;phone&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">countryCode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;86&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">phoneNumber</span>: <span style="color:#66d9ef">this.phoneNumber</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">verifyCode</span>: <span style="color:#66d9ef">this.verifyCode</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">getUser</span>()
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AppStorage</span>.<span style="color:#a6e22e">SetOrCreate</span>(<span style="color:#e6db74">&#39;user&#39;</span>,<span style="color:#a6e22e">user</span>)<span style="color:#75715e">//存储用户到 AppStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;Login&#39;</span>,<span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">replaceUrl</span>({ <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pages/MyLoginLignOut&#39;</span> })
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AlertDialog</span>.<span style="color:#a6e22e">show</span>({<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;错误&#39;</span>,<span style="color:#a6e22e">message</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;登陆失败&#39;</span>})
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;Login&#39;</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">build() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Row() {</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Column() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">TextInput</span>({<span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;请输入手机号&#39;</span>})
+</span></span><span style="display:flex;"><span>          .<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">InputType</span>.Number)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">values</span> <span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">phoneNumber</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">values</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">judgement</span>()<span style="color:#75715e">//点击获取验证码时，判断按键是否可用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        })
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">Row</span>(){
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">TextInput</span>({<span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;验证码&#39;</span>})
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;70%&#39;</span>)
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">value</span> <span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCode</span><span style="color:#f92672">=</span><span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>           })
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">Button</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span>)
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;30%&#39;</span>)
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">enabled</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span>)<span style="color:#75715e">//该属性是控制按键是否可用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>           .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span>{ <span style="color:#75715e">//所在方法加async
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">waiting</span>()
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sending_verifyCode</span>()
+</span></span><span style="display:flex;"><span>           })
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;登录&#39;</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">enabled</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">phoneNumber</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCode</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">6</span>)<span style="color:#75715e">//手机号11位，且验证码六位时点击登录才有效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> ()<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">login_verify</span>()
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">height</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>登录后跳转到的页面：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">cloud</span> ,{<span style="color:#a6e22e">AuthUser</span>}<span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@hw-agconnect/cloud&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">hilog</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.hilog&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">router</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.router&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Entry</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">struct</span> <span style="color:#a6e22e">MyLoginLignOut</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">photoUrl</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e">//存储头像路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">displayName</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e">//存储用户昵称
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@StorageLink</span>(<span style="color:#e6db74">&#39;user&#39;</span>) <span style="color:#a6e22e">user</span>:<span style="color:#66d9ef">AuthUser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#75715e">//定义一个AuthUser的类型来获取用户存的值，(&#39;user&#39;)叫存储对象名，是在另一个页面定义的名字
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">aboutToAppear</span>(){<span style="color:#75715e">//build渲染前就运行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">//1.cloud.auth().getCurrentUser()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">//2.appStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">displayName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">getDisplayName</span>()<span style="color:#75715e">//获取用户，间接通过用户拿到用户头像等数据。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">getPhotoUrl</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">build() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Row() {</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Column() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Row</span>(){
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">Image</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl?this.photoUrl</span>:<span style="color:#66d9ef">$r</span>(<span style="color:#e6db74">&#39;app.media.app_icon&#39;</span>))
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">width</span>(<span style="color:#ae81ff">80</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">height</span>(<span style="color:#ae81ff">80</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">onClick</span>(()<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://img.btstu.cn/api/images/5a2a5d5560223.jpg&#39;</span>
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>        }.<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">justifyContent</span>(<span style="color:#a6e22e">FlexAlign</span>.<span style="color:#a6e22e">Center</span>)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">padding</span>({<span style="color:#a6e22e">bottom</span>:<span style="color:#66d9ef">70</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">TextInput</span>({<span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;设置昵称&#39;</span>,<span style="color:#a6e22e">text</span>:<span style="color:#66d9ef">this.displayName</span>})
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">fontSize</span>(<span style="color:#ae81ff">25</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">fontWeight</span>(<span style="color:#a6e22e">FontWeight</span>.<span style="color:#a6e22e">Bold</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">value</span> <span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">displayName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;保存&#39;</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">margin</span>({<span style="color:#a6e22e">top</span>:<span style="color:#66d9ef">10</span>,<span style="color:#a6e22e">bottom</span>:<span style="color:#66d9ef">10</span>})
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">width</span>(<span style="color:#ae81ff">90</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> ()<span style="color:#f92672">=&gt;</span>{<span style="color:#75715e">//保存图片与用户名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">updateProfile</span>({<span style="color:#75715e">//保存头像、用户名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#a6e22e">displayName</span>: <span style="color:#66d9ef">this.displayName</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">photoUrl</span>: <span style="color:#66d9ef">this.photoUrl</span>
+</span></span><span style="display:flex;"><span>              })
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;updateProfile&#39;</span>,<span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;updateProfile&#39;</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;登出&#39;</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">margin</span>({<span style="color:#a6e22e">top</span>:<span style="color:#66d9ef">10</span>,<span style="color:#a6e22e">bottom</span>:<span style="color:#66d9ef">10</span>})
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">width</span>(<span style="color:#ae81ff">90</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> ()<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">signOut</span>()
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;SignOut&#39;</span>,<span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">replaceUrl</span>({<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;pages/MyLogin&#39;</span>})
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;SignOut&#39;</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">height</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h3 id="个人设置中心">个人设置中心</h3>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">cloud</span>, { <span style="color:#a6e22e">AuthUser</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">router</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.router&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">hilog</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.hilog&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">picker</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.file.picker&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Entry</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">struct</span> <span style="color:#a6e22e">MyIndex</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">photoUrl</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e">//存储头像路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">displayName</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e">//存储用户昵称
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@StorageLink</span>(<span style="color:#e6db74">&#39;user&#39;</span>) <span style="color:#a6e22e">user</span>: <span style="color:#66d9ef">AuthUser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#75715e">//定义一个AuthUser的类型来获取用户存的值，(&#39;user&#39;)叫存储对象名，是在另一个页面定义的名字
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">uploading</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#75715e">//用户控制图片是否可以点击，上传时不可以点击
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">uploadingText</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0%&#39;</span><span style="color:#75715e">//上传进度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">aboutToAppear() {</span>  <span style="color:#75715e">//build渲染前就运行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 1. cloud.auth().getCurrentUser()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 2. AppStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">displayName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">getDisplayName</span>()<span style="color:#75715e">//获取用户，间接通过用户拿到用户头像等数据。加问号是因为在aboutToAppear运行时是无法获取用户名或图片等信息的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">getPhotoUrl</span>()
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">build() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Row() {</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Column</span>({ <span style="color:#a6e22e">space</span>: <span style="color:#66d9ef">10</span> }) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Stack() {</span><span style="color:#75715e">//Stack该属性让它所包含的组件重叠
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#a6e22e">Image</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl</span> : <span style="color:#66d9ef">$r</span>(<span style="color:#e6db74">&#39;app.media.user_dark&#39;</span>))
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">width</span>(<span style="color:#ae81ff">70</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">height</span>(<span style="color:#ae81ff">70</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">borderRadius</span>(<span style="color:#ae81ff">70</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">enabled</span>(<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">uploading</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">onComplete</span>(()<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">uploading</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">// this.photoUrl = &#39;网络图片的地址&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>              <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 1. 从相簿中选照片
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">picker</span>.<span style="color:#a6e22e">PhotoSelectOptions</span>()
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">MIMEType</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">picker</span>.<span style="color:#a6e22e">PhotoViewMIMETypes</span>.<span style="color:#a6e22e">IMAGE_TYPE</span><span style="color:#75715e">//媒体类型：视频还是图片
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">maxSelectNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#75715e">//最大选择个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">picker</span>.<span style="color:#a6e22e">PhotoViewPicker</span>().<span style="color:#a6e22e">select</span>(<span style="color:#a6e22e">options</span>)<span style="color:#75715e">//把参数传给下面的方法，把结果传给result
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Upload&#39;</span>, <span style="color:#e6db74">`Picker Success </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">photoUris</span>[<span style="color:#ae81ff">0</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">uploading</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 2. 调云存储 api 上传照片
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">storage</span>().<span style="color:#a6e22e">upload</span>({
+</span></span><span style="display:flex;"><span>                  <span style="color:#a6e22e">localPath</span>: <span style="color:#66d9ef">result.photoUris</span>[<span style="color:#ae81ff">0</span>],<span style="color:#75715e">//本地图片路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                  <span style="color:#a6e22e">cloudPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`test/</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">getUid</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">.jpg`</span>,<span style="color:#75715e">//云存储那边存储的路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                  <span style="color:#a6e22e">onUploadProgress</span>: <span style="color:#66d9ef">event</span> <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">percent</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#ae81ff">100</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">loaded</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">total</span>)<span style="color:#75715e">//获取上传的百分比，event.loaded：已上传的自己数，event.total：总的自己数，Math.floor：舍弃小数点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">uploadingText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">percent</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%`</span>  <span style="color:#75715e">//数值更新到uploadingText
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                  }
+</span></span><span style="display:flex;"><span>                })
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Upload&#39;</span>, <span style="color:#e6db74">&#39;Upload Success&#39;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 3. 获取上传照片的网络地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">storage</span>().<span style="color:#a6e22e">getDownloadURL</span>(<span style="color:#e6db74">`test/</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">getUid</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">.jpg`</span>)<span style="color:#75715e">//获取公网地址，拿到图片在网络上的地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">photoUrl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">url</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&amp;ts=</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">getTime</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span><span style="color:#75715e">//这个里做这个处理是因为，图片被缓存起来了，上传的时候如果只是给云存储的地址，那么在传第二张图片到云存储后，photoUrl再获取时，因为图片地址不变照片也不会改变，它会缓存起来，而在图片后面加上一个时间图片就不在被缓存。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">// this.uploading = false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Upload&#39;</span>, <span style="color:#e6db74">`url: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">url</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>              } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">error</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Upload&#39;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">uploading</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 显示上传进度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">Text</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">uploadingText</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">width</span>(<span style="color:#ae81ff">70</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">height</span>(<span style="color:#ae81ff">70</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">borderRadius</span>(<span style="color:#ae81ff">70</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">fontColor</span>(<span style="color:#e6db74">&#39;white&#39;</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">backgroundColor</span>(<span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">opacity</span>(<span style="color:#ae81ff">0.6</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">fontSize</span>(<span style="color:#ae81ff">24</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">fontWeight</span>(<span style="color:#a6e22e">FontWeight</span>.<span style="color:#a6e22e">Bolder</span>)
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">TextAlign</span>.<span style="color:#a6e22e">Center</span>)<span style="color:#75715e">//文字对齐方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">TextInput</span>({ <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;请设置昵称&#39;</span>, <span style="color:#a6e22e">text</span>: <span style="color:#66d9ef">this.displayName</span> })
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;50%&#39;</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">value</span> <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">displayName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">`保存`</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">updateProfile</span>({
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">displayName</span>: <span style="color:#66d9ef">this.displayName</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">photoUrl</span>: <span style="color:#66d9ef">this.photoUrl</span>
+</span></span><span style="display:flex;"><span>              })
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;updateProfile&#39;</span>, <span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">error</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;updateProfile&#39;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">`登出`</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">signOut</span>()
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;SignOut&#39;</span>, <span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">replaceUrl</span>({ <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pages/MyLoginCustom&#39;</span> })
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">error</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;SignOut&#39;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">height</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h2 id="登录页面">登录页面</h2>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Auth</span>, <span style="color:#a6e22e">VerifyCodeAction</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">cloud</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@hw-agconnect/cloud&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">hilog</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.hilog&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">router</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@ohos.router&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Entry</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@Component</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">struct</span> <span style="color:#a6e22e">MyLogin</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">countDown</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//用一个变量来获取setinterval的ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">intervalId</span>:<span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">//因为这个变量与页面显示无关所以不用@State注释
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">verifyCodeButtonEnable</span>:<span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">verifyCodeButtonText</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;获取验证码&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">phoneNumber</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">@State</span> <span style="color:#a6e22e">verifyCode</span>:<span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;输入验证码&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">mainPage</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`pages/StudentPage`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">aboutToAppear() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">getCurrentUser</span>()<span style="color:#75715e">//获取当前认证用户
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">user</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {<span style="color:#75715e">//获取用户是否为空，如果用户已经断开会话，则下一次进入时间走时登录流程
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">AppStorage</span>.<span style="color:#a6e22e">SetOrCreate</span>(<span style="color:#e6db74">&#39;user&#39;</span>, <span style="color:#a6e22e">user</span>) <span style="color:#75715e">// 如果会话未断开，不走登录流程，而是吧用户数据存到AppStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">replaceUrl</span>({ <span style="color:#a6e22e">url</span>: <span style="color:#66d9ef">this.mainPage</span> })
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">error</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Login&#39;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//定时器代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">waiting</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s`</span><span style="color:#75715e">//在一点击时，就显示10S
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">intervalId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(() <span style="color:#f92672">=&gt;</span> { <span style="color:#75715e">//要知道定时器结束没有需要知道它的返回结果，这个结果可以通过setinterval的ID获取。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s`</span><span style="color:#75715e">//将倒计时显示出来
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//如果减到0，清楚定时器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">clearInterval</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">intervalId</span>)<span style="color:#75715e">//得到返回结果后清楚定时器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">intervalId</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;获取验证码&#39;</span><span style="color:#75715e">//倒计时结束时回复
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span> <span style="color:#75715e">//当点击时按键不可用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#75715e">//不需要再往下继续执行了，所以return
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">countDown</span><span style="color:#f92672">--</span>
+</span></span><span style="display:flex;"><span>    },<span style="color:#ae81ff">1000</span>)<span style="color:#75715e">//每隔1秒减一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">judgement</span>(){
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">phoneNumber</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span>){
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span><span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>     }<span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">sending_verifyCode</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> { <span style="color:#75715e">//调用方式异步调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">requestVerifyCode</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">verifyCodeType</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;phone&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">phoneNumber</span>: <span style="color:#66d9ef">this.phoneNumber</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">countryCode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;86&#39;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">action</span>: <span style="color:#66d9ef">VerifyCodeAction.REGISTER_LOGIN</span>, <span style="color:#75715e">//验证的方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">lang</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;zh_CN&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sendInterval</span>: <span style="color:#66d9ef">10</span>
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;VerifCode&#39;</span>,<span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AlertDialog</span>.<span style="color:#a6e22e">show</span>({ <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;错误&#39;</span>, <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;验证码失败&#39;</span> })<span style="color:#75715e">//弹窗内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;VerifCode&#39;</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">login_verify</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cloud</span>.<span style="color:#a6e22e">auth</span>().<span style="color:#a6e22e">signIn</span>({ <span style="color:#75715e">//定义一个变量来接收它的返回结果,返回的是result，在通过result.gitUsr获取用户信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">credentialInfo</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;phone&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">countryCode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;86&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">phoneNumber</span>: <span style="color:#66d9ef">this.phoneNumber</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">verifyCode</span>: <span style="color:#66d9ef">this.verifyCode</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">getUser</span>()
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AppStorage</span>.<span style="color:#a6e22e">SetOrCreate</span>(<span style="color:#e6db74">&#39;user&#39;</span>,<span style="color:#a6e22e">user</span>)<span style="color:#75715e">//存储用户到 AppStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;Login&#39;</span>,<span style="color:#e6db74">&#39;Success&#39;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">replaceUrl</span>({ <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pages/MyLoginLignOut&#39;</span> })
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AlertDialog</span>.<span style="color:#a6e22e">show</span>({<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;错误&#39;</span>,<span style="color:#a6e22e">message</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;登陆失败&#39;</span>})
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">hilog</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;Login&#39;</span>,<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">e</span>))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">build() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Row() {</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Column() {</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">TextInput</span>({<span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;请输入手机号&#39;</span>})
+</span></span><span style="display:flex;"><span>          .<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">InputType</span>.Number)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">values</span> <span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">phoneNumber</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">values</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">judgement</span>()<span style="color:#75715e">//点击获取验证码时，判断按键是否可用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        })
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">Row</span>(){
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">TextInput</span>({<span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;验证码&#39;</span>})
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;70%&#39;</span>)
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">onChange</span>(<span style="color:#a6e22e">value</span> <span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCode</span><span style="color:#f92672">=</span><span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>           })
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">Button</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonText</span>)
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;30%&#39;</span>)
+</span></span><span style="display:flex;"><span>           .<span style="color:#a6e22e">enabled</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCodeButtonEnable</span>)<span style="color:#75715e">//该属性是控制按键是否可用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>           .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span>{ <span style="color:#75715e">//所在方法加async
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">waiting</span>()
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sending_verifyCode</span>()
+</span></span><span style="display:flex;"><span>           })
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;登录&#39;</span>)
+</span></span><span style="display:flex;"><span>          .<span style="color:#a6e22e">enabled</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">phoneNumber</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">verifyCode</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">6</span>)<span style="color:#75715e">//手机号11位，且验证码六位时点击登录才有效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          .<span style="color:#a6e22e">onClick</span>(<span style="color:#66d9ef">async</span> ()<span style="color:#f92672">=&gt;</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">login_verify</span>()
+</span></span><span style="display:flex;"><span>          })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">width</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">height</span>(<span style="color:#e6db74">&#39;100%&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>希望文档对你有所帮助。</p>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">应用开发</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1716793162" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1716793162" defer></script>
+    <script src="../../../js/theme.js?1716793162" defer></script>
+  </body>
+</html>

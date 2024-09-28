@@ -6,7 +6,7 @@
     <description>Recent content in 12.实战项目 on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 14 May 2024 22:22:09 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>贺青工程</title>
@@ -14,6 +14,13 @@
       <pubDate>Wed, 17 Jan 2024 17:03:27 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/</guid>
       <description>志愿活动软件设计与开发设计一款可以参加志愿活动的小程序，其制作流程大致如下： 需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和</description>
+    </item>
+    <item>
+      <title>毕业设计</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
+      <description>运行环境 通信 ESP8266-01S上传数据到OneNet 参考视频 1.进入OneNet创建产品和设备（具体步骤待补充） 2.复制产品和设备的详细</description>
     </item>
     <item>
       <title>电赛</title>

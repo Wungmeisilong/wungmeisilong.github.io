@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B3-毕业设计 on Maloudown</title>
+    <link>https://wungmeisilong.github.io/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in B3-毕业设计 on Maloudown</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
+    <atom:link href="https://wungmeisilong.github.io/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>毕业设计</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
+      <description>运行环境 通信 ESP8266-01S上传数据到OneNet 参考视频 1.进入OneNet创建产品和设备（具体步骤待补充） 2.复制产品和设备的详细</description>
+    </item>
+  </channel>
+</rss>

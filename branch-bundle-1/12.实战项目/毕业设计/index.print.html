@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="毕业设计 :: Maloudown">
+    <meta name="twitter:description" content="运行环境 通信 ESP8266-01S上传数据到OneNet 参考视频 1.进入OneNet创建产品和设备（具体步骤待补充） 2.复制产品和设备的详细">
+    <meta property="og:title" content="毕业设计 :: Maloudown">
+    <meta property="og:description" content="运行环境 通信 ESP8266-01S上传数据到OneNet 参考视频 1.进入OneNet创建产品和设备（具体步骤待补充） 2.复制产品和设备的详细">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">
+    <meta property="article:section" content="12.实战项目 :: Maloudown">
+    <meta property="article:published_time" content="2024-07-07T18:10:42+08:00">
+    <meta property="article:modified_time" content="2024-07-07T18:10:42+08:00">
+    <meta property="og:site_name" content="Maloudown">
+    <title>毕业设计 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" rel="canonical" type="text/html" title="毕业设计 :: Maloudown">
+    <link href="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/index.xml" rel="alternate" type="application/rss+xml" title="毕业设计 :: Maloudown">
+    <link href="../../../images/favicon.png?1720924551" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1720924552" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1720924552" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1720924552" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1720924552" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1720924552" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1720924552" rel="stylesheet">
+    <link href="../../../css/fonts.css?1720924552" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1720924552" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1720924552" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1720924552" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1720924552" rel="stylesheet">
+    <link href="../../../css/print.css?1720924552" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1720924552" rel="stylesheet">
+    <link href="../../../css/ie.css?1720924552" rel="stylesheet">
+    <script src="../../../js/url.js?1720924552"></script>
+    <script src="../../../js/variant.js?1720924552"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"><span itemprop="name">12.实战项目</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">毕业设计</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/onenet/">OneNet</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="毕业设计">毕业设计</h1>
+
+<h2 id="运行环境">运行环境</h2>
+<h2 id="通信">通信</h2>
+<h3 id="esp8266-01s上传数据到onenet">ESP8266-01S上传数据到OneNet</h3>
+<p><a href="https://www.bilibili.com/video/BV1jS421A7Bk/?spm_id_from=333.337.search-card.all.click&amp;vd_source=8b3841f9fc62479f11b65d83945326a7" target="_blank">参考视频</a></p>
+<p>1.进入OneNet创建产品和设备（具体步骤待补充）</p>
+<p>2.复制产品和设备的详细信息（备份）</p>
+<p>目的是为了方便使用AT指令以及代码编写。</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">设备名称</span>(clientlD) <span style="color:#f92672">:</span> test
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">产品</span>ID (username) <span style="color:#f92672">:</span> F1AVyfXw7l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>password: version<span style="color:#f92672">=</span><span style="color:#ae81ff">2018</span><span style="color:#f92672">-</span><span style="color:#ae81ff">10</span><span style="color:#f92672">-</span><span style="color:#ae81ff">31</span><span style="color:#f92672">&amp;</span>res<span style="color:#f92672">=</span>products<span style="color:#f92672">%</span><span style="color:#ae81ff">2FF</span><span style="color:#ae81ff">1</span>AVyfXw71<span style="color:#f92672">%</span><span style="color:#ae81ff">2F</span>devices<span style="color:#f92672">%</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2F</span>test<span style="color:#f92672">&amp;</span>et<span style="color:#f92672">=</span><span style="color:#ae81ff">2810313321</span><span style="color:#f92672">&amp;</span>method<span style="color:#f92672">=</span>md5<span style="color:#f92672">&amp;</span>sign<span style="color:#f92672">=</span>EfJtPPxHwMX6iWWf3YksbA<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>D<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>D.urI:mqtts.heclouds.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">端口号</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1883</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">订阅</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">$</span>sys<span style="color:#f92672">/</span>F1AVyfXw7I<span style="color:#f92672">/</span>test<span style="color:#f92672">/</span>thing<span style="color:#f92672">/</span>property<span style="color:#f92672">/</span>post<span style="color:#f92672">/</span>reply发布: <span style="color:#960050;background-color:#1e0010">$</span>sys<span style="color:#f92672">/</span>F1AVyfXw7l<span style="color:#f92672">/</span>test<span style="color:#f92672">/</span>thing<span style="color:#f92672">/</span>property<span style="color:#f92672">/</span>post
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">设备密钥</span><span style="color:#f92672">:</span> cjFZSWRwUGNrazdRR2d6eTJ4Tm9YNXN5bTNuMGpMTIE<span style="color:#f92672">=</span>access key: vclTl19loOn7mcfdtT39l1eRfVffM6FfH8U<span style="color:#f92672">/</span>U3HhUQc<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>res:products<span style="color:#f92672">/</span>F1AVyfXw7l<span style="color:#f92672">/</span>devices<span style="color:#f92672">/</span>test
+</span></span><span style="display:flex;"><span>et:<span style="color:#960050;background-color:#1e0010">时间戳</span></span></span></code></pre></div><h4 id="收藏的一些资料">收藏的一些资料</h4>
+<p><a href="https://open.iot.10086.cn/console/product/own" target="_blank">OneNet云平台</a>
+<a href="#R-image-e453c38bd224e0d8f74a48ece64a542f" class="lightbox-link"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-2.png" alt="OneNet云平台" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e453c38bd224e0d8f74a48ece64a542f"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-2.png" alt="OneNet云平台" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="https://www.beijing-time.org/shijianchuo/" target="_blank">2.时间戳</a>
+<a href="#R-image-6fe78fe6d78a55e1e4cf0e7d1bca90ba" class="lightbox-link"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image.png" alt="时间戳" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6fe78fe6d78a55e1e4cf0e7d1bca90ba"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image.png" alt="时间戳" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="https://open.iot.10086.cn/doc/v5/develop/detail/639" target="_blank">OneNet文档中心</a>
+<a href="#R-image-66633481a1073fafcbb21da3ae25ee5f" class="lightbox-link"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-1.png" alt="OneNet文档中心" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-66633481a1073fafcbb21da3ae25ee5f"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-1.png" alt="OneNet文档中心" class="lightbox-image        " loading="lazy"></a></p>
+<h4 id="最终的操作结果">最终的操作结果</h4>
+<p><a href="#R-image-a899d66b4f923a6e8a0d4502c0a9384d" class="lightbox-link"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-3.png" alt="结果" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a899d66b4f923a6e8a0d4502c0a9384d"><img src="../../../branch-bundle-1/12.%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-3.png" alt="结果" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="esp32esp8266-12e连接onenet参考资料">ESP32&amp;&amp;ESP8266-12E连接ONeNet参考资料</h3>
+<ul>
+<li><a href="https://open.iot.10086.cn/doc/v5/fuse/detail/1007" target="_blank">云平台调试错误码</a></li>
+<li><a href="https://open.iot.10086.cn/doc/v5/fuse/detail/922" target="_blank">设备之间数据交换实战项目</a></li>
+<li><a href="https://github.com/arduino-libraries/WiFi" target="_blank">wifi.h库</a></li>
+<li><a href="https://blog.csdn.net/qq_40700822/article/details/116640694" target="_blank">参考文档</a></li>
+</ul>
+<p>代码部分唯一不同的是引用的库函数不同，</p>
+<p>ESP8266使用的是</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span></span></span></code></pre></div><p>ESP32使用的是</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span></span></span></code></pre></div><p>在使用时需要注意引用的库函数，如果库函数不匹配，可能会导致编译失败，这部分的代码以放在附件中。</p>
+<ul>
+<li><strong>ESP-12EConnectONenet</strong>是ESP8266-12E连接ONeNet；</li>
+<li><strong>ESP32ConnectONenet</strong> 是ESP8266-12E连接ONeNet。</li>
+</ul>
+<h3 id="app连接onenet">APP连接ONeNet</h3>
+<ul>
+<li><a href="https://blog.csdn.net/m0_57523637/article/details/134110774" target="_blank">1.内含demo</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Sx42127ni/?spm_id_from=333.337.search-card.all.click&amp;vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" target="_blank">2.新版视频地址</a></li>
+<li><a href="https://www.json.cn/json2java/" target="_blank">3.json格式化网站</a></li>
+<li><a href="https://blog.csdn.net/NakajimaFN/article/details/109074166" target="_blank">4.Android Okhttp3的使用（很全面，包含Post提交字符串、键值对、表单、上传文件、无参请求和Get有参无参请求，还有自动添加token）</a></li>
+<li><a href="https://blog.csdn.net/weixin_46323814/article/details/124662664" target="_blank">从json中取出数据,结合第一点看</a></li>
+<li><a href="https://open.iot.10086.cn/doc/v5/fuse/detail/1007" target="_blank">5.云平台调试错误码</a></li>
+</ul>
+<p>在B站上学习OKHTTP3，我把主要的核心代码放在附件里，分别是get和post的同步和异步请求，返回的结果和视频地址2里讲的一样。</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1Kr4y1b7Kw?p=2&amp;vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" target="_blank">视频地址1</a>,</li>
+<li><a href="https://www.bilibili.com/video/BV1Z8411i7Yo/?p=70&amp;spm_id_from=333.880.my_history.page.click&amp;vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" target="_blank">视频地址2</a></li>
+</ul>
+<p>在编写HTTPS网络请求（post）时需要上传一些数据，这些数据有一定的上传格式，下面的网址汇总了上传格式content参数</p>
+<ul>
+<li><a href="https://www.runoob.com/http/http-content-type.html" target="_blank">HTTP的content格式汇总网址</a></li>
+</ul>
+<h3 id="stm32电脑模拟esp32esp8266通信">STM32+电脑(模拟ESP32)+ESP8266通信</h3>
+<p>STM32————电脑：串口1（PA 9  PA10）,手机连接指定热点，连接成功后等待一段时间把摄像头的网址发给单片机，单片机通过串口2发给ESP8266.ESP8266再传到OneNet上。</p>
+<p><strong>注意</strong>：在用ESP8266最小系统通信的时，需要给板子单独供电，否则通信可能失败，原因我想可能是因为电压不够。</p>
+<h3 id="通信过程中遇到的问题">通信过程中遇到的问题</h3>
+<ul>
+<li>
+<p>keil5中一点击下载就闪退或点击debug中的setting就闪退。<a href="https://blog.csdn.net/wcanon/article/details/129645304" target="_blank">参照文章</a></p>
+</li>
+<li>
+<p>Keil5编程之warning: #223-D: function “xxx“ declared implicitly.<a href="https://blog.csdn.net/weixin_45714385/article/details/114965914" target="_blank">参考链接</a></p>
+</li>
+</ul>
+<h3 id="这一部分所用到的资料下载地址">这一部分所用到的资料下载地址</h3>
+<ul>
+<li><a href="http://www.openedv.com/docs/modules/iot/atk-esp.html" target="_blank">正点原子AKT-ESP-Fwifi模块</a></li>
+<li></li>
+</ul>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+      <li><a href="../../../branch-bundle-1/12.%e5%ae%9e%e6%88%98%e9%a1%b9%e7%9b%ae/%e6%af%95%e4%b8%9a%e8%ae%be%e8%ae%a1/index.files/ESP-12ConnectOnenet.c">ESP-12ConnectOnenet.c</a> (0 B)</li>
+      <li><a href="../../../branch-bundle-1/12.%e5%ae%9e%e6%88%98%e9%a1%b9%e7%9b%ae/%e6%af%95%e4%b8%9a%e8%ae%be%e8%ae%a1/index.files/ESP32ConnectOnenet%20.c">ESP32ConnectOnenet .c</a> (0 B)</li>
+      <li><a href="../../../branch-bundle-1/12.%e5%ae%9e%e6%88%98%e9%a1%b9%e7%9b%ae/%e6%af%95%e4%b8%9a%e8%ae%be%e8%ae%a1/index.files/https.java">https.java</a> (2 KB)</li>
+  </ul>
+</div>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">B3-毕业设计</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1720924552" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1720924552" defer></script>
+    <script src="../../../js/theme.js?1720924552" defer></script>
+  </body>
+</html>

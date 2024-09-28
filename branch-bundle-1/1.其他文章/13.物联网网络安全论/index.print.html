@@ -21,21 +21,21 @@
     <title>13.物联网网络安全论 :: Maloudown</title>
     <link href="https://wungmeisilong.github.io/branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/" rel="canonical" type="text/html" title="13.物联网网络安全论 :: Maloudown">
     <link href="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/index.xml" rel="alternate" type="application/rss+xml" title="13.物联网网络安全论 :: Maloudown">
-    <link href="../../../images/favicon.png?1716963896" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1720924551" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1716963896" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1716963896" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1716963896" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1716963896" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1716963896" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1716963896" rel="stylesheet">
-    <link href="../../../css/fonts.css?1716963896" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1716963896" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1716963896" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1716963896" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1716963896" rel="stylesheet">
-    <link href="../../../css/print.css?1716963896" rel="stylesheet" media="print">
-    <link href="../../../css/format-print.css?1716963896" rel="stylesheet">
-    <link href="../../../css/ie.css?1716963896" rel="stylesheet">
-    <script src="../../../js/url.js?1716963896"></script>
-    <script src="../../../js/variant.js?1716963896"></script>
+    <link href="../../../css/fontawesome-all.min.css?1720924552" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1720924552" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1720924552" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1720924552" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1720924552" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1720924552" rel="stylesheet">
+    <link href="../../../css/fonts.css?1720924552" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1720924552" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1720924552" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1720924552" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1720924552" rel="stylesheet">
+    <link href="../../../css/print.css?1720924552" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1720924552" rel="stylesheet">
+    <link href="../../../css/ie.css?1720924552" rel="stylesheet">
+    <script src="../../../js/url.js?1720924552"></script>
+    <script src="../../../js/variant.js?1720924552"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -100,15 +100,16 @@
 <li>可以根据各个行业、各种业务的具体特点形成各个不同的应用或系统的应用解决方案</li>
 </ul>
 <h2 id="数据加密中出现的攻击旁路系统是什么">数据加密中出现的攻击——旁路系统是什么</h2>
-<p>攻击者可能试图通过旁路系统，如物理地取走数据库，在通线路商窃听，面对这样的威胁最有效的方式对数据进行加密，以加密的格式存储和传输数据。</p>
+<p>攻击者可能试图通过旁路系统，如物理地取走数据库，在通信线路上窃听，面对这样的威胁最有效的方式是对数据进行加密，以加密的格式存储和传输数据。</p>
 <h2 id="数字签名的使用">数字签名的使用</h2>
 <ul>
-<li>鉴权：非对称数据加密系统允许每一位发送数据的用户使用公钥进行数据加密，数字签名能够让信息接受者确认信息发送者的身份</li>
+<li>鉴权：非对称秘钥加密系统允许每一位发送数据的用户使用公钥进行数据加密，数字签名能够让信息接受者确认信息发送者的身份</li>
 <li>验证完整性：数据传输的双方都希望数据在传输的过程没有被修改</li>
 <li>保证不可抵赖性： 在密文的背景下，抵赖这个词指的是不承认与消息有关的举动（即声称消息来自第三方）。消息接受方可以通过数字签名的方式来抵制后续的抵赖，因为接收方可以出示数字签名证明数据的来源。</li>
 </ul>
 <h2 id="节点认证机制中的pki是什么">节点认证机制中的PKI是什么？</h2>
-<p>KPI是遵循既定标准的秘钥管理平台，它能够为所有的网络应用提供加密和数字签名等密码服务以及必要的秘钥和证书管理体系，KPI利用公钥的理论和技术的提供安全服务的基础设施。</p>
+<p>KPI是遵循既定标准的秘钥管理平台，它能够为所有的网络应用提供加密和数字签名等密码服务，以及必要的秘钥和证书管理体系。
+简单来说KPI是利用公钥的理论和技术建立的提供安全服务的基础设施。</p>
 <h2 id="路由协议的安全威胁">路由协议的安全威胁</h2>
 <table>
 <thead>
@@ -139,7 +140,7 @@
 <td>虚假路由攻击、选择性转发攻击、污水池攻击、女巫攻击、虫洞攻击</td>
 </tr>
 <tr>
-<td>能量节约的拓扑维护（SPAN、GAF、CEC、AFECA）</td>
+<td><strong>能量节约的拓扑维护</strong>（SPAN、GAF、CEC、AFECA）</td>
 <td>虚假路由攻击、女巫攻击、Hello泛红攻击</td>
 </tr>
 <tr>
@@ -148,6 +149,15 @@
 </tr>
 </tbody>
 </table>
+<p>SPAN、GAF、CEC、AFECA 是网络拓扑维护中用于节约能量的几种不同策略或算法的缩写。它们主要用于无线传感器网络（WSN）或其他类型的网络中，以优化网络结构，减少冗余，延长网络寿命，从而节约能量消耗。下面是每个缩写的具体含义：</p>
+<p>SPAN (Sparse Topology Control):</p>
+<p>稀疏拓扑控制。SPAN 是一种拓扑控制算法，旨在通过创建一个稀疏的网络拓扑来减少节点间的消息传递，从而降低能量消耗。这种方法通过选择性地关闭一些节点或链接来减少网络的密集度，但同时保持网络的连通性。</p>
+<p>GAF (Geographic Adaptive Fidelity):</p>
+<p>地理自适应保真度。GAF 是一种基于地理位置信息的拓扑控制机制，它根据节点的地理位置和重要性来调整通信频率和范围。在 GAF 中，节点根据其地理位置和网络需求动态调整它们的通信行为，以减少不必要的通信和监听，从而节省能量。</p>
+<p>CEC (Critical Energy Consumption):</p>
+<p>关键能量消耗。CEC 可能指的是一种考虑网络中关键节点或链接的能量消耗的策略。这种策略旨在识别和优化那些对网络性能和稳定性至关重要的节点或链接的能量使用，以确保网络的关键部分能够在能量受限的情况下继续运作。</p>
+<p>AFECA (Adaptive Fault-tolerant Energy-efficient Clustering Algorithm):</p>
+<p>自适应容错节能聚类算法。AFECA 是一种聚类算法，它结合了容错机制和能量效率，以适应网络条件的变化。通过自适应地调整聚类结构和领导者选举，AFECA 旨在在保持网络稳定性的同时减少能量消耗，并提高网络的容错能力。</p>
 <h2 id="撒凯加密">撒凯加密</h2>
 <p>撒凯加密法的分明文和密文，密文计算公式如下：</p>
 <p><strong>公式：F(a)=(a+K)mod26。</strong></p>
@@ -157,15 +167,15 @@
 <h2 id="对称加密算法">对称加密算法</h2>
 <p>DES（Data Encryption Standard，数据加密标准）该算法速度快，适用于加密大量数据。</p>
 <p>3DES：是DES的变体，对同一块数据使用3个不同的秘钥进行3次加密，强度增强。</p>
-<p>AES（Advenced Encryption Standard，高级加密标准）：该算法算法基于排序和置换算法。它也是一种迭代的、对称加密分组的密码，它可以用128、192和256位秘钥，用128位的分组加密和解密。</p>
+<p>AES（Advenced Encryption Standard，高级加密标准）：该算法基于排序和置换算法。它也是一种迭代的、对称加密分组的密码，它可以用128、192和256位秘钥，用128位的分组加密和解密。</p>
 <h2 id="单向扩散列函数">单向扩散列函数</h2>
 <p>在实际生活中，采用公钥对长文件进行加密耗时，为节省时间数字签名协议经常和单向扩散列函数一起使用。
 Alice并不对整个文件进行签名，而是只对三设置签名。签名过程参照书籍61页</p>
 <h2 id="零知识证明的基本协议">零知识证明的基本协议</h2>
 <p>这里做一个比喻，假设P知道开一扇门的密码，现在想向验证者V证明自己知道这扇门的密码，但具体密码是多少不让V知道，那么验证方法就是去开这扇门，只要P开了门就可以证明P知道门的密码。</p>
 <p>下面是书本的证明步骤：
-<a href="#R-image-d70435064a55523865bef17b67f36f91" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/image.png" alt="1" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d70435064a55523865bef17b67f36f91"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/image.png" alt="1" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-b1b92db8c8293bc08146a27f320f4d62" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/image.png" alt="1" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1b92db8c8293bc08146a27f320f4d62"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/image.png" alt="1" class="lightbox-image        " loading="lazy"></a></p>
 <ul>
 <li>V站在A点。</li>
 <li>P进入洞中，到达C点或D点</li>
@@ -174,7 +184,7 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
 <li>P按照V的要求从左边或有边出来；</li>
 <li>P和V重复执行上面的步骤N次</li>
 </ul>
-<p>如果每次P走的都正确，怎认为P知道咒语。</p>
+<p>如果每次P走的都正确，则认为P知道咒语。</p>
 <h2 id="标签和读写器的通信模式">标签和读写器的通信模式</h2>
 <p>标签分类及其特点</p>
 <table>
@@ -251,15 +261,25 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
 <h2 id="rfid病毒">RFID病毒</h2>
 <p>2006年3月荷兰Vrije大学一组计算机研究员宣布，发现包括EPC标签在内的RFID标签可以携带病毒，并能攻击计算机。他们认为，可读写的电子标签存在着安全隐患。</p>
 <h2 id="rfid系统通信模型">RFID系统通信模型</h2>
-<p>这一个模型的物理层主要关心什么问题？</p>
-<p>物理模型主要关心电气信号的问题，例如频道分配、物理载波等，特别是载波切割问题是这一层关注的重点。</p>
+<p>这一个模型的物理层主要关心的问题是什么？</p>
+<ul>
+<li>物理模型主要关心电气信号的问题，例如频道分配、物理载波等，其中最重要的问题是载波切割问题。</li>
+</ul>
+<p>其他层关注的问题：</p>
+<ul>
+<li>
 <p>通信层主要解决多个标签的访问问题。</p>
+</li>
+<li>
 <p>应用层主要解决与最上层应用直接相关的内容，包括认证、识别、以及应用层数据表示。</p>
-<h2 id="rfid技术的epc系统安全问题">RFID技术的EPC系统安全问题</h2>
+</li>
+</ul>
+<h2 id="rfid技术中epc系统的安全问题">RFID技术中EPC系统的安全问题</h2>
+<p>EPC（电子产品标签）</p>
 <ul>
 <li>标签本身的缺陷
 <ul>
-<li>用户都可利用合法的读写器或自购的读写器对电子标签进行读写或修改里面的存储信息。</li>
+<li>用户都可以利用合法的读写器或自购的读写器对电子标签进行读写或修改里面的存储信息。</li>
 <li>支持EPC global标准的无源标签大多数只允许写入一次，但是支持其他标准（ISO标准）的RFID标签可以写入多次；</li>
 <li>电子标签可以写入多次带来便利的同时，也带来了很多安全隐患。</li>
 </ul>
@@ -267,7 +287,7 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
 <li>通信链路上的安全问题
 <ul>
 <li>黑客非法截取通信</li>
-<li>拒绝服务器攻击</li>
+<li>拒绝服务器攻击（Dos）</li>
 <li>利用假冒标签向读写器发送数据</li>
 <li>RFID读写器与后台系统之间的通信信息安全</li>
 </ul>
@@ -282,7 +302,7 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
 <li>基于散列的ID变化协议</li>
 <li>数字图书馆RFID协议</li>
 <li>分布式RFID询问-应答协议</li>
-<li>LCAP协议</li>
+<li>LCAP协议：也是一种询问-应答协议，只是每次执行之后都要刷新ID</li>
 <li>再次加密机制</li>
 </ul>
 <h2 id="传感器网络组网技术面临的安全问题">传感器网络组网技术面临的安全问题</h2>
@@ -343,39 +363,39 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
    </tr>
    <tr>
         <td rowspan="4">网络层</td> 
-        <td>……</td> 
-        <td>……</td> 
+        <td>丢弃和贪婪破坏</td> 
+        <td>冗余路径探测机制</td> 
    </tr>
     <tr>
-        <td>……</td> 
-        <td>……</td> 
+        <td>汇聚节点攻击</td> 
+        <td>加密和逐条认证机制</td> 
    </tr>
    <tr>
-        <td>……</td> 
-        <td>……</td> 
+        <td>方向误导攻击</td> 
+        <td>出口过滤、认证监视机制</td> 
    </tr>
    <tr>
-        <td>……</td> 
-        <td>……</td> 
+        <td>黑洞攻击</td> 
+        <td>认证、监视、冗余机制</td> 
    </tr>
    <tr>
         <td rowspan="2">应用层</td> 
-        <td>……</td> 
-        <td>……</td> 
+        <td>泛红攻击</td> 
+        <td>客户端谜题</td> 
    </tr>
    <tr>
-        <td>……</td> 
-        <td>……</td> 
+        <td>去同步攻击</td> 
+        <td>认证</td> 
    </tr>
 </table>
 <h2 id="入侵检测技术">入侵检测技术</h2>
-<p>由于在物联网中无安全依靠密码机制不能完全抵御所有攻击，所以采用入侵检测技术作为信息安全的第二套防线。</p>
+<p>由于在物联网中依靠密码机制不能完全抵御所有攻击，所以采用入侵检测技术作为信息安全的第二道防线。</p>
 <p>入侵检测技术是一种网络安全手段，旨在通过监控网络和系统的活动来发现违反安全策略的行为。这项技术能够识别未授权访问、攻击行为以及其他潜在的安全威胁。</p>
 <p>按照检测节点是否主动发送消息，可将入侵检测分为主动检测和被动检测。</p>
 <p>主动检测主要有四种：</p>
 <ul>
-<li>路径诊断的方法</li>
-<li>邻居检测的方法</li>
+<li>路径诊断的方法：源节点向故障路径上的检测节点发送消息，收到消息的检测消息要回复消息，如果某一路径上的检测节点没有回复，说明这一路径上出现故障，需要在这一路经上插入新的节点，重新检测；</li>
+<li>邻居检测的方法：</li>
 <li>通过向多个路径发送ping包的方式发现路径上的关键节点，从而部署攻击检测算法；</li>
 <li>基于主动信息提供的检测。网络中部分节点定期广播邻居节点信息，其他节点通过分析累计一定时间后的信息发现重复节点。</li>
 </ul>
@@ -386,8 +406,8 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
 <li>簇状结构</li>
 </ul>
 <h2 id="数据链路层安全">数据链路层安全</h2>
-<p><strong>注意：</strong> 这里指的ZigBee中的数据链路。</p>
-<p><strong>IEEE802.15.4</strong> 标准MAC子层使用的是CCM模式，CCM是一种通用的认真和加密模式，被定义使用在类似AES的128位数据块上，它由CTR模式和CBC-MAC模式组成。</p>
+<p><strong>注意：</strong> 这里指的是ZigBee中的数据链路。</p>
+<p><strong>IEEE802.15.4</strong> 标准MAC子层使用的是CCM模式，CCM是一种通用的认证和加密模式，被定义使用在类似AES的128位数据块上，它由CTR模式和CBC-MAC模式组成。</p>
 <h2 id="zigbee中确保安全的方法">ZigBee中确保安全的方法</h2>
 <ul>
 <li>加密技术:使用AES-128加密算法</li>
@@ -398,7 +418,7 @@ Alice并不对整个文件进行签名，而是只对三设置签名。签名过
 <ul>
 <li>鉴权：在信息被允许传输前，无线网络节点必须被识别，而且必须提交能够被认为有效的信任书；</li>
 <li>加密：在发送无线网络的数据包之前，无线网络节点必须对数据进行加密以确保数据的机密性；</li>
-<li>数据的完整性：在发送数据包之前，无线网络节点必须企鹅包数据包中包含有关的数据完整性的信息，这样接收者才能确认数据在传输的过程中没有被动过。</li>
+<li>数据的完整性：在发送数据包之前，无线网络节点必须确保数据包中包含有关的数据完整性的信息，这样接收者才能确认数据在传输的过程中没有被动过。</li>
 </ul>
 <h2 id="无线网络安全所面临的威胁地址欺骗和会话拦截">无线网络安全所面临的威胁——地址欺骗和会话拦截</h2>
 <p>由于IEEE802.11无线局网不对数据帧进行认证，</p>
@@ -424,8 +444,8 @@ WEP在数据传输上起到一定安全性和保密性作用，可以组织无�
 </ul>
 <h2 id="防火墙的结构屏蔽子网模式">防火墙的结构——屏蔽子网模式</h2>
 <p>简单而言就是在外网与内网之间建一个子网屏蔽网络，及时这个子网被攻陷，外网还是要经过内网路由。</p>
-<p><a href="#R-image-40f11e108b79db84e6522c8cf2df6672" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE1.jpg" alt="屏蔽子网模式" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-40f11e108b79db84e6522c8cf2df6672"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE1.jpg" alt="屏蔽子网模式" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-bc761ea5924e0c7c626056ff4d3013e4" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE1.jpg" alt="屏蔽子网模式" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc761ea5924e0c7c626056ff4d3013e4"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE1.jpg" alt="屏蔽子网模式" class="lightbox-image        " loading="lazy"></a></p>
 <h2 id="vpn在中国使用要解决哪些问题">VPN在中国使用要解决哪些问题？</h2>
 <ul>
 <li>IPSec通过包封装的方法</li>
@@ -441,8 +461,8 @@ WEP在数据传输上起到一定安全性和保密性作用，可以组织无�
 <li>如何找到与本VPN相关的节点</li>
 </ul>
 <h2 id="中间件的体系结构和核心模块">中间件的体系结构和核心模块</h2>
-<p><a href="#R-image-451a6ba766cdab5e199862a446dc699f" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE2.jpg" alt="屏蔽子网模式" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-451a6ba766cdab5e199862a446dc699f"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE2.jpg" alt="屏蔽子网模式" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-b97200e7576216b9598efafb2adb4126" class="lightbox-link"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE2.jpg" alt="屏蔽子网模式" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b97200e7576216b9598efafb2adb4126"><img src="../../../branch-bundle-1/1.%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE2.jpg" alt="屏蔽子网模式" class="lightbox-image        " loading="lazy"></a></p>
 <p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
@@ -457,8 +477,8 @@ WEP在数据传输上起到一定安全性和保密性作用，可以组织无�
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard.min.js?1716963896" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1716963896" defer></script>
-    <script src="../../../js/theme.js?1716963896" defer></script>
+    <script src="../../../js/clipboard.min.js?1720924552" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1720924552" defer></script>
+    <script src="../../../js/theme.js?1720924552" defer></script>
   </body>
 </html>

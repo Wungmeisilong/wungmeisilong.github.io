@@ -6,7 +6,7 @@
     <description>Recent content in 一、博客文章 on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2024 23:05:58 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.文章</title>
@@ -121,6 +121,13 @@ AndroidStudio笔记第一章 配置开发环境： 1.安装JDK &amp;ldquo;安装
       <pubDate>Tue, 05 Mar 2024 17:33:07 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/16.%E8%80%83%E8%AF%95%E7%B1%BB/</guid>
       <description>教资 小学科目一： 教育观与职业道德 教育与社会的发展 点击查看流程图 考题 简述教育对生产力的关系（制约作用）？ 教育与人的发展 点击查看流程图 教育制度 理</description>
+    </item>
+    <item>
+      <title>18.C&#43;&#43;编程语言</title>
+      <link>https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Tue, 22 Oct 2024 23:05:58 +0800</pubDate>
+      <guid>https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description>6.STL库学习笔记之分配器分配器 附件 5.STL库学习笔记学习资料 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 STL六大组件 容器-Containers，申请内存</description>
     </item>
   </channel>
 </rss>

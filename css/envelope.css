@@ -1,0 +1,45 @@
+/* 基本重置 */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* 信封背景 */
+  .envelope {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 信封内容 */
+  .content {
+    max-width: auto;
+    margin: auto;
+    padding: 5px;
+    font-size: 20px;
+    background-image: url('envelope.svg');
+    /* 设置字体为楷体和宋体 */
+    font-family: 'KaiTi', 'SimSun', serif;
+  }
+  
+  /* 为标题添加自定义下划线 */
+  h1 {
+    border-bottom: 1px solid #000; /* 黑色下划线 */
+    display: inline-block; /* 使下划线只显示在文字下方 */
+    line-height: 1.2; /* 调整行高以控制下划线与文字的间距 */
+    margin-bottom: 20px; /* 与下文的间距 */
+  }
+  /* 为标题添加自定义下划线 */
+  h4 {
+    text-align: center;
+  }
+  /* 响应式设计 */
+  @media (max-width: 600px) {
+    .content {
+      padding: 10px;
+    }
+  }

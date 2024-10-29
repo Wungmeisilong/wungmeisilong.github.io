@@ -43,3 +43,38 @@ body, html {
       padding: 10px;
     }
   }
+  .image_l {
+    float: left;
+    margin-right: 20px; /* 右边距，根据需要调整 */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  
+  .image_r {
+    float: right;
+    margin-left: 20px; /* 左边距，根据需要调整 */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  
+  .image_c {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .image_j {
+    clear: both;
+  }
+  /* <div class="image_l">
+  <img src="./mt.jpg" alt="Left aligned image" width="300" height="200">
+</div>
+
+<div class="image_r">
+  <img src="mt.jpg" alt="Right aligned image" width="300" height="200">
+</div> */

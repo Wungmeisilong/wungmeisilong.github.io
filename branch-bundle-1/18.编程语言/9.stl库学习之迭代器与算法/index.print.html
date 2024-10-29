@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="9.STL库学习之迭代器与算法 :: Maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="9.STL库学习之迭代器与算法 :: Maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/">
+    <meta property="og:site_name" content="Maloudown">
+    <title>9.STL库学习之迭代器与算法 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="canonical" type="text/html" title="9.STL库学习之迭代器与算法 :: Maloudown">
+    <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="alternate" type="application/rss+xml" title="9.STL库学习之迭代器与算法 :: Maloudown">
+    <link href="../../../images/favicon.png?1730216409" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1730216410" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1730216410" rel="stylesheet">
+    <link href="../../../css/fonts.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1730216410" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1730216410" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1730216410" rel="stylesheet">
+    <link href="../../../css/print.css?1730216410" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1730216410" rel="stylesheet">
+    <link href="../../../css/ie.css?1730216410" rel="stylesheet">
+    <script src="../../../js/url.js?1730216410"></script>
+    <script src="../../../js/variant.js?1730216410"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span itemprop="name">18.C&#43;&#43;编程语言</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">9.STL库学习之迭代器与算法</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="9stl库学习之迭代器与算法">9.STL库学习之迭代器与算法</h1>
+
+<h2 id="标准库常用算法">标准库常用算法</h2>
+<p><a href="#R-image-779b0caa2caa2057f01170934dbdf1e8" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-779b0caa2caa2057f01170934dbdf1e8"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="迭代器">迭代器</h2>
+<h3 id="迭代器-的分类">迭代器-的分类</h3>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">input_iterator_tag</span> {}<span style="color:#960050;background-color:#1e0010">；</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">output_iterator_tag</span> {};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">forward_iterator_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> input_iterator_tag{};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">bidirectional_iterator_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> forward_iterator_tag{};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">random_access_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> bidirectional_iterator_tag {};</span></span></code></pre></div><p>以上5中迭代器的继承关系，如下图所示。
+<a href="#R-image-496bde1d77005d029b215353380da8b2" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-496bde1d77005d029b215353380da8b2"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>1.Input Iterator（输入迭代器）：
+输入迭代器是最基本的迭代器类型，支持单向遍历，只能向前移动。</p>
+<p>用法示例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> vec <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>};
+</span></span><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>input_iterator<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> it <span style="color:#f92672">=</span> vec.begin();
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">while</span> (it <span style="color:#f92672">!=</span> vec.end()) {
+</span></span><span style="display:flex;"><span>         std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>it <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">++</span>it;
+</span></span><span style="display:flex;"><span>     }</span></span></code></pre></div><p>2.Forward Iterator（前向迭代器）：
+前向迭代器支持双向遍历，可以向前和向后移动。</p>
+<p>用法示例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> lst <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>};
+</span></span><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>forward_iterator<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> it <span style="color:#f92672">=</span> lst.begin();
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">while</span> (it <span style="color:#f92672">!=</span> lst.end()) {
+</span></span><span style="display:flex;"><span>         std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>it <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">++</span>it;
+</span></span><span style="display:flex;"><span>     }</span></span></code></pre></div><p>3.Output Iterator（输出迭代器）：
+输出迭代器允许对容器中的元素进行写操作，但不支持读操作。</p>
+<p>用法示例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> vec;
+</span></span><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>back_insert_iterator<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> it(vec);
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">*</span>it <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 写操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     <span style="color:#f92672">++</span>it;
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">*</span>it <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// 写操作
+</span></span></span></code></pre></div><p>4.Bidirectional Iterator（双向迭代器）：
+双向迭代器支持双向遍历，可以向前和向后移动。</p>
+<p>用法示例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> lst <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>};
+</span></span><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>bidirectional_iterator<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> it <span style="color:#f92672">=</span> lst.end();
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">while</span> (it <span style="color:#f92672">!=</span> lst.begin()) {
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">--</span>it;
+</span></span><span style="display:flex;"><span>         std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>it <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>     }</span></span></code></pre></div><p>5.Random Access Iterator（随机访问迭代器）：
+随机访问迭代器支持任意位置的快速访问，类似于指针操作。</p>
+<p>用法示例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> vec <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>};
+</span></span><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>random_access_iterator<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> it <span style="color:#f92672">=</span> vec.begin();
+</span></span><span style="display:flex;"><span>     it <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// 随机访问
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>it <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;</span></span></code></pre></div><h2 id="各种容器的迭代器类型">各种容器的迭代器类型</h2>
+<p>测试代码：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iterator&gt;</span><span style="color:#75715e"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> test_iterator_category
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> display_category(T itr) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">typename</span> iterator_traits<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;::</span>iterator_category cagy; <span style="color:#75715e">// 使用 std::iterator_traits 获取迭代器类别
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// 这里不需要递归调用 display_iterator 函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">typeid</span>(cagy).name() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>() {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_iterator_category....................</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            display_category(array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">10</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(forward_list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(deque<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            display_category(set<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>            display_category(multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>iterator());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            display_category(istream_iterator<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>());
+</span></span><span style="display:flex;"><span>            display_category(ostream_iterator<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(cout,<span style="color:#e6db74">&#34;&#34;</span>));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div><p>此处可以参考一下<code>display_category(array&lt;int, 10&gt;::iterator());</code>中传递<code>array&lt;int, 10&gt;::iterator()</code>的方法。</p>
+<p>测试结果：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>test_iterator_category....................
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>random_access_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>random_access_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>bidirectional_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>forward_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>random_access_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>bidirectional_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>bidirectional_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>bidirectional_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>bidirectional_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>input_iterator_tag
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">std</span><span style="color:#f92672">::</span>output_iterator_tag</span></span></code></pre></div><h2 id="迭代器对算法的影响">迭代器对算法的影响</h2>
+<h3 id="例子1-distance">例子1-distance</h3>
+<p>迭代器如何计算容器元素之间的距离呢？当调用迭代器时，迭代器是如何操作以协助算法完成后续的增删改查的？</p>
+<p>在计算距离方面，我们可以看到调用接口需要传入容器的头，以及容器尾部，接着使用：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">typename</span> iterator_traits<span style="color:#f92672">&lt;</span>InputIterator<span style="color:#f92672">&gt;::</span>itrerator_category category;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">__distance</span>(first,last, category);</span></span></code></pre></div><p><code>typedef typename iterator_traits&lt;InputIterator&gt;::itrerator_category category;</code>这一句会判断迭代器的类型，进而执行加操作或一步一步加操作。详细如下图所示。
+<a href="#R-image-360f588248a8bd5180c380020c543192" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-360f588248a8bd5180c380020c543192"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="例子2-copy">例子2-copy</h3>
+<p>copy的动作也不仅仅是对迭代器类型的判断，还做了许多特化、偏特化。如下图所示。
+<a href="#R-image-9a527dc81ee435cf214bd4003444f15f" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a527dc81ee435cf214bd4003444f15f"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="例子3-destroy">例子3-destroy</h3>
+<p><a href="#R-image-058d805cec8e650842b83efc653af054" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-058d805cec8e650842b83efc653af054"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="例子4-__unique_copy">例子4-__unique_copy</h3>
+<p><a href="#R-image-bcb9273ec2f484dd8760b90aceef12fd" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bcb9273ec2f484dd8760b90aceef12fd"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="对传入的迭代器类型的暗示">对传入的迭代器类型的暗示</h2>
+<p>在调用一些需要传入迭代器的函数时，从函数的形参名可以判断传入的迭代器类型，如InputIterator，由于forward_iterator_tag、bidirection_iterator_tag、random_asccess_iterator_tag与input_iterator的继承关系可知，前三者都可以传入，以此类推如果形参是forward_iterator_tag那么除了其本身，bidirection_iterator_tag、random_asccess_iterator_tag也可传入。</p>
+<p><a href="#R-image-84f7abe603f8a79c196a1bfdb88d2ee6" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-84f7abe603f8a79c196a1bfdb88d2ee6"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="算法源码剖析">算法源码剖析</h2>
+<h3 id="accumulate-累计">accumulate-累计</h3>
+<p><a href="#R-image-80d3b1f37cbacccdad5dcba6610b2396" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-80d3b1f37cbacccdad5dcba6610b2396"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>测试用例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;functional&gt;</span><span style="color:#75715e">//std::minus
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;numeric&gt;</span><span style="color:#75715e">//std::accumulate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> test_accumulate
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">myfcn</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) { <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> y; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">myclass</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">operator</span>()(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) { <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> y; }
+</span></span><span style="display:flex;"><span>        } myobj;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> init <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> nums[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>};
+</span></span><span style="display:flex;"><span>        cout <span style="color:#f92672">&lt;&lt;</span> accumulate(nums, nums <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>, init)<span style="color:#f92672">&lt;&lt;</span>endl;<span style="color:#75715e">//40
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cout <span style="color:#f92672">&lt;&lt;</span> accumulate(nums, nums <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>, init, test_accumulate<span style="color:#f92672">::</span>myfcn)<span style="color:#f92672">&lt;&lt;</span>endl;<span style="color:#75715e">//70
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cout <span style="color:#f92672">&lt;&lt;</span> accumulate(nums, nums <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>, init, test_accumulate<span style="color:#f92672">::</span>myobj) <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }</span></span></code></pre></div><h3 id="for_each">for_each</h3>
+<p>拿到每一个元素时都对该元素执行某一操作。
+<a href="#R-image-dc50a36a3d11dbfd5a2c756044792434" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc50a36a3d11dbfd5a2c756044792434"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>测试用例：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">namespace</span> test_for_each
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myfcn</span>(<span style="color:#66d9ef">int</span> i) { cout<span style="color:#f92672">&lt;&lt;</span>i<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;-&#34;</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">myclass</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operator</span>()(<span style="color:#66d9ef">int</span> i) { cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;[&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;] &#34;</span>; }
+</span></span><span style="display:flex;"><span>        } myobj;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>() {
+</span></span><span style="display:flex;"><span>            vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            c.push_back(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>            c.push_back(<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>            c.push_back(<span style="color:#ae81ff">30</span>);
+</span></span><span style="display:flex;"><span>            for_each(c.begin(), c.end(), test_for_each<span style="color:#f92672">::</span>myfcn);<span style="color:#75715e">//10-20-30-
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            for_each(c.begin(), c.end(), test_for_each<span style="color:#f92672">::</span>myobj);<span style="color:#75715e">//[10] [20] [30]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div><h3 id="replacereplace_ifrreplace_copy">replace,replace_if,rreplace_copy</h3>
+<p>replace用于将新值替换为旧值，例如将数组中所有的8替换为9.详细源码如下图所示。
+<a href="#R-image-a8772029835c8dca620b8e558092e9c4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a8772029835c8dca620b8e558092e9c4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><code>replace</code>、<code>replace_if</code> 和 <code>replace_copy</code> 是 C++ 标准库中的算法，它们用于在容器或数组中替换元素。这些函数属于 <code>&lt;algorithm&gt;</code> 头文件。下面是每个函数的详细介绍和作用：</p>
+<h3 id="1-replace">1. <code>replace</code></h3>
+<p><code>replace</code> 函数用于将容器中所有满足特定条件的元素替换为另一个值。这个函数直接在原容器上操作，不创建新的容器。</p>
+<p><strong>函数原型</strong>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">replace</span>(ForwardIterator first, ForwardIterator last, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> old_value, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> new_value);</span></span></code></pre></div><ul>
+<li><code>first</code>, <code>last</code>：定义了要替换元素的范围。</li>
+<li><code>old_value</code>：要被替换的值。</li>
+<li><code>new_value</code>：替换后的值。</li>
+</ul>
+<p><strong>示例</strong>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>};
+</span></span><span style="display:flex;"><span>replace(v.begin(), v.end(), <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// v 变为 {1, 5, 3, 4, 3, 5}
+</span></span></span></code></pre></div><h3 id="2-replace_if">2. <code>replace_if</code></h3>
+<p><code>replace_if</code> 函数用于将容器中满足特定条件的元素替换为另一个值。与 <code>replace</code> 不同，<code>replace_if</code> 需要一个谓词（条件函数），只有满足这个条件的元素才会被替换。这个函数也直接在原容器上操作。</p>
+<p><strong>函数原型</strong>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">replace_if</span>(ForwardIterator first, ForwardIterator last, Predicate pred, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> new_value);</span></span></code></pre></div><ul>
+<li><code>first</code>, <code>last</code>：定义了要替换元素的范围。</li>
+<li><code>pred</code>：一个谓词函数，返回 <code>true</code> 表示替换，<code>false</code> 表示不替换。</li>
+<li><code>new_value</code>：替换后的值。</li>
+</ul>
+<p><strong>示例</strong>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>};
+</span></span><span style="display:flex;"><span>replace_if(v.begin(), v.end(), [](<span style="color:#66d9ef">int</span> i) { <span style="color:#66d9ef">return</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>; }, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// v 变为 {1, 5, 3, 4, 3, 5}
+</span></span></span></code></pre></div><h3 id="3-replace_copy">3. <code>replace_copy</code></h3>
+<p><code>replace_copy</code> 函数用于将容器中所有满足特定条件的元素复制到另一个容器中，并替换为另一个值。这个函数不会改变原容器，而是创建一个新的容器，其中包含替换后的元素。</p>
+<p><strong>函数原型</strong>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InputIterator</span>, <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OutputIterator</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>OutputIterator replace_copy(InputIterator first, InputIterator last, OutputIterator result, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> old_value, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> new_value);</span></span></code></pre></div><ul>
+<li><code>first</code>, <code>last</code>：定义了要替换元素的范围。</li>
+<li><code>result</code>：指向目标容器的迭代器，用于存储替换后的元素。</li>
+<li><code>old_value</code>：要被替换的值。</li>
+<li><code>new_value</code>：替换后的值。</li>
+</ul>
+<p><strong>示例</strong>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>};
+</span></span><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v2(v.size());
+</span></span><span style="display:flex;"><span>replace_copy(v.begin(), v.end(), v2.begin(), <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// v 保持不变，v2 变为 {1, 5, 3, 4, 3, 5}
+</span></span></span></code></pre></div><h3 id="countcount_if">count，count_if</h3>
+<p>源代码如下：
+<a href="#R-image-d1cf5cd582d2acb1a475bfd3bf8c43a4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d1cf5cd582d2acb1a475bfd3bf8c43a4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>小结：
+<a href="#R-image-43c504e91215e133717627b3b2376ff4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-43c504e91215e133717627b3b2376ff4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="findfind_if">find，find_if</h3>
+<p><a href="#R-image-5a4339b1856f25a8dfbbbdacf9ad98b8" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a4339b1856f25a8dfbbbdacf9ad98b8"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="sort">sort</h3>
+<p><a href="#R-image-045c95796e4f9e7ad8b697df19e23d58" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-045c95796e4f9e7ad8b697df19e23d58"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="binary_search">binary_search</h3>
+<p><a href="#R-image-9cf87ba0478b34a749b18baef2130aaf" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cf87ba0478b34a749b18baef2130aaf"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><strong>算法原理：</strong></p>
+<p>二分查找的基本思想是将一个有序序列分为两半，通过比较中间元素和目标值来缩小搜索范围。如果中间元素正好是目标值，则查找成功；如果目标值小于中间元素，则在序列的左半部分继续查找；如果目标值大于中间元素，则在右半部分继续查找。这个过程不断重复，直到找到目标值或搜索范围为空。</p>
+<p><strong>函数原型：</strong></p>
+<p><code>binary_search</code> 的函数原型如下：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForwardIterator</span>, <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">T</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> binary_search(ForwardIterator first,
+</span></span><span style="display:flex;"><span>                   ForwardIterator last,
+</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> value);</span></span></code></pre></div><ul>
+<li><code>first</code>, <code>last</code>：定义了要搜索的范围，<code>first</code> 是序列的开始迭代器，<code>last</code> 是序列的结束迭代器（指向序列末尾的下一个位置）。</li>
+<li><code>value</code>：要查找的值。</li>
+</ul>
+<p><strong>返回值：</strong></p>
+<ul>
+<li>如果在序列中找到 <code>value</code>，则返回 <code>true</code>。</li>
+<li>如果没有找到，则返回 <code>false</code>。</li>
+</ul>
+<p><strong>示例代码：</strong></p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> data <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> found <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>binary_search(data.begin(), data.end(), target);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (found) {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Element found in the array.&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Element not found in the array.&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p><strong>注意事项：</strong></p>
+<ol>
+<li><strong>有序序列</strong>：<code>binary_search</code> 要求序列必须是有序的，否则查找结果将不可预测。</li>
+<li><strong>效率</strong>：二分查找的时间复杂度为 O(log n)，其中 n 是序列中的元素数量。这使得它比线性查找（O(n)）更高效，尤其是在大数据集上。</li>
+<li><strong>稳定性</strong>：如果存在多个相同的目标值，<code>binary_search</code> 将返回第一个匹配的位置。如果需要找到所有匹配项，可能需要使用其他方法。</li>
+</ol>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1730216410" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1730216410" defer></script>
+    <script src="../../../js/theme.js?1730216410" defer></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="11.STL库学习之适配器 :: Maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="11.STL库学习之适配器 :: Maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/">
+    <meta property="og:site_name" content="Maloudown">
+    <title>11.STL库学习之适配器 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/" rel="canonical" type="text/html" title="11.STL库学习之适配器 :: Maloudown">
+    <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/index.xml" rel="alternate" type="application/rss+xml" title="11.STL库学习之适配器 :: Maloudown">
+    <link href="../../../images/favicon.png?1730216409" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1730216410" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1730216410" rel="stylesheet">
+    <link href="../../../css/fonts.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1730216410" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1730216410" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1730216410" rel="stylesheet">
+    <link href="../../../css/print.css?1730216410" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1730216410" rel="stylesheet">
+    <link href="../../../css/ie.css?1730216410" rel="stylesheet">
+    <script src="../../../js/url.js?1730216410"></script>
+    <script src="../../../js/variant.js?1730216410"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span itemprop="name">18.C&#43;&#43;编程语言</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">11.STL库学习之适配器</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="11stl库学习之适配器">11.STL库学习之适配器</h1>
+
+<h2 id="整体框架的回顾">整体框架的回顾</h2>
+<p><a href="#R-image-77032d51aa2dee67150ea8dbcc9de978" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-77032d51aa2dee67150ea8dbcc9de978"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="存在多种适配器-adapters">存在多种适配器-adapters</h2>
+<p>一个人理解，要将适配器理解透彻，我们需要先从别的组件入手，这里以vector容器为例，我们都知道该容器需要迭代器，也就是一些智能指针来确定容器的头尾，以及内容位置，目的是方便后续的算法的怎删改查等操作，假设算法现在要做拿到位置8的数据，那么vector的指针要怎么移动呢？已知指针移动上，vector是随机访问指针，也就是前后都可以跑，而这个操作实际上是迭代器的其中一个内容，而这一内容就需要一个适配器去做适配。</p>
+<p>下面做一个模拟问答，来加以了解：</p>
+<p>&mdash;c
+模拟问答
+算法：你好，vector的迭代器，我需要知道你的迭代器类别，这样我才能正确地进行操作。</p>
+<pre><code>vector的迭代器：好的，我先问一下我的适配器。
+
+vector的迭代器：适配器，算法想知道 iterator_traits&lt;InputIterator&gt;::iterator_category 是什么类型的迭代器？
+
+vector_iterator的适配器：你好，我们这里是随机访问迭代器（Random Access Iterator）。
+
+算法：太好了，随机访问迭代器可以让我进行更高效的操作。那么，如果我想访问第8个元素，我该怎么做？
+
+vector_iterator的适配器：很简单，你可以直接通过加上偏移量来访问第8个元素。比如，如果你有一个指向第一个元素的迭代器 first，那么 first + 7（因为迭代器是从0开始计数的）就会给你第8个元素的迭代器。
+
+算法：明白了，那我可以直接使用 *(first + 7) 来获取第8个元素的值了。
+
+vector_iterator的适配器：是的，完全正确。
+
+算法：如果我需要反向迭代器，或者插入迭代器，你们能提供吗？
+
+vector_iterator的适配器：当然可以。我们 vector 提供了多种迭代器适配器，包括反向迭代器（reverse_iterator）、插入迭代器（insert_iterator）等，以满足不同的需求。
+
+算法：那太好了，这样我可以更灵活地处理 vector 中的数据了。谢谢你的帮助！
+</code></pre>
+<hr>
+<h2 id="stl中适配器的重要特性">STL中适配器的重要特性</h2>
+<p>对于容器、迭代器和仿函数它们第二次迭代器都有一个重要的特性，就是适配器会包含（也有继承）对应的类，比如stack包含了deque，然后使用了deque的某些功能，屏蔽了deque的某些某能，实现了先进后出的功能。</p>
+<h2 id="仿函数适配器">仿函数适配器</h2>
+<h3 id="binder2nd适配器">binder2nd适配器</h3>
+<p>该适配器是用于绑定的，比如对于一个容器，需要操作比88小于数，这使用可以用binder2nd，第一个参数可以传入比较大小的less仿函数，第二个传入比较的数值x，本质上在binder2nd中，less的第二个参数传入就是x,这样就达到比较的目的了。
+<a href="#R-image-45e70bf0c734d463046fed61055806f8" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-45e70bf0c734d463046fed61055806f8"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>
+小结：把A类和数值a传入另一个类B中，在B中再操作A和a.这样就实现了绑定。</p>
+<h3 id="not1">not1</h3>
+<p>对结果取反
+<a href="#R-image-25781538f3b1f6f58f354b8b0afdeb67" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-25781538f3b1f6f58f354b8b0afdeb67"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="一些新的适配器">一些新的适配器</h3>
+<p><a href="#R-image-6a78c366572fe63226afb0fb4896dfae" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6a78c366572fe63226afb0fb4896dfae"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="bind">bind</h3>
+<p><a href="#R-image-478cbbcc37a20ba22c1a555d18d50051" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-478cbbcc37a20ba22c1a555d18d50051"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="迭代器适配器">迭代器适配器</h2>
+<h3 id="reverseiterator">reverse——iterator</h3>
+<p>三个细节：</p>
+<ul>
+<li>1.begin=rend,end=rbigin</li>
+<li>2.取值是取后一个，所以内部实现的*是做&ndash;操作；</li>
+<li>3.operate ++()操作重载后内部实现为&ndash;，operate &ndash;()重载后内部实现++操作。</li>
+</ul>
+<p>具体图下图所示
+<a href="#R-image-d494e740adf3106b8d46441c8d773e86" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d494e740adf3106b8d46441c8d773e86"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="insert_iterator">insert_iterator</h3>
+<p>在下面的案例中<code>copy(bar.begin(),bar.end(),inserter(foo,it));</code>欲将list的bar数据从it指向的位置
+开始插入，但是foo的空间不够，为什么还能成功？</p>
+<p>设计的小技巧，当传入copy中时，因为inserter对operate =()做了重载，重载中调用了insert()该函数能决绝以上问题，
+因此不会因为foo的内存不足导致插入失败。
+<a href="#R-image-86d35b49fbe23d2752d41206c9b1af8f" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-7.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-86d35b49fbe23d2752d41206c9b1af8f"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-7.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="ostream_iterator">ostream_iterator</h3>
+<p>下面通过一个案例说明该迭代器的一些特性和使用方法：</p>
+<p>1.当执行初始化操作std::ostream_iterator<int> out_it(std::cout,&quot;,&quot;)时调用构造函数，并初始化。
+2.执行copy操作时，因为ostream_iterator对operate =()重载，所以会将值value传给*out_stream，通过这个方法把数据打印在屏幕上。
+<a href="#R-image-4b917a53b3d8cdd3aee2fbb1d1bbdad1" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4b917a53b3d8cdd3aee2fbb1d1bbdad1"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h3 id="istream_iterator">istream_iterator</h3>
+<p>下面也是两个例子说明istream_iterator的特性：</p>
+<p>1.<code>std::istream_iterator&lt;double&gt; iit(std::cin);</code>时同样会调用对应的构造函数，并且此处会调用<code>operate ++()</code>重载，在该重载中，<code>*in_stream</code>接收按键输入的一个值，也就是说才定义时，就已经在准备接收一个值，如果此时在该语句下写一段打印操作没见无法看到输出！
+<a href="#R-image-b05681a5fafa7e9978e978c283b92bea" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-8.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b05681a5fafa7e9978e978c283b92bea"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-8.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>2.下面是<code>copy</code>操作，对于这个操作，我们可以观察是否有对<code>*</code>和<code>=</code>的操作符进行重载，对于<code>=</code>的重载上述已经介绍， <code>*</code>的重载是将value返回，也就是 <code>*first</code>的操作取得的是容器中的值。
+<a href="#R-image-785b70c98dd7e0072deefd5168369d1e" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-9.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-785b70c98dd7e0072deefd5168369d1e"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/image-9.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1730216410" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1730216410" defer></script>
+    <script src="../../../js/theme.js?1730216410" defer></script>
+  </body>
+</html>

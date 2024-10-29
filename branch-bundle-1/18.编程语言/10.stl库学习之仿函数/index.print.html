@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="10.STL库学习之仿函数 :: Maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="10.STL库学习之仿函数 :: Maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/">
+    <meta property="og:site_name" content="Maloudown">
+    <title>10.STL库学习之仿函数 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/" rel="canonical" type="text/html" title="10.STL库学习之仿函数 :: Maloudown">
+    <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.xml" rel="alternate" type="application/rss+xml" title="10.STL库学习之仿函数 :: Maloudown">
+    <link href="../../../images/favicon.png?1730216409" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1730216410" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1730216410" rel="stylesheet">
+    <link href="../../../css/fonts.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730216410" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1730216410" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1730216410" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1730216410" rel="stylesheet">
+    <link href="../../../css/print.css?1730216410" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1730216410" rel="stylesheet">
+    <link href="../../../css/ie.css?1730216410" rel="stylesheet">
+    <script src="../../../js/url.js?1730216410"></script>
+    <script src="../../../js/variant.js?1730216410"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span itemprop="name">18.C&#43;&#43;编程语言</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">10.STL库学习之仿函数</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="10stl库学习之仿函数">10.STL库学习之仿函数</h1>
+
+<h2 id="仿函数的个人理解">仿函数的个人理解</h2>
+<p>仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了operate()，当调用这个类的()时就会返回响应的数据。</p>
+<p>你的理解是正确的，仿函数（functor）是 C++ 中的一个概念，它指的是那些可以像函数一样被调用的对象。这些对象通常重载了函数调用操作符 <code>operator()</code>，使得对象可以被当作函数来使用。以下是对你描述的一些补充说明：</p>
+<h3 id="仿函数的特点">仿函数的特点</h3>
+<ol>
+<li>
+<p><strong>重载 <code>operator()</code></strong>：仿函数类必须重载函数调用操作符 <code>operator()</code>，这样对象就可以被像函数那样调用。</p>
+</li>
+<li>
+<p><strong>可以携带状态</strong>：与普通函数不同，仿函数可以拥有成员变量，这意味着它们可以携带状态。这些状态可以是私有的，也可以是公开的，取决于仿函数的设计。</p>
+</li>
+<li>
+<p><strong>可以进行重载</strong>：仿函数可以重载 <code>operator()</code>，以接受不同数量和类型的参数。</p>
+</li>
+<li>
+<p><strong>可以定义在类中</strong>：仿函数可以是类的成员函数，也可以是独立的类。</p>
+</li>
+<li>
+<p><strong>可以有返回值</strong>：当仿函数被调用时，可以返回一个值，就像普通函数那样。</p>
+</li>
+<li>
+<p><strong>可以作为参数传递</strong>：由于仿函数可以像函数一样被调用，它们可以作为参数传递给接受函数作为参数的函数。</p>
+</li>
+</ol>
+<h3 id="仿函数的应用">仿函数的应用</h3>
+<ol>
+<li>
+<p><strong>算法的参数</strong>：仿函数经常用作 STL 算法的参数，例如 <code>std::sort</code> 和 <code>std::find_if</code>，因为这些算法需要一个可以被调用的实体来比较元素或测试条件。</p>
+</li>
+<li>
+<p><strong>回调函数</strong>：在事件驱动的编程中，仿函数可以作为回调函数，响应特定的事件。</p>
+</li>
+<li>
+<p><strong>策略模式</strong>：在设计模式中，仿函数可以用于实现策略模式，允许算法的行为在运行时动态改变。</p>
+</li>
+<li>
+<p><strong>简化代码</strong>：通过使用仿函数，可以减少函数指针和全局函数的使用，使得代码更加简洁和易于管理。</p>
+</li>
+</ol>
+<h3 id="示例代码">示例代码</h3>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Max</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 重载()操作符，使其可以被调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">operator</span>()(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) <span style="color:#66d9ef">const</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (a <span style="color:#f92672">&gt;</span> b) <span style="color:#f92672">?</span> a : b;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    Max max_functor;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> max_functor(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>); <span style="color:#75715e">// 使用仿函数对象调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Max value: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> result <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>在这个例子中，<code>Max</code> 是一个仿函数，它重载了 <code>operator()</code> 来比较两个整数并返回最大值。然后，我们可以像调用函数一样调用 <code>max_functor</code> 对象。</p>
+<h2 id="仿函数内部一般设计什么">仿函数内部一般设计什么？</h2>
+<p>仿函数一般重载operate()后，会在内部设计运算操作，如算数、逻辑、相对关系等运算。如下图所示。
+<a href="#R-image-123afb9e76c3404351380aeb593bc45b" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-123afb9e76c3404351380aeb593bc45b"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>
+从上面一张图也可以发现，plus,minus,logical_and,equal_to,less类都集成了binary_function，该类的作用是什么呢？</p>
+<p><code>std::binary_function</code> 的主要作用是：</p>
+<ol>
+<li><strong>泛型框架</strong>：提供一个泛型框架，允许函数对象接受任意类型的参数。</li>
+<li><strong>类型转换</strong>：允许参数类型和返回类型的转换，使得函数对象可以用于不同的数据类型。</li>
+<li><strong>模板编程</strong>：支持模板编程，使得可以创建通用的算法和函数。</li>
+</ol>
+<ul>
+<li><strong>原型</strong></li>
+</ul>
+<p><code>std::binary_function</code> 的原型如下：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Arg1Type</span>, <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Arg2Type</span>, <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ResultType</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">binary_function</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">typedef</span> Arg1Type first_argument_type;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">typedef</span> Arg2Type second_argument_type;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">typedef</span> ResultType result_type;
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div><ul>
+<li>
+<p><code>Arg1Type</code>：第一个参数的类型。</p>
+</li>
+<li>
+<p><code>Arg2Type</code>：第二个参数的类型。</p>
+</li>
+<li>
+<p><code>ResultType</code>：函数返回值的类型。</p>
+</li>
+<li>
+<p><strong>继承和使用</strong></p>
+</li>
+</ul>
+<p>函数对象如 <code>std::plus</code>, <code>std::minus</code>, <code>std::logical_and</code>, <code>std::equal_to</code>, <code>std::less</code> 等都继承自 <code>std::binary_function</code>。这意味着这些函数对象都定义了 <code>first_argument_type</code>, <code>second_argument_type</code>, 和 <code>result_type</code> 这三个类型别名，它们分别表示函数对象接受的第一个参数类型、第二个参数类型和返回值类型。</p>
+<p>关于 <code>std::binary_function</code>的具体细节在适配器一节会重点讲到。</p>
+<p>下图是是否继承binary_function的一些示例，如果不继承会怎么样呢？以我个人的理解，继承会让仿函数的扩展性更高，它将来可以扩展出更好的功能。如下图所示。
+<a href="#R-image-8fddb4b50386aebb7325dc61bd72a989" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8fddb4b50386aebb7325dc61bd72a989"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>除了上面讲到的binary_function还有unary_function，该类是针对单个变量的操作，比如取反，加加。如下图：
+<a href="#R-image-2f77b9c4ebe3c557871b0bc8cf2e7540" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2f77b9c4ebe3c557871b0bc8cf2e7540"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>关于binary_function的细节此处先不介绍，下一节将着重说明。</p>
+<p>对于仿函数，鲜明的特点就是对operate()做了重载，这样的类创建出来的对象叫仿函数对象，具有函数的行为。如果要对重载做更多操作需要结合一些仿函数适配器，比如相面讲到的binary_function和unary_funtion。</p>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1730216410" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1730216410" defer></script>
+    <script src="../../../js/theme.js?1730216410" defer></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 var relearn_search_index = [
   {
     "breadcrumb": "Maloudown",
-    "content": " 1.文章 14.初次安装AD需要做哪些设置？ 13.物联网网络安全论 12.嵌入式系统设计知识点 物联网应用系统设计 10.云端一体化的环境变量问题 9.云端一体化如何查看云函数日志？ 8.速通ArkTS语言 6.github和atomgit的混合使用，哪些是值得注意的？ 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 常与问题总结 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 心经 思想的边界 庄子之道 费尔巴哈提纲 如何理解费尔巴哈提纲的主要含义？ 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 毕业设计 电赛 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 14.电子电路 模拟电子技术基础笔记 15.外语类 英语 16.考试类 教资 小学 18.C++编程语言 12.其他库的介绍 11.STL库学习之适配器 10.STL库学习之仿函数 9.STL库学习之迭代器与算法 8.STL库学习之容器 7.STL库学习之分配器 6.STL库学习之筑基概要 5.STL库之观其大略 4.C++2.0特性的使用 3.导读 2.组合与继承 1.代码编写规范 常用的数学表达\n常用箭头\n常用函数图像公式\n",
+    "content": " 1.文章 14.初次安装AD需要做哪些设置？ 13.物联网网络安全论 12.嵌入式系统设计知识点 物联网应用系统设计 10.云端一体化的环境变量问题 9.云端一体化如何查看云函数日志？ 8.速通ArkTS语言 6.github和atomgit的混合使用，哪些是值得注意的？ 5.自定义页面以康奈尔笔记格式输出 4.如何在github上使用高级搜索搜出自己想要的项目？ 文章标题的多样设计 常与问题总结 如何用旧电脑搭建自己的服务器？ 创建hugo静态网站的经历 网站内常用到的模版 网站的目录与子目录创建 2.AndroidStudio AndroidStudio AndroidStudio笔记 2-1.Toolbar工具栏 3.STM32_RFID 4.Esp8266_WiFi 物联网通信技术-小知识 5.CC2530_ZigBee 实验2 IO端口输出实验 6.Arduino 物联网控制-小知识 7.物联网工程 8.51单片机 pretues+kiel5仿真软件配合使用时需要注意的地方 9.操作系统 Linux期末复习 10.微信小程序 基础知识 11.哲学 心经 思想的边界 庄子之道 费尔巴哈提纲 如何理解费尔巴哈提纲的主要含义？ 12.实战项目 贺青工程 志愿活动软件设计与开发 验收问题 毕业设计 电赛 唛盟杯比赛详记 13.计算机组成原理 过年 计算机组成原理-复习 14.电子电路 模拟电子技术基础笔记 15.外语类 英语 16.考试类 教资 小学 18.C++编程语言 13.从C到C++ 12.其他库的介绍 11.STL库学习之适配器 10.STL库学习之仿函数 9.STL库学习之迭代器与算法 8.STL库学习之容器 7.STL库学习之分配器 6.STL库学习之筑基概要 5.STL库之观其大略 4.C++2.0特性的使用 3.导读 2.组合与继承 1.代码编写规范 19.设计模式（C++） 常用的数学表达\n常用箭头\n常用函数图像公式\n",
     "description": "",
     "tags": null,
     "title": "一、博客文章",
@@ -169,21 +169,56 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章",
-    "content": " 12.其他库的介绍为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括： 数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从\n11.STL库学习之适配器整体框架的回顾 存在多种适配器-adapters 一个人理解，要将适配器理解透彻，我们需要先从别的组件入手，这里以vector容器为例，我们都知\n10.STL库学习之仿函数仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了op\n9.STL库学习之迭代器与算法标准库常用算法 迭代器 迭代器-的分类 struct input_iterator_tag {}； struct output_iterator_tag {}; struct forward_iterator_tag:public input_iterator_tag{}; struct bidirectional_iterator_tag:public forward_iterator_tag{}; struct random_access_tag:public bidirectional_iterator_tag {};以上5中迭代器的继承关系，如下图所示。 1.Input Iterator（输入迭代\n8.STL库学习之容器list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）\n7.STL库学习之分配器分配器源代码位置：xmemory.h 除了array和vector外，其他容器的适配器必须是一个类， 附件\n6.STL库学习之筑基概要STL程序源代码位置 了解自身编译器STL程序源代码位置。 OOP 与 GP 面向对象编程（OOP）： 面向对象编程是一种编程范式，它将数据和处理这些数据的方\n5.STL库之观其大略一下主要讲STL组件的测试用例，特别是容器的测试 学习资料 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 STL六大组件 容器-Containers，申请内存用于存储数\n4.C++2.0特性的使用VS 2022的设置 首先你可以先用下面的代码测试使用可以执行： #include \u003ciostream\u003e void printTypes() { } template \u003ctypename T, typename... U\u003e void printTypes(const T\u0026 t, const U\u0026... u) { std::cout \u003c\u003c t \u003c\u003c std::endl; printTypes(u...); } int main() { printTypes('a', 1.5, 'b'); }如果报错了，如t\n3.导读书籍推荐 《C++ Premier》 《C++ Programming Language》 《Effective Modern C++》 《Efficient C++》 《The C++ standard libra\n2.组合与继承类与类的三种关系 Composition-复合 以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构\n1.代码编写规范如何写一个标准的.h文件 以下内容来自B站。 接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码： class complex { private: /* data */ double re,im; friend complex\u0026 __doapl (complex*,const\n",
+    "content": " 13.从C到C++指针 指针的声明： 数组 数组的范围必须是常量表达式，同时如果需要变化的范围可以做如下定义： 2.字符串文字量 指的是用 ““括\n12.其他库的介绍为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括： 数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从\n11.STL库学习之适配器整体框架的回顾 存在多种适配器-adapters 一个人理解，要将适配器理解透彻，我们需要先从别的组件入手，这里以vector容器为例，我们都知\n10.STL库学习之仿函数仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了op\n9.STL库学习之迭代器与算法标准库常用算法 迭代器 迭代器-的分类 struct input_iterator_tag {}； struct output_iterator_tag {}; struct forward_iterator_tag:public input_iterator_tag{}; struct bidirectional_iterator_tag:public forward_iterator_tag{}; struct random_access_tag:public bidirectional_iterator_tag {};以上5中迭代器的继承关系，如下图所示。 1.Input Iterator（输入迭代\n8.STL库学习之容器list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）\n7.STL库学习之分配器分配器源代码位置：xmemory.h 除了array和vector外，其他容器的适配器必须是一个类， 附件\n6.STL库学习之筑基概要STL程序源代码位置 了解自身编译器STL程序源代码位置。 OOP 与 GP 面向对象编程（OOP）： 面向对象编程是一种编程范式，它将数据和处理这些数据的方\n5.STL库之观其大略一下主要讲STL组件的测试用例，特别是容器的测试 学习资料 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 STL六大组件 容器-Containers，申请内存用于存储数\n4.C++2.0特性的使用VS 2022的设置 首先你可以先用下面的代码测试使用可以执行： #include \u003ciostream\u003e void printTypes() { } template \u003ctypename T, typename... U\u003e void printTypes(const T\u0026 t, const U\u0026... u) { std::cout \u003c\u003c t \u003c\u003c std::endl; printTypes(u...); } int main() { printTypes('a', 1.5, 'b'); }如果报错了，如t\n3.导读书籍推荐 《C++ Premier》 《C++ Programming Language》 《Effective Modern C++》 《Efficient C++》 《The C++ standard libra\n2.组合与继承类与类的三种关系 Composition-复合 以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构\n1.代码编写规范如何写一个标准的.h文件 以下内容来自B站。 接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码： class complex { private: /* data */ double re,im; friend complex\u0026 __doapl (complex*,const\n",
     "description": "",
     "tags": null,
     "title": "18.C++编程语言",
     "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
   },
   {
+    "breadcrumb": "Maloudown \u003e 一、博客文章",
+    "content": "组件协作 模板方法-template method 在C语言代码编写中主函数调用常调用库函数，进行功能实现。那么现在面向对象编程中，可以选择在库中调用未来写在主函数中的函数，这个设计方式就叫template method（个人的理解，不是定义）。举个例子，假设有一个lib.h的库，里面写了画圆的步骤，主体框架已经在rung()中写好，但是还有一个函数没用写，该函数是用来指定圆的半径等参数的，这个函数用virtual修饰，在未来主函数中可以继承该类并重写这个函数，最后在调用lib.h库里的run()即可。\n在这里画圆的框架以及步骤已经规定好，也就是稳定的，而圆的半径是变化，使用以上方法就把稳定与变化分开，这也是设计模式的核心要点之一。例子粗糙但已经能说明该设计模式了\n前一过程称为早绑定，后一过程称为晚绑定。\n策略方法-strategy 如下图是该方法的结构图。 该方法是为了应对未来的需求，这在业务就很常见，在未来会增加业务的功能，主要体现在代码运行时，假设现在有三种算分分别对应三种不同的情况，在运算时需要对不同的算法做不同的处理，以往我们会使用if-else或Switch-case，但是当情况不是三种或未来增加时，后者的代码会变得冗长，也不好维护，现在我们可以把三种情况对应的算法继承一个基类中的virtual修饰的方法，并重写这个方法。在运行处通过上下文调用对应的算法。\n",
+    "description": "",
+    "tags": null,
+    "title": "19.设计模式（C++）",
+    "uri": "/branch-bundle-1/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/"
+  },
+  {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
-    "content": "为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括：\n数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从而快速检索数据。这是哈希表（如 C++ 中的 std::unordered_map 和 std::unordered_set）的基础。\n快速比较：在数据库和各种数据结构中，哈希函数可以快速比较字符串或对象，常用于检查两个字符串是否相等。\n数据分布：在分布式系统中，哈希函数可以将数据均匀地分布到多个节点上，以实现负载均衡。\n密码学应用：在密码学中，哈希函数用于生成数据的摘要，用于数据完整性验证和数字签名。\n缓存实现：哈希函数可以用于实现缓存机制，通过快速定位缓存中的数据。\n负载均衡：在网络流量管理中，哈希函数可以用于将请求分配到不同的服务器上。\nC++ 库中哈希函数的实现和底层逻辑 在 C++11 及以后的版本中，标准库提供了一个专门的哈希函数库 \u003cfunctional\u003e，其中包含了 std::hash 模板类。std::hash 为基本数据类型（如 int、double、std::string 等）提供了特化版本。\n实现底层逻辑： 整数类型：对于整数类型，std::hash 直接返回数值本身或其变体。例如，对于 int 类型，std::hash\u003cint\u003e()(10) 可能直接返回 10 或者 10 的一个简单变换。\n浮点类型：对于浮点类型，std::hash 通常会将浮点数的位表示转换为整数，然后应用整数的哈希函数。\n字符串类型：对于字符串，std::hash 通常会遍历字符串中的每个字符，将每个字符的哈希值组合起来，生成最终的哈希值。这可以通过位操作和数学函数（如乘法、加法、异或等）来实现。\n自定义类型：对于自定义类型，如果需要使用 std::hash，则需要为该类型提供自定义的哈希函数。\n组合哈希：对于复合类型（如结构体或类），哈希函数需要将各个成员的哈希值组合起来。这通常通过将成员的哈希值进行某种形式的数学运算（如加权求和、异或等）来实现。\n均匀分布：一个好的哈希函数应该能够产生均匀分布的哈希值，以减少哈希冲突。\n确定性：哈希函数应该是确定性的，即对于同一个输入总是产生相同的哈希值。\n快速计算：哈希函数的计算应该尽可能快，以减少对性能的影响。\n在 C++ 中，std::hash 的实现可能因编译器和平台而异，但基本原理是相似的。正确实现哈希函数对于哈希表的性能至关重要，因为它直接影响到哈希表的冲突率和检索效率。\nhash function-哈希函数 如果要自己给自己的数据写一个哈希函数，那又该怎么写呢？能否基于这些数据计算出hash code的呢？\n编写模版规范 ​ 类型1 类型1示例 类型2 类型3 #include \u003cfunctional\u003e namespace test_hash_function { class Customer { private: string fname; string lname; int on; public: Customer( string fn, string ln, int id) : fname(fn), lname(ln), on(id) {} bool operator==(const Customer\u0026 other) const {//需要重载== return fname == other.fname \u0026\u0026 lname == other.lname \u0026\u0026 on == other.on; } friend class CustomerHash; }; class CustomerHash { public: std::size_t operator()(const Customer\u0026 c) const { return ...; } }; unordered_set\u003cCustomer, CustromerHash\u003e custsct; } #include \u003cfunctional\u003e namespace test_hash_function { template \u003ctypename T\u003e inline void hash_combine(size_t\u0026 seed, const T\u0026 val) { seed ^= hash\u003cT\u003e()(val) + 0x9e3779b9 + (seed \u003c\u003c 6) + (seed \u003e\u003e 2); } template \u003ctypename T\u003e inline void hash_val(size_t\u0026 seed, const T\u0026 val) { hash_combine(seed, val); } template \u003ctypename T, typename... Types\u003e inline void hash_val(\tsize_t\u0026 seed, const T\u0026 val, const Types\u0026... args) { hash_combine(seed, val); hash_val(seed, args...); } template \u003ctypename... Types\u003e inline size_t hash_val(const Types\u0026... args) { size_t seed = 0; hash_val(seed, args...); return seed; } class Customer { private: string fname; string lname; int on; public: Customer( string fn, string ln, int id) : fname(fn), lname(ln), on(id) {} bool operator==(const Customer\u0026 other) const { return fname == other.fname \u0026\u0026 lname == other.lname \u0026\u0026 on == other.on; } friend class CustomerHash; }; class CustomerHash { public: size_t operator()(const Customer\u0026 c) const { return hash_val(c.fname, c.lname, c.on); } }; void test() { unordered_set\u003cCustomer, CustomerHash\u003e s; s.insert(Customer(\"Asd\", \"dfw\", 1L)); s.insert(Customer(\"Dfg\", \"kjt\", 2L)); s.insert(Customer(\"VVB\", \"ert\", 3L)); s.insert(Customer(\"TgR\", \"uik\", 4L)); s.insert(Customer(\"Gdf\", \"pii\", 5L)); s.insert(Customer(\"Gdf\", \"pii\", 6L)); s.insert(Customer(\"Gdf\", \"pii\", 7L));//8 cout \u003c\u003c s.bucket_count() \u003c\u003c endl; CustomerHash hh; cout \u003c\u003c hh(Customer(\"Asd\", \"dfw\", 1L)) % 8 \u003c\u003c endl;//4 cout \u003c\u003c hh(Customer(\"Dfg\", \"kjt\", 2L)) % 8 \u003c\u003c endl;//0 cout \u003c\u003c hh(Customer(\"VVB\", \"ert\", 3L)) % 8 \u003c\u003c endl;//3 cout \u003c\u003c hh(Customer(\"TgR\", \"uik\", 4L)) % 8 \u003c\u003c endl;//7 cout \u003c\u003c hh(Customer(\"Gdf\", \"pii\", 5L)) % 8 \u003c\u003c endl;//2 cout \u003c\u003c hh(Customer(\"Gdf\", \"pii\", 6L)) % 8 \u003c\u003c endl;//7 cout \u003c\u003c hh(Customer(\"Gdf\", \"pii\", 7L)) % 8 \u003c\u003c endl;//4 for (unsigned i = 0; i \u003c s.bucket_count(); i++) { cout \u003c\u003c \"bucked #\" \u003c\u003c i \u003c\u003c \"has\" \u003c\u003c s.bucket_size(i) \u003c\u003c \"element\\n\"; } } } // bucked #0has1element // bucked #1has0element // bucked #2has1element // bucked #3has1element // bucked #4has2element // bucked #5has0element // bucked #6has0element // bucked #7has2element #include \u003cfunctional\u003e namespace test_hash_function { class Customer { private: string fname; string lname; int on; public: Customer( string fn, string ln, int id) : fname(fn), lname(ln), on(id) {} bool operator==(const Customer\u0026 other) const {//需要重载== return fname == other.fname \u0026\u0026 lname == other.lname \u0026\u0026 on == other.on; } friend class CustomerHash; }; class CustomerHash { public: size_t customer_hash_func(const Customer\u0026 c) const { return ...; } }; unordered_set\u003cCustomer, size_t(*)(const Custromer\u0026)\u003e custsct(20,customer_hash_func);//注意与类型1的不同写法 } 第三种方式是对类里面的hash进行偏特化，比如你使用了unordered_set那么对于它的Hash，可以单独进行偏特化。 附件 ",
+    "content": "指针 指针的声明： 数组 数组的范围必须是常量表达式，同时如果需要变化的范围可以做如下定义： 2.字符串文字量\n指的是用 ““括起来的字符串。\n长字符串编写： 带有L的字符是宽字符，如L\"sddsf”，类型是const wchar_t. 3.指向数组的指针\n4.常量 5.指针和常量\n使用一个指针时涉及到两个对象:该指针本身和被它所指的对象。将一个指针的声明用cons“预先固定”将使那个对象而不是使这个指针成为常量。要将指针本身而不是被指对象声明为常量，我们必须使用声明运算符*const，而不能只用简单的const。\n定义常量指针的声明运算符是const。并没有cons** 声明符，所以出现在之前的conr是作为基础类型的一部分。例如\n// 到char的hconst指针 char *const cp; char const* pc; // 到const char的指针 const char* pc2; //到const char的指针 有人发现从右向左读这种定义很有帮助。例如，“cp是一个conse指针到char”，以及“pe2是一个指针措到const chor”\n引用 void f(){ int ii=1; int \u0026rr = ii; rr++;//实际上是ii++,rr不能像指针一样操作。 int *pp = \u0026ii; } 附件 ",
     "description": "",
     "tags": [
-      ""
+      "C++",
+      "C",
+      "基础知识",
+      "基本概念"
     ],
-    "title": "12.其他库的介绍",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/"
+    "title": "13.从C到C++",
+    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: C",
+    "uri": "/tags/c/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: C++",
+    "uri": "/tags/c\u0026#43;\u0026#43;/"
+  },
+  {
+    "breadcrumb": "Maloudown",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Categories",
+    "uri": "/categories/"
   },
   {
     "breadcrumb": "",
@@ -192,6 +227,48 @@ var relearn_search_index = [
     "tags": null,
     "title": "Maloudown",
     "uri": "/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Categories",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "类别 :: R1-编程语言",
+    "uri": "/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
+  },
+  {
+    "breadcrumb": "Maloudown",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Tags",
+    "uri": "/tags/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 基本概念",
+    "uri": "/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e Tags",
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "标签 :: 基础知识",
+    "uri": "/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
+  },
+  {
+    "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
+    "content": "为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括：\n数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从而快速检索数据。这是哈希表（如 C++ 中的 std::unordered_map 和 std::unordered_set）的基础。\n快速比较：在数据库和各种数据结构中，哈希函数可以快速比较字符串或对象，常用于检查两个字符串是否相等。\n数据分布：在分布式系统中，哈希函数可以将数据均匀地分布到多个节点上，以实现负载均衡。\n密码学应用：在密码学中，哈希函数用于生成数据的摘要，用于数据完整性验证和数字签名。\n缓存实现：哈希函数可以用于实现缓存机制，通过快速定位缓存中的数据。\n负载均衡：在网络流量管理中，哈希函数可以用于将请求分配到不同的服务器上。\nC++ 库中哈希函数的实现和底层逻辑 在 C++11 及以后的版本中，标准库提供了一个专门的哈希函数库 \u003cfunctional\u003e，其中包含了 std::hash 模板类。std::hash 为基本数据类型（如 int、double、std::string 等）提供了特化版本。\n实现底层逻辑： 整数类型：对于整数类型，std::hash 直接返回数值本身或其变体。例如，对于 int 类型，std::hash\u003cint\u003e()(10) 可能直接返回 10 或者 10 的一个简单变换。\n浮点类型：对于浮点类型，std::hash 通常会将浮点数的位表示转换为整数，然后应用整数的哈希函数。\n字符串类型：对于字符串，std::hash 通常会遍历字符串中的每个字符，将每个字符的哈希值组合起来，生成最终的哈希值。这可以通过位操作和数学函数（如乘法、加法、异或等）来实现。\n自定义类型：对于自定义类型，如果需要使用 std::hash，则需要为该类型提供自定义的哈希函数。\n组合哈希：对于复合类型（如结构体或类），哈希函数需要将各个成员的哈希值组合起来。这通常通过将成员的哈希值进行某种形式的数学运算（如加权求和、异或等）来实现。\n均匀分布：一个好的哈希函数应该能够产生均匀分布的哈希值，以减少哈希冲突。\n确定性：哈希函数应该是确定性的，即对于同一个输入总是产生相同的哈希值。\n快速计算：哈希函数的计算应该尽可能快，以减少对性能的影响。\n在 C++ 中，std::hash 的实现可能因编译器和平台而异，但基本原理是相似的。正确实现哈希函数对于哈希表的性能至关重要，因为它直接影响到哈希表的冲突率和检索效率。\nhash function-哈希函数 如果要自己给自己的数据写一个哈希函数，那又该怎么写呢？能否基于这些数据计算出hash code的呢？\n编写模版规范 ​ 类型1 类型1示例 类型2 类型3 #include \u003cfunctional\u003e namespace test_hash_function { class Customer { private: string fname; string lname; int on; public: Customer( string fn, string ln, int id) : fname(fn), lname(ln), on(id) {} bool operator==(const Customer\u0026 other) const {//需要重载== return fname == other.fname \u0026\u0026 lname == other.lname \u0026\u0026 on == other.on; } friend class CustomerHash; }; class CustomerHash { public: std::size_t operator()(const Customer\u0026 c) const { return ...; } }; unordered_set\u003cCustomer, CustromerHash\u003e custsct; } #include \u003cfunctional\u003e namespace test_hash_function { template \u003ctypename T\u003e inline void hash_combine(size_t\u0026 seed, const T\u0026 val) { seed ^= hash\u003cT\u003e()(val) + 0x9e3779b9 + (seed \u003c\u003c 6) + (seed \u003e\u003e 2); } template \u003ctypename T\u003e inline void hash_val(size_t\u0026 seed, const T\u0026 val) { hash_combine(seed, val); } template \u003ctypename T, typename... Types\u003e inline void hash_val(\tsize_t\u0026 seed, const T\u0026 val, const Types\u0026... args) { hash_combine(seed, val); hash_val(seed, args...); } template \u003ctypename... Types\u003e inline size_t hash_val(const Types\u0026... args) { size_t seed = 0; hash_val(seed, args...); return seed; } class Customer { private: string fname; string lname; int on; public: Customer( string fn, string ln, int id) : fname(fn), lname(ln), on(id) {} bool operator==(const Customer\u0026 other) const { return fname == other.fname \u0026\u0026 lname == other.lname \u0026\u0026 on == other.on; } friend class CustomerHash; }; class CustomerHash { public: size_t operator()(const Customer\u0026 c) const { return hash_val(c.fname, c.lname, c.on); } }; void test() { unordered_set\u003cCustomer, CustomerHash\u003e s; s.insert(Customer(\"Asd\", \"dfw\", 1L)); s.insert(Customer(\"Dfg\", \"kjt\", 2L)); s.insert(Customer(\"VVB\", \"ert\", 3L)); s.insert(Customer(\"TgR\", \"uik\", 4L)); s.insert(Customer(\"Gdf\", \"pii\", 5L)); s.insert(Customer(\"Gdf\", \"pii\", 6L)); s.insert(Customer(\"Gdf\", \"pii\", 7L));//8 cout \u003c\u003c s.bucket_count() \u003c\u003c endl; CustomerHash hh; cout \u003c\u003c hh(Customer(\"Asd\", \"dfw\", 1L)) % 8 \u003c\u003c endl;//4 cout \u003c\u003c hh(Customer(\"Dfg\", \"kjt\", 2L)) % 8 \u003c\u003c endl;//0 cout \u003c\u003c hh(Customer(\"VVB\", \"ert\", 3L)) % 8 \u003c\u003c endl;//3 cout \u003c\u003c hh(Customer(\"TgR\", \"uik\", 4L)) % 8 \u003c\u003c endl;//7 cout \u003c\u003c hh(Customer(\"Gdf\", \"pii\", 5L)) % 8 \u003c\u003c endl;//2 cout \u003c\u003c hh(Customer(\"Gdf\", \"pii\", 6L)) % 8 \u003c\u003c endl;//7 cout \u003c\u003c hh(Customer(\"Gdf\", \"pii\", 7L)) % 8 \u003c\u003c endl;//4 for (unsigned i = 0; i \u003c s.bucket_count(); i++) { cout \u003c\u003c \"bucked #\" \u003c\u003c i \u003c\u003c \"has\" \u003c\u003c s.bucket_size(i) \u003c\u003c \"element\\n\"; } } } // bucked #0has1element // bucked #1has0element // bucked #2has1element // bucked #3has1element // bucked #4has2element // bucked #5has0element // bucked #6has0element // bucked #7has2element #include \u003cfunctional\u003e namespace test_hash_function { class Customer { private: string fname; string lname; int on; public: Customer( string fn, string ln, int id) : fname(fn), lname(ln), on(id) {} bool operator==(const Customer\u0026 other) const {//需要重载== return fname == other.fname \u0026\u0026 lname == other.lname \u0026\u0026 on == other.on; } friend class CustomerHash; }; class CustomerHash { public: size_t customer_hash_func(const Customer\u0026 c) const { return ...; } }; unordered_set\u003cCustomer, size_t(*)(const Custromer\u0026)\u003e custsct(20,customer_hash_func);//注意与类型1的不同写法 } 第三种方式是对类里面的hash进行偏特化，比如你使用了unordered_set那么对于它的Hash，可以单独进行偏特化。 tuple 在C++中，tuple 是一个标准库模板类，它提供了一种方式来存储不同类型数据的集合。tuple 类似于一个固定大小的数组，但是数组中的每个元素可以是不同的类型。这个特性使得 tuple 非常灵活，可以用于多种场景。\n附件 ",
+    "description": "",
+    "tags": [
+      ""
+    ],
+    "title": "12.其他库的介绍",
+    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -242,38 +319,6 @@ var relearn_search_index = [
     ],
     "title": "7.STL库学习之分配器",
     "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/"
-  },
-  {
-    "breadcrumb": "Maloudown \u003e Tags",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "标签 :: C++",
-    "uri": "/tags/c\u0026#43;\u0026#43;/"
-  },
-  {
-    "breadcrumb": "Maloudown",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "Categories",
-    "uri": "/categories/"
-  },
-  {
-    "breadcrumb": "Maloudown \u003e Categories",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "类别 :: R1-编程语言",
-    "uri": "/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
-  },
-  {
-    "breadcrumb": "Maloudown",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "Tags",
-    "uri": "/tags/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",

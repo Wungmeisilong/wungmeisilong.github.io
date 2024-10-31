@@ -18,21 +18,21 @@
     <title>9.STL库学习之迭代器与算法 :: Maloudown</title>
     <link href="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="canonical" type="text/html" title="9.STL库学习之迭代器与算法 :: Maloudown">
     <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="alternate" type="application/rss+xml" title="9.STL库学习之迭代器与算法 :: Maloudown">
-    <link href="../../../images/favicon.png?1730216409" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1730383749" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730216410" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1730216410" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730216410" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1730216410" rel="stylesheet">
-    <link href="../../../css/fonts.css?1730216410" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730216410" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1730216410" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1730216410" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1730216410" rel="stylesheet">
-    <link href="../../../css/print.css?1730216410" rel="stylesheet" media="print">
-    <link href="../../../css/format-print.css?1730216410" rel="stylesheet">
-    <link href="../../../css/ie.css?1730216410" rel="stylesheet">
-    <script src="../../../js/url.js?1730216410"></script>
-    <script src="../../../js/variant.js?1730216410"></script>
+    <link href="../../../css/fontawesome-all.min.css?1730383749" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730383749" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1730383749" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1730383749" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730383749" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1730383749" rel="stylesheet">
+    <link href="../../../css/fonts.css?1730383749" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730383749" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1730383749" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1730383749" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1730383749" rel="stylesheet">
+    <link href="../../../css/print.css?1730383749" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1730383749" rel="stylesheet">
+    <link href="../../../css/ie.css?1730383749" rel="stylesheet">
+    <script src="../../../js/url.js?1730383749"></script>
+    <script src="../../../js/variant.js?1730383749"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -86,8 +86,8 @@
 <h1 id="9stl库学习之迭代器与算法">9.STL库学习之迭代器与算法</h1>
 
 <h2 id="标准库常用算法">标准库常用算法</h2>
-<p><a href="#R-image-779b0caa2caa2057f01170934dbdf1e8" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-779b0caa2caa2057f01170934dbdf1e8"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-92d105ba8ce0e20b051eaa070a7d9d4c" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-92d105ba8ce0e20b051eaa070a7d9d4c"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h2 id="迭代器">迭代器</h2>
 <h3 id="迭代器-的分类">迭代器-的分类</h3>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">input_iterator_tag</span> {}<span style="color:#960050;background-color:#1e0010">；</span>
@@ -95,8 +95,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">forward_iterator_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> input_iterator_tag{};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">bidirectional_iterator_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> forward_iterator_tag{};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">random_access_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> bidirectional_iterator_tag {};</span></span></code></pre></div><p>以上5中迭代器的继承关系，如下图所示。
-<a href="#R-image-496bde1d77005d029b215353380da8b2" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-496bde1d77005d029b215353380da8b2"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-90c86e8e2038e2b9062e7a429f968f70" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-90c86e8e2038e2b9062e7a429f968f70"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>1.Input Iterator（输入迭代器）：
 输入迭代器是最基本的迭代器类型，支持单向遍历，只能向前移动。</p>
 <p>用法示例：</p>
@@ -183,26 +183,26 @@
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">typename</span> iterator_traits<span style="color:#f92672">&lt;</span>InputIterator<span style="color:#f92672">&gt;::</span>itrerator_category category;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">__distance</span>(first,last, category);</span></span></code></pre></div><p><code>typedef typename iterator_traits&lt;InputIterator&gt;::itrerator_category category;</code>这一句会判断迭代器的类型，进而执行加操作或一步一步加操作。详细如下图所示。
-<a href="#R-image-360f588248a8bd5180c380020c543192" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-360f588248a8bd5180c380020c543192"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-53987ffbcd89922488a4774191566e28" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-53987ffbcd89922488a4774191566e28"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="例子2-copy">例子2-copy</h3>
 <p>copy的动作也不仅仅是对迭代器类型的判断，还做了许多特化、偏特化。如下图所示。
-<a href="#R-image-9a527dc81ee435cf214bd4003444f15f" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a527dc81ee435cf214bd4003444f15f"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-49aab5ca8901878664575cfd906cd27f" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-49aab5ca8901878664575cfd906cd27f"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="例子3-destroy">例子3-destroy</h3>
-<p><a href="#R-image-058d805cec8e650842b83efc653af054" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-058d805cec8e650842b83efc653af054"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-dbdc91637cf1f760df20aa1fc0db7aeb" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dbdc91637cf1f760df20aa1fc0db7aeb"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="例子4-__unique_copy">例子4-__unique_copy</h3>
-<p><a href="#R-image-bcb9273ec2f484dd8760b90aceef12fd" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bcb9273ec2f484dd8760b90aceef12fd"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-bc358288c846e629fca9053ddfcbf9b7" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc358288c846e629fca9053ddfcbf9b7"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h2 id="对传入的迭代器类型的暗示">对传入的迭代器类型的暗示</h2>
 <p>在调用一些需要传入迭代器的函数时，从函数的形参名可以判断传入的迭代器类型，如InputIterator，由于forward_iterator_tag、bidirection_iterator_tag、random_asccess_iterator_tag与input_iterator的继承关系可知，前三者都可以传入，以此类推如果形参是forward_iterator_tag那么除了其本身，bidirection_iterator_tag、random_asccess_iterator_tag也可传入。</p>
-<p><a href="#R-image-84f7abe603f8a79c196a1bfdb88d2ee6" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-84f7abe603f8a79c196a1bfdb88d2ee6"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-9338a4f1d264d7feedc2f35975cca7a8" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9338a4f1d264d7feedc2f35975cca7a8"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h2 id="算法源码剖析">算法源码剖析</h2>
 <h3 id="accumulate-累计">accumulate-累计</h3>
-<p><a href="#R-image-80d3b1f37cbacccdad5dcba6610b2396" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-80d3b1f37cbacccdad5dcba6610b2396"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-e2acafb158a7c1d4d65b551cd766e875" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e2acafb158a7c1d4d65b551cd766e875"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>测试用例：</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;functional&gt;</span><span style="color:#75715e">//std::minus
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;numeric&gt;</span><span style="color:#75715e">//std::accumulate
@@ -221,8 +221,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cout <span style="color:#f92672">&lt;&lt;</span> accumulate(nums, nums <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>, init, test_accumulate<span style="color:#f92672">::</span>myobj) <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//100
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }</span></span></code></pre></div><h3 id="for_each">for_each</h3>
 <p>拿到每一个元素时都对该元素执行某一操作。
-<a href="#R-image-dc50a36a3d11dbfd5a2c756044792434" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc50a36a3d11dbfd5a2c756044792434"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-d486e9454646dfd3b8e4cab18334d341" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d486e9454646dfd3b8e4cab18334d341"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>测试用例：</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">namespace</span> test_for_each
 </span></span><span style="display:flex;"><span>    {
@@ -241,8 +241,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div><h3 id="replacereplace_ifrreplace_copy">replace,replace_if,rreplace_copy</h3>
 <p>replace用于将新值替换为旧值，例如将数组中所有的8替换为9.详细源码如下图所示。
-<a href="#R-image-a8772029835c8dca620b8e558092e9c4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a8772029835c8dca620b8e558092e9c4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-5a714f355862bc0e15e3c06d34339ba3" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a714f355862bc0e15e3c06d34339ba3"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p><code>replace</code>、<code>replace_if</code> 和 <code>replace_copy</code> 是 C++ 标准库中的算法，它们用于在容器或数组中替换元素。这些函数属于 <code>&lt;algorithm&gt;</code> 头文件。下面是每个函数的详细介绍和作用：</p>
 <h3 id="1-replace">1. <code>replace</code></h3>
 <p><code>replace</code> 函数用于将容器中所有满足特定条件的元素替换为另一个值。这个函数直接在原容器上操作，不创建新的容器。</p>
@@ -285,20 +285,20 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// v 保持不变，v2 变为 {1, 5, 3, 4, 3, 5}
 </span></span></span></code></pre></div><h3 id="countcount_if">count，count_if</h3>
 <p>源代码如下：
-<a href="#R-image-d1cf5cd582d2acb1a475bfd3bf8c43a4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d1cf5cd582d2acb1a475bfd3bf8c43a4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-f42c66e78b6833ee60b22c4b23b4d257" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f42c66e78b6833ee60b22c4b23b4d257"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>小结：
-<a href="#R-image-43c504e91215e133717627b3b2376ff4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-43c504e91215e133717627b3b2376ff4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-078afcb26ddc26765b4de8f4029835f3" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-078afcb26ddc26765b4de8f4029835f3"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="findfind_if">find，find_if</h3>
-<p><a href="#R-image-5a4339b1856f25a8dfbbbdacf9ad98b8" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a4339b1856f25a8dfbbbdacf9ad98b8"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-e0499ac9f190da68608c965c07889703" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0499ac9f190da68608c965c07889703"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="sort">sort</h3>
-<p><a href="#R-image-045c95796e4f9e7ad8b697df19e23d58" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-045c95796e4f9e7ad8b697df19e23d58"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-a14efdf3fd57ced6f2d1ca3dcb55c40e" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a14efdf3fd57ced6f2d1ca3dcb55c40e"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="binary_search">binary_search</h3>
-<p><a href="#R-image-9cf87ba0478b34a749b18baef2130aaf" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cf87ba0478b34a749b18baef2130aaf"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-cb570dc39f8af6cd1ccada041d67ac9d" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb570dc39f8af6cd1ccada041d67ac9d"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p><strong>算法原理：</strong></p>
 <p>二分查找的基本思想是将一个有序序列分为两半，通过比较中间元素和目标值来缩小搜索范围。如果中间元素正好是目标值，则查找成功；如果目标值小于中间元素，则在序列的左半部分继续查找；如果目标值大于中间元素，则在右半部分继续查找。这个过程不断重复，直到找到目标值或搜索范围为空。</p>
 <p><strong>函数原型：</strong></p>
@@ -353,8 +353,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard.min.js?1730216410" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1730216410" defer></script>
-    <script src="../../../js/theme.js?1730216410" defer></script>
+    <script src="../../../js/clipboard.min.js?1730383749" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1730383749" defer></script>
+    <script src="../../../js/theme.js?1730383749" defer></script>
   </body>
 </html>

@@ -6,7 +6,7 @@
     <description>Recent content in 一、博客文章 on Maloudown</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 01 Nov 2024 08:16:41 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 09:12:17 +0800</lastBuildDate>
     <atom:link href="https://wungmeisilong.github.io/branch-bundle-1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.文章</title>
@@ -125,9 +125,9 @@ AndroidStudio笔记第一章 配置开发环境： 1.安装JDK &amp;ldquo;安装
     <item>
       <title>18.C&#43;&#43;编程语言</title>
       <link>https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
-      <pubDate>Thu, 31 Oct 2024 10:41:29 +0800</pubDate>
+      <pubDate>Sun, 03 Nov 2024 09:12:17 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
-      <description>13.从C到C&amp;#43;&amp;#43;内联函数、函数重载和缺省函数 类和对象的基本概念 抽象 将事物所能进行的的行为归纳出来，形成函数，这些函数可以操</description>
+      <description>14.新标准C加加程序设计内联函数、函数重载和缺省函数 类和对象的基本概念 抽象 将事物所能进行的的行为归纳出来，形成函数，这些函数可以操作事物归</description>
     </item>
     <item>
       <title>19.设计模式（C&#43;&#43;）</title>
@@ -141,7 +141,7 @@ AndroidStudio笔记第一章 配置开发环境： 1.安装JDK &amp;ldquo;安装
       <link>https://wungmeisilong.github.io/branch-bundle-1/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Fri, 01 Nov 2024 08:16:41 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</guid>
-      <description>1.网络编程网络编程 网络原理 数据库 C++基础 数据湖结构与算法 附件</description>
+      <description>1.网络编程网络编程 网络原理 数据库 C++基础 1.左值引用和右值引用 数据湖结构与算法 附件</description>
     </item>
   </channel>
 </rss>

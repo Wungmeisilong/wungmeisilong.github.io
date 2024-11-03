@@ -18,20 +18,20 @@
     <title>2.组合与继承 :: Maloudown</title>
     <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.xml" rel="alternate" type="application/rss+xml" title="2.组合与继承 :: Maloudown">
     <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.print.html" rel="alternate" type="text/html" title="2.组合与继承 :: Maloudown">
-    <link href="../../../images/favicon.png?1730593660" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1730645780" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1730593660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730593660" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1730593660" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1730593660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730593660" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1730593660" rel="stylesheet">
-    <link href="../../../css/fonts.css?1730593660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730593660" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1730593660" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1730593660" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1730593660" rel="stylesheet">
-    <link href="../../../css/print.css?1730593660" rel="stylesheet" media="print">
-    <link href="../../../css/ie.css?1730593660" rel="stylesheet">
-    <script src="../../../js/url.js?1730593660"></script>
-    <script src="../../../js/variant.js?1730593660"></script>
+    <link href="../../../css/fontawesome-all.min.css?1730645780" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730645780" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1730645780" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1730645780" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730645780" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1730645780" rel="stylesheet">
+    <link href="../../../css/fonts.css?1730645780" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730645780" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1730645780" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1730645780" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1730645780" rel="stylesheet">
+    <link href="../../../css/print.css?1730645780" rel="stylesheet" media="print">
+    <link href="../../../css/ie.css?1730645780" rel="stylesheet">
+    <script src="../../../js/url.js?1730645780"></script>
+    <script src="../../../js/variant.js?1730645780"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -138,19 +138,19 @@
 <h2 id="类与类的三种关系">类与类的三种关系</h2>
 <h3 id="composition-复合">Composition-复合</h3>
 <p>以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构函数运行次序是，构造函数有内到外依次运行，析构函数则相反。可以使用下图表示这种关系</p>
-<p><a href="#R-image-4e293d981678b424dee51c0d3209d44e" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e293d981678b424dee51c0d3209d44e"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-44f0d4729f1bc204830ba2612e607ae1" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-44f0d4729f1bc204830ba2612e607ae1"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="delegation-委托">delegation-委托</h3>
 <p>当一个类欲用一个指针指向另一个类，以达到想使用时就指向这个类的这种关系就叫delegation，假设我要实现一个计算，此时指针指向这个函数，让函数去做这个计算。这有些类似于复合，但是这里重点在于指针的使用。在写一些功能的时候也建议使用这种关系的特性，因为这样就将两者隔开，起到一定的保护作用。参考下图：
-<a href="#R-image-c8118f31c9b3ff8f202aef5206b41194" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c8118f31c9b3ff8f202aef5206b41194"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-ba7814d6aec6a0e06f9c96db9f08839d" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ba7814d6aec6a0e06f9c96db9f08839d"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="inheritance-继承">Inheritance-继承</h3>
 <p>在C++有三种继承方式，其中public是常用的一种，继承表示从一个类中集成某些属性成为 <strong>另外一种</strong> 类。</p>
-<p><a href="#R-image-781045ae21336ec7ed530ad22788b05a" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-781045ae21336ec7ed530ad22788b05a"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-886698a1db077e1c6f0b47bc7d5d3dc7" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-886698a1db077e1c6f0b47bc7d5d3dc7"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>Inheritance关系的两个类它们的构造函数与析构函数执行次序与之前描述复合时一样。如下图是这种关系的表示方法：
-<a href="#R-image-24bba4dd4ab27bc4740933d2aa209683" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-24bba4dd4ab27bc4740933d2aa209683"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-3be9bd90f07f0189cb725a778c284553" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3be9bd90f07f0189cb725a778c284553"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <ul>
 <li>构造函数（constructor）：由内到外，代码表示为<code>SunFunction::SunFunction(…):base(){…};</code></li>
 <li>析构函数（destructor）：由外到内，代码表示为<code>SunFunction::SunFunction(…){……~base();};</code></li>
@@ -4849,12 +4849,12 @@
         <script>
           var contentLangs=['zh'];
         </script>
-        <script src="../../../js/auto-complete.js?1730593660" defer></script>
-        <script src="../../../js/lunr/lunr.min.js?1730593660" defer></script>
-        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1730593660" defer></script>
-        <script src="../../../js/lunr/lunr.multi.min.js?1730593660" defer></script>
-        <script src="../../../js/lunr/lunr.zh.min.js?1730593660" defer></script>
-        <script src="../../../js/search.js?1730593660" defer></script>
+        <script src="../../../js/auto-complete.js?1730645780" defer></script>
+        <script src="../../../js/lunr/lunr.min.js?1730645780" defer></script>
+        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1730645780" defer></script>
+        <script src="../../../js/lunr/lunr.multi.min.js?1730645780" defer></script>
+        <script src="../../../js/lunr/lunr.zh.min.js?1730645780" defer></script>
+        <script src="../../../js/search.js?1730645780" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -4924,6 +4924,7 @@
           <li data-nav-id="/branch-bundle-1/16.%E8%80%83%E8%AF%95%E7%B1%BB/" class=""><a class="padding" href="../../../branch-bundle-1/16.%E8%80%83%E8%AF%95%E7%B1%BB/">16.考试类</a><ul id="R-subsections-9b5f4f6d8e0a85e4b92568d854fb2d65" class="morespace collapsible-menu">
           <li data-nav-id="/branch-bundle-1/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/" class=""><a class="padding" href="../../../branch-bundle-1/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/">教资 小学</a></li></ul></li>
           <li data-nav-id="/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="parent "><a class="padding" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">18.C&#43;&#43;编程语言</a><ul id="R-subsections-08e0bfe1f50f380ccb3525833a28f86d" class="morespace collapsible-menu">
+          <li data-nav-id="/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class=""><a class="padding" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">14.新标准C加加程序设计</a></li>
           <li data-nav-id="/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/" class=""><a class="padding" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/">13.从C到C&#43;&#43;</a></li>
           <li data-nav-id="/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/" class=""><a class="padding" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/">12.其他库的介绍</a></li>
           <li data-nav-id="/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/" class=""><a class="padding" href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/">11.STL库学习之适配器</a></li>
@@ -5025,8 +5026,8 @@
         </div>
       </div>
     </aside>
-    <script src="../../../js/clipboard.min.js?1730593660" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1730593660" defer></script>
-    <script src="../../../js/theme.js?1730593660" defer></script>
+    <script src="../../../js/clipboard.min.js?1730645781" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1730645781" defer></script>
+    <script src="../../../js/theme.js?1730645781" defer></script>
   </body>
 </html>

@@ -18,21 +18,21 @@
     <title>2.组合与继承 :: Maloudown</title>
     <link href="https://wungmeisilong.github.io/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" rel="canonical" type="text/html" title="2.组合与继承 :: Maloudown">
     <link href="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.xml" rel="alternate" type="application/rss+xml" title="2.组合与继承 :: Maloudown">
-    <link href="../../../images/favicon.png?1730467373" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1730593660" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1730467375" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730467375" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1730467375" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1730467375" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730467375" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1730467375" rel="stylesheet">
-    <link href="../../../css/fonts.css?1730467375" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730467375" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1730467375" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1730467375" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1730467375" rel="stylesheet">
-    <link href="../../../css/print.css?1730467375" rel="stylesheet" media="print">
-    <link href="../../../css/format-print.css?1730467375" rel="stylesheet">
-    <link href="../../../css/ie.css?1730467375" rel="stylesheet">
-    <script src="../../../js/url.js?1730467375"></script>
-    <script src="../../../js/variant.js?1730467375"></script>
+    <link href="../../../css/fontawesome-all.min.css?1730593660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1730593660" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1730593660" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1730593660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1730593660" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1730593660" rel="stylesheet">
+    <link href="../../../css/fonts.css?1730593660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1730593660" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1730593660" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1730593660" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1730593660" rel="stylesheet">
+    <link href="../../../css/print.css?1730593660" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1730593660" rel="stylesheet">
+    <link href="../../../css/ie.css?1730593660" rel="stylesheet">
+    <script src="../../../js/url.js?1730593660"></script>
+    <script src="../../../js/variant.js?1730593660"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -93,19 +93,19 @@
 <h2 id="类与类的三种关系">类与类的三种关系</h2>
 <h3 id="composition-复合">Composition-复合</h3>
 <p>以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构函数运行次序是，构造函数有内到外依次运行，析构函数则相反。可以使用下图表示这种关系</p>
-<p><a href="#R-image-f4d5442e441d1d29822426fd3f89f148" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4d5442e441d1d29822426fd3f89f148"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-4e293d981678b424dee51c0d3209d44e" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e293d981678b424dee51c0d3209d44e"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="delegation-委托">delegation-委托</h3>
 <p>当一个类欲用一个指针指向另一个类，以达到想使用时就指向这个类的这种关系就叫delegation，假设我要实现一个计算，此时指针指向这个函数，让函数去做这个计算。这有些类似于复合，但是这里重点在于指针的使用。在写一些功能的时候也建议使用这种关系的特性，因为这样就将两者隔开，起到一定的保护作用。参考下图：
-<a href="#R-image-805b13ee0be90e9417d2b1cd3293b43f" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-805b13ee0be90e9417d2b1cd3293b43f"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-c8118f31c9b3ff8f202aef5206b41194" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c8118f31c9b3ff8f202aef5206b41194"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="inheritance-继承">Inheritance-继承</h3>
 <p>在C++有三种继承方式，其中public是常用的一种，继承表示从一个类中集成某些属性成为 <strong>另外一种</strong> 类。</p>
-<p><a href="#R-image-ca21a33046b5bf573c12d1c5b562eba3" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca21a33046b5bf573c12d1c5b562eba3"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-781045ae21336ec7ed530ad22788b05a" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-781045ae21336ec7ed530ad22788b05a"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>Inheritance关系的两个类它们的构造函数与析构函数执行次序与之前描述复合时一样。如下图是这种关系的表示方法：
-<a href="#R-image-f2684a4e073eae2b7849d8f04bc2f3e4" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2684a4e073eae2b7849d8f04bc2f3e4"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-24bba4dd4ab27bc4740933d2aa209683" class="lightbox-link"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-24bba4dd4ab27bc4740933d2aa209683"><img src="../../../branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <ul>
 <li>构造函数（constructor）：由内到外，代码表示为<code>SunFunction::SunFunction(…):base(){…};</code></li>
 <li>析构函数（destructor）：由外到内，代码表示为<code>SunFunction::SunFunction(…){……~base();};</code></li>
@@ -133,8 +133,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard.min.js?1730467375" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1730467375" defer></script>
-    <script src="../../../js/theme.js?1730467375" defer></script>
+    <script src="../../../js/clipboard.min.js?1730593660" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1730593660" defer></script>
+    <script src="../../../js/theme.js?1730593660" defer></script>
   </body>
 </html>

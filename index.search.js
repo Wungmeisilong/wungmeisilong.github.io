@@ -173,7 +173,7 @@ var relearn_search_index = [
     "description": "",
     "tags": null,
     "title": "18.C++编程语言",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章",
@@ -201,7 +201,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 21.C语言程序设计（含面试）",
-    "content": "网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C++面试总结项目” “书籍：Github项目” “C/C++面试总结” “系统设计” 笔记 附件 ",
+    "content": "网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C++面试总结项目” “书籍：Github项目” “C/C++面试总结” “系统设计” 题目笔记 1.cahr *s = \"AAAA\"指针接受一个字符串（右值），当想通过s[0] = ‘B’修改时是无法修改成功的，因为\"AAAA\"只能读，不能写。 2.一般函数内如果返回char s[] = {“abcd”};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。 3.在自动类型转换中：\nunsiged int a = 9; int b = 1; printf(\"%d\", b+a);此处会触发隐式转换——int类型转为uniged int 类型。\n4.大端模式和小端模式的作用是什么，为什么会出现这两种模式？\n5.printf的返回值类型是变量的字符个数。 6.#和##运算符的使用\n#include \u003cstdio.h\u003e #define T(x) printf(\"\"#x\" square is the \",(x)*(x)) #define TEST(n) X##n int main(void){ T(4); int TEST(0) = 10; int TEST(1) = 20; printf(\"%d\",X1); }结果：\n4 square is the 16 X1 = 10 示例：\n//#pragma pack(4) #include \u003cstdio.h\u003e #define offsetof(TYPE, MEMBER) ((size_t ) \u0026((TYPE *)0)-\u003eMEMBER) typedef struct s { /* data */ union { int a;//4字节 char str[10];//10字节 }; struct s* next; }S; int main(){ printf(\"%ld\",offsetof(S, next)); return 0; }结果为16，因为电脑是64位的，所以以8字节对齐，联合体字节大小以最大的成员变量为准，故联合体的字节大小是10个字节\n附件 ",
     "description": "",
     "tags": [
       "C++面试",
@@ -278,7 +278,7 @@ var relearn_search_index = [
       "基本概念"
     ],
     "title": "14.新标准C加加程序设计",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",
@@ -335,7 +335,7 @@ var relearn_search_index = [
       "基本概念"
     ],
     "title": "13.从C到C++",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -345,7 +345,7 @@ var relearn_search_index = [
       ""
     ],
     "title": "12.其他库的介绍",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -355,7 +355,7 @@ var relearn_search_index = [
       ""
     ],
     "title": "11.STL库学习之适配器",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -365,7 +365,7 @@ var relearn_search_index = [
       ""
     ],
     "title": "10.STL库学习之仿函数",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -375,7 +375,7 @@ var relearn_search_index = [
       ""
     ],
     "title": "9.STL库学习之迭代器与算法",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -385,7 +385,7 @@ var relearn_search_index = [
       ""
     ],
     "title": "8.STL库学习之容器",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -395,7 +395,7 @@ var relearn_search_index = [
       "C++"
     ],
     "title": "7.STL库学习之分配器",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -405,7 +405,7 @@ var relearn_search_index = [
       "C++"
     ],
     "title": "6.STL库学习之筑基概要",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -416,7 +416,7 @@ var relearn_search_index = [
       "STL库"
     ],
     "title": "5.STL库之观其大略",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "Maloudown \u003e Tags",
@@ -444,17 +444,17 @@ var relearn_search_index = [
       "C++"
     ],
     "title": "4.C++2.0特性的使用",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
-    "content": "书籍推荐 《C++ Premier》 《C++ Programming Language》 《Effective Modern C++》 《Efficient C++》 《The C++ standard library》 《STL C++》 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 《算法+数据结构=程序》 学习路线 慕课C++学习 练习网站 conversion function-转换函数 接下来以一个分数的代码例子说明转换函数。\n情况1：让值转为其他类型\nclass Fraction { private: int m_num, m_den; public: Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } }; //使用示例： Fraction f(2,5); double d = 4+f;在上述的示例中，d = 4+f;程序会先判断有没有写opertaor +，如果没有会试着将f通过opertaor double()转为double类型。\n情况2：non-explicit-one-argument-ctor，不带explicit的一个参数的构造函数，将其他类型转为预所写类的类型\nclass Fraction { private: int m_num, m_den; public: Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } }; //使用示例： Fraction f1(2,5); Fraction f2 = 4+f1;同样在这个地方会先将4转为Fraction，然后在进行相加，转换函数使用的是构造函数，构造函数默认第二个参数是1，也就一个参数时也可用，但这个意思并不是说f1(2)你不写第二个参数。\n虽然向上面的情况可行，但是当你把两个情况结合在一起时，就会报错，例如你如下写：\nclass Fraction { private: int m_num, m_den; public: Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } Fraction operator + (const Fraction\u0026 f){ return Fraction(……); } };情况3：explicit-one-argument-ctor，带explicit的一个参数的构造函数 这个时候再使用刚才的例子，程序就会报错，因为此时是两种情况的结合，意味着两种情况都可以实现，编译器此时就不知道该使用哪个方法，为了解决这个问题，你可以使用关键字explicit来约束构造函数，让其他类型如法转为所写类，这个时候编译器会报错说无法将double类型转为Fraction。如下：\nclass Fraction { private: int m_num, m_den; public: explicit Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } Fraction operator + (const Fraction\u0026 f){ return Fraction(……); } }; //示例 Fraction f1(2,5); Fraction f2 = 4+f1;编写的类大两个大方向 智能指针 伪函数 这样的类会像函数一样接收参数，返回某一类型的值通常会看到类中重载operate() (……){……}函数。\n特化 偏特化–对应泛化 个数上的偏 以我的理解就是假设原先设计的模版为\ntemplate \u003ctypename a, typename b……\u003e class A {……}现在我使用偏特化，写为\ntemplate \u003ctypename b\u003e class A\u003cbool, typename b……\u003e {……}也就是第一个参数已经确定是bool类型了。（大概先这么理解吧:smile: :smile: :smile:）\n范围上的偏特化 一般我们的类模版你可以任意指定类型，但是现在我想写一个用指针指向的类模板，那么他就被限制在一定的范围内了\ntemplate \u003ctypename a\u003e class A {……} //范围偏特化 template \u003ctypename a\u003e class A\u003ctypename* a\u003e {……}模板模板类 假设我要创建一个容器，并指定这个容器内容的类型，这个时候可以使用模版模版类，详细看下图： 附件 ",
+    "content": "书籍推荐 《C++ Premier》 《C++ Programming Language》 《Effective Modern C++》 《Efficient C++》 《The C++ standard library》 《STL C++》 《STL源码剖析》 《算法+数据结构=程序》 “网站CPLusPlus” “网站CppReference” “网站gcc.gnu” 学习路线 慕课C++学习 练习网站 conversion function-转换函数 接下来以一个分数的代码例子说明转换函数。\n情况1：让值转为其他类型\nclass Fraction { private: int m_num, m_den; public: Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } }; //使用示例： Fraction f(2,5); double d = 4+f;在上述的示例中，d = 4+f;程序会先判断有没有写opertaor +，如果没有会试着将f通过opertaor double()转为double类型。\n情况2：non-explicit-one-argument-ctor，不带explicit的一个参数的构造函数，将其他类型转为预所写类的类型\nclass Fraction { private: int m_num, m_den; public: Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } }; //使用示例： Fraction f1(2,5); Fraction f2 = 4+f1;同样在这个地方会先将4转为Fraction，然后在进行相加，转换函数使用的是构造函数，构造函数默认第二个参数是1，也就一个参数时也可用，但这个意思并不是说f1(2)你不写第二个参数。\n虽然向上面的情况可行，但是当你把两个情况结合在一起时，就会报错，例如你如下写：\nclass Fraction { private: int m_num, m_den; public: Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } Fraction operator + (const Fraction\u0026 f){ return Fraction(……); } };情况3：explicit-one-argument-ctor，带explicit的一个参数的构造函数 这个时候再使用刚才的例子，程序就会报错，因为此时是两种情况的结合，意味着两种情况都可以实现，编译器此时就不知道该使用哪个方法，为了解决这个问题，你可以使用关键字explicit来约束构造函数，让其他类型如法转为所写类，这个时候编译器会报错说无法将double类型转为Fraction。如下：\nclass Fraction { private: int m_num, m_den; public: explicit Fraction(int num, int den = 1) : m_num(num),m_den(den){} opertaor double() const { return (double)(m_num/m_den); } Fraction operator + (const Fraction\u0026 f){ return Fraction(……); } }; //示例 Fraction f1(2,5); Fraction f2 = 4+f1;编写的类大两个大方向 智能指针 伪函数 这样的类会像函数一样接收参数，返回某一类型的值通常会看到类中重载operate() (……){……}函数。\n特化 偏特化–对应泛化 个数上的偏 以我的理解就是假设原先设计的模版为\ntemplate \u003ctypename a, typename b……\u003e class A {……}现在我使用偏特化，写为\ntemplate \u003ctypename b\u003e class A\u003cbool, typename b……\u003e {……}也就是第一个参数已经确定是bool类型了。（大概先这么理解吧:smile: :smile: :smile:）\n范围上的偏特化 一般我们的类模版你可以任意指定类型，但是现在我想写一个用指针指向的类模板，那么他就被限制在一定的范围内了\ntemplate \u003ctypename a\u003e class A {……} //范围偏特化 template \u003ctypename a\u003e class A\u003ctypename* a\u003e {……}模板模板类 假设我要创建一个容器，并指定这个容器内容的类型，这个时候可以使用模版模版类，详细看下图： 附件 ",
     "description": "",
     "tags": [
       "C++"
     ],
     "title": "3.导读",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/3.%E5%AF%BC%E8%AF%BB/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/3.%E5%AF%BC%E8%AF%BB/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -464,7 +464,7 @@ var relearn_search_index = [
       "C++"
     ],
     "title": "2.组合与继承",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/"
   },
   {
     "breadcrumb": "Maloudown \u003e 一、博客文章 \u003e 18.C++编程语言",
@@ -474,7 +474,7 @@ var relearn_search_index = [
       "C++"
     ],
     "title": "1.代码编写规范",
-    "uri": "/branch-bundle-1/18.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/"
+    "uri": "/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/"
   },
   {
     "breadcrumb": "Maloudown \u003e 二、小 说",

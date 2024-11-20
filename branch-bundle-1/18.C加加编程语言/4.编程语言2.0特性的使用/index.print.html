@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="4.C&#43;&#43;2.0特性的使用 :: Maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="4.C&#43;&#43;2.0特性的使用 :: Maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/">
+    <meta property="og:site_name" content="Maloudown">
+    <title>4.C&#43;&#43;2.0特性的使用 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="canonical" type="text/html" title="4.C++2.0特性的使用 :: Maloudown">
+    <link href="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/index.xml" rel="alternate" type="application/rss+xml" title="4.C++2.0特性的使用 :: Maloudown">
+    <link href="../../../images/favicon.png?1732119286" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1732119286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1732119286" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1732119286" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1732119286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1732119286" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1732119286" rel="stylesheet">
+    <link href="../../../css/fonts.css?1732119286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1732119286" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1732119286" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1732119286" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1732119286" rel="stylesheet">
+    <link href="../../../css/print.css?1732119286" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1732119286" rel="stylesheet">
+    <link href="../../../css/ie.css?1732119286" rel="stylesheet">
+    <script src="../../../js/url.js?1732119286"></script>
+    <script src="../../../js/variant.js?1732119286"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span itemprop="name">18.C&#43;&#43;编程语言</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">4.C&#43;&#43;2.0特性的使用</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/c/">C</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="4c20特性的使用">4.C&#43;&#43;2.0特性的使用</h1>
+
+<h2 id="vs-2022的设置">VS 2022的设置</h2>
+<p>首先你可以先用下面的代码测试使用可以执行：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printTypes</span>() {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T, <span style="color:#66d9ef">typename</span>... U<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> printTypes(<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> t, <span style="color:#66d9ef">const</span> U<span style="color:#f92672">&amp;</span>... u) {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> t <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>        printTypes(u...);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>        printTypes(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#ae81ff">1.5</span>, <span style="color:#e6db74">&#39;b&#39;</span>);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div><p>如果报错了，如typename&hellip;未定义，那么请你按照如下步骤操作，
+<a href="#R-image-5dad36a575bcbdd96868efa8a6b07f99" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5dad36a575bcbdd96868efa8a6b07f99"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<ul>
+<li>C++语言标准选择<code>预览 - 最新 C++ 工作草案中的功能 (/std:c++latest)</code></li>
+<li>启用实验性C++标准库模块&ndash;<code>是</code></li>
+<li>生成ISO C++23标准库模块 &ndash; <code>是</code></li>
+</ul>
+<h2 id="const补充">const补充</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>const 参数</th>
+<th>non-const 参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>const 函数</td>
+<td>可执行</td>
+<td>可执行</td>
+</tr>
+<tr>
+<td>non-const 函数</td>
+<td>报错</td>
+<td>可执行</td>
+</tr>
+</tbody>
+</table>
+<p>使用const需要注意两个问题，参数是否需要修改，参数进入函数内后数据是都会修改。解决这两个问题，在需要的地方加上const</p>
+<p>还有一种情况，</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">foo</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        T fooTo(T str) <span style="color:#66d9ef">const</span> { <span style="color:#66d9ef">return</span> str; };
+</span></span><span style="display:flex;"><span>        T <span style="color:#a6e22e">fooTo</span>(T str)  {<span style="color:#66d9ef">return</span> str;};
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>        foo <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">&gt;</span> f;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;c&#39;</span>;
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span>  f.fooTo(x) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span>  f.fooTo(y) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div><p>运行结果如下:
+<a href="#R-image-1a2d89756c6cfca27964e012c76e9ec2" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a2d89756c6cfca27964e012c76e9ec2"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>
+在这个例子中，带const的参数只会执行带const的函数，而不带const的参数会只会执行不带const的函数，这就是带const和不带const函数出现时的情况。
+但是这个结果我并不是很满意，应为我试着在不带const函数内部修改传入的参数，代码执行时将不会以我上面说的结论出现。或许还需要在研究研究……</p>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1732119286" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1732119286" defer></script>
+    <script src="../../../js/theme.js?1732119286" defer></script>
+  </body>
+</html>

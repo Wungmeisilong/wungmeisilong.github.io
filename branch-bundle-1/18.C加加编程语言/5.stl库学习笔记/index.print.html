@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="5.STL库之观其大略 :: Maloudown">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="5.STL库之观其大略 :: Maloudown">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <meta property="og:site_name" content="Maloudown">
+    <title>5.STL库之观其大略 :: Maloudown</title>
+    <link href="https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="canonical" type="text/html" title="5.STL库之观其大略 :: Maloudown">
+    <link href="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="alternate" type="application/rss+xml" title="5.STL库之观其大略 :: Maloudown">
+    <link href="../../../images/favicon.png?1732119286" rel="icon" type="image/png">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="../../../css/fontawesome-all.min.css?1732119286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1732119286" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1732119286" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1732119286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1732119286" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1732119286" rel="stylesheet">
+    <link href="../../../css/fonts.css?1732119286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1732119286" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1732119286" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1732119286" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1732119286" rel="stylesheet">
+    <link href="../../../css/print.css?1732119286" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1732119286" rel="stylesheet">
+    <link href="../../../css/ie.css?1732119286" rel="stylesheet">
+    <script src="../../../js/url.js?1732119286"></script>
+    <script src="../../../js/variant.js?1732119286"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="../../../index.search.js";
+      var root_url="../../../";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/wungmeisilong.github.io/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'zen-light', 'zen-dark', 'neon', 'zen-light' ] );
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+              <button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)">
+                <i class="fa-fw fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../"><span itemprop="name">Maloudown</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/"><span itemprop="name">一、博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span itemprop="name">18.C&#43;&#43;编程语言</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">5.STL库之观其大略</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/c/">C</a></li>
+    <li><a class="term-link" href="../../../tags/stl%E5%BA%93/">STL库</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="5stl库之观其大略">5.STL库之观其大略</h1>
+
+<h2 id="一下主要讲stl组件的测试用例特别是容器的测试">一下主要讲STL组件的测试用例，特别是容器的测试</h2>
+<h2 id="学习资料">学习资料</h2>
+<ul>
+<li>CPLusPlus.com</li>
+<li>CppReference.com</li>
+<li>gcc.gnu.org</li>
+<li>《STL源码剖析》</li>
+</ul>
+<h2 id="stl六大组件">STL六大组件</h2>
+<ul>
+<li>容器-Containers，申请内存用于存储数据</li>
+<li>分配器-Allocators，配合容器分配内存</li>
+<li>算法- Algorithms，处理某一数据的最优办法</li>
+<li>迭代器-  Iterators，指针的泛型，本质与指针类似</li>
+<li>适配器- Adapters，</li>
+<li>仿函数-Functors，类似函数。</li>
+</ul>
+<p>六者的关系</p>
+<p><a href="#R-image-fef8e8b248987cd14f9cdc5d87400f3b" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fef8e8b248987cd14f9cdc5d87400f3b"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="begin和end">begin()和end()</h2>
+<p>以迭代器为例，begin()指向迭代器的首地址，而end()指向迭代器尾地址的下一位，可以用前闭后开区间来表示，即**[ )**</p>
+<h2 id="容器的分类">容器的分类</h2>
+<p><a href="#R-image-bf842eb307f3b7409301aa8337e6e236" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf842eb307f3b7409301aa8337e6e236"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-664c6fdbb89d15ba2bf6f9bdd6ffabd5" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-664c6fdbb89d15ba2bf6f9bdd6ffabd5"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<h2 id="数组容器的使用">数组容器的使用</h2>
+<h3 id="array-的使用">array 的使用</h3>
+<div class="tab-panel" data-tab-group="80cddb2eb077276bc615937e791a7304">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例1</div>
+    <button
+      data-tab-item="h文件"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('80cddb2eb077276bc615937e791a7304','h文件')"
+    >
+      <span class="tab-nav-text">.h文件</span>
+    </button>
+    <button
+      data-tab-item="testcode"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('80cddb2eb077276bc615937e791a7304','testcode')"
+    >
+      <span class="tab-nav-text">testCode</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('80cddb2eb077276bc615937e791a7304','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="h文件"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>        <span style="color:#75715e">#ifndef __AUXFUN__
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">#define __AUXFUN__
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">#define RAMD_MAX 32767
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">get_a_target_long</span>()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;target (0--&#34;</span> <span style="color:#f92672">&lt;&lt;</span> RAMD_MAX <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;):&#34;</span>;
+</span></span><span style="display:flex;"><span>            cin <span style="color:#f92672">&gt;&gt;</span> target;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> target;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//将数值转为string，这样可以测试类似object的情况
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        string <span style="color:#a6e22e">get_a_target_string</span>()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;target (0--&#34;</span> <span style="color:#f92672">&lt;&lt;</span> RAMD_MAX <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;):&#34;</span>;
+</span></span><span style="display:flex;"><span>            cin <span style="color:#f92672">&gt;&gt;</span> target;
+</span></span><span style="display:flex;"><span>            snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, target);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> string(buf);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareLongs</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> a, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> b)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> (<span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)a <span style="color:#f92672">-</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)b);
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            1.类型转换：因为参数是const void* 类型，你需要将它们转换为具体的数据类型指针（在这个例子中是long* ），以便可以解引用并获取它们的值。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            2.解引用：在转换之后，通过在类型转换的结果前使用* 操作符来获取指针指向的实际值。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            3.强制转换的结果：* (long*)a实际上是一个long值，它是通过解引用转换后的指针得到的。*/</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareString</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> a, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> b)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)a <span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)b)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)a <span style="color:#f92672">&lt;</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)b)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#endif </span><span style="color:#75715e">// !__ENTRY__
+</span></span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="testcode"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;TestHeardFiles/AuxFun.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ctime&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdlib&gt;</span><span style="color:#75715e">//qsort()、 bsearch()、 NULL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;array&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> size_t ASIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">50000</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">namespace</span> t01
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_array</span>()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_array().............. </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span>, ASIZE<span style="color:#f92672">&gt;</span> c;<span style="color:#75715e">//使用数组容器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> ASIZE; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                c[i] <span style="color:#f92672">=</span> rand();<span style="color:#75715e">//可以产生随机数的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli_seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;array.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//返回数组大小
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;array.back(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.back() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//返回数组最后一个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;array.data: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.data() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//返回第一个数的地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> target <span style="color:#f92672">=</span> get_a_target_long();
+</span></span><span style="display:flex;"><span>            timeStart <span style="color:#f92672">=</span> clock();<span style="color:#75715e">//clock()返回毫秒数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            qsort(c.data(), ASIZE, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">long</span>), compareLongs);<span style="color:#75715e">//数组排序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">long</span><span style="color:#f92672">*</span> pItem <span style="color:#f92672">=</span> (<span style="color:#66d9ef">long</span><span style="color:#f92672">*</span>)bsearch(<span style="color:#f92672">&amp;</span>target, (c.data()), ASIZE, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">long</span>), compareLongs);<span style="color:#75715e">//数组查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;qsort()+bsearch(),milli-seconds:&#34;</span> <span style="color:#f92672">&lt;&lt;</span> clock() <span style="color:#f92672">-</span> timeStart <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>        t01<span style="color:#f92672">::</span>test_array();
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p><a href="#R-image-85d0b252b1dac48b984323fcdbdab499" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-85d0b252b1dac48b984323fcdbdab499"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+</div>
+    </div>
+  </div>
+</div>
+<h3 id="vector-的使用">vector 的使用</h3>
+<p>vector是一种向后自动以2次方增加的内存的容器，一般使用push_back向后添加数据；</p>
+<p>vector也有一定的缺点，假设我只需要5个内存空间，但是vector分配的是8个，剩下的3个后面如果不使用就会浪费。</p>
+<div class="tab-panel" data-tab-group="a81f11c2b1123089dc92ff55357183fc">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例2</div>
+    <button
+      data-tab-item="代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a81f11c2b1123089dc92ff55357183fc','代码')"
+    >
+      <span class="tab-nav-text">代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a81f11c2b1123089dc92ff55357183fc','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdexcept&gt;</span><span style="color:#75715e"> </span><span style="color:#75715e">//obort()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">	</span><span style="color:#75715e">//snprintf()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">//sort()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t02
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_vector</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value) {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_vector()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            vector<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push_back(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push_back()将数据存入容器尾部，这是vector的特性
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#75715e">//同时值得注意，当空间不足时，内存会自动增加，怎么加方式是2的平方
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;vector.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;vector.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;vector.back(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.back() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;vector.data(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.data() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;vector.capacity(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.capacity() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//返回的是向量当前分配的存储空间可以容纳的元素个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            string target <span style="color:#f92672">=</span> get_a_target_string();<span style="color:#75715e">//获取输入的数字，并转为string类型返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//使用算法find查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//返回类型是：使用全局::find()寻找目标，这是循环寻找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//判断有没有找到
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//进行排序后使用bsearch查找。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                sort(c.begin(), c.end());<span style="color:#75715e">//该算法将任何类型进行排序，需要提供相应的比较函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                string<span style="color:#f92672">*</span> pItem <span style="color:#f92672">=</span> (string<span style="color:#f92672">*</span>)bsearch(<span style="color:#f92672">&amp;</span>target, (c.data()), c.size(), <span style="color:#66d9ef">sizeof</span>(string), compareString);
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;sort()+bsearch(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> NULL) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p><a href="#R-image-86f8e51f0b138e926215b391a534f7e3" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-86f8e51f0b138e926215b391a534f7e3"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+</div>
+    </div>
+  </div>
+</div>
+<p>从上面的结果来看，排序后使用二分查找反而比循环查找慢，原因在于排序话费了很多时间，因为string类型是一个object，其本身大小比较大，所以面对一个object进行查找时不建议使用排序后二分查找。</p>
+<p>在实际应用中，选择排序加二分查找还是直接线性查找，需要根据具体情况来决定：</p>
+<ul>
+<li>如果容器已经排序，或者数据量不大，直接使用二分查找可能更简单、更快。</li>
+<li>如果容器未排序，且数据量很大，那么可能需要考虑是否值得为了一次查找而进行排序，或者是否可以通过其他方式（如使用更高效的数据结构，如哈希表）来提高查找效率。</li>
+<li>如果查找操作非常频繁，而插入和删除操作不频繁，那么维护一个已排序的容器可能是合理的，这样每次查找都可以利用二分查找的效率。</li>
+</ul>
+<p>总之，选择哪种方法取决于具体的应用场景和性能要求。在某些情况下，可能需要通过实验或性能分析来确定最佳的策略。</p>
+<h3 id="链表容器-list">链表容器-list</h3>
+<p>std::list 是 C++ 标准库中的一个容器，它提供了双向链表的实现。</p>
+<p><strong>std::list 容器的特点：</strong></p>
+<ul>
+<li>双向链表结构：std::list 由一系列节点组成，每个节点包含一个元素和两个指针，分别指向前一个节点和后一个节点。</li>
+<li>动态内存分配：std::list 中的每个节点都是独立分配内存的。这意味着当你添加或删除元素时，std::list 会为新元素分配内存，或释放不再使用的元素所占用的内存。</li>
+<li>内存空间利用：由于 std::list 的元素是单独分配的，因此不存在像 std::vector 那样的连续内存块，也就不会有额外的内存浪费。每个元素恰好占用它所需的空间，加上一些指针存储开销。</li>
+</ul>
+<p><strong>查询操作效率：</strong></p>
+<ul>
+<li>查询效率较低：与 std::vector 或 std::array 这样的随机访问容器相比，std::list 的查询操作通常较慢。这是因为 std::list 没有提供快速的随机访问能力。</li>
+<li>顺序访问：在 std::list 中，要访问一个特定位置的元素，你需要从头开始遍历，直到到达那个位置。这意味着访问时间与列表的大小成正比，最坏情况下的时间复杂度为 O(n)。</li>
+<li>没有跳跃访问：与数组或 std::vector 不同，std::list 没有提供直接跳到任意位置的能力。在数组中，你可以通过简单的指针算术来访问任意位置的元素，而在 std::list 中，你必须遍历链表。</li>
+</ul>
+<p><strong>测试代码：</strong></p>
+<div class="tab-panel" data-tab-group="505c423a9eb2ebfcb796bbaee659f872">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例3</div>
+    <button
+      data-tab-item="代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('505c423a9eb2ebfcb796bbaee659f872','代码')"
+    >
+      <span class="tab-nav-text">代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('505c423a9eb2ebfcb796bbaee659f872','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;list&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t03
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_list</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_list()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            list<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push_back(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push_back()将数据存入容器尾部，这是vector的特性
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#75715e">//同时值得注意，当空间不足时，内存会自动增加，怎么加方式是2的平方
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;list.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;list.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;list.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;list.back(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.back() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            string target <span style="color:#f92672">=</span> get_a_target_string();<span style="color:#75715e">//获取输入的数字，并转为string类型返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//使用算法find查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//返回类型是：使用全局::find()寻找目标，这是循环寻找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//判断有没有找到
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//测试排序花费的时间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                c.sort();<span style="color:#75715e">//使用list自带的排序函数，当然也可以用全局的sort，一般如果容器自带，则选择自带的。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;list.sort(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_list</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1073</span>
+</span></span><span style="display:flex;"><span>    list.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    list.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">329406144173384850</span>
+</span></span><span style="display:flex;"><span>    list.<span style="color:#a6e22e">front</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">41</span>
+</span></span><span style="display:flex;"><span>    list.<span style="color:#a6e22e">back</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">12679</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>    found,<span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    list.<span style="color:#a6e22e">sort</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1611</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<p><strong>总结：</strong>
+std::list 的优点在于它的灵活性和高效的插入/删除操作，这些操作可以在 O(1) 时间内完成，因为它们只需要修改几个指针。然而，这种灵活性的代价是牺牲了快速随机访问的能力。因此，如果你的应用场景中需要频繁地在序列中间插入或删除元素，而不太关心随机访问性能，std::list 是一个很好的选择。反之，如果随机访问是一个关键操作，那么可能需要考虑使用其他类型的容器。</p>
+<h3 id="链表容器-forward_list">链表容器-forward_list</h3>
+<p>std::forward_list 是 C++ 标准库中的一个容器，它提供了单向链表的实现。</p>
+<p><strong>std::forward_list 容器的特点：</strong></p>
+<ul>
+<li>单向链表结构：std::forward_list 由一系列节点组成，每个节点包含一个元素和一个指向下一个节点的指针。</li>
+<li>内存分配：与 std::list 类似，std::forward_list 的元素也是动态分配内存的。但是，由于它是单向链表，所以只能从链表的前端（头部）开始进行内存分配。</li>
+<li>操作限制：由于 std::forward_list 的单向特性，它只提供了 push_front() 和 pop_front() 操作来在链表的前端添加或删除元素。不支持快速的随机访问，也不支持在链表的中间或末尾进行插入和删除操作。</li>
+</ul>
+<p><strong>内存使用效率：</strong></p>
+<ul>
+<li>无尾插法：std::forward_list 没有 push_back() 方法，只能使用 push_front() 在链表的头部插入元素。这意味着，如果你需要在链表的末尾添加元素，你将不得不遍历整个链表以到达末尾，这在大型数据集中可能效率较低。</li>
+<li>节省空间：与 std::list 相比，std::forward_list 每个节点只需要存储一个指向下一个节点的指针，因此它的内存开销比 std::list 小。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>空间敏感的应用：如果你的应用对内存使用非常敏感，且需要从链表的前端进行频繁的插入和删除操作，std::forward_list 是一个不错的选择。</li>
+<li>单向遍历：如果你的应用只需要从链表的前端开始遍历元素，那么 std::forward_list 可以提供良好的性能。</li>
+</ul>
+<p><strong>测试代码</strong></p>
+<div class="tab-panel" data-tab-group="011bbd376e7ca110ebc99a91baaf9cc5">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例3</div>
+    <button
+      data-tab-item="代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('011bbd376e7ca110ebc99a91baaf9cc5','代码')"
+    >
+      <span class="tab-nav-text">代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('011bbd376e7ca110ebc99a91baaf9cc5','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;forward_list&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t04
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_forward_list</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">forward_list()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            forward_list<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push_front(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push_frond()将数据存入容器头部，forward_list没有push_back()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;forward_list.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;forward_list.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//cout &lt;&lt; &#34;forward_list.back(): &#34; &lt;&lt; c.back() &lt;&lt; endl;	没有该函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//cout &lt;&lt; &#34;forward_list.size(): &#34; &lt;&lt; c.size() &lt;&lt; endl;	没有该函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            string target <span style="color:#f92672">=</span> get_a_target_string();<span style="color:#75715e">//获取输入的数字，并转为string类型返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//使用算法find查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//返回类型是：使用全局::find()寻找目标，这是循环寻找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//判断有没有找到
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//测试排序花费的时间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                c.sort();<span style="color:#75715e">//使用forward_list自带的排序函数，当然也可以用全局的sort，一般如果容器自带，则选择自带的。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;forward_list.sort(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">forward_list</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">965</span>
+</span></span><span style="display:flex;"><span>    forward_list.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">384307168202282325</span>
+</span></span><span style="display:flex;"><span>    forward_list.<span style="color:#a6e22e">front</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">12679</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    found,<span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    forward_list.<span style="color:#a6e22e">sort</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1595</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<p>值得注意的是：
+std::forward_list 专为高效的前端插入和删除操作设计，std::forward_list 没有 push_back() 是因为它是单向链表，
+只能高效地从前面操作。它没有 size() 函数，因为计算链表长度需要遍历整个链表，这与它优化前端操作的设计目标不符。</p>
+<p><strong>总结：</strong></p>
+<p>std::forward_list 是一个轻量级的容器，它在内存使用上比 std::list 更为高效，但在功能上也更为有限。它适合于那些只需要单向遍历和操作的场景。由于其单向链表的特性，std::forward_list 在进行元素插入和删除时，只能从链表的前端进行，这限制了它的使用场景。在选择 std::forward_list 时，需要根据应用的具体需求来权衡其优势和局限性。</p>
+<h3 id="链表容器-slist">链表容器-slist</h3>
+<p>slist容器与forward_list容器一样，只是slis容器存在于ext\slist头文件中。</p>
+<p><strong>测试代码：</strong></p>
+<div class="tab-panel" data-tab-group="b2372c1ff0e7c9389cb2c1f943261f56">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例3</div>
+    <button
+      data-tab-item="代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('b2372c1ff0e7c9389cb2c1f943261f56','代码')"
+    >
+      <span class="tab-nav-text">代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('b2372c1ff0e7c9389cb2c1f943261f56','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;forward_list&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t04
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_forward_list</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">forward_list()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            forward_list<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push_front(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push_frond()将数据存入容器头部，forward_list没有push_back()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;forward_list.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;forward_list.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//cout &lt;&lt; &#34;forward_list.back(): &#34; &lt;&lt; c.back() &lt;&lt; endl;	没有该函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//cout &lt;&lt; &#34;forward_list.size(): &#34; &lt;&lt; c.size() &lt;&lt; endl;	没有该函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            string target <span style="color:#f92672">=</span> get_a_target_string();<span style="color:#75715e">//获取输入的数字，并转为string类型返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//使用算法find查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//返回类型是：使用全局::find()寻找目标，这是循环寻找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//判断有没有找到
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//测试排序花费的时间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                c.sort();<span style="color:#75715e">//使用forward_list自带的排序函数，当然也可以用全局的sort，一般如果容器自带，则选择自带的。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;forward_list.sort(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">forward_list</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">965</span>
+</span></span><span style="display:flex;"><span>    forward_list.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">384307168202282325</span>
+</span></span><span style="display:flex;"><span>    forward_list.<span style="color:#a6e22e">front</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">12679</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    found,<span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    forward_list.<span style="color:#a6e22e">sort</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1595</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<h2 id="双向容器-deque">双向容器-deque</h2>
+<p><a href="#R-image-dd024b71cd8724190c2b56956590ebe1" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd024b71cd8724190c2b56956590ebe1"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>std::deque（双端队列）是一种容器，它允许在序列的前端和后端快速插入和删除元素。尽管从概念图上看，
+std::deque 似乎是一个连续的存储空间，但实际上它并不是连续的。std::deque 的实现通常是由一个或多个固定大小的连续内存块
+（通常称为“节点”或“块”）组成的，这些块通过指针连接在一起。</p>
+<p>以下是对您提供内容的整理：</p>
+<ul>
+<li>存储机制：std::deque 由多个指针组成，每个指针指向一个具有一定容量的连续内存块。这些内存块被组织在一起，形成一个能够从两端快速增长的容器。</li>
+<li>内存管理：当 std::deque 中的一个内存块满了，需要更多的空间时，它会“自动跳转”到下一个空闲的内存块的开始位置。如果所有现有的内存块都已满，std::deque 会分配一个新的内存块，并更新指针以指向这个新的块。</li>
+<li>内存效率：使用固定容量的内存块可以减少内存浪费。例如，如果每个内存块的大小为8个元素，那么即使只存储一个元素，也只会浪费7个元素的空间（因为第一个块始终被使用）。这与 std::vector 相比，后者可能会因为频繁的内存重新分配而导致更多的内存浪费。</li>
+<li>动态增长：当 std::deque 需要更多内存时，它会动态地增加新的内存块。这种设计使得 std::deque 能够在不牺牲太多内存的情况下，提供快速的插入和删除操作。</li>
+<li>连续性：尽管 std::deque 在内部不是完全连续的，但它提供了随机访问的能力，这意味着你可以像访问 std::vector 或数组一样，通过索引来访问 std::deque 中的任何元素。</li>
+</ul>
+<p>总的来说，std::deque 是一个灵活且高效的容器，适用于需要在序列的两端进行频繁插入和删除操作的场景。它的设计既考虑了性能，
+也考虑了内存使用效率。</p>
+<p><strong>测试代码：</strong></p>
+<div class="tab-panel" data-tab-group="38b7a119068e0e996bda202fd1121d85">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例3</div>
+    <button
+      data-tab-item="代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('38b7a119068e0e996bda202fd1121d85','代码')"
+    >
+      <span class="tab-nav-text">代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('38b7a119068e0e996bda202fd1121d85','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;deque&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t05
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_deque</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_deque()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            deque<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push_back(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push_back()将数据存入容器尾部
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;deque.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;deque.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;deque.back(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.back() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;deque.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            string target <span style="color:#f92672">=</span> get_a_target_string();<span style="color:#75715e">//获取输入的数字，并转为string类型返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">//使用算法find查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//返回类型是：使用全局::find()寻找目标，这是循环寻找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//判断有没有找到
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//测试排序花费的时间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                sort(c.begin(), c.end());<span style="color:#75715e">//使用全局的sort,deque没有自己的sort。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;deque.sort(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_deque</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1055</span>
+</span></span><span style="display:flex;"><span>    deque.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">461168601842738790</span>
+</span></span><span style="display:flex;"><span>    deque.<span style="color:#a6e22e">front</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">41</span>
+</span></span><span style="display:flex;"><span>    deque.<span style="color:#a6e22e">back</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">12679</span>
+</span></span><span style="display:flex;"><span>    deque.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>    found,<span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    deque.<span style="color:#a6e22e">sort</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">3838</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<h2 id="特殊容器-stack和queue">特殊容器-stack和queue</h2>
+<h3 id="stdstack栈">std::stack（栈）</h3>
+<p><strong>定义：</strong></p>
+<p>std::stack 是一个遵循后进先出（LIFO，Last In First Out）原则的容器适配器。它只能在序列的一端（栈顶）进行添加（push）和移除（pop）操作。</p>
+<p><strong>主要操作：</strong></p>
+<ul>
+<li>push()：在栈顶添加一个元素。</li>
+<li>pop()：移除栈顶元素。</li>
+<li>top()：返回栈顶元素的引用，不移除它。</li>
+</ul>
+<p><strong>特点：</strong></p>
+<ul>
+<li>只能单端操作，即只能在栈顶进行操作。</li>
+<li>没有提供直接的迭代器支持，但提供了 top() 方法来访问栈顶元素。</li>
+</ul>
+<h3 id="stdqueue队列">std::queue（队列）</h3>
+<p><strong>定义：</strong></p>
+<p>std::queue 是一个遵循先进先出（FIFO，First In First Out）原则的容器适配器。它只能在序列的一端（队尾）进行添加（push）操作，在另一端（队首）进行移除（pop）操作。</p>
+<p><strong>主要操作：</strong></p>
+<ul>
+<li>push()：在队尾添加一个元素。</li>
+<li>pop()：移除队首元素。</li>
+<li>front()：返回队首元素的引用，不移除它。</li>
+<li>back()：返回队尾元素的引用，不移除它。</li>
+</ul>
+<p><strong>特点：</strong></p>
+<ul>
+<li>双端操作，即在队首进行移除操作，在队尾进行添加操作。</li>
+<li>提供了迭代器支持，允许遍历队列中的所有元素。</li>
+</ul>
+<p><strong>与 std::deque 的不同.</strong></p>
+<ul>
+<li>操作限制：std::stack 和 std::queue 限制了操作的位置，而 std::deque 允许在两端自由操作。</li>
+<li>迭代器支持：std::stack 不支持迭代器，std::queue 支持迭代器但只能访问队列中的元素，而 std::deque 提供了随机访问迭代器，可以高效地访问序列中的任何位置。</li>
+<li>使用场景：如果你需要一个简单的后进先出或先进先出的数据结构，std::stack 或 std::queue 可能更适合。如果你需要一个能够在两端快速操作且支持随机访问的容器，std::deque 是更好的选择。</li>
+</ul>
+<p><strong>测试代码：</strong></p>
+<div class="tab-panel" data-tab-group="bb2126de6d4bed5e2e1766df8bdf249a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例4</div>
+    <button
+      data-tab-item="stack代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('bb2126de6d4bed5e2e1766df8bdf249a','stack代码')"
+    >
+      <span class="tab-nav-text">stack代码</span>
+    </button>
+    <button
+      data-tab-item="queue代码"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('bb2126de6d4bed5e2e1766df8bdf249a','queue代码')"
+    >
+      <span class="tab-nav-text">queue代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('bb2126de6d4bed5e2e1766df8bdf249a','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="stack代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stack&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t06
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_stack</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_stack()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            stack <span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;<span style="color:#75715e">//stack又叫栈，特点是先进后出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push()将数据压入容器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;stack.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;stack.top(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.top() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            c.pop();
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;stack.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;stack.top(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.top() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//与前面的容器不同，stack不可以进行查找操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="queue代码"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;queue&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t07
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_queue</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_queue()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            queue <span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;<span style="color:#75715e">//queue又叫队列，特点是先进先出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.push(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用push()将数据压入容器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;queue.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;queue.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;queue.back(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.back() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            c.pop();
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;queue.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;queue.front(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.front() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;queue.back(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.back() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//与前面的容器不同，queue也不提供查找操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_stack</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1050</span>
+</span></span><span style="display:flex;"><span>    stack.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    stack.<span style="color:#a6e22e">top</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">12679</span>
+</span></span><span style="display:flex;"><span>    stack.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">999999</span>
+</span></span><span style="display:flex;"><span>    stack.<span style="color:#a6e22e">top</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">17172</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_queue</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1027</span>
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">front</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">21384</span>
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">back</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1461</span>
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">999999</span>
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">front</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">10793</span>
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">back</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1461</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<h2 id="红黑树-multiset容器">红黑树-multiset容器</h2>
+<p>multiset容器结构类似二叉树，准确说是红黑树，这种结构的的查找会快很多，但是插入则会耗费一定时间，这些时间都花费在了排序上。</p>
+<p><strong>测试代码：</strong></p>
+<div class="tab-panel" data-tab-group="b19aeaa79bb7105c04bb36f0f3a1091f">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例8</div>
+    <button
+      data-tab-item="multiset代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('b19aeaa79bb7105c04bb36f0f3a1091f','multiset代码')"
+    >
+      <span class="tab-nav-text">multiset代码</span>
+    </button>
+    <button
+      data-tab-item="multimap代码"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('b19aeaa79bb7105c04bb36f0f3a1091f','multimap代码')"
+    >
+      <span class="tab-nav-text">multimap代码</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('b19aeaa79bb7105c04bb36f0f3a1091f','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="multiset代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;set&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t08
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_multiset</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_multiset()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            multiset <span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;<span style="color:#75715e">//multiset结构式红黑树
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.insert(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用insert()将数据存入容器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;multiset.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;multiset.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            string target <span style="color:#f92672">=</span> get_a_target_string();
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//使用全局::fingd()查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> c.find(target);<span style="color:#75715e">//使用multiset自身的fingd()查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c.find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="multimap代码"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;map&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t09
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_multimap</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_multimap()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            multimap <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span>,string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.insert(pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span>,string<span style="color:#f92672">&gt;</span>(i,buf));<span style="color:#75715e">//此处使用了pair设置键值对
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#75715e">//值得注意，multimap不可以用[]做insert，这一点可以结合map容器理解,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#75715e">//另外key是不会重复的，因为接收的是0-1000000，而值可能会重复，因为值是通过随机数函数rand()产生，范围为0-32767
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;multimap.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;multimap.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> target <span style="color:#f92672">=</span> get_a_target_long();
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> c.find(target);
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c.find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, (&#34;</span> <span style="color:#f92672">&lt;&lt;</span> (<span style="color:#f92672">*</span>pItem).first <span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span>pItem<span style="color:#f92672">-&gt;</span>second<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_multiset</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">3235</span>
+</span></span><span style="display:flex;"><span>    multiset.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    multiset.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">256204778801521550</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">23456</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">59</span>
+</span></span><span style="display:flex;"><span>    found, <span style="color:#ae81ff">23456</span>
+</span></span><span style="display:flex;"><span>    c.<span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    found, <span style="color:#ae81ff">23456</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_multimap</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1843</span>
+</span></span><span style="display:flex;"><span>    multimap.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    multimap.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">230584300921369395</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">23456</span>
+</span></span><span style="display:flex;"><span>    c.<span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    found, (<span style="color:#ae81ff">23456</span>, <span style="color:#ae81ff">31622</span>)</span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<p>从测试结果看，因为不会抛弃重复的值，multiset的元素个数与大小相等，且存值会话费很多时间。
+相比之下multimap存值时间会话费少一些。</p>
+<h2 id="unordered_multiset和unordered_multimap">unordered_multiset和unordered_multimap</h2>
+<p>std::unordered_map 和 std::unordered_set 是 C++ 标准库中的两种容器，它们基于哈希表实现。这两种容器提供平均时间复杂度为 O(1) 的快速访问，插入和删除操作。下面简单解释它们的概念图，包括桶和负载因子的说明。</p>
+<p><strong>概念图简述：</strong></p>
+<p><strong>桶（Buckets）：</strong></p>
+<p>在 std::unordered_map 和 std::unordered_set 中，哈希表被分为多个“桶”。
+每个桶存储指向一个链表的指针（在 std::unordered_map 的情况下）或直接存储元素（在 std::unordered_set 的情况下）。
+当元素被插入时，它们的哈希值决定了它们将被存储在哪个桶中。</p>
+<p><strong>链表（Chaining）：</strong></p>
+<p>如果多个元素具有相同的哈希值（哈希冲突），它们将被存储在同一个桶中，并通过链表连接起来。
+在 std::unordered_map 中，每个桶可能包含一个链表，链表中的每个节点存储一个键值对。
+在 std::unordered_set 中，每个桶可能包含一个链表，链表中的每个节点存储一个元素。</p>
+<p><strong>负载因子（Load Factor）：</strong></p>
+<p>负载因子是哈希表中已存储元素数量与桶数量的比率。
+负载因子影响哈希表的性能。较高的负载因子可能导致更多的哈希冲突，从而增加链表的长度，降低性能。
+当负载因子超过一个预设的最大值时，哈希表可能会进行重新哈希（rehashing），即增加桶的数量并重新分配所有元素到新的桶中。</p>
+<p><strong>概念图说明：</strong></p>
+<p><a href="#R-image-06f72cc9ea8238bee42211b4ac2e08e7" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-06f72cc9ea8238bee42211b4ac2e08e7"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<ul>
+<li>桶：哈希表被分为多个桶，每个桶可以存储一个链表的头部指针。</li>
+<li>指针：在 std::unordered_map 中，每个指针指向一个链表节点，该节点包含一个键值对。在 std::unordered_set 中，每个指针直接指向存储的元素。</li>
+<li>元素：链表中的元素，可能是键值对或单个值。</li>
+</ul>
+<p><strong>负载因子说明：</strong></p>
+<p>重新哈希（Rehashing）：当负载因子超过 max_load_factor() 时，哈希表会进行重新哈希，增加桶的数量，并将所有元素重新分配到新的桶中。
+动态调整：这种动态调整机制使得 std::unordered_map 和 std::unordered_set 能够根据元素数量的变化自动调整大小，以保持操作的性能。
+通过这种结构，std::unordered_map 和 std::unordered_set 能够在大多数情况下提供快速的访问和修改操作，但需要注意，极端情况下（如所有元素哈希到同一个桶中）性能可能会退化到 O(n)。</p>
+<p><strong>测试代码：</strong></p>
+<div class="tab-panel" data-tab-group="3bad00883fc1bcd88a46cf8e49984186">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例9</div>
+    <button
+      data-tab-item="unordere_multiset代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('3bad00883fc1bcd88a46cf8e49984186','unordere_multiset代码')"
+    >
+      <span class="tab-nav-text">unordere_multiset代码</span>
+    </button>
+    <button
+      data-tab-item="unordere_multiset结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('3bad00883fc1bcd88a46cf8e49984186','unordere_multiset结果')"
+    >
+      <span class="tab-nav-text">unordere_multiset结果</span>
+    </button>
+    <button
+      data-tab-item="unordere_multimap代码"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('3bad00883fc1bcd88a46cf8e49984186','unordere_multimap代码')"
+    >
+      <span class="tab-nav-text">unordere_multimap代码</span>
+    </button>
+    <button
+      data-tab-item="unordere_multimap结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('3bad00883fc1bcd88a46cf8e49984186','unordere_multimap结果')"
+    >
+      <span class="tab-nav-text">unordere_multimap结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="unordere_multiset代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unordered_set&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t10
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_unordered_multiset</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_unordered_multiset()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            unordered_multiset <span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.insert(string(buf));<span style="color:#75715e">//将随机数转为string类型，并使用insert()将数据存入容器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;unordered_multiset.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">// 打印 unordered_multiset 能存储的最大元素数量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;unordered_multiset.bucket_count(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.bucket_count() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">// 打印 unordered_multiset 中桶的数量，即存储指向一定长度链表的指针的个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;unordered_multiset.max_load_factor(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_load_factor() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">// 打印 unordered_multiset 可以使用的最大负载因子，它影响桶中链表的最大长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;unordered_multiset.max_bucket_count(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_bucket_count() <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">// 打印 unordered_multiset 可以使用的最大桶的数量，这个值通常由桶的增长策略和哈希表的容量决定
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">unsigned</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;bucket # &#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; has &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.bucket_size(i) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; element.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            string target <span style="color:#f92672">=</span> get_a_target_string();
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);<span style="color:#75715e">//使用全局::fingd()查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> c.find(target);<span style="color:#75715e">//使用multiset自身的fingd()查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c.find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="unordere_multiset结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_unordered_multiset</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1867</span>
+</span></span><span style="display:flex;"><span>    unordered_multiset.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">329406144173384850</span>
+</span></span><span style="display:flex;"><span>    unordered_multiset.<span style="color:#a6e22e">bucket_count</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1048576</span>
+</span></span><span style="display:flex;"><span>    unordered_multiset.<span style="color:#a6e22e">max_load_factor</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    unordered_multiset.<span style="color:#a6e22e">max_bucket_count</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1152921504606846975</span>
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">0</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">1</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">2</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">3</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">4</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">5</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">6</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">7</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">8</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">9</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">10</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">11</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">12</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">13</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">14</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">15</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">16</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">17</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">18</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    bucket <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">19</span> has <span style="color:#ae81ff">0</span> element.
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">108</span>
+</span></span><span style="display:flex;"><span>    found, <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    c.<span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    found, <span style="color:#ae81ff">12345</span></span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="unordere_multimap代码"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unordered_map&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">namespace</span> t11
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_unordered_multimap</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_unordered_multimap()..............</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>            multimap <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span>, string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c.insert(pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span>, string<span style="color:#f92672">&gt;</span>(i, buf));
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();<span style="color:#75715e">//发生异常使用该函数退出程序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;unordered_multimap.size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;unordered_multimap.max_size(): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> target <span style="color:#f92672">=</span> get_a_target_long();
+</span></span><span style="display:flex;"><span>            timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> c.find(target);
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c.find(),milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, (&#34;</span> <span style="color:#f92672">&lt;&lt;</span> (<span style="color:#f92672">*</span>pItem).first <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> pItem<span style="color:#f92672">-&gt;</span>second <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;)&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not found!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="unordere_multimap结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_unordered_multimap</span>()..............
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1942</span>
+</span></span><span style="display:flex;"><span>    unordered_multimap.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    unordered_multimap.<span style="color:#a6e22e">max_size</span>()<span style="color:#f92672">:</span> <span style="color:#ae81ff">230584300921369395</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    c.<span style="color:#a6e22e">find</span>(),milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    found, (<span style="color:#ae81ff">12345</span>, <span style="color:#ae81ff">5839</span>)</span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<h2 id="set和map容器">set和map容器</h2>
+<p>测试代码：</p>
+<div class="tab-panel" data-tab-group="e219a45d1afe11db237af321c12acc76">
+  <div class="tab-nav">
+    <div class="tab-nav-title">示例10</div>
+    <button
+      data-tab-item="set"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('e219a45d1afe11db237af321c12acc76','set')"
+    >
+      <span class="tab-nav-text">set</span>
+    </button>
+    <button
+      data-tab-item="map"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('e219a45d1afe11db237af321c12acc76','map')"
+    >
+      <span class="tab-nav-text">map</span>
+    </button>
+    <button
+      data-tab-item="结果"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('e219a45d1afe11db237af321c12acc76','结果')"
+    >
+      <span class="tab-nav-text">结果</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="set"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">namespace</span> t12
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_set</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value){
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test-set()............................</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            set<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                        snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                        c.insert(string(buf));
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                        abort();
+</span></span><span style="display:flex;"><span>                    } 
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;set.max_size() &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;set.size() &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                string target <span style="color:#f92672">=</span> get_a_target_string();
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> <span style="color:#f92672">::</span>find(c.begin(), c.end(), target);
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(), milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> c.find(target);
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;find(), milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>pItem <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not fount!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="map"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>   <span style="color:#66d9ef">namespace</span> t13
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test_map</span>(<span style="color:#66d9ef">long</span><span style="color:#f92672">&amp;</span> value) {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">test_map()............................</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span>,string<span style="color:#f92672">&gt;</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>            clock_t timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> value; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    snprintf(buf, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;%d&#34;</span>, rand());
+</span></span><span style="display:flex;"><span>                    c[i] <span style="color:#f92672">=</span> string(buf);<span style="color:#75715e">//注意这种使用方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">catch</span> (exception<span style="color:#f92672">&amp;</span> p)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;i = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> p.what() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                    abort();
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;map.max_size() &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.max_size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;map.size() &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> target <span style="color:#f92672">=</span> get_a_target_long();
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                timeStart <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">auto</span> pItem <span style="color:#f92672">=</span> c.find(target);
+</span></span><span style="display:flex;"><span>                cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;::find(), milli-seconds: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> (clock() <span style="color:#f92672">-</span> timeStart) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pItem <span style="color:#f92672">!=</span> c.end()) {
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;found value, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> pItem<span style="color:#f92672">-&gt;</span>second <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;not fount value!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></div>
+    </div>
+    <div
+      data-tab-item="结果"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    How much memory space you need: <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    test<span style="color:#f92672">-</span><span style="color:#a6e22e">set</span>()............................
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">2133</span>
+</span></span><span style="display:flex;"><span>    set.<span style="color:#a6e22e">max_size</span>() <span style="color:#ae81ff">256204778801521550</span>
+</span></span><span style="display:flex;"><span>    set.<span style="color:#a6e22e">size</span>() <span style="color:#ae81ff">32768</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(), milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    found, <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">find</span>(), milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    found, <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test_map</span>()............................
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">1937</span>
+</span></span><span style="display:flex;"><span>    map.<span style="color:#a6e22e">max_size</span>() <span style="color:#ae81ff">230584300921369395</span>
+</span></span><span style="display:flex;"><span>    map.<span style="color:#a6e22e">size</span>() <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">--</span><span style="color:#ae81ff">32767</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">::</span><span style="color:#a6e22e">find</span>(), milli<span style="color:#f92672">-</span>seconds: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    found value, <span style="color:#ae81ff">5839</span></span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+<h2 id="分配器测试程序">分配器测试程序</h2>
+<p><a href="#R-image-bf7b895096d20668074194961eda7ae5" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf7b895096d20668074194961eda7ae5"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard.min.js?1732119287" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1732119287" defer></script>
+    <script src="../../../js/theme.js?1732119287" defer></script>
+  </body>
+</html>

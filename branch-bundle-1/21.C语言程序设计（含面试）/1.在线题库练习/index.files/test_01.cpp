@@ -1,16 +1,24 @@
 #include <stdio.h>
-void convert(unsigned int *);
+#include <string.h>
+#define SIZE 5
 int main(){
-    unsigned int a;
-    printf("请输入一个整数：");
-    scanf("%x",&a);
-    convert(&a);
-    printf("转换后的整数为：0x%x\n",a);
+    long n;
+    int a[SIZE],tag;
+    scanf("%ld",&n);
+    if(n<=99999){
+    	for(int i = 0; i<SIZE; i++){
+   			a[i] =n%10;n/=10;
+			if(n==0){tag = i; break;}			  		
+		}
+		printf("%d\n",tag+1);
+		for(int i = tag; i>=0; i--){
+			printf("%d ",a[i]);
+		}
+		printf("\n");
+		for(int i = 0; i<=tag; i++){
+			printf("%d",a[i]);
+		}
+	}
     return 0;
 }
-void convert(unsigned int *a){
-    unsigned int temp;
-    temp = *a & 0x0f;
-    *a &= 0xf0;
-    *a = (*a >> 4) | (temp << 4);
-}
+

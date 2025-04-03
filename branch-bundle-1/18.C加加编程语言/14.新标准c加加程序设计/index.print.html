@@ -18,21 +18,21 @@
     <title>14.新标准C加加程序设计 :: Maloudown</title>
     <link href="https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="canonical" type="text/html" title="14.新标准C加加程序设计 :: Maloudown">
     <link href="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/index.xml" rel="alternate" type="application/rss+xml" title="14.新标准C加加程序设计 :: Maloudown">
-    <link href="../../../images/favicon.png?1732292375" rel="icon" type="image/png">
+    <link href="../../../images/favicon.png?1743696567" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1732292376" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1732292376" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1732292376" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1732292376" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1732292376" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1732292376" rel="stylesheet">
-    <link href="../../../css/fonts.css?1732292376" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1732292376" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1732292376" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1732292376" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1732292376" rel="stylesheet">
-    <link href="../../../css/print.css?1732292376" rel="stylesheet" media="print">
-    <link href="../../../css/format-print.css?1732292376" rel="stylesheet">
-    <link href="../../../css/ie.css?1732292376" rel="stylesheet">
-    <script src="../../../js/url.js?1732292376"></script>
-    <script src="../../../js/variant.js?1732292376"></script>
+    <link href="../../../css/fontawesome-all.min.css?1743696568" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1743696568" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1743696568" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1743696568" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1743696568" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1743696568" rel="stylesheet">
+    <link href="../../../css/fonts.css?1743696568" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1743696568" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1743696568" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1743696568" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1743696568" rel="stylesheet">
+    <link href="../../../css/print.css?1743696568" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1743696568" rel="stylesheet">
+    <link href="../../../css/ie.css?1743696568" rel="stylesheet">
+    <script src="../../../js/url.js?1743696568"></script>
+    <script src="../../../js/variant.js?1743696568"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -93,24 +93,336 @@
             </header>
 <h1 id="14新标准c加加程序设计">14.新标准C加加程序设计</h1>
 
-<h2 id="内联函数函数重载和缺省函数">内联函数、函数重载和缺省函数</h2>
-<h2 id="类和对象的基本概念">类和对象的基本概念</h2>
-<h3 id="抽象">抽象</h3>
-<p>将事物所能进行的的行为归纳出来，形成函数，这些函数可以操作事物归纳后的数据结构。</p>
+<h2 id="内存分区模型">内存分区模型</h2>
+<p>内存代码区的意义：程序代码放在不同的区域，有程序自动管理的代码，也有程序员管理的代码，灵活管理；</p>
+<p>一、程序执行前</p>
+<p>1.代码区
+存放二进制指令，就是代码，特点：</p>
+<ul>
+<li>共享：多个进程的代码区是共享的，因为代码是相同的，所以只需要加载一份到内存中即可，节省内存空间。</li>
+<li>只读：代码是只读的，防止程序意外地修改了代码。</li>
+</ul>
+<p>2.全局区
+全局变量和静态变量存储在全局区，还包括常量区、字符串常量和其他常量（如：const）,特点：</p>
+<ul>
+<li>全局区是程序结束后由系统释放。</li>
+<li>全局变量和静态变量在程序结束后系统会自动释放，而局部变量在函数结束后由系统自动释放。</li>
+</ul>
+<p>例子：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//全局变量 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> g_a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> g_b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//const 修饰的全局变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> c_g_a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[]){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//局部变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//静态变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> s_a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> s_b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//字符串常量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>P <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//const修饰的局部变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> c_l_a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;局部变量a的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;局部变量b的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>b<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;全局变量a的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>g_a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;全局变量b的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>g_b<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;静态变量a的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>s_a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;静态变量b的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>s_b<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;字符串常量P的地址：&#34;</span><span style="color:#f92672">&lt;&lt;</span>P<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;const修饰的局部变量c_l_a的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>c_l_a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;const修饰的全局变量c_g_a的地址：&#34;</span><span style="color:#f92672">&lt;&lt;&amp;</span>c_g_a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>3.总结</p>
+<ul>
+<li>代码区：存放二进制指令，共享，只读。</li>
+<li>全局区：存放全局变量和静态变量，程序结束后由系统释放。</li>
+</ul>
+<p>二、程序运行后</p>
+<p>1.栈区</p>
+<p>由编译器自动分配释放，存放函数的参数值，局部变量等。</p>
+<p><strong>注意：</strong> 不要返回局部变量的地址，因为局部变量在函数结束后会被系统释放，再次访问会导致程序崩溃。</p>
+<p>例子：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">GetAddr</span>(<span style="color:#66d9ef">int</span> b){<span style="color:#75715e">//形参数据也放在栈区
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span>a;<span style="color:#75715e">//返回局部变量的地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> GetAddr();
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;*</span>p<span style="color:#f92672">&lt;&lt;</span>endl;<span style="color:#75715e">//第一次可以打印正确的数据，是因为编译器做了保留，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    cout<span style="color:#f92672">&lt;&lt;*</span>p<span style="color:#f92672">&lt;&lt;</span>endl;<span style="color:#75715e">// 但是第二次访问将不再保留
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>2.堆区</p>
+<p>由程序员分配释放，如果程序员不释放，程序结束时由系统回收。</p>
+<p>在C++中主要利用new和delete操作符进行动态内存管理。</p>
+<p>例子1-在堆上开辟空间：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">getAddr</span>(){
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//在堆上开辟空间，并初始化为10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//new出来的数据返回的是一个指针
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//使用存在栈区的局部指针指向堆区的数据，栈区的内容会被程序自动释放，但是指向堆区的数据不会被释放
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> p;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> getAddr();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;*</span>p<span style="color:#f92672">&lt;&lt;</span>endl;<span style="color:#75715e">//输出10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">delete</span> p;<span style="color:#75715e">//释放空间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>图解：
+<a href="#R-image-fee2f74b6a5ad52cc6a7ec8de1b504c2" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fee2f74b6a5ad52cc6a7ec8de1b504c2"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>例子2-堆区上的数据开辟与释放</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>P <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;*</span>P<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">delete</span> P;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test2</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        arr[i] <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span>arr[i]<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">delete</span>[] arr;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    test();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h2 id="引用">引用</h2>
+<p>给变量取别名。</p>
+<p>一、变量引用</p>
+<p>引用注意事项：</p>
+<ul>
+<li>引用必须初始化，int &amp;b;//这样是不正确的</li>
+<li>引用初始化后不能改变</li>
+<li>通过引用参数产生的效果与指针地址传递效果一样，引用语法更清楚；</li>
+</ul>
+<p>测试代码：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//值传递
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test1</span>(<span style="color:#66d9ef">int</span> a,<span style="color:#66d9ef">int</span> b) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//地址传递
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test2</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>a;
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span>a <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>b;
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span>b <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//引用传递
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test3</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>b) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> a;
+</span></span><span style="display:flex;"><span>	a <span style="color:#f92672">=</span> b;
+</span></span><span style="display:flex;"><span>	b <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>二、应用做函数的返回值</p>
+<ul>
+<li>不要返回局部变量的引用</li>
+<li>函数返回值是引用，那么这个函数调用可以作为左值</li>
+</ul>
+<p>测试代码：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// 二、引用做函数返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//1.不能返回应用返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> test04()<span style="color:#75715e">//以引用的方式返回b,相当于给这个b起了一个别名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;<span style="color:#75715e">//局部变量存放在栈区，函数结束后会被释放
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> b;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//2. 函数的调用可以作为左值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> test05()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;<span style="color:#75715e">//静态变量存放在全局区，程序结束后由系统自动释放
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> b;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> ret04 <span style="color:#f92672">=</span> test04();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> ret05 <span style="color:#f92672">=</span> test05();
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;ret04= &#34;</span><span style="color:#f92672">&lt;&lt;</span>ret04 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;ret04= &#34;</span> <span style="color:#f92672">&lt;&lt;</span> ret04 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;<span style="color:#75715e">//第二次访问返回的是乱码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;ret05= &#34;</span> <span style="color:#f92672">&lt;&lt;</span> ret05 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>	test05() <span style="color:#f92672">=</span> <span style="color:#ae81ff">130</span>;<span style="color:#75715e">//函数的返回是引用，函数的调用可以作为左值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;ret05= &#34;</span> <span style="color:#f92672">&lt;&lt;</span> ret05 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	system(<span style="color:#e6db74">&#34;pause&#34;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>测试代码结果
+<a href="#R-image-4c485d4a948ef66658210b3b44d7f11a" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4c485d4a948ef66658210b3b44d7f11a"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p>三、引用的本质</p>
+<p>引用的本质在C++内部实现是一个指针常量，引用类型必须和引用实体是同类型。</p>
+<p>四、常量引用</p>
+<p>作用：用来修饰形参，防止误操作。</p>
+<p>代码说明：</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//四、常量引用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//int &amp;ref = 10; 这样的操作是不被允许的，因为赋值给引用的是一个字面量,引用需要一个合法的空间，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 程序运行时没有专门为其分配可修改的内存空间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 但是如果在前面在上const，这条代码就通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// const int &amp;ref = 10;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//用来修饰形参，防止误操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test06</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>val)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//val = 100;不被允许修改
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;val = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> val <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h2 id="函数进阶">函数进阶</h2>
+<p>一、函数默认参数</p>
+<p>返回值 函数名(参数 = 默认值){}</p>
+<p>注意事项：</p>
+<p>1.如果某个位置已经有了默认参数，那么该位置往后都必须有默认参数</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//函数默认参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">int</span> a ,<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>,<span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;a = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;b = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>2.函数的声明有默认参数，函数实现不能有默认参数,声明和实现只能有一个有默认值</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">//函数声明
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">int</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>);<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//函数实现
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">int</span> a ,<span style="color:#66d9ef">int</span> b)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;a = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;b = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>二、函数占位参数</p>
+<p>作用：为了函数声明和定义的统一
+语法：返回类型 函数名(数据类型){}</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//函数占位参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">int</span> a,<span style="color:#66d9ef">int</span>)<span style="color:#75715e">//第二个参数为占位参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;a = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    test(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//占位参数必须填补,否则无法运行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div><p>注意：占位参数可以有默认参数，此时调用时就不用在传值</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//函数占位参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">int</span> a,<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>)<span style="color:#75715e">//第二个参数为占位参数，含默认值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;a = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    test(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//不需要传站位参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div><p>三、函数重载</p>
+<p>满足条件：</p>
+<ul>
+<li>在同一个作用域下。</li>
+<li>函数名相同，</li>
+<li>参数类型不同，</li>
+<li>参数个数不同，</li>
+<li>参数顺序不同。</li>
+</ul>
+<p>作用： 提高复用性</p>
+<p>注意：</p>
+<p>1.返回值不能作为重载的条件</p>
+<p>2.引用作为重载的条件</p>
+<p>加const和不加是可以重载的</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fun</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>a){
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;fun(int &amp;a)&#34;</span><span style="color:#f92672">&lt;&lt;</span>std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fun</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>a){
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;fun(const int &amp;a)&#34;</span><span style="color:#f92672">&lt;&lt;</span>std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>    fun(a);<span style="color:#75715e">//调用fun(int &amp;a)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    fun(b);<span style="color:#75715e">//调用fun(const int &amp;a)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    fun(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//调用fun(const int &amp;a)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>3.函数重载遇到默认参数</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fun2</span>(<span style="color:#66d9ef">int</span> a,<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>){
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;fun(int &amp;a)&#34;</span><span style="color:#f92672">&lt;&lt;</span>std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fun2</span>(<span style="color:#66d9ef">int</span> a){
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;fun(const int &amp;a)&#34;</span><span style="color:#f92672">&lt;&lt;</span>std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun2(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//此时程序出现二义性，无法确定调用哪个函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h2 id="类和对象的基本概念">类和对象的基本概念</h2>
+<p>C++的特性：封装、多态、继承</p>
+<p>一、基本概念</p>
+<ul>
+<li>抽象：将事物所能进行的的行为归纳出来，形成函数，这些函数可以操作事物归纳后的数据结构。</li>
+<li>类： 、</li>
+</ul>
 <h3 id="封装">封装</h3>
 <p>将事物归纳的数据结构和操作该数据结构的算法呈现显而易见的紧密关系，叫封装。</p>
+<p>一、 封装的意义</p>
+<p>1.将属性和行为作为一个整体，表现生活中的事物。</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_class
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//设计一个圆的类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#define PI 3.14
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//访问权限
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//属性
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">int</span> m_r;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//行为
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">calculateZC</span>()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> PI <span style="color:#f92672">*</span> m_r;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>() {
+</span></span><span style="display:flex;"><span>		Circle c1;
+</span></span><span style="display:flex;"><span>		c1.m_r <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;圆的周长 = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c1.calculateZC() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>2.访问权限</p>
+<ul>
+<li>public 公共权限</li>
+<li>protected 保护权限</li>
+<li>private 私有权限</li>
+</ul>
+<p>二、访问权限说明</p>
+<ul>
+<li>public修饰的成员，可以在类内或者类外直接访问</li>
+<li>protected修饰的成员，只能在类内和子类中访问</li>
+<li>private修饰的成员，只能在类内访问</li>
+</ul>
 <h3 id="继承">继承</h3>
 <h3 id="多态">多态</h3>
 <h3 id="类">类</h3>
 <p>将数据结构和操作该数据结构的函数捆绑在一起形成一个类。</p>
 <h3 id="在类中使用缺省函数">在类中使用缺省函数</h3>
 <p>需要注意避免二义性：
-<a href="#R-image-e8f3f7bce263183b4fa01d064b57563a" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e8f3f7bce263183b4fa01d064b57563a"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-932226e082de4e0a0aa8257b14a3356a" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-932226e082de4e0a0aa8257b14a3356a"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h2 id="构造函数">构造函数</h2>
 <h3 id="类中为什么需要构造函数">类中为什么需要构造函数</h3>
-<p><a href="#R-image-a86f1edece88c962ed28302e2f6fa88d" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a86f1edece88c962ed28302e2f6fa88d"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-247333334dd6b268a78fe327ba5d91bc" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-247333334dd6b268a78fe327ba5d91bc"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="构造函数在数组中的使用">构造函数在数组中的使用</h3>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a;
@@ -136,11 +448,11 @@
 <p>注意：对象之间的复制是不会导致复制构造函数的</p>
 <h2 id="转换构造函数">转换构造函数</h2>
 <p>什么是转换构造函数
-<a href="#R-image-820b266b55786474216f4a0458f045b1" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-820b266b55786474216f4a0458f045b1"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-e49c6912e8068883dcfee3750bd6c1b5" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e49c6912e8068883dcfee3750bd6c1b5"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>示例代码：
-<a href="#R-image-78bbbfe9bce9196a4d21c7690a812f8a" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-78bbbfe9bce9196a4d21c7690a812f8a"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>
+<a href="#R-image-20c9c91e5b335f03eecb1fd9924c2e2b" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-20c9c91e5b335f03eecb1fd9924c2e2b"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>
 在上面的例子当中，<code>c1 = 9;</code>会被自动转换为调用转换构造函数，如果不想让这样的事情发生，可以在转换构造函数前面加上修饰字段 <code>explicit</code>，这样再次使用<code>c1 = 9;</code>时程序会报错。</p>
 <h2 id="析构函数-destructors">析构函数-destructors</h2>
 <p>这里补充几点，一个类只能有一个析构函数；</p>
@@ -160,11 +472,11 @@
 </span></span><span style="display:flex;"><span>    obj <span style="color:#f92672">=</span> fun(obj); <span style="color:#75715e">//函数调用的返回值（临时对象）被
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//用过后，该临时对象析构函数被调用
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }</span></span></code></pre></div><p>上面结果输出三个destructor，在<code>fun(CMyclass sobj)</code>参数对象消亡调用析构函数（具体可以联想复制构造函数），会调用一次析构函数；当函数返回赋值给obj后，再次调用析构函数；整个程序结束再次调用析构函数。
-<a href="#R-image-c54612755111379cd16035ffc2bb9fa7" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c54612755111379cd16035ffc2bb9fa7"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-67400138f43a9e8c3a81d47b1a72388e" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-67400138f43a9e8c3a81d47b1a72388e"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h2 id="this指针">this指针</h2>
-<p><a href="#R-image-b6dc6955c38a1241bd69b862ac0569f7" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b6dc6955c38a1241bd69b862ac0569f7"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-197c4bb94cd0cec336b0283335ec52cf" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-197c4bb94cd0cec336b0283335ec52cf"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>静态成员函数中可以直接使用this指针来代表指向该函数作用的对象的指针</p>
 <p>示例1：</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Complex</span> {
@@ -287,8 +599,8 @@ mutable成员变量
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> m_b2;
 </span></span><span style="display:flex;"><span>    };</span></span></code></pre></div><h2 id="运算符重载函数">运算符重载函数</h2>
 <p><strong>浅拷贝与深拷贝：</strong>
-<a href="#R-image-3572d4c4ca11773b4bc5be3d444997cf" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3572d4c4ca11773b4bc5be3d444997cf"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-3aed00cd69776e75b81a1c2c86240461" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3aed00cd69776e75b81a1c2c86240461"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>为解决这个问题，我们需要修改赋值运算符重载：</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    String <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">const</span> String <span style="color:#f92672">&amp;</span> s){
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> <span style="color:#f92672">&amp;</span> s)
@@ -316,8 +628,8 @@ mutable成员变量
 <h2 id="继承和派生">继承和派生</h2>
 <p>**注意：**在派生类的各个成员函数中，不能访问基类中的private成员。</p>
 <h3 id="派生类的内存空间">派生类的内存空间</h3>
-<p><a href="#R-image-492f53ce19a867dc611ffbeef3ccee4e" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-492f53ce19a867dc611ffbeef3ccee4e"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-be7699205c1b997c2126fd7951210134" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-be7699205c1b997c2126fd7951210134"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="类之间的关系">类之间的关系</h3>
 <p><strong>继承：“是”关系。</strong></p>
 <ul>
@@ -332,8 +644,8 @@ mutable成员变量
 分”</li>
 </ul>
 <p>复合关系的示例：
-<a href="#R-image-325a77185f1a0e102828a5e65a12b5af" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-325a77185f1a0e102828a5e65a12b5af"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-bc6da7845c537b7cc590f98f2be8671a" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc6da7845c537b7cc590f98f2be8671a"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="基类与派生类名字重名的情况">基类与派生类名字重名的情况</h3>
 <p>一般来说，基类和派生类不定义同名成员变量。但如果要方位可以使用<code>基类::基类成员</code>来访问。</p>
 <h3 id="访问权限">访问权限</h3>
@@ -424,28 +736,28 @@ mutable成员变量
 <li>当指针指向基类时调用，基类的函数，当指针指向派生类时，调用调用派生类的函数，这叫做多态。</li>
 <li>另外，在非虚函数和非构造、析构函数中调用虚函数，也叫做多态。
 例子：
-<a href="#R-image-8b27300f2b74ef1eb70ab99b87d1bf3c" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b27300f2b74ef1eb70ab99b87d1bf3c"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></li>
+<a href="#R-image-1f151eb146835823435e27e358812f7c" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1f151eb146835823435e27e358812f7c"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></li>
 </ul>
 <p>如果在构造、析构函数中调用虚函数，那么会怎么样呢？</p>
 <p>如果这么做，那么编译器只会调用当前的虚函数，如果当前没有重写虚函数，则会从基类中找进行调用，为什么要这么做呢？其实这是为了防止未初始化就调用派生类的虚函数的情况。</p>
 <p>你想想啊，一类的初始化先从基类的构造函数开始，如果这个时候构造函数具有多态性，那么此时将调用派生类的对应虚函数，但是派生类这个时候都还没有初始化。</p>
 <p>例子：
-<a href="#R-image-d68112b29807c535c008285de5811294" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d68112b29807c535c008285de5811294"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>`</p>
+<a href="#R-image-fdd130f59216c990d3a8c8cbfab754c0" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fdd130f59216c990d3a8c8cbfab754c0"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" alt="alt text" class="lightbox-image        " loading="lazy"></a>`</p>
 <ul>
 <li>补充：在上面的图例子中，派生类写了与基类虚函数相同的名字，但是没有在前面加修饰符virtual，这种情况编译器认为是虚函数。</li>
 </ul>
 <h3 id="多态的作用">多态的作用</h3>
 <p>在面向对象的程序设计中使用多态，能够增强程序的可扩充性，即程序需要修改或增加功能的时候，需要改动和增加的代码较少。</p>
 <h3 id="虚函数的访问权限">虚函数的访问权限</h3>
-<p><a href="#R-image-cbe53e21ce5fc8bd8758aa29bd89c40e" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cbe53e21ce5fc8bd8758aa29bd89c40e"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<p><a href="#R-image-c4b52f90327215df718f2616a3d40657" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4b52f90327215df718f2616a3d40657"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <h3 id="动态联编的实现机制">动态联编的实现机制</h3>
 <p>“多态”的关键在于通过基类指针或引用调用一个虚函数时，编译时不确定到底调用的是基类还是派生类的函数，运行时才确定 &mdash;- 这叫“动态联编”。</p>
 <p>每一个有虚函数的类（或有虚函数的类的派生类）都有一个虚函数表，该类的任何对象中都放着虚函数表的指针。虚函数表中列出了该类的虚函数地址。多出来的4个字节就是用来放虚函数表的地址的。
-<a href="#R-image-f7f6d2b0d9a3457d259ca2e388183558" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7f6d2b0d9a3457d259ca2e388183558"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
+<a href="#R-image-ecac0940767394c7ac33d5b77031b67c" class="lightbox-link"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" alt="alt text" class="figure-image        " style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecac0940767394c7ac33d5b77031b67c"><img src="../../../branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" alt="alt text" class="lightbox-image        " loading="lazy"></a></p>
 <p>下面一段代码将验证，对象的首地址是存了虚函数表的地址的：</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
@@ -506,8 +818,8 @@ mutable成员变量
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard.min.js?1732292376" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1732292376" defer></script>
-    <script src="../../../js/theme.js?1732292376" defer></script>
+    <script src="../../../js/clipboard.min.js?1743696568" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1743696568" defer></script>
+    <script src="../../../js/theme.js?1743696568" defer></script>
   </body>
 </html>

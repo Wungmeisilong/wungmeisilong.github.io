@@ -13,7 +13,7 @@
       <link>https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sun, 03 Nov 2024 09:12:17 +0800</pubDate>
       <guid>https://wungmeisilong.github.io/branch-bundle-1/18.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
-      <description>内联函数、函数重载和缺省函数 类和对象的基本概念 抽象 将事物所能进行的的行为归纳出来，形成函数，这些函数可以操作事物归纳后的数据结构。 封装 将事物</description>
+      <description>内存分区模型 内存代码区的意义：程序代码放在不同的区域，有程序自动管理的代码，也有程序员管理的代码，灵活管理； 一、程序执行前 1.代码区 存放二进</description>
     </item>
     <item>
       <title>13.从C到C&#43;&#43;</title>
